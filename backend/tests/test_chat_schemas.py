@@ -34,20 +34,43 @@ def test_chat_response_with_source() -> None:
     response = ChatResponse(
         answer="La bibliothèque ouvre à 8h.",
         source="Guide étudiant",
+        category="service_campus",
+        confidence=0.92,
+        resolved=True,
     )
 
     assert response.model_dump() == {
         "answer": "La bibliothèque ouvre à 8h.",
         "source": "Guide étudiant",
+        "category": "service_campus",
+        "confidence": 0.92,
+        "resolved": True,
     }
 
 
 def test_chat_response_without_source() -> None:
     response = ChatResponse(
         answer="Bonjour ! Comment puis-je vous aider ?",
+        category="salutation",
+        confidence=1.0,
+        resolved=True,
     )
 
     assert response.model_dump() == {
         "answer": "Bonjour ! Comment puis-je vous aider ?",
         "source": None,
+        "category": "salutation",
+        "confidence": 1.0,
+        "resolved": True,
     }
+
+
+def test_chat_response_rejects_invalid_confidence() -> None:
+    with pytest.raises(ValidationError):
+        ChatResponse(
+            answer="Réponse invalide",
+            source=None,
+            category="unknown",
+            confidence=1.5,
+            resolved=False,
+        )

@@ -18,3 +18,9 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     answer: str
     source: str | None = None
+    category: str
+    confidence: float = Field(
+        ge=0.0,
+        le=1.0,
+    )
+    resolved: bool

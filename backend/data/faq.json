@@ -1,0 +1,79 @@
+[
+  {
+    "id": "faq-001",
+    "questions": [
+      "Quels sont les horaires de la scolarité ?",
+      "À quelle heure ouvre la scolarité ?",
+      "Quand est-ce que la scolarité est ouverte ?"
+    ],
+    "answer": "Le service scolarité est ouvert du lundi au vendredi, de 9h à 17h.",
+    "source": "Guide de l'étudiant",
+    "category": "service_campus"
+  },
+  {
+    "id": "faq-002",
+    "questions": [
+      "Comment contacter le service scolarité ?",
+      "Quel est le mail de la scolarité ?",
+      "Quel est le numéro de téléphone de la scolarité ?"
+    ],
+    "answer": "Vous pouvez joindre la scolarité par e-mail à scolarite@esic.fr ou vous rendre au bureau du rez-de-chaussée.",
+    "source": "Annuaire des contacts",
+    "category": "contact"
+  },
+  {
+    "id": "faq-003",
+    "questions": [
+      "Quelles formations propose l'ESIC ?",
+      "Quels sont les cursus disponibles ?",
+      "Quelles formations sont disponibles ?"
+    ],
+    "answer": "L'ESIC propose notamment des formations en Data Science, Cybersécurité et Développement, accessibles en initial ou en alternance.",
+    "source": "Catalogue des formations",
+    "category": "formation"
+  },
+  {
+    "id": "faq-004",
+    "questions": [
+      "Quand sont les prochaines vacances ?",
+      "Où consulter le calendrier académique ?",
+      "Quand commencent les congés ?"
+    ],
+    "answer": "Le calendrier académique des vacances, examens et soutenances est disponible sur l'ENT.",
+    "source": "Calendrier académique",
+    "category": "calendrier"
+  },
+  {
+    "id": "faq-005",
+    "questions": [
+      "Comment obtenir un certificat de scolarité ?",
+      "Où télécharger mon certificat de scolarité ?",
+      "Je veux une attestation de scolarité."
+    ],
+    "answer": "Le certificat de scolarité est téléchargeable depuis votre espace ENT, dans la rubrique « Mes documents ».",
+    "source": "Procédures administratives",
+    "category": "procedure_admin"
+  },
+  {
+    "id": "faq-006",
+    "questions": [
+      "Quelles sont les règles de vie du campus ?",
+      "Où consulter le règlement intérieur ?",
+      "Quels sont les droits et devoirs des étudiants ?"
+    ],
+    "answer": "Le règlement intérieur présente les droits et devoirs des étudiants, notamment l'assiduité, le respect des locaux et les sanctions. Il est disponible sur l'ENT.",
+    "source": "Règlement intérieur",
+    "category": "reglement"
+  },
+  {
+    "id": "faq-007",
+    "questions": [
+      "Bonjour",
+      "Salut",
+      "Hello"
+    ],
+    "answer": "Bonjour ! Posez-moi votre question sur le campus, je suis là pour vous aider.",
+    "source": null,
+    "category": "salutation"
+  }
+]

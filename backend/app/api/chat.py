@@ -8,9 +8,16 @@ from sqlalchemy import select
 
 from backend.app.db.database import get_db
 from backend.app.schemas.chat import ChatRequest, ChatResponse
-from backend.app.core.exceptions import UnsafeInputError
+from backend.app.core.exceptions import (
+    RateLimitExceededError,
+    UnsafeInputError,
+)
 from backend.app.services.input_security_service import (
     validate_user_input,
+)
+
+from backend.app.services.rate_limit_service import (
+    check_rate_limit,
 )
 
 from backend.app.services.knowledge_service import knowledge_service
@@ -120,6 +127,18 @@ def chat(
 
         safe_message = security_result.sanitized_text
 
+        rate_limit_result = check_rate_limit(
+            request.session_id
+        )
+
+        if not rate_limit_result.allowed:
+            raise RateLimitExceededError(
+                limit=rate_limit_result.limit,
+                retry_after_seconds=(
+                    rate_limit_result.retry_after_seconds
+                ),
+            )
+
         conversation = get_or_create_conversation(
             database=database,
             session_id=request.session_id,
@@ -155,6 +174,30 @@ def chat(
         )
 
         database.commit()
+
+    except RateLimitExceededError as error:
+        database.rollback()
+
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail={
+                "code": "rate_limit_exceeded",
+                "limit": error.limit,
+                "retry_after_seconds": (
+                    error.retry_after_seconds
+                ),
+                "message": (
+                    "Trop de requêtes. "
+                    "Veuillez patienter avant de réessayer."
+                ),
+            },
+            headers={
+                "Retry-After": str(
+                    error.retry_after_seconds
+                ),
+            },
+        ) from error
+
 
     except UnsafeInputError as error:
         database.rollback()

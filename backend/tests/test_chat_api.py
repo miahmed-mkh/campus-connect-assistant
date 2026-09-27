@@ -8,6 +8,10 @@ from backend.app.main import app
 from backend.app.services.input_security_service import (
     MAX_MESSAGE_LENGTH,
 )
+from backend.app.services.rate_limit_service import (
+    RATE_LIMIT_REQUESTS,
+    reset_rate_limit,
+)
 
 
 client = TestClient(app)
@@ -15,6 +19,7 @@ client = TestClient(app)
 LOGGING_TEST_USER_ID = "test-chat-api-logging"
 PII_TEST_USER_ID = "test-chat-api-pii"
 SECURITY_TEST_USER_ID = "test-chat-api-security"
+RATE_LIMIT_TEST_USER_ID = "test-chat-api-rate-limit"
 
 def cleanup_logging_test_data() -> None:
     database = SessionLocal()
@@ -47,6 +52,7 @@ def cleanup_chat_test_data() -> None:
                         LOGGING_TEST_USER_ID,
                         PII_TEST_USER_ID,
                         SECURITY_TEST_USER_ID,
+                        RATE_LIMIT_TEST_USER_ID,
                     ]
                 )
             )
@@ -63,9 +69,11 @@ def cleanup_chat_test_data() -> None:
 @pytest.fixture(autouse=True)
 def clean_chat_test_data() -> None:
     cleanup_chat_test_data()
+    reset_rate_limit()
 
     yield
 
+    reset_rate_limit()
     cleanup_chat_test_data()
 
 def test_chat_with_known_question() -> None:
@@ -345,6 +353,62 @@ def test_chat_rejects_message_above_maximum_length() -> None:
         )
 
         assert conversation is None
+
+    finally:
+        database.close()
+
+def test_chat_rejects_eleventh_request_without_persistence() -> None:
+    responses = [
+        client.post(
+            "/api/chat",
+            json={
+                "message": "Bonjour",
+                "session_id": RATE_LIMIT_TEST_USER_ID,
+            },
+        )
+        for _ in range(RATE_LIMIT_REQUESTS + 1)
+    ]
+
+    assert all(
+        response.status_code == 200
+        for response in responses[:RATE_LIMIT_REQUESTS]
+    )
+
+    blocked_response = responses[-1]
+
+    assert blocked_response.status_code == 429
+    assert blocked_response.headers["Retry-After"] == "60"
+    assert blocked_response.json() == {
+        "detail": {
+            "code": "rate_limit_exceeded",
+            "limit": RATE_LIMIT_REQUESTS,
+            "retry_after_seconds": 60,
+            "message": (
+                "Trop de requêtes. "
+                "Veuillez patienter avant de réessayer."
+            ),
+        }
+    }
+
+    database = SessionLocal()
+
+    try:
+        conversation = database.scalar(
+            select(ConversationSession).where(
+                ConversationSession.anonymous_user_id
+                == RATE_LIMIT_TEST_USER_ID
+            )
+        )
+
+        assert conversation is not None
+
+        messages = database.scalars(
+            select(Message).where(
+                Message.session_id == conversation.id
+            )
+        ).all()
+
+        assert len(messages) == RATE_LIMIT_REQUESTS * 2
 
     finally:
         database.close()

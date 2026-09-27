@@ -5,12 +5,16 @@ from fastapi.testclient import TestClient
 import pytest
 
 from backend.app.main import app
+from backend.app.services.input_security_service import (
+    MAX_MESSAGE_LENGTH,
+)
 
 
 client = TestClient(app)
 
 LOGGING_TEST_USER_ID = "test-chat-api-logging"
 PII_TEST_USER_ID = "test-chat-api-pii"
+SECURITY_TEST_USER_ID = "test-chat-api-security"
 
 def cleanup_logging_test_data() -> None:
     database = SessionLocal()
@@ -42,6 +46,7 @@ def cleanup_chat_test_data() -> None:
                         "session-001",
                         LOGGING_TEST_USER_ID,
                         PII_TEST_USER_ID,
+                        SECURITY_TEST_USER_ID,
                     ]
                 )
             )
@@ -270,6 +275,76 @@ def test_chat_redacts_personal_data_before_storage() -> None:
             "192.168.1.42"
             not in user_message.content_redacted
         )
+
+    finally:
+        database.close()
+
+def test_chat_rejects_unsafe_input_without_persistence() -> None:
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "<script>alert(1)</script>",
+            "session_id": SECURITY_TEST_USER_ID,
+        },
+    )
+
+    assert response.status_code == 400
+    assert response.json() == {
+        "detail": {
+            "code": "unsafe_input",
+            "reason": "script_tag",
+            "message": (
+                "Le message contient une entrée non autorisée."
+            ),
+        }
+    }
+
+    database = SessionLocal()
+
+    try:
+        conversation = database.scalar(
+            select(ConversationSession).where(
+                ConversationSession.anonymous_user_id
+                == SECURITY_TEST_USER_ID
+            )
+        )
+
+        assert conversation is None
+
+    finally:
+        database.close()
+
+def test_chat_rejects_message_above_maximum_length() -> None:
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "a" * (MAX_MESSAGE_LENGTH + 1),
+            "session_id": SECURITY_TEST_USER_ID,
+        },
+    )
+
+    assert response.status_code == 400
+    assert response.json() == {
+        "detail": {
+            "code": "unsafe_input",
+            "reason": "message_too_long",
+            "message": (
+                "Le message contient une entrée non autorisée."
+            ),
+        }
+    }
+
+    database = SessionLocal()
+
+    try:
+        conversation = database.scalar(
+            select(ConversationSession).where(
+                ConversationSession.anonymous_user_id
+                == SECURITY_TEST_USER_ID
+            )
+        )
+
+        assert conversation is None
 
     finally:
         database.close()

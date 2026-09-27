@@ -1,12 +1,18 @@
 from uuid import UUID
 from backend.app.models import ConversationSession, Message
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
+
 from sqlalchemy.orm import Session
 from time import perf_counter
 from sqlalchemy import select
 
 from backend.app.db.database import get_db
 from backend.app.schemas.chat import ChatRequest, ChatResponse
+from backend.app.core.exceptions import UnsafeInputError
+from backend.app.services.input_security_service import (
+    validate_user_input,
+)
+
 from backend.app.services.knowledge_service import knowledge_service
 
 from backend.app.services.pii_redaction_service import (
@@ -103,6 +109,17 @@ def chat(
     started_at = perf_counter()
 
     try:
+        security_result = validate_user_input(
+            request.message
+        )
+
+        if not security_result.is_safe:
+            raise UnsafeInputError(
+                security_result.reason or "unsafe_input"
+            )
+
+        safe_message = security_result.sanitized_text
+
         conversation = get_or_create_conversation(
             database=database,
             session_id=request.session_id,
@@ -112,10 +129,10 @@ def chat(
             database=database,
             conversation=conversation,
             role="user",
-            content=request.message,
+            content=safe_message,
         )
 
-        result = knowledge_service.search(request.message)
+        result = knowledge_service.search(safe_message)
         resolved = result["category"] != "unknown"
 
         response_time_ms = max(
@@ -138,6 +155,20 @@ def chat(
         )
 
         database.commit()
+
+    except UnsafeInputError as error:
+        database.rollback()
+
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail={
+                "code": "unsafe_input",
+                "reason": error.reason,
+                "message": (
+                    "Le message contient une entrée non autorisée."
+                ),
+            },
+        ) from error
 
     except Exception:
         database.rollback()

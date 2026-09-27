@@ -9,6 +9,10 @@ from backend.app.db.database import get_db
 from backend.app.schemas.chat import ChatRequest, ChatResponse
 from backend.app.services.knowledge_service import knowledge_service
 
+from backend.app.services.pii_redaction_service import (
+    redact_personal_data,
+)
+
 
 router = APIRouter(
     prefix="/api",
@@ -74,7 +78,7 @@ def save_message(
     message = Message(
         session_id=conversation.id,
         role=role,
-        content_redacted=content,
+        content_redacted=redact_personal_data(content),
         response_time_ms=response_time_ms,
         category=category,
         confidence=confidence,

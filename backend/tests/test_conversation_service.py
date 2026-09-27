@@ -215,3 +215,44 @@ def test_reuse_conversation_from_anonymous_id() -> None:
     finally:
         database.close()
         cleanup_test_sessions()
+
+def test_save_message_redacts_personal_data() -> None:
+    cleanup_test_sessions()
+    database = SessionLocal()
+
+    try:
+        conversation = get_or_create_conversation(
+            database=database,
+            session_id=TEST_USER_ID,
+        )
+
+        message = save_message(
+            database=database,
+            conversation=conversation,
+            role="user",
+            content=(
+                "Mon email est student@example.com, "
+                "mon téléphone est 06 12 34 56 78, "
+                "mon IP est 192.168.1.42 et "
+                "mon numéro étudiant : ESIC-123456"
+            ),
+        )
+
+        database.commit()
+        database.refresh(message)
+
+        assert message.content_redacted == (
+            "Mon email est [EMAIL], "
+            "mon téléphone est [TELEPHONE], "
+            "mon IP est [IP] et "
+            "mon [IDENTIFIANT_ETUDIANT]"
+        )
+
+        assert "student@example.com" not in message.content_redacted
+        assert "06 12 34 56 78" not in message.content_redacted
+        assert "192.168.1.42" not in message.content_redacted
+        assert "ESIC-123456" not in message.content_redacted
+
+    finally:
+        database.close()
+        cleanup_test_sessions()

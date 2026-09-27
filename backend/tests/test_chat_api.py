@@ -10,7 +10,7 @@ from backend.app.main import app
 client = TestClient(app)
 
 LOGGING_TEST_USER_ID = "test-chat-api-logging"
-
+PII_TEST_USER_ID = "test-chat-api-pii"
 
 def cleanup_logging_test_data() -> None:
     database = SessionLocal()
@@ -41,6 +41,7 @@ def cleanup_chat_test_data() -> None:
                     [
                         "session-001",
                         LOGGING_TEST_USER_ID,
+                        PII_TEST_USER_ID,
                     ]
                 )
             )
@@ -213,3 +214,62 @@ def test_chat_logs_conversation_and_messages() -> None:
 
     finally:
         cleanup_logging_test_data()
+
+def test_chat_redacts_personal_data_before_storage() -> None:
+    original_message = (
+        "Bonjour, mon email est student@example.com, "
+        "mon téléphone est 06 12 34 56 78 et "
+        "mon IP est 192.168.1.42"
+    )
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": original_message,
+            "session_id": PII_TEST_USER_ID,
+        },
+    )
+
+    assert response.status_code == 200
+
+    database = SessionLocal()
+
+    try:
+        conversation = database.scalar(
+            select(ConversationSession).where(
+                ConversationSession.anonymous_user_id
+                == PII_TEST_USER_ID
+            )
+        )
+
+        assert conversation is not None
+
+        user_message = database.scalar(
+            select(Message).where(
+                Message.session_id == conversation.id,
+                Message.role == "user",
+            )
+        )
+
+        assert user_message is not None
+        assert user_message.content_redacted == (
+            "Bonjour, mon email est [EMAIL], "
+            "mon téléphone est [TELEPHONE] et "
+            "mon IP est [IP]"
+        )
+
+        assert (
+            "student@example.com"
+            not in user_message.content_redacted
+        )
+        assert (
+            "06 12 34 56 78"
+            not in user_message.content_redacted
+        )
+        assert (
+            "192.168.1.42"
+            not in user_message.content_redacted
+        )
+
+    finally:
+        database.close()

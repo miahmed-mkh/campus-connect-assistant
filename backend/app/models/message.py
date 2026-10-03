@@ -14,6 +14,7 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
 
 from backend.app.db.database import Base
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 
 def utc_now() -> datetime:
@@ -79,3 +80,12 @@ class Message(Base):
         Boolean,
         nullable=True,
     )
+
+    feedback: Mapped["Feedback | None"] = relationship(
+        back_populates="message",
+        cascade="all, delete-orphan",
+        passive_deletes=True,
+        uselist=False,
+    )
+
+from backend.app.models.feedback import Feedback  # noqa: E402

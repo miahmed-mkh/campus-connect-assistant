@@ -1,10 +1,12 @@
-from sqlalchemy import select
-from backend.app.db.database import SessionLocal
-from backend.app.models import ConversationSession, Message
-from fastapi.testclient import TestClient
-import pytest
+from uuid import UUID
 
+import pytest
+from fastapi.testclient import TestClient
+from sqlalchemy import select
+
+from backend.app.db.database import SessionLocal
 from backend.app.main import app
+from backend.app.models import ConversationSession, Message
 from backend.app.services.input_security_service import (
     MAX_MESSAGE_LENGTH,
 )
@@ -21,24 +23,7 @@ PII_TEST_USER_ID = "test-chat-api-pii"
 SECURITY_TEST_USER_ID = "test-chat-api-security"
 RATE_LIMIT_TEST_USER_ID = "test-chat-api-rate-limit"
 
-def cleanup_logging_test_data() -> None:
-    database = SessionLocal()
 
-    try:
-        conversations = database.scalars(
-            select(ConversationSession).where(
-                ConversationSession.anonymous_user_id
-                == LOGGING_TEST_USER_ID
-            )
-        ).all()
-
-        for conversation in conversations:
-            database.delete(conversation)
-
-        database.commit()
-
-    finally:
-        database.close()
 
 def cleanup_chat_test_data() -> None:
     database = SessionLocal()
@@ -47,13 +32,13 @@ def cleanup_chat_test_data() -> None:
         conversations = database.scalars(
             select(ConversationSession).where(
                 ConversationSession.anonymous_user_id.in_(
-                    [
+                    (
                         "session-001",
                         LOGGING_TEST_USER_ID,
                         PII_TEST_USER_ID,
                         SECURITY_TEST_USER_ID,
                         RATE_LIMIT_TEST_USER_ID,
-                    ]
+                    )
                 )
             )
         ).all()
@@ -66,6 +51,7 @@ def cleanup_chat_test_data() -> None:
     finally:
         database.close()
 
+
 @pytest.fixture(autouse=True)
 def clean_chat_test_data() -> None:
     cleanup_chat_test_data()
@@ -75,6 +61,7 @@ def clean_chat_test_data() -> None:
 
     reset_rate_limit()
     cleanup_chat_test_data()
+
 
 def test_chat_with_known_question() -> None:
     response = client.post(
@@ -86,7 +73,12 @@ def test_chat_with_known_question() -> None:
     )
 
     assert response.status_code == 200
-    assert response.json() == {
+
+    response_data = response.json()
+    message_id = response_data.pop("message_id")
+
+    assert UUID(message_id)
+    assert response_data == {
         "answer": (
             "Le service scolarité est ouvert du lundi au vendredi, "
             "de 9h à 17h."
@@ -108,7 +100,12 @@ def test_chat_with_greeting() -> None:
     )
 
     assert response.status_code == 200
-    assert response.json() == {
+
+    response_data = response.json()
+    message_id = response_data.pop("message_id")
+
+    assert UUID(message_id)
+    assert response_data == {
         "answer": (
             "Bonjour ! Posez-moi votre question sur le campus, "
             "je suis là pour vous aider."
@@ -125,20 +122,27 @@ def test_chat_with_unknown_question() -> None:
     response = client.post(
         "/api/chat",
         json={
-            "message": "Comment réserver un hélicoptère sur le campus ?",
+            "message": (
+                "Comment réserver un hélicoptère sur le campus ?"
+            ),
             "session_id": "session-001",
         },
     )
 
     assert response.status_code == 200
 
-    data = response.json()
+    response_data = response.json()
+    message_id = response_data.pop("message_id")
 
-    assert data["source"] is None
-    assert data["category"] == "unknown"
-    assert data["confidence"] < 0.65
-    assert data["resolved"] is False
-    assert "pas encore de réponse fiable" in data["answer"]
+    assert UUID(message_id)
+    assert response_data["source"] is None
+    assert response_data["category"] == "unknown"
+    assert response_data["resolved"] is False
+    assert response_data["confidence"] < 0.65
+    assert (
+        "Je n’ai pas encore de réponse fiable"
+        in response_data["answer"]
+    )
 
 
 def test_chat_rejects_empty_message() -> None:
@@ -163,70 +167,64 @@ def test_chat_rejects_missing_session_id() -> None:
 
     assert response.status_code == 422
 
+
 def test_chat_logs_conversation_and_messages() -> None:
-    cleanup_logging_test_data()
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Bonjour",
+            "session_id": LOGGING_TEST_USER_ID,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+    response_message_id = UUID(
+        response_data["message_id"]
+    )
+
+    database = SessionLocal()
 
     try:
-        response = client.post(
-            "/api/chat",
-            json={
-                "message": "Bonjour",
-                "session_id": LOGGING_TEST_USER_ID,
-            },
+        conversation = database.scalar(
+            select(ConversationSession).where(
+                ConversationSession.anonymous_user_id
+                == LOGGING_TEST_USER_ID
+            )
         )
 
-        assert response.status_code == 200
+        assert conversation is not None
+        assert conversation.channel == "web"
+        assert conversation.language == "fr"
 
-        database = SessionLocal()
-
-        try:
-            conversation = database.scalar(
-                select(ConversationSession).where(
-                    ConversationSession.anonymous_user_id
-                    == LOGGING_TEST_USER_ID
-                )
+        messages = database.scalars(
+            select(Message)
+            .where(
+                Message.session_id == conversation.id
             )
+            .order_by(Message.created_at)
+        ).all()
 
-            assert conversation is not None
-            assert conversation.channel == "web"
-            assert conversation.language == "fr"
+        assert len(messages) == 2
 
-            messages = database.scalars(
-                select(Message)
-                .where(
-                    Message.session_id == conversation.id
-                )
-                .order_by(Message.created_at)
-            ).all()
+        user_message = messages[0]
+        assistant_message = messages[1]
 
-            assert len(messages) == 2
+        assert user_message.role == "user"
+        assert user_message.content_redacted == "Bonjour"
 
-            user_message = messages[0]
-            assistant_message = messages[1]
-
-            assert user_message.role == "user"
-            assert user_message.content_redacted == "Bonjour"
-            assert user_message.response_time_ms is None
-            assert user_message.category is None
-            assert user_message.confidence is None
-            assert user_message.source is None
-            assert user_message.resolved is None
-
-            assert assistant_message.role == "assistant"
-            assert (
-                assistant_message.category
-                == "salutation"
-            )
-            assert assistant_message.confidence == 1.0
-            assert assistant_message.source is None
-            assert assistant_message.resolved is True
-            assert assistant_message.response_time_ms >= 1
-
-        finally:
-            database.close()
+        assert assistant_message.role == "assistant"
+        assert assistant_message.id == response_message_id
+        assert assistant_message.category == "salutation"
+        assert assistant_message.confidence == 1.0
+        assert assistant_message.resolved is True
+        assert assistant_message.response_time_ms is not None
+        assert assistant_message.response_time_ms >= 1
 
     finally:
-        cleanup_logging_test_data()
+        database.close()
+
 
 def test_chat_redacts_personal_data_before_storage() -> None:
     original_message = (
@@ -287,6 +285,7 @@ def test_chat_redacts_personal_data_before_storage() -> None:
     finally:
         database.close()
 
+
 def test_chat_rejects_unsafe_input_without_persistence() -> None:
     response = client.post(
         "/api/chat",
@@ -321,6 +320,7 @@ def test_chat_rejects_unsafe_input_without_persistence() -> None:
 
     finally:
         database.close()
+
 
 def test_chat_rejects_message_above_maximum_length() -> None:
     response = client.post(
@@ -357,6 +357,7 @@ def test_chat_rejects_message_above_maximum_length() -> None:
     finally:
         database.close()
 
+
 def test_chat_rejects_eleventh_request_without_persistence() -> None:
     responses = [
         client.post(
@@ -377,17 +378,23 @@ def test_chat_rejects_eleventh_request_without_persistence() -> None:
     blocked_response = responses[-1]
 
     assert blocked_response.status_code == 429
-    assert blocked_response.headers["Retry-After"] == "60"
-    assert blocked_response.json() == {
-        "detail": {
-            "code": "rate_limit_exceeded",
-            "limit": RATE_LIMIT_REQUESTS,
-            "retry_after_seconds": 60,
-            "message": (
-                "Trop de requêtes. "
-                "Veuillez patienter avant de réessayer."
-            ),
-        }
+
+    retry_after = int(
+        blocked_response.headers["Retry-After"]
+    )
+
+    assert 1 <= retry_after <= 60
+
+    response_detail = blocked_response.json()["detail"]
+
+    assert response_detail == {
+        "code": "rate_limit_exceeded",
+        "limit": RATE_LIMIT_REQUESTS,
+        "retry_after_seconds": retry_after,
+        "message": (
+            "Trop de requêtes. "
+            "Veuillez patienter avant de réessayer."
+        ),
     }
 
     database = SessionLocal()

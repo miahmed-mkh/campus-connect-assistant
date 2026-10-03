@@ -161,7 +161,7 @@ def chat(
             ),
         )
 
-        save_message(
+        assistant_message = save_message(
             database=database,
             conversation=conversation,
             role="assistant",
@@ -218,6 +218,7 @@ def chat(
         raise
 
     return ChatResponse(
+        message_id=assistant_message.id,
         answer=result["answer"],
         source=result["source"],
         category=result["category"],

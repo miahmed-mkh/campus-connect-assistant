@@ -37,9 +37,20 @@ export async function sendFeedback(sessionId, messageId, rating) {
     return
   }
 
-  await fetch('/api/feedback', {
+  const response = await fetch('/api/feedback', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ session_id: sessionId, message_id: messageId, rating }),
+    body: JSON.stringify({
+      session_id: sessionId,
+      message_id: messageId,
+      rating,
+    }),
   })
+
+  if (!response.ok) {
+    throw new Error(`Erreur serveur (${response.status})`)
+  }
+
+  return response.json()
+
 }

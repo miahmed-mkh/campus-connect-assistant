@@ -1,5 +1,6 @@
 import pytest
 from pydantic import ValidationError
+from uuid import UUID
 
 from backend.app.schemas.chat import ChatRequest, ChatResponse
 
@@ -31,7 +32,12 @@ def test_empty_session_id_is_rejected() -> None:
 
 
 def test_chat_response_with_source() -> None:
+    message_id = UUID(
+        "11111111-1111-4111-8111-111111111111"
+    )
+
     response = ChatResponse(
+        message_id=message_id,
         answer="La bibliothèque ouvre à 8h.",
         source="Guide étudiant",
         category="service_campus",
@@ -40,6 +46,7 @@ def test_chat_response_with_source() -> None:
     )
 
     assert response.model_dump() == {
+        "message_id": message_id,
         "answer": "La bibliothèque ouvre à 8h.",
         "source": "Guide étudiant",
         "category": "service_campus",
@@ -49,7 +56,12 @@ def test_chat_response_with_source() -> None:
 
 
 def test_chat_response_without_source() -> None:
+    message_id = UUID(
+        "22222222-2222-4222-8222-222222222222"
+    )
+
     response = ChatResponse(
+        message_id=message_id,
         answer="Bonjour ! Comment puis-je vous aider ?",
         category="salutation",
         confidence=1.0,
@@ -57,6 +69,7 @@ def test_chat_response_without_source() -> None:
     )
 
     assert response.model_dump() == {
+        "message_id": message_id,
         "answer": "Bonjour ! Comment puis-je vous aider ?",
         "source": None,
         "category": "salutation",
@@ -68,6 +81,9 @@ def test_chat_response_without_source() -> None:
 def test_chat_response_rejects_invalid_confidence() -> None:
     with pytest.raises(ValidationError):
         ChatResponse(
+            message_id=UUID(
+                "33333333-3333-4333-8333-333333333333"
+            ),
             answer="Réponse invalide",
             source=None,
             category="unknown",

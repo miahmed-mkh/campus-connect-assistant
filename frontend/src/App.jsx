@@ -67,7 +67,7 @@ export default function App() {
     try {
       const data = await sendMessage(text, sessionId)
       addMessage({
-        id: newId(),
+        id: data.message_id,
         role: 'bot',
         text: data.answer,
         source: data.source,
@@ -86,12 +86,31 @@ export default function App() {
     }
   }
 
-  function handleFeedback(messageId, rating) {
-    setSession((s) => ({
-      ...s,
-      messages: s.messages.map((m) => (m.id === messageId ? { ...m, feedback: rating } : m)),
+  async function handleFeedback(messageId, rating) {
+    const previousMessage = messages.find((message) => message.id === messageId)
+    const previousFeedback = previousMessage?.feedback
+
+    setSession((currentSession) => ({
+      ...currentSession,
+      messages: currentSession.messages.map((message) =>
+        message.id === messageId
+          ? { ...message, feedback: rating }
+          : message
+      ),
     }))
-    sendFeedback(sessionId, messageId, rating)
+
+    try {
+      await sendFeedback(sessionId, messageId, rating)
+    } catch {
+      setSession((currentSession) => ({
+        ...currentSession,
+        messages: currentSession.messages.map((message) =>
+          message.id === messageId
+            ? { ...message, feedback: previousFeedback }
+            : message
+        ),
+      }))
+    }
   }
 
   // Redémarrer proprement la conversation (US-003)

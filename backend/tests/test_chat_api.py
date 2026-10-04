@@ -526,3 +526,128 @@ def test_chat_rejects_unknown_contact_as_unresolved() -> None:
     assert response_data["confidence"] < 0.65
     assert response_data["resolved"] is False
     assert response_data["source"] is None
+
+def test_chat_returns_group_schedule() -> None:
+    session_id = "schedule-group-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Quels sont les cours du groupe B1-A lundi ?",
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "schedule"
+    assert response_data["confidence"] == 1.0
+    assert response_data["resolved"] is True
+    assert "B1-A" in response_data["answer"]
+    assert "Cours du Lundi" in response_data["answer"]
+    assert "historiques 2024-2025" in response_data["answer"]
+
+
+def test_chat_returns_subject_schedule() -> None:
+    session_id = "schedule-subject-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": (
+                "Où se déroule le cours de "
+                "Machine Learning Avancé ?"
+            ),
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "schedule"
+    assert response_data["confidence"] >= 0.65
+    assert response_data["resolved"] is True
+    assert "Machine Learning Avancé" in response_data["answer"]
+    assert "Dr. Julie MOREAU" in response_data["answer"]
+    assert "A003" in response_data["answer"]
+    assert "C002" in response_data["answer"]
+
+
+def test_chat_returns_exam_schedule() -> None:
+    session_id = "schedule-exams-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Quand sont les examens de B1 ?",
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "schedule"
+    assert response_data["confidence"] >= 0.65
+    assert response_data["resolved"] is True
+    assert "Examens B1" in response_data["answer"]
+    assert "07/01/2025" in response_data["answer"]
+    assert "historique 2024-2025" in response_data["answer"]
+
+
+def test_chat_returns_important_dates() -> None:
+    session_id = "schedule-important-dates-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Quelles sont les dates importantes ?",
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "schedule"
+    assert response_data["confidence"] >= 0.65
+    assert response_data["resolved"] is True
+    assert "Rentrée académique" in response_data["answer"]
+    assert "02/09/2024" in response_data["answer"]
+
+
+def test_chat_returns_unknown_for_missing_schedule_group() -> None:
+    session_id = "schedule-unknown-group-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Quels sont les cours du groupe B2-Z lundi ?",
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "unknown"
+    assert response_data["confidence"] < 0.65
+    assert response_data["resolved"] is False
+    assert response_data["source"] is None

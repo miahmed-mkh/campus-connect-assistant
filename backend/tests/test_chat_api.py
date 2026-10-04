@@ -454,3 +454,75 @@ def test_chat_returns_procedure_answer() -> None:
         "Procédures ESIC — données pédagogiques 2024-2025"
     )
     assert "Convention de Stage" in response_data["answer"]
+
+
+def test_chat_returns_teacher_contact() -> None:
+    session_id = "contact-teacher-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Qui enseigne l'algorithmique ?",
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "contact"
+    assert response_data["confidence"] >= 0.65
+    assert response_data["resolved"] is True
+    assert "bernard" in response_data["answer"].lower()
+
+
+def test_chat_returns_external_partner_contact() -> None:
+    session_id = "contact-crous-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Comment contacter le CROUS de Paris ?",
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "contact"
+    assert response_data["confidence"] >= 0.65
+    assert response_data["resolved"] is True
+    assert "crous" in response_data["answer"].lower()
+
+
+def test_chat_rejects_unknown_contact_as_unresolved() -> None:
+    session_id = "contact-unknown-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": (
+                "Comment contacter le pilote "
+                "d'hélicoptère du campus ?"
+            ),
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "unknown"
+    assert response_data["confidence"] < 0.65
+    assert response_data["resolved"] is False
+    assert response_data["source"] is None

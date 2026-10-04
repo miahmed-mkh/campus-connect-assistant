@@ -651,3 +651,50 @@ def test_chat_returns_unknown_for_missing_schedule_group() -> None:
     assert response_data["confidence"] < 0.65
     assert response_data["resolved"] is False
     assert response_data["source"] is None
+
+def test_chat_returns_plagiarism_document() -> None:
+    session_id = "document-plagiarism-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": (
+                "Quelles sont les sanctions en cas de plagiat ?"
+            ),
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    payload = response.json()
+
+    assert payload["category"] == "document"
+    assert payload["resolved"] is True
+    assert payload["source"] is not None
+    assert payload["confidence"] >= 0.55
+    assert "2024-2025" in payload["answer"]
+    assert "non officiels" in payload["answer"]
+
+
+def test_chat_returns_absence_document() -> None:
+    session_id = "document-absence-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "Comment justifier une absence ?",
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    payload = response.json()
+
+    assert payload["category"] == "document"
+    assert payload["resolved"] is True
+    assert payload["source"] is not None
+    assert "absence" in payload["answer"].lower()

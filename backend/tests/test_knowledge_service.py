@@ -238,3 +238,65 @@ def test_global_search_returns_unknown_for_unavailable_service() -> None:
     assert result["category"] == "unknown"
     assert result["source"] is None
     assert result["confidence"] < 0.65
+
+def test_global_search_returns_plagiarism_document() -> None:
+    result = search_knowledge(
+        "Quelles sont les sanctions en cas de plagiat ?"
+    )
+
+    assert result["category"] == "document"
+    assert result["confidence"] >= 0.55
+    assert result["source"] is not None
+    assert "2024-2025" in result["answer"]
+    assert "non officiels" in result["answer"]
+
+
+def test_global_search_returns_absence_document() -> None:
+    result = search_knowledge(
+        "Comment justifier une absence ?"
+    )
+
+    assert result["category"] == "document"
+    assert result["confidence"] >= 0.55
+    assert "absence" in result["answer"].lower()
+
+
+def test_document_integration_preserves_contact_result() -> None:
+    result = search_knowledge(
+        "Qui enseigne l'algorithmique ?"
+    )
+
+    assert result["category"] == "contact"
+
+
+def test_document_integration_preserves_procedure_result() -> None:
+    result = search_knowledge(
+        "Quels documents faut-il pour une convention de stage ?"
+    )
+
+    assert result["category"] == "procedure"
+
+
+def test_document_integration_preserves_schedule_result() -> None:
+    result = search_knowledge(
+        "Quels sont les cours du groupe B1-A lundi ?"
+    )
+
+    assert result["category"] == "schedule"
+
+
+def test_document_integration_preserves_faq_result() -> None:
+    result = search_knowledge(
+        "Quels sont les horaires de la bibliothèque ?"
+    )
+
+    assert result["category"] == "services_campus"
+
+
+def test_document_integration_preserves_unknown_result() -> None:
+    result = search_knowledge(
+        "Comment réserver un hélicoptère sur le campus ?"
+    )
+
+    assert result["category"] == "unknown"
+    assert result["source"] is None

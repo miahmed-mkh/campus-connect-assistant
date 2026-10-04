@@ -3,6 +3,7 @@ from difflib import SequenceMatcher
 from typing import Any
 
 from backend.app.services.contact_service import contact_service
+from backend.app.services.document_service import document_service
 from backend.app.services.faq_loader import load_all_faq_items
 from backend.app.services.procedure_service import (
     procedure_service,
@@ -193,6 +194,7 @@ def search_knowledge(question: str) -> dict[str, Any]:
         procedure_service.search(question),
         contact_service.search(question),
         schedule_service.search(question),
+        document_service.search(question),
     )
 
     known_results = tuple(

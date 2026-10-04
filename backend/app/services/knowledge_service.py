@@ -1,30 +1,12 @@
-import re
-import unicodedata
+from backend.app.services.text_matching import normalize_text
 from difflib import SequenceMatcher
 from typing import Any
 
 from backend.app.services.faq_loader import load_all_faq_items
+from backend.app.services.procedure_service import (
+    procedure_service,
+)
 
-
-def normalize_text(text: str) -> str:
-    normalized = unicodedata.normalize(
-        "NFKD",
-        text.lower(),
-    )
-
-    normalized = "".join(
-        character
-        for character in normalized
-        if not unicodedata.combining(character)
-    )
-
-    normalized = re.sub(
-        r"[^a-z0-9\s]",
-        " ",
-        normalized,
-    )
-
-    return " ".join(normalized.split())
 
 def calculate_similarity(
     normalized_question: str,
@@ -202,3 +184,21 @@ def test_knowledge_service_loads_all_faq_items() -> None:
     assert len(identifiers) == len(set(identifiers))
 
 knowledge_service = KnowledgeService()
+
+def search_knowledge(question: str) -> dict[str, Any]:
+    faq_result = knowledge_service.search(question)
+    procedure_result = procedure_service.search(question)
+
+    if (
+        procedure_result["category"] != "unknown"
+        and procedure_result["confidence"]
+        > faq_result["confidence"]
+    ):
+        return {
+            "answer": procedure_result["answer"],
+            "source": procedure_result["source"],
+            "category": procedure_result["category"],
+            "confidence": procedure_result["confidence"],
+        }
+
+    return faq_result

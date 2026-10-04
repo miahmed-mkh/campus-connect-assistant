@@ -426,3 +426,31 @@ def test_chat_rejects_eleventh_request_without_persistence() -> None:
 
     finally:
         database.close()
+
+def test_chat_returns_procedure_answer() -> None:
+    session_id = "procedure-api-test"
+    reset_rate_limit(session_id)
+
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": (
+                "Quels documents faut-il pour une "
+                "convention de stage ?"
+            ),
+            "session_id": session_id,
+        },
+    )
+
+    assert response.status_code == 200
+
+    response_data = response.json()
+
+    assert UUID(response_data["message_id"])
+    assert response_data["category"] == "procedure"
+    assert response_data["confidence"] >= 0.65
+    assert response_data["resolved"] is True
+    assert response_data["source"] == (
+        "Procédures ESIC — données pédagogiques 2024-2025"
+    )
+    assert "Convention de Stage" in response_data["answer"]

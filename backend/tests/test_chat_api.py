@@ -3,6 +3,7 @@ from uuid import UUID
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import select
+from uuid import UUID
 
 from backend.app.db.database import SessionLocal
 from backend.app.main import app
@@ -67,7 +68,9 @@ def test_chat_with_known_question() -> None:
     response = client.post(
         "/api/chat",
         json={
-            "message": "À quelle heure est ouverte la scolarité ?",
+            "message": (
+                "À quelle heure est ouverte la scolarité ?"
+            ),
             "session_id": "session-001",
         },
     )
@@ -76,8 +79,11 @@ def test_chat_with_known_question() -> None:
 
     response_data = response.json()
     message_id = response_data.pop("message_id")
+    confidence = response_data.pop("confidence")
 
     assert UUID(message_id)
+    assert confidence >= 0.65
+
     assert response_data == {
         "answer": (
             "Le service scolarité est ouvert du lundi au vendredi, "
@@ -85,8 +91,9 @@ def test_chat_with_known_question() -> None:
         ),
         "source": "Guide de l'étudiant",
         "category": "service_campus",
-        "confidence": 0.917,
+
         "resolved": True,
+
     }
 
 

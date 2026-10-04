@@ -1,16 +1,16 @@
-import json
 import re
 import unicodedata
 from difflib import SequenceMatcher
-from pathlib import Path
 from typing import Any
 
-
-FAQ_PATH = Path(__file__).resolve().parents[2] / "data" / "faq.json"
+from backend.app.services.faq_loader import load_all_faq_items
 
 
 def normalize_text(text: str) -> str:
-    normalized = unicodedata.normalize("NFKD", text.lower())
+    normalized = unicodedata.normalize(
+        "NFKD",
+        text.lower(),
+    )
 
     normalized = "".join(
         character
@@ -26,11 +26,47 @@ def normalize_text(text: str) -> str:
 
     return " ".join(normalized.split())
 
+def calculate_similarity(
+    normalized_question: str,
+    normalized_reference: str,
+) -> float:
+    if normalized_question == normalized_reference:
+        return 1.0
+
+    question_words = set(normalized_question.split())
+    reference_words = set(normalized_reference.split())
+    common_words = question_words & reference_words
+
+    if len(common_words) < 2:
+        return 0.0
+
+    sequence_score = SequenceMatcher(
+        None,
+        normalized_question,
+        normalized_reference,
+    ).ratio()
+
+    question_coverage = len(common_words) / max(
+        1,
+        len(question_words),
+    )
+
+    reference_coverage = len(common_words) / max(
+        1,
+        len(reference_words),
+    )
+
+    return (
+        sequence_score * 0.5
+        + question_coverage * 0.3
+        + reference_coverage * 0.2
+    )
 
 class KnowledgeService:
     def __init__(self) -> None:
-        with FAQ_PATH.open("r", encoding="utf-8") as faq_file:
-            self.faq_items: list[dict[str, Any]] = json.load(faq_file)
+        self.faq_items: list[dict[str, Any]] = (
+            load_all_faq_items()
+        )
 
     def search(self, question: str) -> dict[str, Any]:
         normalized_question = normalize_text(question)
@@ -40,11 +76,14 @@ class KnowledgeService:
 
         for item in self.faq_items:
             for reference_question in item["questions"]:
-                score = SequenceMatcher(
-                    None,
+                normalized_reference = normalize_text(
+                    reference_question
+                )
+
+                score = calculate_similarity(
                     normalized_question,
-                    normalize_text(reference_question),
-                ).ratio()
+                    normalized_reference,
+                )
 
                 if score > best_score:
                     best_score = score
@@ -53,9 +92,9 @@ class KnowledgeService:
         if best_item is None or best_score < 0.65:
             return {
                 "answer": (
-                    "Je n’ai pas encore de réponse fiable à cette question. "
-                    "Vous pouvez reformuler ou contacter directement "
-                    "le service scolarité."
+                    "Je n’ai pas encore de réponse fiable à cette "
+                    "question. Vous pouvez reformuler ou contacter "
+                    "directement le service scolarité."
                 ),
                 "source": None,
                 "category": "unknown",
@@ -69,5 +108,97 @@ class KnowledgeService:
             "confidence": round(best_score, 3),
         }
 
+def test_expanded_faq_library_question() -> None:
+    result = knowledge_service.search(
+        "Quels sont les horaires de la bibliothèque ?"
+    )
+
+    assert result["category"] == "services_campus"
+    assert result["confidence"] == 1.0
+    assert result["source"] == (
+        "FAQ complète ESIC — données pédagogiques 2024-2025"
+    )
+    assert "bibliothèque" in result["answer"].lower()
+
+
+def test_expanded_faq_administrative_question() -> None:
+    result = knowledge_service.search(
+        "Comment obtenir un certificat de scolarité ?"
+    )
+
+    assert result["category"] == "procedures_administratives"
+    assert result["confidence"] >= 0.65
+    assert result["source"] == (
+        "FAQ complète ESIC — données pédagogiques 2024-2025"
+    )
+
+
+def test_expanded_faq_orientation_question() -> None:
+    result = knowledge_service.search(
+        "Quelles sont les spécialisations proposées en Bachelor 3 ?"
+    )
+
+    assert result["category"] == "orientation_formation"
+    assert result["confidence"] >= 0.65
+    assert result["source"] == (
+        "FAQ complète ESIC — données pédagogiques 2024-2025"
+    )
+
+def test_knowledge_service_loads_all_faq_items() -> None:
+    assert len(knowledge_service.faq_items) == 159
+
+    identifiers = [
+        item["id"]
+        for item in knowledge_service.faq_items
+    ]
+
+    assert len(identifiers) == len(set(identifiers))
+
+def test_expanded_faq_library_question() -> None:
+    result = knowledge_service.search(
+        "Quels sont les horaires de la bibliothèque ?"
+    )
+
+    assert result["category"] == "services_campus"
+    assert result["confidence"] == 1.0
+    assert result["source"] == (
+        "FAQ complète ESIC — données pédagogiques 2024-2025"
+    )
+    assert "bibliothèque" in result["answer"].lower()
+
+
+def test_administrative_question_preserves_legacy_answer() -> None:
+    result = knowledge_service.search(
+        "Comment obtenir un certificat de scolarité ?"
+    )
+
+    assert result["category"] == "procedure_admin"
+    assert result["confidence"] == 1.0
+    assert result["source"] == "Procédures administratives"
+    assert "ENT" in result["answer"]
+
+
+def test_expanded_faq_orientation_question() -> None:
+    result = knowledge_service.search(
+        "Quelles sont les spécialisations proposées en Bachelor 3 ?"
+    )
+
+    assert result["category"] == "orientation_formation"
+    assert result["confidence"] >= 0.65
+    assert result["source"] == (
+        "FAQ complète ESIC — données pédagogiques 2024-2025"
+    )
+    assert "Cybersécurité" in result["answer"]
+
+
+def test_knowledge_service_loads_all_faq_items() -> None:
+    assert len(knowledge_service.faq_items) == 159
+
+    identifiers = [
+        item["id"]
+        for item in knowledge_service.faq_items
+    ]
+
+    assert len(identifiers) == len(set(identifiers))
 
 knowledge_service = KnowledgeService()

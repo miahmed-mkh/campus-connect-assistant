@@ -7,6 +7,7 @@ from backend.app.services.faq_loader import load_all_faq_items
 from backend.app.services.procedure_service import (
     procedure_service,
 )
+from backend.app.services.schedule_service import schedule_service
 
 
 def calculate_similarity(
@@ -191,6 +192,7 @@ def search_knowledge(question: str) -> dict[str, Any]:
         knowledge_service.search(question),
         procedure_service.search(question),
         contact_service.search(question),
+        schedule_service.search(question),
     )
 
     known_results = tuple(

@@ -20,7 +20,9 @@ from backend.app.services.rate_limit_service import (
     check_rate_limit,
 )
 
-from backend.app.services.knowledge_service import knowledge_service
+from backend.app.services.knowledge_service import (
+    search_knowledge,
+)
 
 from backend.app.services.pii_redaction_service import (
     redact_personal_data,
@@ -151,7 +153,7 @@ def chat(
             content=safe_message,
         )
 
-        result = knowledge_service.search(safe_message)
+        result = search_knowledge(safe_message)
         resolved = result["category"] != "unknown"
 
         response_time_ms = max(

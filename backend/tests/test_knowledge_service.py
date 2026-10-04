@@ -3,6 +3,9 @@ from backend.app.services.knowledge_service import (
     normalize_text,
 )
 
+from backend.app.services.knowledge_service import (
+    search_knowledge,
+)
 
 def test_normalize_text() -> None:
     normalized = normalize_text(
@@ -145,3 +148,45 @@ def test_knowledge_service_loads_all_faq_items() -> None:
     ]
 
     assert len(identifiers) == len(set(identifiers))
+
+def test_search_knowledge_selects_procedure() -> None:
+    result = search_knowledge(
+        "Quels documents faut-il pour une convention de stage ?"
+    )
+
+    assert result["category"] == "procedure"
+    assert result["confidence"] >= 0.65
+    assert result["source"] == (
+        "Procédures ESIC — données pédagogiques 2024-2025"
+    )
+    assert "Convention de Stage" in result["answer"]
+
+
+def test_search_knowledge_preserves_faq_answer() -> None:
+    result = search_knowledge(
+        "Quels sont les horaires de la bibliothèque ?"
+    )
+
+    assert result["category"] == "services_campus"
+    assert result["confidence"] == 1.0
+    assert result["source"] == (
+        "FAQ complète ESIC — données pédagogiques 2024-2025"
+    )
+
+
+def test_search_knowledge_preserves_greeting() -> None:
+    result = search_knowledge("Bonjour")
+
+    assert result["category"] == "salutation"
+    assert result["confidence"] == 1.0
+    assert result["source"] is None
+
+
+def test_search_knowledge_returns_unknown() -> None:
+    result = search_knowledge(
+        "Comment réserver un hélicoptère sur le campus ?"
+    )
+
+    assert result["category"] == "unknown"
+    assert result["confidence"] < 0.65
+    assert result["source"] is None

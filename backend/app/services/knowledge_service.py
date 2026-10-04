@@ -2,6 +2,7 @@ from backend.app.services.text_matching import normalize_text
 from difflib import SequenceMatcher
 from typing import Any
 
+from backend.app.services.contact_service import contact_service
 from backend.app.services.faq_loader import load_all_faq_items
 from backend.app.services.procedure_service import (
     procedure_service,
@@ -186,19 +187,29 @@ def test_knowledge_service_loads_all_faq_items() -> None:
 knowledge_service = KnowledgeService()
 
 def search_knowledge(question: str) -> dict[str, Any]:
-    faq_result = knowledge_service.search(question)
-    procedure_result = procedure_service.search(question)
+    results = (
+        knowledge_service.search(question),
+        procedure_service.search(question),
+        contact_service.search(question),
+    )
 
-    if (
-        procedure_result["category"] != "unknown"
-        and procedure_result["confidence"]
-        > faq_result["confidence"]
-    ):
+    known_results = tuple(
+        result
+        for result in results
+        if result["category"] != "unknown"
+    )
+
+    if known_results:
+        best_result = max(
+            known_results,
+            key=lambda result: result["confidence"],
+        )
+
         return {
-            "answer": procedure_result["answer"],
-            "source": procedure_result["source"],
-            "category": procedure_result["category"],
-            "confidence": procedure_result["confidence"],
+            "answer": best_result["answer"],
+            "source": best_result["source"],
+            "category": best_result["category"],
+            "confidence": best_result["confidence"],
         }
 
-    return faq_result
+    return results[0]

@@ -190,3 +190,51 @@ def test_search_knowledge_returns_unknown() -> None:
     assert result["category"] == "unknown"
     assert result["confidence"] < 0.65
     assert result["source"] is None
+
+def test_global_search_returns_procedure_result() -> None:
+    result = search_knowledge(
+        "Quels documents faut-il pour une convention de stage ?"
+    )
+
+    assert result["category"] == "procedure"
+    assert result["confidence"] >= 0.65
+    assert result["source"] is not None
+
+
+def test_global_search_returns_teacher_contact() -> None:
+    result = search_knowledge(
+        "Qui enseigne l'algorithmique ?"
+    )
+
+    assert result["category"] == "contact"
+    assert result["confidence"] >= 0.65
+    assert "bernard" in result["answer"].lower()
+
+
+def test_global_search_returns_external_partner_contact() -> None:
+    result = search_knowledge(
+        "Comment contacter le CROUS de Paris ?"
+    )
+
+    assert result["category"] == "contact"
+    assert result["confidence"] >= 0.65
+    assert "crous" in result["answer"].lower()
+
+
+def test_global_search_preserves_faq_result() -> None:
+    result = search_knowledge(
+        "Quels sont les horaires de la bibliothèque ?"
+    )
+
+    assert result["category"] == "services_campus"
+    assert result["confidence"] == 1.0
+
+
+def test_global_search_returns_unknown_for_unavailable_service() -> None:
+    result = search_knowledge(
+        "Comment réserver un hélicoptère sur le campus ?"
+    )
+
+    assert result["category"] == "unknown"
+    assert result["source"] is None
+    assert result["confidence"] < 0.65

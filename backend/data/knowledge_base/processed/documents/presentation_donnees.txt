@@ -1,0 +1,365 @@
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+   Les données utiles pour le projet "Assistant virtuel
+                            campus"
+
+PS : Les données sont produites exclusivement pour le projet
+et ne sont pas des données fiables d'ESIC.
+
+Les données utiles pour le projet "Assistant virtuel campus"...................................... 1
+PARTIE 1 : Règlement intérieur ................................................................................. 1
+PARTIE 2 : Guide de l'étudiant .................................................................................. 1
+PARTIE 3 : Base emploi du temps.............................................................................. 2
+
+     1. Format JSON (emploi_du_temps.json) ............................................................ 2
+     2. Format CSV (emploi_du_temps.csv) ............................................................... 2
+
+        Données incluses : ........................................................................................ 2
+PARTIE 4 : Annuaire de contacts ............................................................................... 3
+
+  Ce qui est inclus :................................................................................................. 3
+     Structure complète avec 150+ contacts organisés en 11 catégories : .................... 3
+
+  Utilisation pour le chatbot :................................................................................... 5
+PARTIE 5 : FAQ ........................................................................................................ 5
+
+  Structure complète : ............................................................................................ 6
+     5 catégories principales :................................................................................... 6
+
+  Caractéristiques du fichier : .................................................................................. 7
+PARTIE 6 : Les procédures........................................................................................ 8
+
+     Contenu des 25 procédures : ............................................................................. 8
+TOUS LES DOCUMENTS SOURCES........................................................................... 9
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+PARTIE 1 : Règlement intérieur
+
+C'est un document structuré qui couvre tous les aspects attendus pour alimenter le
+chatbot :
+
+Points clés inclus :
+
+    • ~45 pages de contenu
+    • Structure logique en 12 chapitres
+    • Informations détaillées sur toutes les catégories du projet
+    • Contacts, horaires, procédures
+    • Règles, droits et devoirs
+    • Exemples concrets et cas pratiques
+
+PARTIE 2 : Guide de l'étudiant
+
+Ce qu'il contient :
+
+    • ~70 pages de contenu
+    • 10 parties principales couvrant toute la vie étudiante
+    • Informations pratiques : horaires, contacts, procédures
+    • Conseils méthodologiques pour réussir
+    • Guide complet des services campus
+    • Tableaux, checklists, exemples concrets
+
+Structure :
+
+    1. Bienvenue à l'ESIC (présentation, chiffres clés, plan campus)
+    2. Vos premiers pas (inscription, carte étudiante, ENT, email)
+    3. Parcours et formations (Bachelor, Master, spécialisations détaillées)
+    4. Réussir ses études (méthodologie, gestion temps, examens, stress)
+    5. Services campus (bibliothèque, informatique, resto, santé, sport) 6-10. Vie
+
+         étudiante, Stages, International, Pratique, Contacts (à compléter si besoin)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Le document est très complet et exploitable pour votre chatbot !
+
+PARTIE 3 : Base emploi du temps
+
+1. Format JSON (emploi_du_temps.json)
+
+Structure hiérarchique complète avec :
+
+    • Métadonnées : année académique, semestres, dates vacances/examens
+    • Formations : Bachelor 1-3, Master 1-2 avec spécialisations
+    • Enseignants : 20 profils avec spécialités
+    • Salles : Amphithéâtres, salles de cours, labs informatiques
+    • Matières : Codes, noms, ECTS, heures
+    • Emplois du temps détaillés : 4 groupes exemples (B1-A, B3-DATA-1, M1-IA-1,
+
+         B3-CYBER-1)
+    • Calendrier examens : Dates, horaires, salles, coefficients
+    • Dates importantes : Événements académiques et vie étudiante
+
+2. Format CSV (emploi_du_temps.csv)
+
+Version tabulaire plate pour :
+
+    • Import Excel/Google Sheets
+    • Traitement par scripts Python/R ou autres
+    • Intégration bases de données relationnelles
+    • Contient ~100 créneaux de cours pour 8 groupes différents
+Données incluses :
+
+Formations couvertes :
+
+    • Bachelor 1 (groupes A, B)
+    • Bachelor 2 (groupe A)
+    • Bachelor 3 : Développement, Data Science, Cybersécurité
+    • Master 1 : IA, Cybersécurité
+    • Master 2 : IA
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+200+ créneaux répartis sur la semaine avec :
+
+    • Jours et horaires précis
+    • Types de cours (CM, TD, TP, Projets)
+    • Enseignants assignés
+    • Salles et bâtiments
+    • Cohérence avec le règlement intérieur
+
+Prêt pour le chatbot pour répondre aux questions :
+
+    • "Quels sont mes cours lundi ?"
+    • "Où se trouve le cours de Machine Learning ?"
+    • "Qui enseigne la Cybersécurité en B3 ?"
+    • "Quand sont les examens de S1 ?"
+
+PARTIE 4 : Annuaire de contacts
+
+Ce qui est inclus :
+
+Structure complète avec 150+ contacts organisés en 11 catégories :
+
+Direction (5 personnes)
+
+    • Directeur Général, Directrice des Études, Directeurs Relations
+         Entreprises/Internationales/Recherche
+
+    • Avec assistants, emails, téléphones, bureaux, horaires de RDV
+
+Services Administratifs (5 services)
+
+    • Scolarité (3 gestionnaires)
+    • Comptabilité et Finances
+    • Admissions
+    • Communication
+    • Helpdesk IT
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Services Étudiants (9 services)
+
+    • Santé (Infirmière + Médecin scolaire)
+    • Psychologie
+    • Service Social
+    • Bureau de la Vie Étudiante
+    • Service des Sports
+    • Bibliothèque-Médiathèque (3 personnes)
+    • Service Carrières (3 personnes)
+    • Relations Internationales (3 personnes)
+    • Restaurant Universitaire + Cafétéria
+
+Responsables Pédagogiques (8 formations)
+
+    • Bachelor 1, 2, 3 (Dev, Cyber, Data)
+    • Master 1-2 (IA, Cyber)
+    • Avec horaires de RDV
+
+Enseignants (20 profils détaillés)
+
+    • ID, nom, spécialité, email, téléphone, bureau
+    • Horaires de permanence
+    • Liste des matières enseignées
+
+Délégués Étudiants (4 formations)
+
+    • Délégués principaux et suppléants avec emails
+
+Associations Étudiantes (6 associations)
+
+    • BDE, BDS, DevCampus, ESICyber, ESIC Entrepreneurship, ESIC Green
+    • Avec présidents et emails de contact
+
+Contacts d'Urgence (9 numéros)
+
+    • Urgence campus, Sécurité, SAMU, Police, Pompiers
+    • Fil Santé Jeunes, SOS Amitié, Violences Femmes Info
+    • Avec disponibilités
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Partenaires Externes (5 organismes)
+
+    • CROUS, CAF, Préfecture, SUMPPS, Campus France
+    • Avec contacts et services proposés
+
+Horaires Services
+
+    • Accueil, Scolarité, Bibliothèque, Restaurant, Infirmerie, etc.
+
+Plans d'accès
+
+    • Transports en commun (Métro, Bus, Vélib')
+    • Parking étudiant et visiteur
+
+Utilisation pour le chatbot :
+
+Le chatbot pourra répondre à des questions comme :
+
+    • "Comment contacter le service scolarité ?"
+    • "Quel est l'email du responsable de Master IA ?"
+    • "Quels sont les horaires de la bibliothèque ?"
+    • "Qui est l'enseignant de Machine Learning ?"
+    • "Comment joindre l'infirmerie ?"
+    • "Numéro d'urgence campus ?"
+
+PARTIE 5 : FAQ
+
+Structure complète :
+
+5 catégories principales :
+
+1. Emplois du temps & Planning (30% - 45 questions)
+
+    • Consultation EDT, calendrier semestriel, examens
+    • Horaires cours, durée, format (CM/TD/TP)
+    • Réservations salles, modifications planning
+    • Soutenances, rattrapages, examens blancs
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Assiduité, absences, retards
+    • Événements académiques
+
+2. Procédures Administratives (25% - 38 questions)
+
+    • Certificats, attestations, relevés de notes
+    • Inscriptions (cours, examens, rattrapages)
+    • Paiements, bourses, aides financières
+    • Conventions stage, alternance
+    • Documents administratifs divers
+    • VAE, césure, changements formation
+    • Réclamations, contestations notes
+    • Comptes ENT, cartes étudiantes
+
+3. Services Campus (20% - 30 questions)
+
+    • Bibliothèque (horaires, emprunts, ressources numériques)
+    • Restaurant U et cafétéria
+    • WiFi, impression, informatique
+    • Sport (salle, cours, équipes)
+    • Santé (infirmerie, médecin, psychologue)
+    • Service social, aides
+    • Parking, transports, accès
+    • Vie associative, événements
+    • Services divers (casiers, micro-ondes, etc.)
+
+4. Règlement & Vie Étudiante (15% - 23 questions)
+
+    • Règlement intérieur (interdictions, sanctions)
+    • Droits et devoirs étudiants
+    • Harcèlement, discrimination
+    • Plagiat, fraude académique
+    • RGPD, données personnelles
+    • BDE, BDS, associations
+    • Événements, gala, soirées
+    • Entrepreneuriat, projets solidaires
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Tutorat, soutien scolaire
+    • Alumni, réseau
+
+5. Orientation & Formation (10% - 16 questions)
+
+    • Spécialisations Bachelor 3 et Master
+    • Doubles diplômes internationaux
+    • Débouchés, insertion professionnelle
+    • Mobilité internationale (échanges, Erasmus)
+    • Stages et alternance (recherche, à l'étranger)
+    • Certifications professionnelles
+    • Réorientation, passerelles
+    • Projets pédagogiques
+    • Poursuite d'études (doctorat)
+    • Cours en anglais
+
+Caractéristiques du fichier :
+
+Format JSON structuré avec :
+
+    • ID unique par question
+    • Question et réponse détaillée
+    • Tags pour recherche sémantique
+    • Fréquence (très élevée, élevée, moyenne, faible, très faible)
+    • Documents associés (références croisées)
+    • Métadonnées complètes
+
+Total : 150 questions couvrant exhaustivement les besoins identifiés dans le cahier
+des charges.
+
+Utilisation chatbot :
+
+    • Recherche par mots-clés/tags
+    • Filtrage par catégorie
+    • Tri par fréquence
+    • Classification NLP sur les questions
+
+
+Document créé exclusivement pour le projet étudiant
+Joel BANKA
+
+    • Extraction d'intentions précises
+
+PARTIE 6 : Les procédures
+
+Contenu des 25 procédures :
+Administratives (8) : Inscription administrative, Certificat de scolarité, Bourse CROUS,
+Aide financière urgence, VAE, Césure, Transfert/Exeat, Obtention diplôme final
+Académiques (6) : Déclaration d'absence, Contestation note, Inscription rattrapage,
+Inscription certification professionnelle, Procédure disciplinaire, Aménagement
+handicap
+Stage & Alternance (2) : Convention de stage, Contrat d'alternance
+Services Campus (6) : Réservation salle, Emprunt livres bibliothèque, Prêt matériel IT,
+Signalement incident IT, Activation compte ENT, Connexion VPN
+Vie Étudiante (2) : Création association, Organisation événement campus
+International (1) : Inscription mobilité internationale
+Sécurité (1) : Signalement harcèlement/discrimination
+
+TOUS LES DOCUMENTS SOURCES
+
+Les 6 documents de la base de connaissances du chatbot sont :
+    1. Règlement Intérieur (~45 pages)
+    2. Guide de l'Étudiant (~70 pages)
+    3. Emploi du Temps (JSON + CSV)
+    4. Annuaire Contacts (JSON)
+    5. FAQ Complète (150 Q/R)
+
+
+Document créé exclusivement pour le projet étudiant
+Joel BANKA
+
+    6. Procédures (25 fiches)

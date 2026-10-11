@@ -1,0 +1,1833 @@
+Document créé exclusivement pour le projet étudiant
+Joel BANKA
+Règlement Intérieur ESIC Campus - 2024-2025
+RÈGLEMENT INTÉRIEUR
+ESIC - École Supérieure d'Informatique et du Commerce
+Année Académique 2024-2025
+
+RÈGLEMENT INTÉRIEUR .......................................................................................... 1
+  ESIC - École Supérieure d'Informatique et du Commerce ........................................ 1
+                                                                                                                1
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+     Année Académique 2024-2025 .......................................................................... 1
+  1. PRÉAMBULE ET DISPOSITIONS GÉNÉRALES....................................................... 1
+
+     1.1 Objet du règlement ...................................................................................... 2
+     1.2 Champ d'application ................................................................................... 2
+     1.3 Principe de non-discrimination ..................................................................... 2
+     1.4 Laïcité ........................................................................................................ 2
+     1.5 Publication et modification .......................................................................... 2
+  2. ADMISSION ET INSCRIPTION............................................................................. 2
+     2.1 Conditions d'admission ............................................................................... 3
+
+        2.1.1 Première année ..................................................................................... 3
+        2.1.2 Admissions parallèles............................................................................ 3
+        2.1.3 Étudiants internationaux ........................................................................ 3
+     2.2 Inscription administrative............................................................................. 3
+        2.2.1 Calendrier............................................................................................. 3
+        2.2.2 Dossier d'inscription .............................................................................. 3
+        2.2.3 Carte étudiante ..................................................................................... 4
+     2.3 Frais de scolarité ......................................................................................... 4
+        2.3.1 Montants 2024-2025.............................................................................. 4
+        2.3.2 Modalités de paiement........................................................................... 4
+        2.3.3 Bourses et aides financières................................................................... 4
+     2.4 Inscription pédagogique............................................................................... 5
+        2.4.1 Choix des modules ................................................................................ 5
+        2.4.2 Modification d'inscription....................................................................... 5
+     2.5 Suspension et démission ............................................................................. 5
+        2.5.1 Suspension d'études ............................................................................. 5
+        2.5.2 Démission............................................................................................. 5
+  3. SCOLARITÉ ET ORGANISATION DES ÉTUDES ...................................................... 5
+
+                                                                                                                2
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+     3.1 Organisation de l'année académique ............................................................ 6
+        3.1.1 Calendrier général ................................................................................. 6
+        3.1.2 Périodes de vacances 2024-2025............................................................ 6
+        3.1.3 Jours fériés............................................................................................ 6
+
+     3.2 Emploi du temps ......................................................................................... 6
+        3.2.1 Consultation ......................................................................................... 6
+        3.2.2 Modifications ........................................................................................ 6
+        3.2.3 Horaires des cours ................................................................................ 6
+
+     3.3 Types d'enseignements................................................................................ 7
+        3.3.1 Cours magistraux (CM)........................................................................... 7
+        3.3.2 Travaux dirigés (TD)................................................................................ 7
+        3.3.3 Travaux pratiques (TP) ............................................................................ 7
+        3.3.4 Projets et travaux de groupe ................................................................... 7
+        3.3.5 Conférences et séminaires..................................................................... 7
+
+     3.4 Système ECTS et validation .......................................................................... 7
+        3.4.1 Principe des crédits ECTS....................................................................... 7
+        3.4.2 Unités d'enseignement (UE) ................................................................... 7
+        3.4.3 Validation des UE .................................................................................. 7
+
+     3.5 Matériel pédagogique .................................................................................. 8
+        3.5.1 Ordinateur personnel............................................................................. 8
+        3.5.2 Logiciels ............................................................................................... 8
+        3.5.3 Prêt de matériel ..................................................................................... 8
+
+  4. ASSIDUITÉ ET PRÉSENCE .................................................................................. 8
+     4.1 Obligation de présence ................................................................................ 9
+        4.1.1 Principe général .................................................................................... 9
+        4.1.2 Contrôle de présence ............................................................................ 9
+     4.2 Absences.................................................................................................... 9
+
+                                                                                                                3
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+        4.2.1 Absences justifiées................................................................................ 9
+        4.2.2 Procédure de justification ...................................................................... 9
+        4.2.3 Absences injustifiées ............................................................................. 9
+     4.3 Retards..................................................................................................... 10
+        4.3.1 Tolérance............................................................................................ 10
+        4.3.2 Sanctions............................................................................................ 10
+     4.4 Dispenses d'assiduité ................................................................................ 10
+        4.4.1 Cas particuliers ................................................................................... 10
+        4.4.2 Procédure ........................................................................................... 10
+  5. ÉVALUATION ET VALIDATION .......................................................................... 11
+     5.1 Modalités d'évaluation ............................................................................... 11
+        5.1.1 Types d'épreuves ................................................................................. 11
+        5.1.2 Sessions d'examen .............................................................................. 11
+     5.2 Déroulement des examens......................................................................... 11
+        5.2.1 Convocations...................................................................................... 11
+        5.2.2 Documents autorisés .......................................................................... 11
+        5.2.3 Règles pendant l'épreuve ..................................................................... 11
+        5.2.4 Retards aux examens........................................................................... 12
+     5.3 Fraude et plagiat........................................................................................ 12
+        5.3.1 Définition ............................................................................................ 12
+        5.3.2 Procédure ........................................................................................... 12
+        5.3.3 Détection du plagiat............................................................................. 12
+     5.4 Résultats et délibérations .......................................................................... 12
+        5.4.1 Publication des notes .......................................................................... 13
+        5.4.2 Jury de délibération.............................................................................. 13
+        5.4.3 Mentions............................................................................................. 13
+     5.5 Compensation et rattrapage....................................................................... 13
+
+                                                                                                                4
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+        5.5.1 Compensation entre UE ....................................................................... 13
+        5.5.2 Session de rattrapage .......................................................................... 13
+        5.5.3 Redoublement .................................................................................... 14
+     5.6 Consultation de copies .............................................................................. 14
+        5.6.1 Droit à la consultation.......................................................................... 14
+        5.6.2 Modalités............................................................................................ 14
+  6. STAGES ET ALTERNANCE ................................................................................ 14
+     6.1 Stages obligatoires .................................................................................... 14
+        6.1.1 Durée et période.................................................................................. 14
+        6.1.2 Convention de stage ............................................................................ 15
+        6.1.3 Gratification ........................................................................................ 15
+     6.2 Suivi du stage ............................................................................................ 15
+        6.2.1 Tuteur académique.............................................................................. 15
+        6.2.2 Carnet de stage ................................................................................... 15
+     6.3 Rapport et soutenance............................................................................... 15
+        6.3.1 Rapport de stage ................................................................................. 16
+        6.3.2 Soutenance orale ................................................................................ 16
+        6.3.3 Évaluation........................................................................................... 16
+     6.4 Alternance (Contrat d'apprentissage / Professionnalisation)......................... 16
+        6.4.1 Rythme d'alternance............................................................................ 16
+        6.4.2 Statut de l'alternant ............................................................................. 16
+        6.4.3 Rupture de contrat............................................................................... 17
+        6.4.4 Mémoire professionnel ........................................................................ 17
+  7. SERVICES ET RESSOURCES CAMPUS .............................................................. 17
+     7.1 Bibliothèque - Médiathèque ....................................................................... 17
+        7.1.1 Horaires d'ouverture ............................................................................ 17
+        7.1.2 Fonds documentaire............................................................................ 17
+
+                                                                                                                5
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+        7.1.3 Prêt de documents .............................................................................. 17
+        7.1.4 Espaces de travail................................................................................ 18
+     7.2 Restaurant universitaire ............................................................................. 18
+        7.2.1 Horaires et tarifs.................................................................................. 18
+        7.2.2 Fonctionnement .................................................................................. 18
+     7.3 Services informatiques .............................................................................. 18
+        7.3.1 Accès aux ordinateurs.......................................................................... 18
+        7.3.2 Réseau WiFi ........................................................................................ 18
+        7.3.3 Support technique ............................................................................... 19
+     7.4 Service médical et social............................................................................ 19
+        7.4.1 Infirmerie ............................................................................................ 19
+        7.4.2 Service de psychologie......................................................................... 19
+        7.4.3 Assistante sociale ............................................................................... 19
+     7.5 Service des sports ..................................................................................... 19
+        7.5.1 Activités proposées ............................................................................. 20
+        7.5.2 Associations sportives ......................................................................... 20
+     7.6 Service Carrières et Relations Entreprises ................................................... 20
+        7.6.1 Accompagnement à l'insertion professionnelle...................................... 20
+        7.6.2 Forum entreprises ............................................................................... 20
+     7.7 Service international .................................................................................. 20
+        7.7.1 Mobilité sortante ................................................................................. 20
+        7.7.2 Accompagnement étudiants internationaux .......................................... 21
+  8. DROITS ET DEVOIRS DES ÉTUDIANTS............................................................... 21
+     8.1 Droits fondamentaux ................................................................................. 21
+        8.1.1 Liberté d'expression............................................................................. 21
+        8.1.2 Droit d'association............................................................................... 21
+        8.1.3 Droit de représentation ........................................................................ 21
+
+                                                                                                                6
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+        8.1.4 Droit à l'information ............................................................................. 21
+     8.2 Devoirs généraux ....................................................................................... 22
+
+        8.2.1 Respect des personnes........................................................................ 22
+        8.2.2 Respect des biens et des locaux ........................................................... 22
+        8.2.3 Tenue vestimentaire ............................................................................ 22
+        8.2.4 Usage du tabac et substances .............................................................. 23
+     8.3 Propriété intellectuelle............................................................................... 23
+        8.3.1 Travaux étudiants ................................................................................ 23
+        8.3.2 Droit d'utilisation par l'ESIC .................................................................. 23
+     8.4 Protection des données personnelles (RGPD).............................................. 23
+        8.4.1 Collecte de données ............................................................................ 23
+        8.4.2 Droits des étudiants............................................................................. 23
+  9. VIE ÉTUDIANTE ET ASSOCIATIONS................................................................... 24
+     9.1 Bureau de la Vie Étudiante (BVE) ................................................................. 24
+        9.1.1 Mission ............................................................................................... 24
+        9.1.2 Salle associative.................................................................................. 24
+     9.2 Associations étudiantes reconnues ............................................................ 24
+        9.2.1 Bureau des Étudiants (BDE).................................................................. 24
+        9.2.2 Bureau des Sports (BDS) ...................................................................... 24
+        9.2.3 Associations thématiques .................................................................... 25
+     9.3 Événements et activités ............................................................................. 25
+        9.3.1 Calendrier annuel ................................................................................ 25
+        9.3.2 Autorisation d'événements................................................................... 25
+     9.4 Financement des associations ................................................................... 25
+        9.4.1 Subventions ESIC ................................................................................ 26
+        9.4.2 Ressources propres............................................................................. 26
+        9.4.3 Gestion financière ............................................................................... 26
+
+                                                                                                                7
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+  10. DISCIPLINE ET SANCTIONS ........................................................................... 26
+     10.1 Fautes et sanctions.................................................................................. 26
+        10.1.1 Catégories de fautes .......................................................................... 26
+        10.1.2 Échelle des sanctions ........................................................................ 27
+     10.2 Procédure disciplinaire ............................................................................ 27
+        10.2.1 Signalement ...................................................................................... 28
+        10.2.2 Audition préalable ............................................................................. 28
+        10.2.3 Conseil de discipline.......................................................................... 28
+        10.2.4 Mesure conservatoire ........................................................................ 28
+     10.3 Voies de recours ...................................................................................... 28
+        10.3.1 Recours gracieux ............................................................................... 29
+        10.3.2 Recours hiérarchique......................................................................... 29
+        10.3.3 Recours contentieux .......................................................................... 29
+
+  11. RÉCLAMATIONS ET RECOURS ....................................................................... 29
+     11.1 Réclamations pédagogiques .................................................................... 29
+        11.1.1 Contestation de note ......................................................................... 29
+        11.1.2 Réclamation sur organisation pédagogique ......................................... 29
+     11.2 Médiateur des études .............................................................................. 29
+        11.2.1 Rôle .................................................................................................. 30
+        11.2.2 Saisine.............................................................................................. 30
+     11.3 Réclamations administratives .................................................................. 30
+     11.4 Enquête de satisfaction............................................................................ 30
+
+  12. DISPOSITIONS FINALES ................................................................................ 30
+     12.1 Assurances ............................................................................................. 31
+        12.1.1 Responsabilité civile .......................................................................... 31
+        12.1.2 Assurance complémentaire................................................................ 31
+     12.2 Sécurité et santé...................................................................................... 31
+
+                                                                                                                8
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+        12.2.1 Règles de sécurité ............................................................................. 31
+        12.2.2 Interdictions...................................................................................... 31
+        12.2.3 Plan de prévention ............................................................................. 31
+     12.3 Communication et affichage .................................................................... 32
+        12.3.1 Affichage autorisé.............................................................................. 32
+        12.3.2 Communication numérique................................................................ 32
+     12.4 Accès aux locaux ..................................................................................... 32
+        12.4.1 Horaires d'ouverture .......................................................................... 32
+        12.4.2 Carte d'accès .................................................................................... 32
+        12.4.3 Personnes extérieures........................................................................ 32
+     12.5 Environnement et développement durable ................................................ 33
+        12.5.1 Engagement ESIC .............................................................................. 33
+        12.5.2 Éco-délégués .................................................................................... 33
+     12.6 Protection de l'image ............................................................................... 33
+        12.6.1 Photos et vidéos ................................................................................ 33
+        12.6.2 Réseaux sociaux................................................................................ 33
+     12.7 Diplômes et certifications ........................................................................ 33
+        12.7.1 Délivrance......................................................................................... 33
+        12.7.2 Cérémonie de remise des diplômes .................................................... 34
+        12.7.3 Retrait du diplôme ............................................................................. 34
+     12.8 Anciens élèves (Alumni) ........................................................................... 34
+        12.8.1 Réseau Alumni .................................................................................. 34
+        12.8.2 Cotisation ......................................................................................... 34
+     12.9 Modification du règlement........................................................................ 34
+     12.10 Acceptation du règlement ...................................................................... 34
+  ANNEXES .......................................................................................................... 35
+     Annexe 1 : Contacts utiles ............................................................................... 35
+
+                                                                                                                9
+
+
+Document créé exclusivement pour le projet étudiant
+Joel BANKA
+
+     Annexe 2 : Calendrier académique 2024-2025 .................................................. 36
+     Annexe 3 : Plan du campus .............................................................................. 36
+
+1. PRÉAMBULE ET DISPOSITIONS GÉNÉRALES
+1.1 Objet du règlement
+Le présent règlement intérieur définit les règles de fonctionnement de l'ESIC et les
+droits et obligations de l'ensemble des membres de la communauté éducative. Il
+s'applique à tous les étudiants inscrits dans l'établissement, quel que soit leur niveau
+d'études ou leur statut (formation initiale, alternance, formation continue).
+1.2 Champ d'application
+Ce règlement s'applique dans l'enceinte de l'établissement et lors de toutes les
+activités organisées par l'ESIC (sorties pédagogiques, événements, stages en
+entreprise sous convention ESIC).
+1.3 Principe de non-discrimination
+L'ESIC garantit à tous ses étudiants l'égalité de traitement et s'engage à lutter contre
+toute forme de discrimination basée sur l'origine, le sexe, l'orientation sexuelle, l'âge,
+les opinions politiques ou religieuses, ou le handicap.
+1.4 Laïcité
+Conformément aux principes de la République française, l'ESIC est un établissement
+laïque. La liberté de conscience et de religion est garantie, mais ne doit pas porter
+atteinte au bon fonctionnement de l'établissement.
+
+                                                                                                              10
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+1.5 Publication et modification
+
+Le règlement intérieur est publié sur l'ENT (Espace Numérique de Travail) et remis à
+chaque étudiant lors de son inscription. Toute modification fait l'objet d'une
+information préalable et entre en vigueur après validation du Conseil d'Administration.
+
+2. ADMISSION ET INSCRIPTION
+
+2.1 Conditions d'admission
+
+2.1.1 Première année
+L'admission en première année requiert :
+
+    • Être titulaire du baccalauréat ou d'un diplôme équivalent
+    • Avoir déposé un dossier de candidature complet sur la plateforme Parcoursup
+
+         ou directement sur esic.fr
+    • Avoir satisfait aux épreuves de sélection (tests écrits, entretien de motivation)
+2.1.2 Admissions parallèles
+Les admissions en cours de cursus (2e, 3e, 4e année) sont possibles pour les étudiants
+justifiant :
+    • D'un niveau d'études équivalent (BTS, DUT, Licence, etc.)
+    • De la validation du dossier académique par la commission pédagogique
+    • De la réussite aux épreuves de sélection spécifiques
+2.1.3 Étudiants internationaux
+Les étudiants internationaux doivent en plus :
+    • Justifier d'un niveau de français B2 minimum (sauf programmes anglophones)
+    • Être en possession d'un titre de séjour valide "étudiant"
+    • Avoir une assurance responsabilité civile et santé valide en France
+2.2 Inscription administrative
+2.2.1 Calendrier
+Les inscriptions administratives se déroulent :
+
+                                                                                                              11
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Pour les nouveaux étudiants : du 1er juillet au 15 septembre
+    • Pour les étudiants actuels : du 15 juin au 31 août
+    • Réinscriptions tardives possibles jusqu'au 30 septembre (frais de retard : 150€)
+2.2.2 Dossier d'inscription
+Le dossier complet comprend obligatoirement :
+
+    • Formulaire d'inscription dûment complété et signé
+    • Copie de la carte d'identité ou passeport en cours de validité
+    • Copie des diplômes obtenus
+    • Certificat de scolarité de l'année précédente
+    • 3 photos d'identité récentes
+    • Justificatif de paiement des frais de scolarité (ou dossier d'échelonnement)
+    • Attestation d'assurance responsabilité civile
+    • Certificat médical de moins de 3 mois pour les sports en option
+2.2.3 Carte étudiante
+Une carte d'étudiant multiservices est délivrée après finalisation de l'inscription. Elle
+est obligatoire pour :
+
+    • Accéder aux locaux et services (bibliothèque, restaurant universitaire)
+    • Emprunter du matériel pédagogique
+    • Participer aux examens (contrôle d'identité)
+    • Bénéficier des tarifs étudiants
+La perte ou le vol de la carte doit être signalé immédiatement au service scolarité. Coût
+de remplacement : 25€.
+
+2.3 Frais de scolarité
+2.3.1 Montants 2024-2025
+
+    • Formation initiale (Bachelor 1-3) : 6 500€/an
+    • Formation initiale (Master 1-2) : 8 500€/an
+    • Alternance : frais pris en charge par l'entreprise d'accueil
+    • Formation continue : selon devis personnalisé
+2.3.2 Modalités de paiement
+Les frais de scolarité peuvent être réglés :
+
+                                                                                                              12
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • En une fois (réduction de 3% si paiement avant le 30 juin)
+    • En trois fois sans frais (septembre, janvier, avril)
+    • En dix fois avec frais de dossier de 100€ (septembre à juin)
+2.3.3 Bourses et aides financières
+L'ESIC accepte les bourses sur critères sociaux du CROUS. Les étudiants boursiers
+doivent fournir leur notification conditionnelle lors de l'inscription. Des bourses
+d'excellence et des aides d'urgence sont également disponibles sur dossier auprès du
+service social.
+
+2.4 Inscription pédagogique
+2.4.1 Choix des modules
+L'inscription pédagogique se fait en ligne sur l'ENT dans les deux premières semaines
+de septembre. Les étudiants choisissent :
+
+    • Leurs options et électifs (selon contraintes du programme)
+    • Leur groupe de TD/TP (dans la limite des places disponibles)
+    • Leurs créneaux de langue vivante
+2.4.2 Modification d'inscription
+Les modifications d'inscription pédagogique sont possibles jusqu'au 30 septembre.
+Après cette date, aucun changement ne sera accepté sauf cas de force majeure validé
+par le responsable de formation.
+
+2.5 Suspension et démission
+2.5.1 Suspension d'études
+Une suspension d'études (césure) peut être accordée pour :
+
+    • Stage longue durée
+    • Projet entrepreneurial
+    • Raisons médicales justifiées
+    • Service civique
+La demande doit être formulée par écrit 2 mois avant le début de la suspension. La
+durée maximale est d'un an, renouvelable une fois. L'étudiant conserve son statut mais
+n'a pas accès aux services campus.
+
+                                                                                                              13
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+2.5.2 Démission
+Toute démission doit être notifiée par courrier recommandé au service scolarité. Les
+frais de scolarité restent dus selon le barème suivant :
+
+    • Démission avant le 30 septembre : 30% des frais annuels
+    • Démission entre le 1er octobre et le 31 décembre : 50%
+    • Démission après le 1er janvier : 100%
+
+3. SCOLARITÉ ET ORGANISATION DES ÉTUDES
+
+3.1 Organisation de l'année académique
+3.1.1 Calendrier général
+L'année académique s'étend du 1er septembre au 30 juin et comprend :
+
+    • Semestre 1 : septembre à janvier (18 semaines de cours + 2 semaines
+         d'examens)
+
+    • Semestre 2 : février à juin (16 semaines de cours + 2 semaines d'examens + 4-12
+         semaines de stage)
+
+3.1.2 Périodes de vacances 2024-2025
+    • Toussaint : 28 octobre au 3 novembre 2024
+    • Noël : 23 décembre 2024 au 5 janvier 2025
+    • Hiver : 24 février au 2 mars 2025
+    • Printemps : 21 avril au 27 avril 2025
+    • Été : à partir du 28 juin 2025
+
+3.1.3 Jours fériés
+L'établissement est fermé les jours fériés légaux. Les cours prévus ces jours-là ne sont
+pas reportés sauf indication contraire de l'enseignant.
+
+3.2 Emploi du temps
+3.2.1 Consultation
+L'emploi du temps est accessible en permanence sur :
+
+    • L'ENT ESIC (onglet "Mon emploi du temps")
+    • L'application mobile ESIC Campus
+    • Les écrans d'affichage dans les halls
+
+                                                                                                              14
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+3.2.2 Modifications
+L'emploi du temps peut faire l'objet de modifications en cours d'année (absence
+d'enseignant, contraintes logistiques). Les étudiants sont informés par email et
+notification push au moins 48h avant le changement, sauf urgence.
+
+3.2.3 Horaires des cours
+Les cours se déroulent selon les créneaux suivants :
+
+    • Matin : 8h00-10h00 / 10h15-12h15
+    • Après-midi : 13h45-15h45 / 16h00-18h00
+    • Soirée (cours exceptionnels) : 18h15-20h15
+
+3.3 Types d'enseignements
+3.3.1 Cours magistraux (CM)
+Dispensés en amphithéâtre ou grande salle, les CM présentent les fondamentaux
+théoriques. La présence est contrôlée de manière aléatoire.
+
+3.3.2 Travaux dirigés (TD)
+En groupes de 25-30 étudiants, les TD approfondissent et appliquent les concepts du
+CM. La présence est obligatoire et contrôlée à chaque séance.
+
+3.3.3 Travaux pratiques (TP)
+En groupes de 15-20 étudiants, les TP se déroulent en laboratoire informatique ou salle
+spécialisée. La présence est obligatoire et contrôlée.
+
+3.3.4 Projets et travaux de groupe
+Les projets représentent 30% du volume horaire. Le travail en équipe est valorisé et
+évalué individuellement et collectivement.
+
+3.3.5 Conférences et séminaires
+L'établissement organise régulièrement des conférences avec des professionnels. La
+participation à au moins 5 conférences par semestre est requise pour valider l'année.
+
+3.4 Système ECTS et validation
+3.4.1 Principe des crédits ECTS
+Le cursus est organisé selon le système européen de crédits ECTS :
+
+    • 1 année = 60 crédits ECTS
+
+                                                                                                              15
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • 1 semestre = 30 crédits ECTS
+    • Bachelor (3 ans) = 180 crédits ECTS
+    • Master (2 ans supplémentaires) = 120 crédits ECTS
+3.4.2 Unités d'enseignement (UE)
+Chaque semestre est composé de 5 à 7 UE, valant chacune entre 3 et 8 crédits ECTS
+selon leur volume horaire et leur importance dans le cursus.
+
+3.4.3 Validation des UE
+Une UE est validée si :
+
+    • La moyenne obtenue est ≥ 10/20
+    • Aucune note éliminatoire (< 7/20) n'a été obtenue dans les matières à coefficient
+
+         majeur
+Les crédits ECTS d'une UE validée sont définitivement acquis.
+
+3.5 Matériel pédagogique
+3.5.1 Ordinateur personnel
+Chaque étudiant doit disposer d'un ordinateur portable répondant aux spécifications
+minimales :
+
+    • Processeur : Intel Core i5 ou équivalent AMD
+    • RAM : 8 Go minimum (16 Go recommandé)
+    • Stockage : 256 Go SSD minimum
+    • Système : Windows 10/11, macOS 11+ ou Linux Ubuntu 20.04+
+3.5.2 Logiciels
+L'ESIC fournit via l'ENT des licences étudiantes pour :
+
+    • Suite Microsoft Office 365
+    • Adobe Creative Cloud
+    • Logiciels de développement (IntelliJ IDEA, Visual Studio, etc.)
+    • Environnements virtuels (VMware, VirtualBox)
+3.5.3 Prêt de matériel
+La médiathèque propose un service de prêt de :
+
+    • Ordinateurs portables (48h maximum)
+    • Tablettes graphiques
+
+                                                                                                              16
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Caméras et matériel audiovisuel
+    • Calculatrices scientifiques
+Le matériel emprunté doit être restitué en parfait état. Tout dommage entraîne la
+facturation du matériel au prix d'achat.
+
+4. ASSIDUITÉ ET PRÉSENCE
+
+4.1 Obligation de présence
+4.1.1 Principe général
+La présence à tous les enseignements (CM, TD, TP, projets) est obligatoire et contrôlée.
+L'assiduité conditionne la validation du semestre.
+
+4.1.2 Contrôle de présence
+La présence est vérifiée par :
+
+    • Émargement sur feuille de présence (signature obligatoire)
+    • Scan de la carte étudiante via borne NFC
+    • Appel nominal par l'enseignant
+    • Participation active en cours
+Toute fraude à l'émargement (signature pour un absent, prêt de carte) est considérée
+comme une faute grave passible de sanction disciplinaire.
+
+4.2 Absences
+4.2.1 Absences justifiées
+Sont considérées comme justifiées les absences pour :
+
+    • Maladie (certificat médical obligatoire sous 48h)
+    • Hospitalisation (justificatif médical)
+    • Décès d'un proche (acte de décès + justificatif de filiation)
+    • Convocation judiciaire ou administrative (convocation originale)
+    • Représentation de l'établissement (ordre de mission)
+    • Obligations de l'alternance (pour les alternants)
+4.2.2 Procédure de justification
+Toute absence doit être signalée :
+
+                                                                                                              17
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Avant le cours si prévisible (via l'ENT ou email au service scolarité)
+    • Dans les 48h si imprévisible (maladie, accident)
+    • Justificatif original à remettre au service scolarité sous 5 jours ouvrés
+Les justificatifs envoyés par email ne sont acceptés qu'en PDF signé, sous réserve de
+validation ultérieure de l'original papier.
+
+4.2.3 Absences injustifiées
+Les absences non justifiées entraînent :
+
+    • 1ère absence : avertissement par email
+    • 3 absences : convocation du responsable de formation
+    • 5 absences : convocation des parents/tuteur légal (pour les mineurs)
+    • 8 absences dans une même matière : note de 0/20 à l'évaluation continue
+    • 15 absences totales dans le semestre : non-autorisation à se présenter aux
+
+         examens
+
+4.3 Retards
+4.3.1 Tolérance
+Un retard de moins de 10 minutes est toléré avec autorisation de l'enseignant. Au-delà,
+l'étudiant peut être refusé en cours et compté absent.
+
+4.3.2 Sanctions
+Les retards répétés (plus de 5 dans le semestre) font l'objet :
+
+    • D'un avertissement écrit
+    • D'une pénalité sur la note de participation (-1 point par retard au-delà du 5e)
+
+4.4 Dispenses d'assiduité
+4.4.1 Cas particuliers
+Des dispenses d'assiduité peuvent être accordées exceptionnellement pour :
+
+    • Étudiants salariés (contrat de travail > 15h/semaine)
+    • Sportifs de haut niveau (reconnaissance officielle)
+    • Situation de handicap (avis médical du médecin scolaire)
+    • Élus étudiants (mandat officiel)
+    • Situation familiale exceptionnelle (validation commission)
+
+                                                                                                              18
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+4.4.2 Procédure
+La demande de dispense doit être formulée par écrit auprès du responsable de
+formation dans les 3 premières semaines du semestre, avec justificatifs. Elle est
+valable uniquement pour le semestre en cours et doit être renouvelée.
+Les étudiants dispensés d'assiduité restent tenus de :
+
+    • Rendre tous les travaux demandés aux dates prévues
+    • Se présenter aux examens terminaux
+    • Réaliser les projets individuels et de groupe
+
+5. ÉVALUATION ET VALIDATION
+5.1 Modalités d'évaluation
+5.1.1 Types d'épreuves
+Les étudiants sont évalués par :
+
+    • Contrôle continu (40%) : tests réguliers, participation, travaux
+    • Projets (30%) : rendus individuels et collectifs
+    • Examen terminal (30%) : épreuve en fin de semestre
+La répartition exacte est précisée dans le syllabus de chaque matière, disponible sur
+l'ENT.
+5.1.2 Sessions d'examen
+Deux sessions d'examen sont organisées par semestre :
+
+    • Session 1 : janvier (S1) et juin (S2)
+    • Session 2 (rattrapage) : février (S1) et septembre (S2)
+Le calendrier détaillé est communiqué au moins 6 semaines avant le début des
+épreuves.
+5.2 Déroulement des examens
+5.2.1 Convocations
+Les convocations aux examens sont publiées sur l'ENT au moins 15 jours avant. Il est
+de la responsabilité de l'étudiant de consulter régulièrement son planning.
+
+                                                                                                              19
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+5.2.2 Documents autorisés
+Sauf mention contraire sur le sujet :
+
+    • Calculatrice non programmable autorisée
+    • Aucun document personnel autorisé
+    • Seuls les documents fournis par l'enseignant peuvent être consultés
+5.2.3 Règles pendant l'épreuve
+Durant l'examen, l'étudiant doit :
+
+    • Présenter sa carte d'étudiant + pièce d'identité
+    • Éteindre et ranger son téléphone portable
+    • Ne communiquer avec personne sauf les surveillants
+    • Rester assis jusqu'à la fin même s'il a terminé
+    • Rendre sa copie au surveillant (ne pas la laisser sur la table)
+5.2.4 Retards aux examens
+    • Retard < 15 min : admission avec autorisation du surveillant
+    • Retard > 15 min : refus d'accès, absence justifiée à fournir sous 48h
+    • Retard > 1h : absence injustifiée, note de 0/20
+
+5.3 Fraude et plagiat
+5.3.1 Définition
+Constitue une fraude ou tentative de fraude :
+
+    • Copie sur un autre étudiant ou document non autorisé
+    • Communication avec un autre candidat
+    • Possession d'un téléphone ou objet électronique allumé
+    • Substitution d'identité
+    • Plagiat : utilisation de travaux externes sans citation appropriée
+5.3.2 Procédure
+En cas de fraude constatée :
+
+    1. L'enseignant/surveillant rédige un procès-verbal
+    2. L'étudiant est entendu par le responsable de formation
+    3. Le conseil de discipline statue sur la sanction
+    4. Note de 0/20 à l'épreuve au minimum
+
+                                                                                                              20
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    5. Sanction disciplinaire complémentaire possible (avertissement à exclusion
+         définitive)
+
+5.3.3 Détection du plagiat
+Tous les travaux écrits sont vérifiés par logiciel anti-plagiat (Compilatio). Un taux de
+similarité > 30% entraîne une analyse approfondie. Le plagiat avéré est sanctionné au
+même titre que la fraude en examen.
+
+5.4 Résultats et délibérations
+5.4.1 Publication des notes
+Les notes sont publiées progressivement sur l'ENT dans un délai de :
+
+    • 3 semaines maximum pour les contrôles continus
+    • 4 semaines maximum pour les examens terminaux
+Seul l'étudiant a accès à ses notes via son compte ENT sécurisé.
+
+5.4.2 Jury de délibération
+Le jury de délibération se réunit :
+
+    • Fin janvier pour le semestre 1
+    • Fin juin pour le semestre 2
+    • Début septembre pour les rattrapages
+Le jury est souverain et ses décisions sont sans appel, sauf erreur matérielle.
+
+5.4.3 Mentions
+Les mentions suivantes sont attribuées selon la moyenne annuelle :
+
+    • 16/20 et plus : Très bien
+    • 14/20 à 15,99 : Bien
+    • 12/20 à 13,99 : Assez bien
+    • 10/20 à 11,99 : Passable
+
+5.5 Compensation et rattrapage
+5.5.1 Compensation entre UE
+La compensation s'effectue :
+
+    • Entre UE d'un même semestre si moyenne semestrielle ≥ 10/20
+    • Une UE à 8/20 peut être compensée par une UE à 12/20
+
+                                                                                                              21
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Pas de compensation si note < 7/20 dans une matière fondamentale à fort
+         coefficient
+
+5.5.2 Session de rattrapage
+Les étudiants doivent passer les rattrapages si :
+
+    • Une UE n'est pas validée après compensation
+    • La moyenne semestrielle est < 10/20
+En rattrapage :
+
+    • Seules les matières non validées sont repassées
+    • La meilleure note entre session 1 et 2 est conservée
+    • Les notes de contrôle continu sont maintenues
+5.5.3 Redoublement
+Le redoublement est possible une seule fois durant le cursus. Il est obligatoire si :
+
+    • Moins de 20 ECTS validés sur 60 en fin d'année
+    • Décision du jury en cas d'absences répétées ou fraude grave
+L'étudiant doit repasser l'intégralité de l'année, aucun crédit ECTS de l'année échouée
+n'est conservé sauf décision exceptionnelle du jury.
+5.6 Consultation de copies
+5.6.1 Droit à la consultation
+Chaque étudiant a le droit de consulter ses copies d'examen après publication des
+résultats. La demande doit être formulée par email au service scolarité dans les 15
+jours suivant la publication.
+5.6.2 Modalités
+La consultation se fait :
+
+    • En présence de l'enseignant ou d'un responsable pédagogique
+    • Sur rendez-vous uniquement
+    • Sans possibilité de photocopie
+    • Aucune modification de note n'est possible sauf erreur matérielle manifeste
+
+                                                                                                              22
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+6. STAGES ET ALTERNANCE
+
+6.1 Stages obligatoires
+6.1.1 Durée et période
+Les stages obligatoires sont répartis ainsi :
+
+    • Bachelor 1 : 4 semaines minimum (juin-juillet)
+    • Bachelor 2 : 8 semaines minimum (juin-août)
+    • Bachelor 3 : 12 semaines minimum (avril-août)
+    • Master 1 : 16 semaines minimum (avril-septembre)
+    • Master 2 : 24 semaines minimum (janvier-août)
+6.1.2 Convention de stage
+Aucun stage ne peut débuter sans convention tripartite signée (ESIC, entreprise,
+étudiant). La demande de convention doit être faite via l'ENT au moins 3 semaines
+avant le début du stage.
+
+Documents requis :
+
+    • Offre de stage détaillée
+    • Coordonnées du tuteur entreprise
+    • Dates et horaires précis
+    • Montant de la gratification le cas échéant
+6.1.3 Gratification
+Pour un stage > 2 mois (44 jours), une gratification minimale est obligatoire :
+
+    • Taux 2024 : 4,35€ par heure de présence effective
+    • Soit environ 609€ mensuels pour un temps plein (35h/semaine)
+L'entreprise peut décider d'une gratification supérieure.
+
+6.2 Suivi du stage
+6.2.1 Tuteur académique
+Chaque stagiaire se voit attribuer un tuteur académique (enseignant ESIC) qui :
+
+    • Valide les objectifs pédagogiques du stage
+    • Effectue au moins une visite en entreprise ou entretien téléphonique
+    • Évalue le rapport de stage et la soutenance
+
+                                                                                                              23
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+6.2.2 Carnet de stage
+L'étudiant doit tenir un carnet de stage numérique sur l'ENT, renseigné
+hebdomadairement avec :
+
+    • Activités réalisées
+    • Compétences mobilisées
+    • Difficultés rencontrées
+    • Auto-évaluation
+Le tuteur académique consulte le carnet régulièrement.
+
+6.3 Rapport et soutenance
+6.3.1 Rapport de stage
+Le rapport doit être rendu au plus tard 3 semaines après la fin du stage. Il comprend :
+
+    • 30 à 50 pages (hors annexes)
+    • Présentation de l'entreprise et du service
+    • Missions réalisées et méthodologie
+    • Analyse critique et apports pédagogiques
+    • Annexes (productions, organigrammes, etc.)
+Format : PDF nommé "NOM_Prenom_RapportStage_Annee.pdf"
+
+6.3.2 Soutenance orale
+La soutenance dure 30 minutes :
+
+    • 15 minutes de présentation (support obligatoire)
+    • 15 minutes de questions du jury
+Jury composé de : tuteur académique, tuteur entreprise (si possible), enseignant
+externe.
+
+6.3.3 Évaluation
+La note de stage (coefficient 6 à 8 selon l'année) est composée de :
+
+    • 30% : évaluation tuteur entreprise
+    • 40% : rapport écrit
+    • 30% : soutenance orale
+Le stage validé rapporte 10 à 15 crédits ECTS selon l'année.
+
+                                                                                                              24
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+6.4 Alternance (Contrat d'apprentissage / Professionnalisation)
+6.4.1 Rythme d'alternance
+Le rythme varie selon les formations :
+
+    • Bachelor 3 : 1 semaine école / 3 semaines entreprise
+    • Master 1-2 : 2 jours école / 3 jours entreprise
+Le calendrier détaillé de l'alternance est communiqué en juin pour l'année suivante.
+
+6.4.2 Statut de l'alternant
+L'alternant a un statut de salarié et doit :
+
+    • Respecter le règlement intérieur de l'entreprise
+    • Informer l'ESIC et l'entreprise en cas d'absence
+    • Participer aux cours et évaluations obligatoires
+    • Réaliser les travaux académiques demandés
+6.4.3 Rupture de contrat
+En cas de rupture du contrat d'alternance :
+
+    • L'étudiant doit en informer l'ESIC immédiatement
+    • Il dispose de 2 mois pour trouver une nouvelle entreprise
+    • Passé ce délai, il bascule en formation initiale (frais de scolarité applicables)
+    • L'ESIC accompagne la recherche via le service Relations Entreprises
+6.4.4 Mémoire professionnel
+En alternance, le rapport de stage est remplacé par un mémoire professionnel soutenu
+en fin de formation, portant sur une problématique d'entreprise traitée durant
+l'alternance.
+
+7. SERVICES ET RESSOURCES CAMPUS
+
+7.1 Bibliothèque - Médiathèque
+7.1.1 Horaires d'ouverture
+
+    • Lundi à vendredi : 8h00-20h00
+    • Samedi : 9h00-17h00
+    • Fermée le dimanche et jours fériés
+
+                                                                                                              25
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Ouverture exceptionnelle 24h/24 pendant les périodes d'examen (janvier et juin)
+7.1.2 Fonds documentaire
+La bibliothèque dispose de :
+
+    • 25 000 ouvrages (informatique, management, sciences, culture générale)
+    • 150 abonnements à des revues spécialisées
+    • Accès aux bases de données numériques (IEEE, ACM, EBSCO, etc.)
+    • Espace presse et magazines
+7.1.3 Prêt de documents
+Conditions de prêt :
+
+    • Livres : 5 maximum pour 3 semaines (renouvelable 1 fois si pas de réservation)
+    • Revues récentes : consultation sur place uniquement
+    • Revues anciennes : 2 maximum pour 1 semaine
+Tout retard entraîne une pénalité de 0,50€ par jour et par document. Au-delà de 30
+jours de retard, l'accès à la bibliothèque est suspendu jusqu'au retour du document.
+
+7.1.4 Espaces de travail
+La bibliothèque propose :
+
+    • Espace silencieux (60 places assises)
+    • Salles de travail en groupe (6 salles, réservation sur l'ENT)
+    • Espace informatique (30 postes)
+    • Espace détente avec sofas et presse
+
+7.2 Restaurant universitaire
+7.2.1 Horaires et tarifs
+Le restaurant universitaire est ouvert :
+
+    • Lundi à vendredi : 11h45-14h00
+    • Menu complet : 3,90€ (tarif étudiant boursier : 1,00€)
+    • Menu à emporter disponible
+7.2.2 Fonctionnement
+    • Carte étudiante obligatoire (rechargeable en ligne ou aux bornes)
+
+                                                                                                              26
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Système de réservation recommandé via l'application mobile (réduction de 10%
+         si réservation avant 10h)
+
+    • Menu végétarien quotidien
+    • Adaptation possible pour allergies alimentaires (signalement préalable
+
+         obligatoire)
+
+7.3 Services informatiques
+7.3.1 Accès aux ordinateurs
+
+    • 4 salles informatiques en libre accès (8h-20h)
+    • 120 postes équipés (Windows et Linux)
+    • Impression : 200 pages gratuites/semestre, puis 0,05€/page noir et blanc,
+
+         0,20€/page couleur
+7.3.2 Réseau WiFi
+
+    • SSID : "ESIC-Student" (authentification ENT)
+    • Couverture totale du campus
+    • Débit : 100 Mbps par utilisateur
+    • Filtrage web conforme à la loi (sites illégaux, malveillants bloqués)
+7.3.3 Support technique
+Le helpdesk informatique est joignable :
+
+    • Par email : support-it@esic.fr
+    • Par téléphone : 01.53.90.15.99 (9h-18h)
+    • En personne : Bureau C104 (9h-12h / 14h-17h)
+Délai d'intervention : 48h pour incident bloquant, 5 jours pour demandes standard.
+
+7.4 Service médical et social
+7.4.1 Infirmerie
+L'infirmière est présente :
+
+    • Lundi, mercredi, vendredi : 9h-17h
+    • Consultations libres sans rendez-vous
+    • Premiers soins, suivi médical étudiant
+    • Orientation vers services spécialisés si nécessaire
+
+                                                                                                              27
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+7.4.2 Service de psychologie
+Un psychologue reçoit sur rendez-vous :
+
+    • Mardi et jeudi : 10h-18h
+    • Entretiens confidentiels et gratuits
+    • Soutien en cas de difficultés personnelles, stress, anxiété
+    • Prise de rendez-vous via sante@esic.fr
+7.4.3 Assistante sociale
+L'assistante sociale accompagne les étudiants sur :
+
+    • Difficultés financières (aides d'urgence, dossiers CROUS)
+    • Problèmes de logement
+    • Démarches administratives
+    • Permanences : lundi et mercredi 14h-18h sur rendez-vous
+
+7.5 Service des sports
+7.5.1 Activités proposées
+L'ESIC propose des créneaux sportifs (accès libre avec carte étudiante) :
+
+    • Salle de musculation (lundi-vendredi 12h-14h et 18h-20h)
+    • Terrains extérieurs : football, basketball, tennis
+    • Cours collectifs : yoga, pilates, boxe, danse (inscription via l'ENT)
+7.5.2 Associations sportives
+Les étudiants peuvent rejoindre les équipes ESIC participant aux championnats
+universitaires :
+
+    • Football (masculin et féminin)
+    • Basketball
+    • Volleyball
+    • Course à pied / athlétisme
+
+7.6 Service Carrières et Relations Entreprises
+7.6.1 Accompagnement à l'insertion professionnelle
+Le service propose :
+
+    • Ateliers CV et lettres de motivation (2 par mois)
+
+                                                                                                              28
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Simulations d'entretien d'embauche
+    • Coaching individuel sur rendez-vous
+    • Veille et diffusion d'offres de stage/alternance/emploi
+7.6.2 Forum entreprises
+Deux forums annuels (octobre et mars) réunissent 80+ entreprises partenaires pour :
+
+    • Recrutement de stagiaires et alternants
+    • Présentation des métiers
+    • Speed-recruiting
+
+7.7 Service international
+7.7.1 Mobilité sortante
+Les étudiants peuvent effectuer un semestre à l'étranger en 3e année de Bachelor ou
+en Master, dans l'une des 45 universités partenaires (Europe, Amérique, Asie).
+
+Calendrier :
+
+    • Candidatures : novembre-décembre
+    • Sélection : janvier
+    • Départ : septembre (S1) ou février (S2)
+7.7.2 Accompagnement étudiants internationaux
+Le bureau des relations internationales accompagne les étudiants étrangers sur :
+
+    • Démarches administratives (titres de séjour, CAF, etc.)
+    • Recherche de logement
+    • Cours de français langue étrangère (FLE) gratuits
+    • Activités d'intégration (buddy program, sorties culturelles)
+
+8. DROITS ET DEVOIRS DES ÉTUDIANTS
+
+8.1 Droits fondamentaux
+8.1.1 Liberté d'expression
+Les étudiants bénéficient de la liberté d'expression dans le respect des lois en vigueur
+et du bon fonctionnement de l'établissement. Cette liberté s'exerce notamment à
+travers :
+
+                                                                                                              29
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Le droit de réunion
+    • Le droit d'affichage (sous réserve de validation)
+    • La participation aux instances représentatives
+8.1.2 Droit d'association
+Les étudiants peuvent créer et animer des associations conformément à la loi 1901.
+Toute nouvelle association doit être déclarée au Bureau de la Vie Étudiante et respecter
+la charte associative de l'ESIC.
+
+8.1.3 Droit de représentation
+Des élections étudiantes sont organisées chaque année en octobre pour élire les
+représentants au :
+
+    • Conseil d'Administration (3 sièges)
+    • Conseil des Études (5 sièges par niveau)
+    • Commission Vie Étudiante (5 sièges)
+8.1.4 Droit à l'information
+L'établissement s'engage à informer les étudiants de manière transparente sur :
+
+    • Les décisions affectant leur scolarité
+    • Leurs droits et obligations
+    • L'offre de formation et les débouchés
+    • Les modalités d'évaluation
+
+8.2 Devoirs généraux
+8.2.1 Respect des personnes
+Chaque étudiant doit adopter un comportement respectueux envers :
+
+    • Le personnel enseignant et administratif
+    • Les autres étudiants
+    • Les intervenants extérieurs
+    • Le personnel d'entretien et de sécurité
+Sont notamment interdits et passibles de sanctions :
+
+    • Propos ou actes discriminatoires
+    • Harcèlement moral ou sexuel
+    • Violence physique ou verbale
+
+                                                                                                              30
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Diffamation ou injure
+8.2.2 Respect des biens et des locaux
+Les étudiants doivent :
+
+    • Maintenir la propreté des locaux (poubelles, respect du tri sélectif)
+    • Utiliser le matériel de manière responsable
+    • Signaler toute dégradation constatée
+    • Ne pas modifier les installations (notamment informatiques et électriques)
+Toute dégradation volontaire entraîne le remboursement des réparations et une
+sanction disciplinaire.
+
+8.2.3 Tenue vestimentaire
+Aucun code vestimentaire strict n'est imposé, mais une tenue décente et appropriée au
+contexte éducatif est requise. Sont notamment interdits :
+
+    • Vêtements comportant des inscriptions injurieuses ou discriminatoires
+    • Tenues manifestement indécentes
+    • Port du casque audio/écouteurs en cours (sauf autorisation pédagogique)
+8.2.4 Usage du tabac et substances
+Il est strictement interdit de :
+
+    • Fumer dans l'enceinte des bâtiments (y compris cigarettes électroniques)
+    • Consommer de l'alcool dans les locaux (sauf événements autorisés)
+    • Détenir ou consommer des substances illicites
+Les espaces fumeurs extérieurs sont signalés et doivent être utilisés exclusivement.
+
+8.3 Propriété intellectuelle
+8.3.1 Travaux étudiants
+Les travaux réalisés dans le cadre des cours (rapports, projets, codes informatiques)
+restent la propriété intellectuelle de leurs auteurs, sauf si :
+
+    • Réalisés en partenariat avec une entreprise (voir contrat)
+    • Développés avec des moyens substantiels fournis par l'ESIC (négociation
+
+         préalable)
+
+                                                                                                              31
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+8.3.2 Droit d'utilisation par l'ESIC
+L'ESIC se réserve le droit d'utiliser les travaux étudiants à des fins pédagogiques et
+promotionnelles (portfolio en ligne, vitrines, démonstrations), avec accord préalable de
+l'étudiant et mention de l'auteur.
+
+8.4 Protection des données personnelles (RGPD)
+8.4.1 Collecte de données
+L'ESIC collecte et traite les données personnelles des étudiants (état civil,
+coordonnées, parcours académique) uniquement pour :
+
+    • La gestion administrative et pédagogique
+    • Le suivi de carrière (alumni)
+    • Les obligations légales (ministère, CROUS, etc.)
+8.4.2 Droits des étudiants
+Conformément au RGPD, chaque étudiant dispose :
+
+    • D'un droit d'accès à ses données
+    • D'un droit de rectification
+    • D'un droit d'opposition au traitement (sauf obligations légales)
+    • D'un droit à l'effacement (après fin de scolarité et délais légaux)
+Contact DPO (Délégué à la Protection des Données) : dpo@esic.fr
+
+9. VIE ÉTUDIANTE ET ASSOCIATIONS
+
+9.1 Bureau de la Vie Étudiante (BVE)
+9.1.1 Mission
+Le BVE coordonne l'animation du campus et accompagne les associations étudiantes.
+Il est composé de :
+
+    • Responsable Vie Étudiante (personnel ESIC)
+    • Représentants élus étudiants
+9.1.2 Salle associative
+Une salle dédiée (B205) est mise à disposition des associations pour :
+
+    • Réunions
+
+                                                                                                              32
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Stockage de matériel
+    • Point de vente lors d'événements
+Accès : carte étudiante + validation BVE
+
+9.2 Associations étudiantes reconnues
+L'ESIC compte une quinzaine d'associations actives :
+
+9.2.1 Bureau des Étudiants (BDE)
+Organise les événements fédérateurs :
+
+    • Soirée de rentrée, gala de fin d'année
+    • Week-end d'intégration
+    • Événements thématiques (Halloween, Noël, etc.)
+9.2.2 Bureau des Sports (BDS)
+Coordonne les activités sportives :
+
+    • Tournois inter-promos
+    • Sorties sportives (ski, randonnée, etc.)
+    • Gestion des équipes en compétition universitaire
+9.2.3 Associations thématiques
+    • DevCampus : club de développeurs (hackathons, coding dojos)
+    • ESIC Entrepreneurship : accompagnement projets startup
+    • ESICyber : club cybersécurité et CTF
+    • ESIC Green : développement durable et écologie
+    • ESIC Charity : actions humanitaires et solidaires
+    • Gaming Club : e-sport et jeux vidéo
+    • Photo/Vidéo Club : créations audiovisuelles
+
+9.3 Événements et activités
+9.3.1 Calendrier annuel
+
+    • Septembre : Rentrée et intégration
+    • Octobre : Forum entreprises, semaine de l'entrepreneuriat
+    • Novembre : Hackathon annuel (48h)
+    • Décembre : Soirée de Noël, marché solidaire
+    • Février : Forum stages/alternance
+
+                                                                                                              33
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Mars : Semaine des arts et culture
+    • Avril : Tournoi sportif inter-écoles
+    • Mai : Remise des diplômes (promos sortantes)
+    • Juin : Gala de fin d'année
+9.3.2 Autorisation d'événements
+Tout événement organisé par une association nécessite :
+
+    • Demande écrite au BVE au moins 3 semaines avant
+    • Budget prévisionnel
+    • Plan d'organisation (sécurité, logistique)
+    • Assurance responsabilité civile
+    • Respect des réglementations (sécurité incendie, capacité d'accueil)
+
+9.4 Financement des associations
+9.4.1 Subventions ESIC
+L'établissement alloue annuellement un budget de 50 000€ réparti entre les
+associations selon :
+
+    • Nombre d'adhérents
+    • Projets déposés et validés
+    • Impact sur la vie étudiante
+9.4.2 Ressources propres
+Les associations peuvent générer des revenus via :
+
+    • Cotisations membres
+    • Ventes lors d'événements (avec autorisation)
+    • Partenariats avec des entreprises (sous validation BVE)
+    • Subventions externes (municipalité, région, etc.)
+9.4.3 Gestion financière
+Chaque association doit :
+
+    • Tenir une comptabilité transparente
+    • Fournir un bilan financier annuel au BVE
+    • Ouvrir un compte bancaire dédié
+    • Respecter les règles comptables d'une association loi 1901
+
+                                                                                                              34
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+10. DISCIPLINE ET SANCTIONS
+
+10.1 Fautes et sanctions
+10.1.1 Catégories de fautes
+Les manquements au règlement intérieur sont classés en trois catégories :
+
+Fautes mineures :
+
+    • Retards répétés
+    • Absence injustifiée ponctuelle
+    • Oubli de carte étudiante
+    • Incivilités légères
+Fautes graves :
+
+    • Fraude ou tentative de fraude aux examens
+    • Absences injustifiées répétées (>8)
+    • Dégradations matérielles volontaires
+    • Comportement perturbateur en cours
+    • Non-respect des consignes de sécurité
+Fautes très graves :
+
+    • Fraude grave ou récidive
+    • Violence physique ou verbale
+    • Harcèlement (moral, sexuel, discriminatoire)
+    • Vol
+    • Consommation ou trafic de substances illicites
+    • Diffusion de contenus illicites ou diffamatoires
+10.1.2 Échelle des sanctions
+Sanctions de premier niveau (sans conseil de discipline) :
+
+    • Avertissement oral
+    • Avertissement écrit
+    • Convocation avec les parents/tuteur (pour les mineurs)
+Sanctions de second niveau (conseil de discipline) :
+
+                                                                                                              35
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Blâme avec inscription au dossier
+    • Exclusion temporaire (1 jour à 2 semaines)
+    • Exclusion de certains cours ou activités
+    • Travail d'intérêt général au sein de l'établissement
+    • Note de 0/20 à une épreuve
+Sanctions de troisième niveau (conseil de discipline renforcé) :
+
+    • Exclusion définitive de l'établissement
+    • Nullité du diplôme en cas de fraude grave avérée
+
+10.2 Procédure disciplinaire
+10.2.1 Signalement
+Tout membre du personnel peut signaler un manquement par écrit au responsable de
+formation ou au directeur des études.
+
+10.2.2 Audition préalable
+L'étudiant concerné est :
+
+    • Informé par écrit des faits reprochés (mail + courrier recommandé)
+    • Convoqué à une audition dans un délai de 5 à 15 jours
+    • Autorisé à se faire accompagner (parent, avocat, représentant étudiant)
+    • Invité à fournir des explications et éléments de défense
+10.2.3 Conseil de discipline
+Composition :
+
+    • Directeur de l'établissement (président)
+    • Directeur des études
+    • 3 enseignants
+    • 2 représentants étudiants élus
+Déroulement :
+
+    • Exposé des faits par le rapporteur
+    • Audition de l'étudiant (et éventuels témoins)
+    • Délibération à huis clos
+    • Notification de la décision par écrit sous 8 jours
+
+                                                                                                              36
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Les décisions du conseil sont prises à la majorité. En cas d'égalité, la voix du président
+est prépondérante.
+10.2.4 Mesure conservatoire
+En cas de faute très grave mettant en danger la sécurité ou l'ordre public, le directeur
+peut prononcer une exclusion immédiate à titre conservatoire, dans l'attente du conseil
+de discipline (délai maximum : 1 mois).
+10.3 Voies de recours
+10.3.1 Recours gracieux
+L'étudiant peut former un recours gracieux auprès du directeur dans les 15 jours
+suivant la notification de la sanction, en exposant les motifs de contestation.
+10.3.2 Recours hiérarchique
+En cas de rejet du recours gracieux, un recours hiérarchique peut être adressé au
+rectorat de l'académie dans les 2 mois.
+10.3.3 Recours contentieux
+Un recours devant le tribunal administratif est possible dans les 2 mois suivant la
+décision contestée.
+
+11. RÉCLAMATIONS ET RECOURS
+11.1 Réclamations pédagogiques
+11.1.1 Contestation de note
+En cas de désaccord avec une évaluation, l'étudiant peut :
+
+    1. Solliciter un entretien avec l'enseignant concerné (sous 5 jours)
+    2. Demander une consultation de copie
+    3. Si désaccord persistant, saisir le responsable de formation par écrit
+Une seconde correction anonyme peut être demandée pour les examens terminaux. En
+cas d'écart > 3 points, une troisième correction est effectuée et la moyenne des 3 notes
+est retenue.
+
+                                                                                                              37
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+11.1.2 Réclamation sur organisation pédagogique
+Pour toute difficulté relative à l'organisation des cours (emploi du temps, qualité
+d'enseignement, supports, etc.), l'étudiant doit :
+
+    1. Contacter le délégué de promotion
+    2. Le délégué saisit le responsable de formation
+    3. Réponse sous 10 jours ouvrés
+
+11.2 Médiateur des études
+11.2.1 Rôle
+Un médiateur indépendant est nommé pour une durée de 2 ans. Il peut être saisi pour :
+
+    • Conflits entre étudiant et enseignant
+    • Litiges non résolus par la voie hiérarchique
+    • Sentiment d'injustice ou de traitement inéquitable
+11.2.2 Saisine
+La saisine se fait par écrit (email ou courrier) : mediateur@esic.fr
+
+Le médiateur entend les parties et formule une recommandation non contraignante
+dans un délai de 1 mois.
+
+11.3 Réclamations administratives
+Pour les questions administratives (inscriptions, frais de scolarité, diplômes, etc.),
+l'étudiant doit contacter le service scolarité :
+
+    • Par email : scolarite@esic.fr
+    • Par téléphone : 01.53.90.15.20
+    • En personne : Bureau A102 (9h-12h / 14h-17h)
+Délai de réponse : 5 jours ouvrés pour les demandes standard, 48h pour les urgences.
+
+11.4 Enquête de satisfaction
+Chaque semestre, les étudiants sont invités à répondre à une enquête de satisfaction
+portant sur :
+
+    • Qualité des enseignements
+    • Services campus
+    • Vie étudiante
+
+                                                                                                              38
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Accompagnement pédagogique
+Les résultats sont anonymisés et communiqués au Conseil des Études pour
+amélioration continue.
+
+12. DISPOSITIONS FINALES
+
+12.1 Assurances
+12.1.1 Responsabilité civile
+Chaque étudiant doit obligatoirement disposer d'une assurance responsabilité civile
+couvrant les dommages causés à autrui dans le cadre de sa scolarité. Une attestation
+valide doit être fournie lors de l'inscription.
+
+12.1.2 Assurance complémentaire
+Il est fortement recommandé de souscrire une assurance complémentaire couvrant :
+
+    • Les accidents corporels
+    • Le matériel informatique personnel
+    • Les stages à l'étranger
+L'ESIC a négocié des tarifs préférentiels avec des assureurs partenaires (information
+disponible au service scolarité).
+
+12.2 Sécurité et santé
+12.2.1 Règles de sécurité
+Chaque étudiant doit :
+
+    • Respecter les consignes de sécurité affichées
+    • Participer aux exercices d'évacuation incendie (2 par an)
+    • Ne pas obstruer les issues de secours
+    • Signaler tout incident ou danger
+12.2.2 Interdictions
+Il est strictement interdit de :
+
+    • Fumer dans les bâtiments
+    • Introduire des objets dangereux (armes, explosifs, etc.)
+    • Consommer alcool ou drogues
+
+                                                                                                              39
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Modifier les équipements de sécurité (alarmes, extincteurs, etc.)
+12.2.3 Plan de prévention
+L'ESIC met en œuvre un plan de prévention des risques psychosociaux incluant :
+
+    • Cellule d'écoute psychologique
+    • Référent harcèlement
+    • Actions de sensibilisation (addictions, harcèlement, premiers secours)
+
+12.3 Communication et affichage
+12.3.1 Affichage autorisé
+L'affichage est autorisé uniquement sur les panneaux dédiés, après validation par le
+BVE. Sont acceptés :
+
+    • Annonces d'événements associatifs
+    • Offres de stages et emplois
+    • Petites annonces étudiantes (logement, covoiturage)
+Tout affichage sauvage est immédiatement retiré.
+
+12.3.2 Communication numérique
+Les étudiants peuvent communiquer via :
+
+    • Adresse email institutionnelle (@esic.fr)
+    • ENT et forums de discussion
+    • Groupes associatifs autorisés
+L'utilisation de ces outils doit rester professionnelle et respectueuse. Sont interdits :
+
+    • Spam et sollicitations commerciales
+    • Propos offensants ou discriminatoires
+    • Partage de contenus illicites
+
+12.4 Accès aux locaux
+12.4.1 Horaires d'ouverture
+Le campus est ouvert :
+
+    • Lundi à vendredi : 7h30-21h00
+    • Samedi : 8h00-18h00 (selon activités programmées)
+    • Dimanche : fermé (sauf événements exceptionnels)
+
+                                                                                                              40
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+12.4.2 Carte d'accès
+La carte étudiante sert de badge d'accès. L'accès est contrôlé en dehors des heures
+d'affluence (avant 8h30, après 19h, samedi).
+
+12.4.3 Personnes extérieures
+Les visiteurs extérieurs doivent :
+
+    • Se présenter à l'accueil
+    • Justifier de leur identité
+    • Être accompagnés par un membre de la communauté ESIC
+
+12.5 Environnement et développement durable
+12.5.1 Engagement ESIC
+L'ESIC s'engage dans une démarche de développement durable :
+
+    • Tri sélectif généralisé (bacs de recyclage)
+    • Réduction des impressions papier
+    • Extinction automatique des lumières
+    • Incitation au covoiturage et transports en commun
+12.5.2 Éco-délégués
+Des éco-délégués étudiants sont élus pour promouvoir les bonnes pratiques
+environnementales et proposer des actions concrètes.
+
+12.6 Protection de l'image
+12.6.1 Photos et vidéos
+L'ESIC peut réaliser des photos/vidéos lors d'événements à des fins de
+communication. Les étudiants en sont informés préalablement et peuvent s'opposer à
+la diffusion de leur image.
+
+12.6.2 Réseaux sociaux
+Les étudiants représentant l'ESIC (associations, événements) doivent adopter un
+comportement responsable sur les réseaux sociaux :
+
+    • Pas de propos diffamatoires sur l'établissement ou ses membres
+    • Respect de la confidentialité des informations internes
+    • Distinction claire entre opinions personnelles et représentation officielle
+
+                                                                                                              41
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+12.7 Diplômes et certifications
+12.7.1 Délivrance
+Les diplômes sont délivrés après :
+
+    • Validation de tous les crédits ECTS requis
+    • Jury de délibération favorable
+    • Soutenance du mémoire/stage (selon niveau)
+    • Règlement complet des frais de scolarité
+12.7.2 Cérémonie de remise des diplômes
+Une cérémonie officielle est organisée en mai/juin pour les diplômés de l'année. La
+présence n'est pas obligatoire mais vivement recommandée.
+
+12.7.3 Retrait du diplôme
+Le diplôme original peut être retiré :
+
+    • Sur place au service scolarité (pièce d'identité obligatoire)
+    • Par courrier recommandé (frais de 15€)
+    • Par procuration (formulaire + copie pièce identité du mandataire)
+
+12.8 Anciens élèves (Alumni)
+12.8.1 Réseau Alumni
+L'association des anciens élèves ESIC Alumni maintient le lien entre diplômés et
+l'établissement. Avantages :
+
+    • Annuaire des diplômés
+    • Événements de networking
+    • Mentorat des étudiants actuels
+    • Offres d'emploi exclusives
+12.8.2 Cotisation
+Adhésion : 50€ à vie (paiement unique lors de l'obtention du diplôme)
+
+12.9 Modification du règlement
+Le présent règlement peut être modifié par décision du Conseil d'Administration. Toute
+modification substantielle fait l'objet :
+
+    • D'une consultation préalable des représentants étudiants
+
+                                                                                                              42
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • D'une communication 1 mois avant l'entrée en vigueur
+    • D'une publication sur l'ENT et remise d'une version actualisée
+
+12.10 Acceptation du règlement
+L'inscription à l'ESIC vaut acceptation sans réserve du présent règlement intérieur. Une
+charte d'engagement est signée par chaque étudiant lors de l'inscription
+administrative.
+
+ANNEXES
+
+Annexe 1 : Contacts utiles
+Services administratifs :
+
+    • Service scolarité : scolarite@esic.fr | 01.53.90.15.20
+    • Service financier : comptabilite@esic.fr | 01.53.90.15.21
+    • Relations internationales : international@esic.fr | 01.53.90.15.25
+    • Relations entreprises : entreprises@esic.fr | 01.53.90.15.30
+Services étudiants :
+
+    • Bureau de la Vie Étudiante : bve@esic.fr
+    • Service de santé : sante@esic.fr | 01.53.90.15.40
+    • Service informatique : support-it@esic.fr | 01.53.90.15.99
+    • Bibliothèque : bibliotheque@esic.fr | 01.53.90.15.50
+Direction :
+
+    • Directeur général : direction@esic.fr
+    • Directeur des études : etudes@esic.fr
+    • Responsables de formation : voir ENT
+Urgences :
+
+    • Numéro d'urgence campus : 01.53.90.15.00
+    • Sécurité : 01.53.90.15.01
+    • SAMU : 15
+    • Police : 17
+    • Pompiers : 18
+
+                                                                                                              43
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Annexe 2 : Calendrier académique 2024-2025
+Semestre 1 :
+
+    • Rentrée : 2 septembre 2024
+    • Cours : 2 septembre - 20 décembre 2024
+    • Vacances Toussaint : 28 oct - 3 nov 2024
+    • Vacances Noël : 23 déc 2024 - 5 jan 2025
+    • Examens S1 : 6 janvier - 17 janvier 2025
+    • Rattrapages S1 : 3 février - 7 février 2025
+Semestre 2 :
+
+    • Cours : 10 février - 16 mai 2025
+    • Vacances Hiver : 24 fév - 2 mars 2025
+    • Vacances Printemps : 21 avril - 27 avril 2025
+    • Examens S2 : 19 mai - 30 mai 2025
+    • Stages S2 : 2 juin - 29 août 2025
+    • Rattrapages S2 : 1er septembre - 12 septembre 2025
+    • Rentrée 2025-2026 : 1er septembre 2025
+
+Annexe 3 : Plan du campus
+[Schéma simplifié du campus]
+
+Bâtiment A (Administration) :
+
+    • RDC : Accueil, scolarité, direction
+    • 1er étage : Salles de réunion, bureaux enseignants
+    • 2e étage : Bureaux administratifs
+Bâtiment B (Enseignement) :
+
+    • RDC : Amphithéâtres (A, B, C - 150 places chacun)
+    • 1er étage : Salles de cours (B101-B115)
+    • 2e étage : Salles de travail en groupe, salle associative
+Bâtiment C (Informatique) :
+
+    • RDC : Salles informatiques (C001-C004)
+    • 1er étage : Laboratoires spécialisés (réseau, cybersécurité)
+    • 2e étage : FabLab, salle innovation
+
+                                                                                                              44
+
+
+Document créé exclusivement pour le projet étudiant
+Joel BANKA
+
+Bâtiment D (Services) :
+    • RDC : Restaurant universitaire, cafétéria
+    • 1er étage : Bibliothèque-médiathèque
+    • 2e étage : Espaces de coworking, salles de repos
+
+Espaces extérieurs :
+    • Terrains de sport (foot, basket, tennis)
+    • Espaces verts et tables de pique-nique
+    • Parking étudiant (200 places)
+    • Abris vélo sécurisés
+
+FIN DU RÈGLEMENT INTÉRIEUR
+Version : 2024-2025 v1.0
+Date de publication : 1er juillet 2024
+Date d'entrée en vigueur : 1er septembre 2024
+Prochaine révision : Juillet 2025
+
+Validation :
+Adopté par le Conseil d'Administration de l'ESIC
+En date du 25 juin 2024
+Signatures :
+Le Directeur Général de l'ESIC : _____________________
+Le Président du Conseil d'Administration : _____________________
+Les Représentants Étudiants : _____________________
+
+                                                                                                              45
+
+
+Document créé exclusivement pour le projet étudiant
+Joel BANKA
+
+                                                                                                              46

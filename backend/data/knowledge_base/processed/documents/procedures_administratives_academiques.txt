@@ -1,0 +1,2965 @@
+Document créé exclusivement pour le projet étudiant
+Joel BANKA
+
+PROCÉDURES ADMINISTRATIVES ET ACADÉMIQUES ESIC
+
+ESIC - École Supérieure d'Informatique et du Commerce
+Année académique 2024-2025
+Version 1.0 - Mise à jour : 1er septembre 2024
+
+PROCÉDURES ADMINISTRATIVES
+
+PROCÉDURE 1 : INSCRIPTION ADMINISTRATIVE
+Public concerné : Nouveaux étudiants, Étudiants en réinscription
+Période : Juillet-Septembre
+Durée estimée : 30-45 minutes
+Coût : Selon la formation (Bachelor 6 500€/an, Master 8 500€/an)
+PRÉREQUIS
+
+    • Avoir été admis à l'ESIC (lettre d'admission reçue)
+    • Disposer des documents requis
+    • Avoir un moyen de paiement
+DOCUMENTS NÉCESSAIRES
+    • Pièce d'identité en cours de validité
+    • Photo d'identité récente (format numérique)
+    • Diplôme du baccalauréat ou dernier diplôme obtenu (copie certifiée)
+    • Relevés de notes des 2 dernières années
+    • Attestation d'assurance responsabilité civile
+    • RIB (pour prélèvement automatique si paiement échelonné)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Justificatif de bourse (si applicable)
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Accès au portail d'inscription
+Connectez-vous au portail d'inscription en ligne sur admission.esic.fr avec les
+identifiants reçus par email.
+
+Conseils :
+
+    • Vérifiez vos spams si vous n'avez pas reçu l'email
+    • Notez vos identifiants dans un endroit sûr
+Étape 2 : Remplissage du formulaire
+Complétez toutes les sections du formulaire : état civil, coordonnées, formation
+antérieure, contacts d'urgence.
+
+Conseils :
+
+    • Prenez votre temps pour remplir correctement
+    • Toutes les informations sont obligatoires
+    • Vous pouvez sauvegarder et reprendre plus tard
+Étape 3 : Téléchargement des documents
+Scannez et téléchargez tous les documents requis au format PDF ou JPG (max 2 Mo par
+fichier).
+
+Conseils :
+
+    • Assurez-vous que les documents sont lisibles
+    • Nommez les fichiers clairement (ex: NOM_Prenom_Diplome.pdf)
+Étape 4 : Choix du mode de paiement
+Sélectionnez votre mode de paiement des frais de scolarité : comptant (-3%), 3 fois ou
+10 fois.
+
+Conseils :
+
+    • Le paiement comptant offre une remise de 3%
+    • Le paiement en 3 fois est sans frais
+    • Le paiement en 10 fois comporte des frais de +2%
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 5 : Validation et paiement
+Vérifiez toutes les informations, acceptez le règlement intérieur, validez et procédez au
+paiement (1er versement ou totalité).
+
+Conseils :
+
+    • Relisez attentivement avant de valider
+    • Conservez le reçu de paiement
+Étape 6 : Confirmation
+Vous recevez un email de confirmation avec votre certificat de scolarité provisoire et
+vos identifiants ENT.
+
+Conseils :
+
+    • Conservez cet email précieusement
+    • Activez votre compte ENT dès réception
+Étape 7 : Retrait de la carte étudiante
+Retirez votre carte étudiante au service scolarité lors de la rentrée (journée d'intégration
+ou première semaine).
+
+Conseils :
+
+    • Apportez une pièce d'identité
+    • La carte vous sera remise en main propre
+
+DÉLAIS
+Inscription en ligne possible à partir du 1er juillet. À effectuer avant le 31 août pour
+bénéficier de tous les services dès la rentrée.
+
+CONTACTS
+Service Admissions
+
+    • Email : admissions@esic.fr
+    • Téléphone : 01.53.90.15.10
+    • Horaires : Lun-Ven 9h-18h
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+Puis-je modifier mes informations après validation ? Oui, contactez le service
+scolarité dans les 7 jours suivant la validation.
+Que faire si je n'ai pas encore mon diplôme ? Fournissez une attestation de réussite
+provisoire, puis le diplôme définitif dès réception.
+DOCUMENTS GÉNÉRÉS
+
+    • Certificat de scolarité provisoire
+    • Carte étudiante
+    • Identifiants ENT
+
+PROCÉDURE 2 : OBTENTION D'UN CERTIFICAT DE SCOLARITÉ
+Public concerné : Tous les étudiants inscrits
+Période : Toute l'année
+Durée estimée : Instantané (en ligne) ou 24h (guichet)
+Coût : Gratuit et illimité
+PRÉREQUIS
+
+    • Être inscrit administrativement
+DOCUMENTS NÉCESSAIRES
+Aucun
+ÉTAPES DE LA PROCÉDURE
+Méthode 1 : En ligne (instantanée)
+Connectez-vous à l'ENT > 'Scolarité' > 'Mes documents' > 'Certificat de scolarité' >
+Téléchargez le PDF.
+Conseils :
+
+    • Le document est généré instantanément
+    • Il porte le cachet électronique officiel de l'école
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Méthode 2 : Par email (délai 48h)
+Envoyez un email à scolarite@esic.fr en précisant : nom, prénom, formation, année et
+motif de la demande.
+
+Conseils :
+
+    • Indiquez votre adresse email dans le corps du message
+    • Précisez si vous avez besoin d'un format particulier
+Méthode 3 : Au guichet (immédiat)
+Présentez-vous au service scolarité (Bureau A102) avec votre carte étudiante.
+
+Conseils :
+
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+    • Le document vous est remis immédiatement
+
+DÉLAIS
+    • Instantané (ENT)
+    • 48h (email)
+    • Immédiat (guichet)
+
+CONTACTS
+Service Scolarité
+
+    • Email : scolarite@esic.fr
+    • Téléphone : 01.53.90.15.20
+    • Bureau : A102
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+
+QUESTIONS FRÉQUENTES
+Le certificat en ligne a-t-il la même valeur qu'un certificat papier ? Oui, le certificat
+téléchargé depuis l'ENT a la même valeur légale grâce au cachet électronique.
+
+Puis-je obtenir un certificat pour l'année précédente ? Oui, les certificats de toutes
+vos années d'inscription restent disponibles sur l'ENT.
+
+DOCUMENTS GÉNÉRÉS
+    • Certificat de scolarité (format PDF)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+PROCÉDURE 3 : DÉCLARATION D'ABSENCE
+Public concerné : Tous les étudiants
+Période : Toute l'année
+Durée estimée : 5-10 minutes
+Coût : Gratuit
+PRÉREQUIS
+
+    • Avoir un motif valable d'absence
+DOCUMENTS NÉCESSAIRES
+
+    • Certificat médical (si absence pour maladie)
+    • Convocation officielle (tribunal, administration, etc.)
+    • Certificat de décès (en cas de deuil familial)
+    • Tout autre justificatif officiel
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Déclaration immédiate
+Le jour même de l'absence ou au plus tard le lendemain, connectez-vous à l'ENT >
+'Scolarité' > 'Mes absences' > 'Déclarer une absence'.
+Conseils :
+    • Plus vous déclarez tôt, mieux c'est
+    • Même sans justificatif, déclarez d'abord l'absence
+Étape 2 : Remplissage du formulaire
+Indiquez : date(s) d'absence, cours concerné(s), motif de l'absence.
+Conseils :
+    • Soyez précis sur les dates et horaires
+    • Choisissez le bon motif dans la liste
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 3 : Obtention du justificatif
+Consultez un médecin dans les 48h (si maladie) ou obtenez le justificatif officiel
+nécessaire.
+
+Conseils :
+
+    • Le certificat médical doit être daté du jour de l'absence ou du lendemain
+    • Conservez l'original
+Étape 4 : Envoi du justificatif
+Scannez et téléchargez le justificatif sur l'ENT OU envoyez-le par email à
+scolarite@esic.fr ET remettez l'original au service scolarité.
+
+Conseils :
+
+    • Format PDF ou JPG
+    • Fichier lisible et complet
+    • Remise de l'original obligatoire dans les 3 jours ouvrés
+Étape 5 : Validation
+Le service scolarité examine le justificatif et valide ou refuse l'absence justifiée (sous 5
+jours ouvrés).
+
+Conseils :
+
+    • Vérifiez sur l'ENT que votre absence est passée de 'non justifiée' à 'justifiée'
+    • En cas de refus, vous pouvez contester
+
+DÉLAIS
+    • Déclaration : immédiate
+    • Justificatif : dans les 48h
+    • Validation : 5 jours ouvrés
+
+CONTACTS
+Service Scolarité
+
+    • Email : scolarite@esic.fr
+    • Téléphone : 01.53.90.15.20
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+Que se passe-t-il si je ne fournis pas de justificatif ? L'absence reste 'non justifiée' et
+compte dans votre total d'absences. Au-delà de 10 absences non justifiées, vous
+risquez des sanctions.
+
+Puis-je justifier une absence pour un entretien d'embauche ? Les entretiens ne sont
+généralement pas considérés comme motifs valables. Privilégiez les créneaux hors
+cours.
+
+Que faire si je suis absent le jour d'un examen ? Même procédure. En cas d'absence
+justifiée à un examen, vous le repasserez lors de la session de rattrapage.
+
+PROCÉDURE 4 : DEMANDE DE CONVENTION DE STAGE
+Public concerné : Tous les étudiants effectuant un stage obligatoire ou optionnel
+
+Période : Toute l'année (selon calendrier de stage)
+
+Durée estimée : 20-30 minutes (en ligne) + 5 jours (traitement)
+
+Coût : Gratuit
+
+PRÉREQUIS
+    • Avoir trouvé une entreprise d'accueil
+    • Avoir validé l'offre de stage avec l'entreprise
+    • Connaître les détails du stage (dates, missions, gratification)
+
+DOCUMENTS NÉCESSAIRES
+    • Coordonnées complètes de l'entreprise
+    • Nom et fonction du maître de stage
+    • Description des missions
+    • Dates de début et fin de stage
+    • Montant de la gratification
+    • Attestation d'assurance responsabilité civile
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Connexion à l'ENT
+Connectez-vous à l'ENT > 'Stages' > 'Nouvelle convention de stage'.
+
+Conseils :
+
+    • Assurez-vous d'avoir toutes les informations nécessaires avant de commencer
+Étape 2 : Remplissage du formulaire en ligne
+Remplissez toutes les sections : informations entreprise, maître de stage, période,
+missions, gratification, assurance.
+
+Conseils :
+
+    • Soyez précis dans la description des missions (3-5 lignes minimum)
+    • Vérifiez le montant de la gratification (minimum légal : 4,35€/h pour stage > 2
+
+         mois)
+    • N'oubliez pas de télécharger votre attestation d'assurance RC
+Étape 3 : Validation et génération
+Validez le formulaire. La convention est générée automatiquement en PDF (exemplaire
+en 3 parties).
+
+Conseils :
+
+    • Relisez attentivement avant de valider
+    • Téléchargez immédiatement les 3 exemplaires
+Étape 4 : Signature de l'entreprise
+Envoyez la convention à votre entreprise d'accueil pour signature (vous + maître de
+stage + représentant légal entreprise).
+
+Conseils :
+
+    • Expliquez que 3 signatures entreprise sont nécessaires
+    • Relancez si besoin après 1 semaine
+Étape 5 : Dépôt au service scolarité
+Une fois signée par l'entreprise, déposez la convention (3 exemplaires) au service
+scolarité (Bureau A102) OU envoyez-la scannée à stages@esic.fr.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Conservez une copie pour vous avant de déposer
+    • Si envoi email : PDF de bonne qualité
+Étape 6 : Signature de l'école
+L'école examine et signe la convention (délai : 5 jours ouvrés maximum).
+
+Conseils :
+
+    • Vous recevez un email dès que c'est signé
+Étape 7 : Récupération
+Récupérez les 3 exemplaires signés au service scolarité : 1 pour vous, 1 pour
+l'entreprise, 1 conservé par l'école.
+
+Conseils :
+
+    • Remettez l'exemplaire entreprise à votre maître de stage le 1er jour
+
+DÉLAIS
+5 jours ouvrés après dépôt de la convention signée par l'entreprise. À PRÉVOIR AU
+MOINS 3 SEMAINES AVANT LE DÉBUT DU STAGE.
+
+CONTACTS
+Service Stages
+
+    • Email : stages@esic.fr
+    • Téléphone : 01.53.90.15.23
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+
+QUESTIONS FRÉQUENTES
+Puis-je commencer mon stage sans convention signée ? NON, absolument pas. La
+convention DOIT être signée par toutes les parties AVANT le premier jour de stage. C'est
+une obligation légale.
+
+Mon stage dure moins de 2 mois, ai-je besoin d'une convention ? Oui, toute période
+de stage nécessite une convention, quelle que soit sa durée.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+L'entreprise refuse de signer la convention, que faire ? Contactez immédiatement le
+service stages. Il est possible que l'entreprise ne comprenne pas l'obligation légale ou
+ait des questions.
+DOCUMENTS GÉNÉRÉS
+
+    • Convention de stage tripartite (3 exemplaires)
+
+PROCÉDURE 5 : CONTESTATION D'UNE NOTE
+Public concerné : Tous les étudiants
+Période : Dans les 15 jours suivant la publication de la note
+Durée estimée : Variable (2-4 semaines pour la procédure complète)
+Coût : Gratuit
+PRÉREQUIS
+
+    • Avoir une raison légitime de contester (erreur de correction, note manifestement
+         anormale, etc.)
+
+    • Respecter le délai de 15 jours après publication
+DOCUMENTS NÉCESSAIRES
+
+    • Copie de la note contestée (capture d'écran ENT)
+    • Arguments détaillés de la contestation
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Consultation de copie (OBLIGATOIRE)
+Demandez d'abord à consulter votre copie auprès de l'enseignant concerné (par email
+ou lors de ses permanences).
+Conseils :
+
+    • C'est votre droit
+    • Cela permet souvent de comprendre la notation et résoudre le problème à
+
+         l'amiable
+    • Prenez des notes lors de la consultation
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 2 : Tentative de résolution amiable
+Discutez avec l'enseignant des points de désaccord. Souvent, une explication suffit ou
+une erreur matérielle est identifiée.
+
+Conseils :
+
+    • Restez courtois et factuel
+    • Si l'enseignant reconnaît une erreur, elle sera corrigée directement
+Étape 3 : Demande formelle de révision (si non résolu)
+Si le désaccord persiste, envoyez un email à scolarite@esic.fr avec : votre identité,
+matière, date de l'examen, note contestée, arguments détaillés.
+
+Conseils :
+
+    • Soyez précis et factuel
+    • Joignez tout élément probant (copie, barème, sujet)
+    • Restez professionnel dans le ton
+Étape 4 : Examen par la commission
+Votre copie est réexaminée par une commission composée de : l'enseignant, un autre
+enseignant de la matière, votre responsable pédagogique.
+
+Conseils :
+
+    • La commission est neutre et objective
+    • Vous n'êtes pas présent lors de l'examen
+Étape 5 : Décision
+La commission rend sa décision sous 2 semaines maximum. Trois issues possibles :
+
+    1. Note maintenue
+    2. Note augmentée
+    3. Note diminuée (si d'autres erreurs à votre désavantage sont découvertes)
+Conseils :
+
+    • La décision est définitive et ne peut pas être contestée à nouveau
+    • Vous êtes informé par email
+Étape 6 : Modification de la note (si applicable)
+Si la note est modifiée, le changement apparaît sur l'ENT sous 48h.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+    • Vérifiez bien que la modification est effective
+
+DÉLAIS
+    • Demande : 15 jours après publication de la note
+    • Décision : 2 semaines maximum
+
+CONTACTS
+Service Scolarité
+
+    • Email : scolarite@esic.fr
+    • Téléphone : 01.53.90.15.20
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+QUESTIONS FRÉQUENTES
+Y a-t-il un risque que ma note baisse ? Oui, si la commission découvre des erreurs de
+correction en votre faveur lors du premier examen, votre note peut être diminuée. C'est
+rare mais possible.
+Puis-je contester une note de projet ou de soutenance ? Oui, même procédure.
+Cependant, les notes de compétences (oral, communication, etc.) sont plus difficiles à
+contester car subjectives.
+Puis-je être accompagné lors de la procédure ? Vous ne participez pas à la
+commission. Cependant, votre délégué de classe peut vous conseiller dans la
+rédaction de votre demande.
+
+PROCÉDURE 6 : DEMANDE DE BOURSE CROUS
+Public concerné : Tous les étudiants éligibles aux bourses
+Période : 15 janvier - 15 mai (pour l'année N+1)
+Durée estimée : 30-60 minutes
+Coût : Gratuit
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+PRÉREQUIS
+    • Avoir moins de 28 ans au 1er septembre de l'année universitaire
+    • Être de nationalité française ou remplir les conditions pour les étrangers
+    • Être inscrit en formation initiale
+    • Ne pas redoubler (sauf exceptions)
+
+DOCUMENTS NÉCESSAIRES
+    • Avis fiscal des parents (année N-2)
+    • Numéro INE (sur certificat de scolarité)
+    • Informations sur les frères et sœurs étudiants
+    • RIB
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Création du Dossier Social Étudiant (DSE)
+Rendez-vous sur messervices.etudiant.gouv.fr et créez votre compte ou connectez-
+vous.
+
+Conseils :
+
+    • Utilisez de préférence FranceConnect si vous avez un compte
+    • Notez bien vos identifiants
+Étape 2 : Remplissage du formulaire
+Remplissez le DSE avec : vos informations personnelles, revenus des parents (avis
+fiscal N-2), nombre de frères et sœurs étudiants, distance domicile-établissement.
+
+Conseils :
+
+    • Ayez l'avis fiscal de vos parents à portée de main
+    • Comptez tous les frères et sœurs étudiants (université, BTS, etc.)
+    • La distance domicile-lieu d'études influence le montant
+Étape 3 : Choix de l'établissement
+Dans la liste des établissements, recherchez et sélectionnez 'ESIC - École Supérieure
+d'Informatique et du Commerce, Paris 11e'.
+
+Conseils :
+
+    • Vous pouvez saisir jusqu'à 4 vœux d'établissement
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Mettez l'ESIC en premier vœu
+Étape 4 : Validation et envoi
+Vérifiez toutes les informations, acceptez les conditions, validez le DSE.
+
+Conseils :
+
+    • Vous recevez un email de confirmation avec un numéro de dossier
+    • Conservez précieusement ce numéro
+Étape 5 : Réponse du CROUS
+Le CROUS étudie votre dossier et vous envoie une notification conditionnelle (juin-
+juillet) indiquant si vous êtes éligible et l'échelon attribué.
+
+Conseils :
+
+    • Consultez régulièrement votre compte
+    • Vérifiez vos emails et le portail
+Étape 6 : Confirmation d'inscription
+Une fois inscrit administrativement à l'ESIC (septembre), votre dossier est
+automatiquement validé par l'école auprès du CROUS.
+
+Conseils :
+
+    • Assurez-vous que votre inscription administrative est bien finalisée
+Étape 7 : Premier versement
+La bourse est versée mensuellement sur votre compte bancaire à partir de septembre
+(généralement vers le 5 de chaque mois).
+
+Conseils :
+
+    • 10 mensualités (septembre à juin)
+    • Vérifiez votre RIB sur le portail
+
+DÉLAIS
+    • Demande : 15 janvier - 15 mai
+    • Réponse conditionnelle : juin-juillet
+    • Premier versement : début septembre
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+CONTACTS
+CROUS de Paris
+
+    • Email : contact@crous-paris.fr
+    • Téléphone : 01.40.51.36.00
+    • Site : https://www.crous-paris.fr
+Service social ESIC (aide au dossier)
+    • Email : social@esic.fr
+    • Téléphone : 01.53.90.15.42
+    • Horaires : Lun, Mer 14h-18h
+QUESTIONS FRÉQUENTES
+Puis-je faire ma demande après le 15 mai ? Oui, mais vous perdez la priorité et
+risquez de ne pas avoir de réponse avant la rentrée. Faites-le impérativement entre
+janvier et mai.
+Combien puis-je recevoir ? Selon votre échelon (0 bis à 7) : de 0€ (exonération seule) à
+7 236€/an (échelon 7, soit 723,60€/mois sur 10 mois).
+Dois-je refaire un dossier chaque année ? Oui, le DSE est à renouveler chaque année
+entre le 15 janvier et le 15 mai.
+
+PROCÉDURE 7 : RÉSERVATION D'UNE SALLE
+Public concerné : Tous les étudiants
+Période : Toute l'année
+Durée estimée : 5-10 minutes
+Coût : Gratuit
+PRÉREQUIS
+
+    • Avoir un motif pédagogique (projet, révisions en groupe, etc.)
+DOCUMENTS NÉCESSAIRES
+Aucun
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Connexion à l'ENT
+Connectez-vous à l'ENT > 'Services' > 'Réservation de salles'.
+
+Étape 2 : Consultation des disponibilités
+Sélectionnez le type de salle souhaité (salle de groupe bibliothèque, salle informatique,
+salle de réunion), la date et l'horaire.
+
+Conseils :
+
+    • Les salles de groupe bibliothèque (4-8 personnes) sont les plus simples à
+         réserver
+
+    • Les salles informatiques nécessitent validation enseignant
+Étape 3 : Sélection du créneau
+Choisissez un créneau disponible (créneaux de 2h minimum, 4h maximum par jour).
+
+Conseils :
+
+    • Réservez tôt, surtout en période d'examens
+    • Vous pouvez réserver jusqu'à 7 jours à l'avance
+Étape 4 : Remplissage du formulaire
+Indiquez : motif de la réservation, nombre de participants, matériel éventuel
+nécessaire.
+
+Conseils :
+
+    • Soyez précis sur le motif
+    • Si vous avez besoin de matériel (vidéoprojecteur, etc.), précisez-le
+Étape 5 : Validation
+    • Pour salles de groupe bibliothèque : validation immédiate
+    • Pour salles informatiques : validation par le responsable pédagogique sous 24h
+Conseils :
+
+    • Vous recevez un email de confirmation
+    • Vérifiez vos emails
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 6 : Utilisation
+Le jour J, présentez-vous à la salle réservée. Accès avec votre carte étudiante.
+Respectez les horaires et l'état des lieux.
+Conseils :
+
+    • Arrivez à l'heure
+    • Laissez la salle propre et rangée
+    • En cas d'empêchement, annulez votre réservation
+DÉLAIS
+Réservation possible jusqu'à 7 jours à l'avance. Validation immédiate ou sous 24h.
+CONTACTS
+Bibliothèque (salles de groupe)
+
+    • Email : bibliotheque@esic.fr
+    • Téléphone : 01.53.90.15.50
+Services informatiques (salles info)
+
+    • Email : support-it@esic.fr
+    • Téléphone : 01.53.90.15.99
+QUESTIONS FRÉQUENTES
+Puis-je annuler une réservation ? Oui, via l'ENT, jusqu'à 2h avant le créneau. Au-delà,
+la réservation est perdue.
+Que se passe-t-il si je ne viens pas ? Après 2 absences non annulées, vous risquez
+une suspension temporaire de votre droit de réservation.
+Puis-je prolonger ma réservation ? Si la salle est libre après votre créneau, oui
+(demandez à la bibliothèque ou sur l'ENT).
+DOCUMENTS GÉNÉRÉS
+    • Confirmation de réservation (email)
+
+PROCÉDURE 8 : EMPRUNT DE LIVRES À LA BIBLIOTHÈQUE
+Public concerné : Tous les étudiants inscrits
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Période : Toute l'année (selon horaires bibliothèque)
+Durée estimée : 5 minutes
+Coût : Gratuit. Pénalité de retard : 0,50€/jour/livre
+PRÉREQUIS
+
+    • Avoir sa carte étudiante
+    • Ne pas avoir de retard de restitution en cours
+    • Ne pas avoir atteint la limite d'emprunts (5 livres)
+DOCUMENTS NÉCESSAIRES
+    • Carte étudiante ESIC
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Recherche du livre
+Option 1 : Recherchez le livre dans le catalogue en ligne (bibliotheque.esic.fr) et notez
+sa cote.
+Option 2 : Parcourez directement les rayonnages.
+Conseils :
+
+    • Le catalogue en ligne indique si le livre est disponible ou emprunté
+    • Notez bien la cote pour localiser le livre
+Étape 2 : Localisation dans les rayonnages
+Les livres sont classés par cote (visible sur la tranche). Suivez les panneaux de
+signalisation dans la bibliothèque.
+Conseils :
+
+    • Si vous ne trouvez pas, demandez à un bibliothécaire
+    • Vérifiez que le livre n'est pas en consultation sur place dans la salle de lecture
+Étape 3 : Emprunt au comptoir
+Présentez-vous au comptoir d'accueil avec le(s) livre(s) et votre carte étudiante.
+Conseils :
+
+    • Vous pouvez emprunter jusqu'à 5 livres simultanément
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 4 : Enregistrement
+Le bibliothécaire scanne votre carte et les livres. L'emprunt est enregistré dans le
+système.
+
+Conseils :
+
+    • Vérifiez la date de retour annoncée (3 semaines)
+Étape 5 : Consultation du prêt
+Vous pouvez consulter vos emprunts en cours sur bibliotheque.esic.fr > 'Mon compte'
+ou sur l'ENT.
+
+Conseils :
+
+    • Un rappel automatique vous est envoyé 3 jours avant la date de retour
+Étape 6 : Restitution
+Rendez les livres avant la date limite au comptoir d'accueil ou dans la boîte de retour (si
+bibliothèque fermée).
+
+Conseils :
+
+    • Vous pouvez renouveler l'emprunt 2 fois (jusqu'à 9 semaines total) via le
+         catalogue ou au comptoir
+
+    • En cas de retard : 0,50€ par jour et par livre
+
+DÉLAIS
+Durée d'emprunt : 3 semaines, renouvelable 2 fois (si pas de réservation par un autre
+étudiant).
+
+CONTACTS
+Bibliothèque
+
+    • Email : bibliotheque@esic.fr
+    • Téléphone : 01.53.90.15.50
+    • Bâtiment D, 1er étage
+    • Horaires : Lun-Ven 8h-20h, Sam 9h-17h
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+Puis-je emprunter des revues ? Les revues récentes sont consultables uniquement
+sur place. Les anciens numéros peuvent être empruntés (2 max, 1 semaine).
+Que se passe-t-il si je perds un livre ? Vous devez le signaler immédiatement et
+racheter le livre (ou rembourser sa valeur) + frais de traitement 10€.
+Puis-je réserver un livre déjà emprunté ? Oui, via le catalogue en ligne. Vous serez
+notifié par email dès qu'il est disponible.
+
+PROCÉDURE 9 : INSCRIPTION À UN EXAMEN DE RATTRAPAGE
+Public concerné : Étudiants ayant obtenu une note < 10/20 après compensation
+Période : 2 semaines avant la session de rattrapage
+Durée estimée : Automatique (pas de démarche)
+Coût : Gratuit
+PRÉREQUIS
+
+    • Avoir une note inférieure à 10/20 dans une ou plusieurs matières après
+         compensation
+
+DOCUMENTS NÉCESSAIRES
+Aucun
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Publication des résultats
+Après la session 1, les résultats sont publiés sur l'ENT avec indication des matières à
+rattraper.
+Conseils :
+
+    • Consultez attentivement vos résultats
+    • Les matières à rattraper sont identifiées clairement
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 2 : Inscription automatique
+Vous êtes AUTOMATIQUEMENT inscrit aux rattrapages des matières où vous avez
+moins de 10/20.
+
+Conseils :
+
+    • Aucune démarche de votre part n'est nécessaire
+    • Vous ne pouvez pas vous désinscrire (sauf demande exceptionnelle)
+Étape 3 : Réception des convocations
+2 semaines avant la session de rattrapage, vous recevez vos convocations par email et
+elles sont disponibles sur l'ENT > 'Examens' > 'Mes convocations'.
+
+Conseils :
+
+    • Vérifiez votre boîte email régulièrement
+    • Téléchargez et imprimez vos convocations
+Étape 4 : Préparation
+Révisez les matières concernées. Les rattrapages sont dans le même format que la
+session 1.
+
+Conseils :
+
+    • Consultez vos cours et vos anciennes copies
+    • N'hésitez pas à solliciter les enseignants pendant leurs permanences
+Étape 5 : Passage des examens
+Présentez-vous aux examens de rattrapage avec votre convocation, carte étudiante et
+pièce d'identité.
+
+Conseils :
+
+    • Arrivez 20-30 min en avance
+    • Retard > 15 min = interdiction d'entrer
+Étape 6 : Note finale
+La meilleure note entre session 1 et rattrapage est retenue, plafonnée à 10/20.
+
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Même si vous faites moins bien au rattrapage, votre note de session 1 est
+         conservée
+
+    • Objectif : obtenir au moins 10/20 pour valider
+
+DÉLAIS
+    • Convocations : 2 semaines avant
+    • Session de rattrapage S1 : début février
+    • Session S2 : début septembre
+
+CONTACTS
+Service Scolarité
+
+    • Email : scolarite@esic.fr
+    • Téléphone : 01.53.90.15.20
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+
+QUESTIONS FRÉQUENTES
+Puis-je ne pas passer un rattrapage si je suis satisfait de ma note ? Par défaut, non.
+Cependant, vous pouvez demander une dispense par email au service scolarité avant
+la date limite indiquée.
+
+Si j'ai 11/20 en session 1 et 8/20 au rattrapage, quelle note est retenue ? Votre note
+de session 1 (11/20) est conservée. La meilleure note entre les deux sessions est
+toujours retenue.
+
+Que se passe-t-il si je rate aussi le rattrapage ? Si après rattrapage vous n'avez pas
+validé suffisamment d'ECTS (< 48/60), vous risquez le redoublement.
+
+DOCUMENTS GÉNÉRÉS
+    • Convocations de rattrapage
+
+PROCÉDURE 10 : DEMANDE D'AIDE FINANCIÈRE D'URGENCE
+Public concerné : Étudiants en difficulté financière soudaine
+
+Période : Toute l'année
+
+Durée estimée : 1h (constitution dossier) + 15 jours (traitement)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Coût : Gratuit
+
+PRÉREQUIS
+    • Être en difficulté financière avérée et soudaine
+    • Avoir épuisé les autres aides (CROUS, CAF, famille)
+
+DOCUMENTS NÉCESSAIRES
+    • Justificatifs de ressources (3 derniers mois) : bulletins de salaire, attestation
+         Pôle Emploi, etc.
+    • Justificatifs de charges : loyer, factures, etc.
+    • Justificatif de la situation d'urgence : licenciement parent, accident, problème
+         de santé, etc.
+    • Relevés bancaires (3 derniers mois)
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Prise de rendez-vous
+Contactez l'assistante sociale Isabelle DUBOIS par email (social@esic.fr) ou téléphone
+(01.53.90.15.42) pour prendre rendez-vous.
+
+Conseils :
+
+    • Expliquez brièvement votre situation dans l'email
+    • Les rendez-vous ont lieu les lundis et mercredis 14h-18h
+Étape 2 : Entretien avec l'assistante sociale
+Lors du rendez-vous, présentez votre situation et apportez tous les justificatifs
+nécessaires.
+
+Conseils :
+
+    • Soyez transparent sur votre situation financière
+    • N'oubliez aucun document
+    • L'entretien est confidentiel
+Étape 3 : Constitution du dossier
+L'assistante sociale vous aide à constituer le dossier de demande d'aide d'urgence.
+
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Elle évaluera aussi votre éligibilité à d'autres aides (CAF, FSU, etc.)
+Étape 4 : Examen par la commission
+Votre dossier est présenté à la commission d'aide d'urgence (composée de la direction,
+service social, représentant étudiant).
+
+Conseils :
+
+    • La commission se réunit toutes les 2 semaines
+    • Délai de réponse : 15 jours maximum
+Étape 5 : Notification de décision
+Vous êtes informé par email et courrier de la décision : acceptation (avec montant
+accordé), refus motivé ou demande de compléments.
+
+Conseils :
+
+    • En cas d'acceptation, le montant est versé sous 5 jours
+    • En cas de refus, vous pouvez demander une révision si situation change
+Étape 6 : Versement
+Si accepté, l'aide est versée directement sur votre compte bancaire (virement).
+
+Conseils :
+
+    • Montant variable selon situation : 200€ à 1 000€
+    • Cette aide est exceptionnelle et non renouvelable dans l'année
+
+DÉLAIS
+Délai de traitement : 15 jours après dépôt du dossier complet. Versement : 5 jours
+après acceptation.
+
+CONTACTS
+Service Social
+
+    • Nom : Isabelle DUBOIS
+    • Email : social@esic.fr
+    • Téléphone : 01.53.90.15.42
+    • Bureau : A105
+    • Horaires : Lun, Mer 14h-18h
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+Dois-je rembourser cette aide ? Non, il s'agit d'une aide à fonds perdus (pas de
+remboursement).
+Puis-je en bénéficier plusieurs fois ? Cette aide est exceptionnelle. En principe, une
+seule fois par année académique, sauf nouvelle situation d'urgence.
+L'aide est-elle cumulable avec d'autres aides ? Oui, elle vient en complément des
+bourses CROUS, APL, etc.
+DOCUMENTS GÉNÉRÉS
+
+    • Notification de décision
+
+PROCÉDURE 11 : CRÉATION D'UNE ASSOCIATION ÉTUDIANTE
+Public concerné : Groupes d'étudiants porteurs d'un projet associatif
+Période : Toute l'année (de préférence septembre-octobre)
+Durée estimée : 2-3 semaines (de la candidature à la validation)
+Coût : Gratuit
+PRÉREQUIS
+
+    • Avoir au minimum 5 membres fondateurs
+    • Avoir un projet associatif clair et viable
+    • Ne pas faire doublon avec une association existante
+
+DOCUMENTS NÉCESSAIRES
+    • Liste des membres fondateurs (nom, prénom, formation, email)
+    • Statuts de l'association (modèle fourni par le BVE)
+    • Descriptif du projet (objectifs, activités prévues, budget prévisionnel)
+    • Règlement intérieur de l'association (optionnel)
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Prise de contact avec le BVE
+Contactez le Bureau de la Vie Étudiante (bve@esic.fr) pour exposer votre projet et
+obtenir le dossier de création.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Préparez une présentation claire de votre projet
+    • Le BVE vous conseillera sur la faisabilité
+Étape 2 : Constitution du dossier
+Réunissez les 5 membres minimum, rédigez les statuts (modèle BVE), définissez le
+bureau (président, trésorier, secrétaire minimum), établissez un budget prévisionnel
+pour la première année.
+
+Conseils :
+
+    • Inspirez-vous des statuts d'associations existantes
+    • Soyez réalistes dans votre budget
+    • Définissez clairement les rôles de chacun
+Étape 3 : Dépôt du dossier
+Envoyez le dossier complet par email à bve@esic.fr.
+
+Conseils :
+
+    • Vérifiez que tous les documents sont présents
+    • Soignez la présentation
+Étape 4 : Examen préalable
+Le BVE examine votre dossier et peut demander des compléments ou ajustements
+(délai : 1 semaine).
+
+Conseils :
+
+    • Répondez rapidement aux demandes de complément
+Étape 5 : Présentation devant la commission
+Vous êtes convoqués (président + 1-2 membres) pour présenter votre projet devant la
+commission (BVE + représentants direction + étudiants).
+
+Conseils :
+
+    • Préparez une présentation orale de 10 min
+    • Anticipez les questions
+    • Soyez enthousiastes mais réalistes
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 6 : Décision
+La commission rend sa décision : validation, refus motivé ou validation sous
+conditions. Délai : 1 semaine après l'audition.
+
+Conseils :
+
+    • En cas de validation conditionnelle, vous devrez remplir les conditions avant le
+         lancement
+
+Étape 7 : Formalisation
+Si validé : signature de la charte des associations ESIC, attribution d'un espace de
+stockage, d'une adresse email (@esic.fr), inscription au registre des associations.
+
+Étape 8 : Déclaration en préfecture (optionnel)
+Pour ouvrir un compte bancaire, vous devez déclarer votre association en préfecture
+(loi 1901). Le BVE peut vous accompagner.
+
+Conseils :
+
+    • Cette étape est obligatoire si vous voulez gérer un budget conséquent
+Étape 9 : Subvention de démarrage
+Les nouvelles associations validées peuvent bénéficier d'une subvention de démarrage
+(200-500€) sur présentation d'un budget détaillé.
+
+Conseils :
+
+    • Utilisez cette aide pour vos premières actions
+
+DÉLAIS
+2-3 semaines de la candidature à la validation. Commencer de préférence en
+septembre pour avoir toute l'année devant vous.
+
+CONTACTS
+Bureau de la Vie Étudiante
+
+    • Nom : Laura GARCIA
+    • Email : bve@esic.fr
+    • Téléphone : 01.53.90.15.50
+    • Bureau : A107
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Horaires : Lun-Ven 10h-18h
+QUESTIONS FRÉQUENTES
+Peut-on créer une association à but lucratif ? Non, les associations étudiantes ESIC
+sont à but non lucratif (loi 1901).
+Combien de temps faut-il s'engager ? Le mandat du bureau est généralement d'un
+an, renouvelable.
+Qui peut être membre ? Priorité aux étudiants ESIC. Les étudiants d'autres écoles
+peuvent être membres selon les statuts.
+DOCUMENTS GÉNÉRÉS
+
+    • Reconnaissance officielle
+    • Charte signée
+    • Email association (@esic.fr)
+
+PROCÉDURE 12 : ORGANISATION D'UN ÉVÉNEMENT SUR LE CAMPUS
+Public concerné : Associations étudiantes, Groupes d'étudiants
+Période : Toute l'année
+Durée estimée : Minimum 3 semaines avant l'événement
+Coût : Gratuit. Aide financière possible selon le projet (jusqu'à 500€)
+PRÉREQUIS
+
+    • Avoir un projet d'événement défini
+    • Être une association reconnue OU avoir l'appui d'un enseignant/service
+DOCUMENTS NÉCESSAIRES
+    • Descriptif de l'événement (type, objectifs, déroulé)
+    • Date, horaire, lieu souhaité
+    • Nombre de participants attendus
+    • Budget prévisionnel
+    • Liste des intervenants (si applicable)
+    • Besoins logistiques (matériel, restauration, etc.)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Conception du projet
+Définissez clairement votre événement : objectifs, public cible, format, date souhaitée.
+
+Conseils :
+
+    • Vérifiez le calendrier académique pour éviter les périodes d'examens
+    • Consultez les autres associations pour éviter les doublons de dates
+Étape 2 : Demande d'autorisation préalable
+Minimum 3 semaines avant la date souhaitée, envoyez un email à bve@esic.fr avec :
+descriptif détaillé, date/lieu souhaités, budget prévisionnel, nombre de participants.
+
+Conseils :
+
+    • Plus vous anticipez, mieux c'est (idéal : 1-2 mois avant)
+    • Ayez des dates alternatives
+Étape 3 : Examen de la demande
+La commission BVE examine votre demande : cohérence avec les valeurs ESIC,
+faisabilité logistique, budget, pertinence pédagogique.
+
+Conseils :
+
+    • Délai de réponse : 1 semaine
+    • La commission peut demander des ajustements
+Étape 4 : Autorisation et réservations
+Si accepté : le BVE valide la réservation de salle, autorise l'événement et vous aide dans
+l'organisation logistique.
+
+Conseils :
+
+    • Vous recevez un accusé d'autorisation par email à conserver
+Étape 5 : Préparation logistique
+Selon vos besoins : demande de matériel (sono, vidéoprojecteur, etc.) auprès du
+service IT, commande de restauration si applicable, création des supports de
+communication (affiches, posts réseaux sociaux).
+
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Le BVE peut vous aider sur la communication
+    • Respectez la charte graphique ESIC
+Étape 6 : Communication
+Faites la promotion de votre événement : affiches sur le campus (avec tampon BVE),
+posts sur réseaux sociaux, email via le BVE (pour envoi à tous les étudiants).
+
+Conseils :
+
+    • Commencez la communication 2 semaines avant
+    • Créez un événement sur l'ENT pour les inscriptions
+Étape 7 : Jour J - Installation
+Installez la salle en respectant les horaires autorisés. Vérifiez le matériel.
+
+Conseils :
+
+    • Arrivez au moins 1h avant le début
+    • Testez tout le matériel technique
+Étape 8 : Déroulement
+Accueillez les participants, assurez le bon déroulement, respectez les horaires.
+
+Conseils :
+
+    • Désignez un responsable sécurité/urgence
+    • Ayez le numéro de l'urgence campus (01.53.90.15.00)
+Étape 9 : Rangement
+Remettez la salle en état, rendez le matériel emprunté.
+
+Conseils :
+
+    • État des lieux obligatoire avec le responsable salle
+    • Tout dégât sera facturé
+Étape 10 : Bilan
+Envoyez un bilan au BVE (nombre de participants, retours, photos, budget final) dans
+les 7 jours suivant l'événement.
+
+Conseils :
+
+    • Ce bilan est important pour vos futures demandes
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Il peut être publié sur les réseaux sociaux ESIC
+DÉLAIS
+Demande minimum 3 semaines avant (idéal : 1-2 mois). Autorisation : 1 semaine.
+CONTACTS
+Bureau de la Vie Étudiante
+
+    • Email : bve@esic.fr
+    • Téléphone : 01.53.90.15.50
+QUESTIONS FRÉQUENTES
+Peut-on organiser un événement payant ? Oui, sous conditions : tarif modéré, à but
+non lucratif, recettes reversées à l'association ou projet caritatif.
+Peut-on faire venir des intervenants extérieurs ? Oui, c'est même encouragé.
+Précisez-le dans votre demande (nom, qualité, sujet).
+Peut-on servir de l'alcool ? Non, l'alcool est strictement interdit sur le campus (sauf
+événements officiels autorisés par la Direction).
+DOCUMENTS GÉNÉRÉS
+    • Autorisation d'événement
+
+PROCÉDURE 13 : SIGNALEMENT D'UN INCIDENT TECHNIQUE (IT)
+Public concerné : Tous les étudiants
+Période : Toute l'année
+Durée estimée : 5 minutes (signalement)
+Coût : Gratuit
+PRÉREQUIS
+Aucun
+DOCUMENTS NÉCESSAIRES
+
+    • Captures d'écran du problème (si applicable)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Identification du problème
+Déterminez précisément le problème : connexion ENT impossible, WiFi ne fonctionne
+pas, imprimante en panne, logiciel qui plante, problème d'accès VPN, etc.
+
+Conseils :
+
+    • Notez les messages d'erreur exacts
+    • Essayez de redémarrer (ordinateur, navigateur) avant de signaler
+Étape 2 : Vérification rapide
+Vérifiez que le problème ne vient pas de vous : mauvais identifiants, navigateur
+obsolète, connexion internet personnelle coupée, etc.
+
+Conseils :
+
+    • Testez sur un autre appareil si possible
+    • Vérifiez que vous utilisez les bons identifiants
+Étape 3 : Signalement
+3 options :
+
+    1. Email à support-it@esic.fr avec description détaillée + captures d'écran
+    2. Formulaire sur ENT > 'Support' > 'Nouveau ticket'
+    3. Chat en ligne sur ENT (9h-18h)
+Conseils :
+
+    • L'email et le formulaire créent automatiquement un ticket
+    • Le chat est le plus rapide pour problèmes simples
+Étape 4 : Informations à fournir
+Dans votre signalement, indiquez : votre nom et formation, description précise du
+problème, message d'erreur (si applicable), appareil utilisé (PC, Mac, smartphone),
+navigateur, quand le problème est apparu, ce que vous avez déjà essayé.
+
+Conseils :
+
+    • Plus vous êtes précis, plus vite le problème sera résolu
+    • Joignez des captures d'écran
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 5 : Confirmation
+Vous recevez un email de confirmation avec un numéro de ticket.
+
+Conseils :
+
+    • Conservez ce numéro
+    • Vous pouvez suivre l'avancement du ticket sur l'ENT
+Étape 6 : Traitement
+L'équipe IT examine votre ticket et vous contacte si besoin. Délai : 48h pour incident
+bloquant, 1 semaine pour demande standard.
+
+Conseils :
+
+    • Consultez vos emails régulièrement
+    • Répondez rapidement si l'équipe IT vous contacte
+Étape 7 : Résolution
+Une fois le problème résolu, vous recevez un email de clôture du ticket.
+
+Conseils :
+
+    • Vérifiez que le problème est bien résolu
+    • Vous pouvez rouvrir le ticket si le problème persiste
+
+DÉLAIS
+Délai de traitement : 48h (incident bloquant), 1 semaine (standard).
+
+CONTACTS
+Helpdesk IT
+
+    • Email : support-it@esic.fr
+    • Téléphone : 01.53.90.15.99
+    • Bureau : C104
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+    • Chat : ENT > Support (9h-18h)
+
+QUESTIONS FRÉQUENTES
+Que faire en cas d'urgence (examen en ligne impossible) ? Téléphonez
+immédiatement au 01.53.90.15.99 ou présentez-vous au bureau C104.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Puis-je apporter mon ordinateur personnel au helpdesk ? Oui, pour problèmes de
+connexion ENT, VPN, WiFi. Pour autres problèmes, adressez-vous à un réparateur.
+Le helpdesk peut-il installer des logiciels sur mon PC personnel ? Non, uniquement
+sur les postes de l'école. Pour votre PC, téléchargez depuis l'ENT (Office, VPN, etc.).
+DOCUMENTS GÉNÉRÉS
+
+    • Ticket de support (numéro de suivi)
+
+PROCÉDURE 14 : DEMANDE DE PRÊT DE MATÉRIEL INFORMATIQUE
+Public concerné : Tous les étudiants
+Période : Toute l'année
+Durée estimée : 10 minutes (réservation + retrait)
+Coût : Gratuit. Caution 50€ restituée si matériel rendu en bon état
+PRÉREQUIS
+
+    • Avoir sa carte étudiante
+    • Ne pas avoir de retard de restitution en cours
+    • Pouvoir fournir une caution
+DOCUMENTS NÉCESSAIRES
+    • Carte étudiante
+    • Pièce d'identité
+    • Caution : chèque de 50€ (non encaissé) OU empreinte CB
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Réservation en ligne
+Connectez-vous à l'ENT > 'Services' > 'Prêt matériel'. Consultez les disponibilités et
+sélectionnez le matériel souhaité :
+
+    • Ordinateur portable (20 disponibles, prêt 48h)
+    • Caméra/micro (5 kits, prêt 1 sem)
+    • Calculatrice (20, prêt durée examen)
+    • Chargeurs (30, prêt journée)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Réservez à l'avance, surtout pour les portables et caméras
+    • Vérifiez les disponibilités avant de vous déplacer
+Étape 2 : Confirmation de réservation
+Vous recevez un email de confirmation avec la date et l'heure de retrait.
+
+Conseils :
+
+    • Notez bien le créneau de retrait (bureau C104, horaires 9h-12h / 14h-17h)
+Étape 3 : Retrait
+Présentez-vous au helpdesk IT (bureau C104) avec votre carte étudiante, pièce
+d'identité et caution (chèque 50€ ou CB).
+
+Conseils :
+
+    • La caution n'est pas encaissée sauf dégradation ou perte
+    • Venez aux horaires confirmés
+Étape 4 : État des lieux
+Le technicien vérifie l'état du matériel avec vous et vous fait signer un formulaire
+d'emprunt.
+
+Conseils :
+
+    • Vérifiez vous-même l'état (rayures, fonctionnement)
+    • Signalez tout défaut constaté
+Étape 5 : Utilisation
+Utilisez le matériel avec précaution. Vous êtes responsable pendant la durée du prêt.
+
+Conseils :
+
+    • Ne prêtez pas à d'autres personnes
+    • Rangez dans un sac protégé
+    • Assurez-vous de ne pas l'oublier quelque part
+Étape 6 : Restitution
+Rendez le matériel au helpdesk IT AVANT la date et l'heure limite indiquées.
+
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Anticipez pour ne pas être en retard
+    • Retard = suspension du droit d'emprunt
+    • Vérifiez que vous n'avez rien oublié (chargeur, câbles, etc.)
+Étape 7 : Vérification et restitution caution
+Le technicien vérifie l'état. Si tout est OK : votre caution vous est rendue
+immédiatement.
+
+Conseils :
+
+    • Si dégradation : caution encaissée + éventuel complément selon dommages
+
+DÉLAIS
+Durée de prêt selon matériel :
+
+    • Portables : 48h
+    • Caméras : 1 semaine
+    • Calculatrices : durée examen
+    • Chargeurs : journée
+
+CONTACTS
+Helpdesk IT
+
+    • Email : support-it@esic.fr
+    • Téléphone : 01.53.90.15.99
+    • Bureau : C104
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+
+QUESTIONS FRÉQUENTES
+Puis-je prolonger la durée de prêt ? Oui, si personne n'a réservé après vous.
+Contactez le helpdesk IT avant la fin du prêt.
+
+Que se passe-t-il si je perds ou casse le matériel ? Vous devez le signaler
+immédiatement. Caution encaissée + remboursement du coût du matériel (PC : ~500€,
+caméra : ~300€).
+
+Puis-je emprunter plusieurs équipements en même temps ? Oui, dans la limite des
+disponibilités. Maximum 2 équipements simultanément.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+DOCUMENTS GÉNÉRÉS
+    • Formulaire d'emprunt signé
+
+PROCÉDURE 15 : INSCRIPTION À UN PROGRAMME DE MOBILITÉ INTERNATIONALE
+Public concerné : Étudiants de Bachelor 3 et Master
+Période : Octobre-Décembre (pour départ année suivante)
+Durée estimée : 2-3 mois (candidature à départ)
+
+Coût : Frais ESIC maintenus (pas de frais dans université partenaire). Bourses
+disponibles : Erasmus+ 150-250€/mois (EU), AMI 400€/mois (boursiers CROUS)
+PRÉREQUIS
+
+    • Être inscrit en B3 ou Master
+    • Avoir une moyenne ≥ 12/20
+    • Niveau d'anglais B2 minimum (TOEFL/IELTS requis pour certaines destinations)
+DOCUMENTS NÉCESSAIRES
+    • Relevés de notes (toutes les années)
+    • CV en anglais
+    • Lettre de motivation en anglais (1-2 pages)
+    • Test d'anglais (TOEFL/IELTS) si destination anglophone
+    • Lettre de recommandation d'un enseignant (optionnelle mais conseillée)
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Réunion d'information
+Participez à la réunion d'information sur la mobilité internationale (organisée en
+octobre). Toutes les destinations et modalités sont présentées.
+Conseils :
+
+    • Date annoncée sur l'ENT en septembre
+    • Présence vivement recommandée
+    • Posez toutes vos questions
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 2 : Choix des destinations
+Consultez la liste des 45 universités partenaires sur l'ENT. Choisissez 3 destinations
+par ordre de préférence.
+
+Conseils :
+
+    • Renseignez-vous sur les cours disponibles
+    • Vérifiez que votre spécialisation existe
+    • Pensez au coût de la vie
+Étape 3 : Constitution du dossier
+Préparez tous les documents requis : formulaire de candidature (ENT), relevés de
+notes, CV anglais, lettre de motivation anglais (spécifique pour chaque destination),
+test d'anglais si nécessaire.
+
+Conseils :
+
+    • Soignez particulièrement la lettre de motivation
+    • Faites-vous relire par un anglophone
+    • Soyez sincère sur vos motivations
+Étape 4 : Dépôt de candidature
+Déposez votre dossier complet sur l'ENT avant la date limite (généralement mi-
+décembre).
+
+Conseils :
+
+    • Ne vous y prenez pas à la dernière minute
+    • Vérifiez que tous les documents sont bien téléchargés
+Étape 5 : Sélection
+Une commission examine tous les dossiers (fin décembre-début janvier). Critères :
+résultats académiques (50%), motivation (30%), niveau langue (20%).
+
+Conseils :
+
+    • Les meilleurs dossiers ont priorité sur les destinations les plus demandées
+Étape 6 : Entretien (si nécessaire)
+Vous pouvez être convoqué pour un entretien de motivation (janvier).
+
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Préparez une présentation de 5 min de votre projet
+    • L'entretien peut être en anglais
+Étape 7 : Résultats
+Les résultats sont publiés fin janvier. Vous êtes affecté à l'une de vos destinations ou
+mis sur liste d'attente.
+
+Conseils :
+
+    • En cas de refus, possibilité de candidater aux places restantes
+Étape 8 : Candidature auprès de l'université partenaire
+Si sélectionné, l'ESIC transmet votre dossier à l'université partenaire. Acceptation
+généralement automatique (février-mars).
+
+Conseils :
+
+    • Certaines universités demandent des documents complémentaires
+Étape 9 : Learning Agreement
+Établissez votre contrat pédagogique (choix des cours, équivalences ECTS) avec le
+coordinateur international.
+
+Conseils :
+
+    • Choisissez 30 ECTS minimum
+    • Vérifiez les équivalences avec votre formation ESIC
+Étape 10 : Préparation au départ
+Dossiers administratifs : visa (si hors UE), logement, assurance santé internationale,
+inscriptions. Bourses : Erasmus+ (EU) ou AMI (hors EU). Préparez votre départ : billets,
+vaccins si nécessaire, etc.
+
+Conseils :
+
+    • Le service international vous accompagne
+    • Rejoignez le groupe Facebook des étudiants en mobilité
+
+DÉLAIS
+    • Candidature : Octobre-Décembre
+    • Résultats : Fin janvier
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Départ : Août-Septembre année suivante
+CONTACTS
+Relations Internationales
+
+    • Nom : Elena MARTINEZ
+    • Email : international@esic.fr
+    • Téléphone : 01.53.90.15.25
+    • Bureau : A204
+    • Horaires : Lun-Ven 9h-17h
+QUESTIONS FRÉQUENTES
+Puis-je partir au S2 plutôt qu'au S1 ? C'est possible mais moins courant. La plupart
+des échanges se font au S1. Contactez le service international.
+Mes cours à l'étranger seront-ils en français ? Non, généralement en anglais ou dans
+la langue locale. Préparez-vous linguistiquement.
+Puis-je partir 1 année complète ? Oui, pour certaines destinations. Vous validez alors
+60 ECTS (2 semestres).
+
+PROCÉDURE 16 : DEMANDE DE VALIDATION DES ACQUIS DE L'EXPÉRIENCE (VAE)
+Public concerné : Professionnels justifiant de 3 ans d'expérience minimum
+Période : Toute l'année (candidatures permanentes)
+Durée estimée : 8-12 mois (procédure complète)
+Coût : Accompagnement (optionnel) : 1 500€ (finançable CPF, employeur, Pôle
+Emploi). Frais de dossier : 350€
+PRÉREQUIS
+
+    • Justifier de 3 ans minimum d'expérience professionnelle en lien avec le diplôme
+         visé
+
+    • Expérience salariée, indépendante, bénévole ou volontaire
+DOCUMENTS NÉCESSAIRES
+
+    • CV détaillé
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Descriptif des activités professionnelles
+    • Certificats de travail, attestations
+    • Pièce d'identité
+    • Diplômes obtenus
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Information et conseil
+Contactez le service VAE (vae@esic.fr) pour un entretien préalable gratuit. Présentation
+de votre parcours et du diplôme visé.
+
+Conseils :
+
+    • Cet entretien permet de vérifier la faisabilité de votre projet
+    • Durée : 1h
+Étape 2 : Dossier de recevabilité (Livret 1)
+Si le projet est jugé recevable, vous remplissez le dossier de recevabilité avec : CV,
+descriptif expériences, attestations employeurs, diplômes.
+
+Conseils :
+
+    • Soyez exhaustif sur vos expériences
+    • Le dossier fait environ 10-15 pages
+Étape 3 : Examen de la recevabilité
+Le service VAE examine votre dossier (délai : 2 mois). Décision : recevable ou non
+recevable (avec motivations).
+
+Conseils :
+
+    • Si non recevable : vous pouvez représenter un dossier après avoir acquis plus
+         d'expérience
+
+Étape 4 : Accompagnement (optionnel mais recommandé)
+Si recevable, vous pouvez bénéficier d'un accompagnement méthodologique (24h,
+payant : 1 500€ finançable par CPF ou employeur).
+
+Conseils :
+
+    • Fortement recommandé pour maximiser vos chances
+    • Séances individuelles et collectives
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 5 : Rédaction du Livret 2
+Rédigez le dossier de validation (Livret 2) : description détaillée de vos activités, analyse
+des compétences acquises, lien avec le référentiel du diplôme.
+
+Conseils :
+
+    • C'est le travail le plus conséquent (50-80 pages)
+    • Prévoyez 4-6 mois de rédaction
+    • L'accompagnement vous aide beaucoup
+Étape 6 : Dépôt du Livret 2
+Déposez votre Livret 2 complet au service VAE.
+
+Conseils :
+
+    • Respectez la date limite (3 sessions par an : mars, juin, novembre)
+    • Prévoyez une relecture attentive avant dépôt
+Étape 7 : Soutenance devant le jury
+Vous présentez votre parcours et votre dossier devant un jury d'experts (durée : 1h). 20
+min présentation + 40 min questions.
+
+Conseils :
+
+    • Préparez votre présentation PowerPoint
+    • Le jury évalue vos compétences au regard du diplôme
+    • Restez factuel et illustrez par des exemples concrets
+Étape 8 : Délibération
+Le jury délibère et rend sa décision :
+
+    • Validation totale (diplôme obtenu)
+    • Validation partielle (modules validés, autres à acquérir)
+    • Refus de validation
+Conseils :
+
+    • La décision vous est notifiée sous 15 jours
+Étape 9 : Validation partielle (si applicable)
+En cas de validation partielle, vous devez suivre les modules non validés ou acquérir
+l'expérience manquante puis représenter un dossier.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Vous avez 5 ans pour compléter
+Étape 10 : Délivrance du diplôme
+En cas de validation totale, vous obtenez le diplôme ESIC, identique au diplôme délivré
+par la formation initiale.
+
+Conseils :
+
+    • Délai de délivrance : 3-6 mois après la validation
+
+DÉLAIS
+    • Procédure complète : 8-12 mois
+    • Recevabilité : 2 mois
+    • Rédaction Livret 2 : 4-6 mois
+    • Soutenance : 3 sessions/an
+
+CONTACTS
+Service VAE
+
+    • Email : vae@esic.fr
+    • Téléphone : 01.53.90.15.30
+    • Horaires : Lun-Ven 9h-17h
+
+QUESTIONS FRÉQUENTES
+Le diplôme obtenu par VAE a-t-il la même valeur qu'en formation initiale ? Oui,
+strictement la même valeur et le même diplôme (aucune mention de VAE sur le
+diplôme).
+
+Puis-je faire une VAE tout en travaillant ? Oui, c'est fait pour ça. La rédaction se fait
+sur votre temps personnel mais certains employeurs accordent des heures pour la
+VAE.
+
+Quels diplômes ESIC sont accessibles par VAE ? Tous : Bachelor (Bac+3) et Master
+(Bac+5) dans toutes les spécialités.
+
+DOCUMENTS GÉNÉRÉS
+    • Notification de recevabilité
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Livret 2 complété
+    • Diplôme (si validation totale)
+    • Attestation de validation partielle (si applicable)
+
+PROCÉDURE 17 : DEMANDE DE CÉSURE
+Public concerné : Étudiants de Bachelor 2, Bachelor 3, Master 1
+Période : 3 mois avant la date de début souhaitée
+Durée estimée : 1 mois (constitution dossier + décision)
+Coût : Maintien de l'inscription : 20% des frais annuels pendant la césure
+PRÉREQUIS
+
+    • Avoir validé au moins 1 année complète
+    • Avoir un projet structuré de césure
+DOCUMENTS NÉCESSAIRES
+    • Lettre de motivation détaillée
+    • Descriptif du projet de césure (stage long, entrepreneuriat, service civique,
+
+         projet personnel, etc.)
+    • Justificatifs (promesse d'embauche, convention, etc.) si applicable
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Élaboration du projet
+Définissez clairement votre projet de césure : nature (stage, service civique, projet
+entrepreneurial, voyage studieux, etc.), durée (1 semestre ou 1 an), période (dates de
+début et fin), objectifs (compétences à acquérir, apports pour votre formation).
+
+Conseils :
+
+    • La césure doit avoir une valeur ajoutée pour votre parcours
+    • Les projets simplement 'récréatifs' sont rarement acceptés
+Étape 2 : Entretien avec le responsable pédagogique
+Prenez rendez-vous avec votre responsable de formation pour présenter votre projet.
+
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Cet entretien est obligatoire
+    • Votre responsable vous conseillera sur la faisabilité
+Étape 3 : Constitution du dossier
+Rédigez une lettre de motivation (2-3 pages) expliquant : votre parcours, votre projet
+détaillé, les bénéfices attendus, comment vous comptez maintenir le lien avec l'école.
+Joignez tous les justificatifs pertinents.
+
+Conseils :
+
+    • Soyez précis et convaincant
+    • Montrez que vous avez bien réfléchi au projet
+Étape 4 : Dépôt du dossier
+Envoyez votre dossier complet à etudes@esic.fr avec copie à votre responsable
+pédagogique. Délai : MINIMUM 3 mois avant la date de début souhaitée.
+
+Conseils :
+
+    • Anticipez car la procédure prend du temps
+    • Ne commencez pas votre césure avant d'avoir l'autorisation !
+Étape 5 : Examen par la commission pédagogique
+Votre dossier est examiné par une commission composée de : votre responsable
+pédagogique, la Directrice des Études, 1 enseignant référent.
+
+Conseils :
+
+    • Critères : qualité du projet, cohérence avec le parcours, bénéfices
+         pédagogiques
+
+Étape 6 : Décision
+Vous recevez la décision sous 3-4 semaines : acceptation, refus motivé, acceptation
+conditionnelle (sous réserve de compléments).
+
+Conseils :
+
+    • En cas de refus, vous pouvez représenter un dossier amélioré
+    • En cas d'acceptation : ne relâchez pas vos efforts académiques avant le départ !
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 7 : Convention de césure
+Si accepté : signature d'une convention de césure entre vous et l'ESIC précisant : dates,
+nature du projet, modalités de suivi, maintien du statut étudiant.
+
+Conseils :
+
+    • Vous gardez le statut étudiant pendant la césure
+    • Vous devez payer un tarif réduit pour maintenir l'inscription (20% des frais
+
+         annuels)
+Étape 8 : Suivi pendant la césure
+Pendant votre césure, vous devez : envoyer 2 rapports d'étape (mi-parcours et fin),
+maintenir le contact avec votre référent pédagogique.
+
+Conseils :
+
+    • Ce suivi permet de valoriser votre expérience dans votre cursus
+Étape 9 : Retour en formation
+À la fin de la césure, vous réintégrez automatiquement votre formation (pas de nouvelle
+candidature).
+
+Conseils :
+
+    • Préparez un bilan de votre expérience
+    • Certains projets de césure peuvent être validés en crédits ECTS (à discuter avec
+
+         votre responsable)
+
+DÉLAIS
+Demande : 3 mois minimum avant le début souhaité. Décision : 3-4 semaines.
+
+CONTACTS
+Service des Études
+
+    • Email : etudes@esic.fr
+    • Téléphone : 01.53.90.15.03
+    • Horaires : Lun-Ven 9h-17h
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+Puis-je faire une césure rémunérée ? Oui, tout à fait. C'est même encouragé (stage
+long rémunéré, service civique indemnisé, etc.).
+Puis-je cumuler bourse CROUS et césure ? Non, la bourse est suspendue pendant la
+césure (sauf service civique).
+La césure retarde-t-elle mon diplôme ? Oui, d'autant de temps que dure votre césure
+(6 mois ou 1 an).
+DOCUMENTS GÉNÉRÉS
+
+    • Convention de césure
+    • Attestation de césure pour organismes (CAF, etc.)
+
+PROCÉDURE 18 : DEMANDE DE TRANSFERT DE DOSSIER ET EXEAT
+Public concerné : Étudiants souhaitant quitter l'ESIC
+Période : Toute l'année
+Durée estimée : 5-10 jours ouvrés
+Coût : Gratuit. Envoi postal des documents : 15€ (recommandé avec AR)
+PRÉREQUIS
+
+    • Être à jour de tous les paiements
+    • Avoir rendu tous les matériels empruntés
+    • Aucune procédure disciplinaire en cours
+DOCUMENTS NÉCESSAIRES
+    • Justificatif d'inscription dans le nouvel établissement (si déjà obtenu)
+    • Lettre de demande d'exeat
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Entretien avec le responsable pédagogique
+Avant toute démarche, prenez rendez-vous avec votre responsable pédagogique pour
+discuter de votre projet de départ.
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Cet entretien n'est pas obligatoire mais fortement recommandé
+    • Votre responsable peut vous conseiller ou vous aider à trouver des solutions si
+
+         vous partez pour des raisons de difficultés
+Étape 2 : Vérification de votre situation administrative
+Assurez-vous d'être en règle :
+
+    1. Frais de scolarité payés intégralement
+    2. Aucun livre emprunté à la bibliothèque
+    3. Matériel IT rendu
+    4. Carte étudiante à restituer
+Conseils :
+
+    • Régularisez tout retard avant de demander l'exeat
+    • Consultez votre compte ENT pour vérifier
+Étape 3 : Demande écrite d'exeat
+Envoyez un email à scolarite@esic.fr avec : vos nom, prénom, formation, année, motif
+du départ, établissement de destination (si connu), date de départ souhaitée.
+
+Conseils :
+
+    • Soyez poli et professionnel dans votre email
+    • Un départ en bons termes facilite d'éventuels retours futurs
+Étape 4 : Régularisation des paiements
+Si vous avez des frais en attente, réglez-les. En cas de paiement échelonné, contactez
+le service comptabilité pour un ajustement éventuel.
+
+Conseils :
+
+    • Les frais déjà payés ne sont généralement pas remboursés (sauf cas
+         exceptionnels)
+
+    • Voir conditions de remboursement dans votre contrat d'inscription
+Étape 5 : Restitution du matériel
+Rendez votre carte étudiante au service scolarité, tous les livres à la bibliothèque, tout
+matériel IT emprunté.
+
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Demandez un reçu de restitution pour chaque élément
+Étape 6 : Établissement de l'exeat
+Une fois toutes les conditions remplies, le service scolarité établit votre exeat (délai : 5
+jours ouvrés).
+
+Conseils :
+
+    • L'exeat certifie que vous quittez l'ESIC en règle
+Étape 7 : Documents de transfert
+Avec l'exeat, vous pouvez demander : relevés de notes de toutes vos années ESIC,
+certificat de scolarité, programme pédagogique détaillé (si demandé par le nouvel
+établissement).
+
+Conseils :
+
+    • Ces documents sont gratuits
+    • Précisez l'adresse email du nouvel établissement si envoi direct souhaité
+Étape 8 : Clôture de votre compte ENT
+Votre compte ENT sera désactivé 30 jours après votre départ officiel.
+
+Conseils :
+
+    • Sauvegardez tous vos documents importants avant
+    • Votre email @esic.fr sera supprimé
+
+DÉLAIS
+5-10 jours ouvrés après demande (si situation régularisée).
+
+CONTACTS
+Service Scolarité
+
+    • Email : scolarite@esic.fr
+    • Téléphone : 01.53.90.15.20
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+Service Comptabilité (pour régularisations)
+
+    • Email : comptabilite@esic.fr
+    • Téléphone : 01.53.90.15.21
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+Puis-je revenir à l'ESIC après avoir obtenu un exeat ? Oui, mais vous devrez repasser
+par la procédure de candidature normale. Avoir quitté en bons termes facilite les
+choses.
+Puis-je obtenir un exeat si je n'ai pas payé tous mes frais ? Non, l'exeat n'est délivré
+qu'une fois tous les frais réglés.
+L'exeat est-il obligatoire pour s'inscrire ailleurs ? Oui, la plupart des établissements
+le demandent pour s'assurer que vous quittez votre école précédente en règle.
+DOCUMENTS GÉNÉRÉS
+
+    • Exeat
+    • Relevés de notes
+    • Certificat de scolarité
+    • Programme pédagogique (si demandé)
+
+PROCÉDURE 19 : ACTIVATION ET UTILISATION DU COMPTE ENT
+Public concerné : Nouveaux étudiants, Étudiants ayant des problèmes de connexion
+Période : Dès l'inscription administrative
+Durée estimée : 10-15 minutes
+Coût : Gratuit
+PRÉREQUIS
+
+    • Avoir finalisé son inscription administrative
+DOCUMENTS NÉCESSAIRES
+Aucun
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Réception des identifiants
+Après votre inscription administrative, vous recevez un email contenant vos identifiants
+ENT :
+
+    • Login : prenom.nom@esic.fr
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Mot de passe temporaire
+Conseils :
+
+    • Vérifiez vos spams si vous ne recevez pas l'email sous 48h
+    • Conservez cet email
+Étape 2 : Première connexion
+Allez sur ent.esic.fr, Entrez vos identifiants (login + mot de passe temporaire).
+
+Conseils :
+
+    • Utilisez un navigateur récent (Chrome, Firefox, Edge, Safari)
+Étape 3 : Changement du mot de passe
+À la première connexion, vous DEVEZ changer votre mot de passe temporaire.
+Choisissez un mot de passe fort : 12 caractères minimum, majuscules + minuscules +
+chiffres + caractères spéciaux.
+
+Conseils :
+
+    • Ne partagez JAMAIS votre mot de passe
+    • Notez-le dans un gestionnaire de mots de passe
+    • Changez-le régulièrement (tous les 6 mois)
+Étape 4 : Validation de l'email
+Vous recevez un email de validation sur votre adresse personnelle. Cliquez sur le lien
+pour valider.
+
+Conseils :
+
+    • Cette étape est importante pour la récupération de mot de passe
+Étape 5 : Découverte de l'interface
+Explorez les différentes sections de l'ENT :
+
+    • 'Scolarité' : emploi du temps, notes, documents
+    • 'Cours' : ressources pédagogiques, devoirs
+    • 'Messagerie' : email @esic.fr
+    • 'Services' : bibliothèque, réservations, IT
+    • 'Carrières' : stages, offres d'emploi
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Familiarisez-vous avec l'interface dès le début
+    • Personnalisez votre tableau de bord
+Étape 6 : Configuration de l'email étudiant
+Votre adresse email ESIC (prenom.nom@esic.fr) est accessible via l'ENT > 'Messagerie'
+OU via un client mail (Outlook, Gmail, iOS Mail, etc.).
+
+Conseils :
+
+    • Configurez l'email sur votre smartphone pour recevoir les notifications
+    • Consultez votre email ESIC quotidiennement
+Étape 7 : Téléchargement de l'application mobile
+Téléchargez l'application 'ESIC Campus' sur iOS (App Store) ou Android (Google Play).
+
+Conseils :
+
+    • L'app donne accès à l'emploi du temps, notes, messagerie, etc.
+    • Activez les notifications
+Étape 8 : Configuration du VPN (optionnel mais recommandé)
+Pour accéder aux ressources ESIC depuis chez vous (bases de données, licences
+logicielles), installez le VPN ESIC : ENT > 'Services IT' > 'VPN ESIC' > Téléchargez le
+client > Installez > Connectez-vous avec vos identifiants ENT.
+
+Conseils :
+
+    • Le VPN est obligatoire pour accéder à certaines ressources à distance
+
+DÉLAIS
+Activation immédiate après réception des identifiants.
+
+CONTACTS
+Helpdesk IT
+
+    • Email : support-it@esic.fr
+    • Téléphone : 01.53.90.15.99
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+J'ai oublié mon mot de passe, que faire ? Sur la page de connexion ENT, cliquez sur
+'Mot de passe oublié'. Suivez la procédure (email de réinitialisation).
+Puis-je utiliser mon email ESIC après mon diplôme ? Oui, pendant 1 an après
+l'obtention du diplôme. Ensuite, il est désactivé. Pensez à migrer vos contacts
+importants.
+Mon compte est bloqué, que faire ? Après 5 tentatives de connexion échouées, le
+compte est bloqué pour sécurité. Contactez le helpdesk IT pour déblocage.
+
+PROCÉDURE 20 : SIGNALEMENT DE HARCÈLEMENT OU DISCRIMINATION
+Public concerné : Toute personne victime ou témoin
+Période : Dès que possible
+Durée estimée : Variable selon la situation
+Coût : Gratuit. Tout accompagnement est gratuit et confidentiel
+PRÉREQUIS
+Aucun
+DOCUMENTS NÉCESSAIRES
+
+    • Tout élément probant (emails, SMS, témoignages, captures d'écran, etc.)
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Mise en sécurité (PRIORITÉ ABSOLUE)
+Si vous êtes en danger immédiat :
+
+    • Composez le 17 (Police) ou 112 (urgences européennes)
+    • Ou contactez l'urgence campus : 01.53.90.15.00 (24h/7j)
+Conseils :
+    • Votre sécurité prime sur tout
+    • N'hésitez pas à demander de l'aide
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 2 : Premier contact confidentiel
+Contactez la cellule d'écoute : ecoute@esic.fr (boîte sécurisée et confidentielle,
+consultée 7j/7).
+
+Conseils :
+
+    • Vous n'êtes pas obligé de vous identifier immédiatement
+    • Un membre formé vous répondra rapidement
+    • L'écoute est bienveillante et sans jugement
+Étape 3 : Entretien avec le référent
+Un référent harcèlement/discrimination vous contacte pour un entretien confidentiel
+(en personne, visio ou téléphone selon votre souhait).
+
+Conseils :
+
+    • Vous pouvez être accompagné par une personne de confiance
+    • L'entretien vise à comprendre la situation et vous informer de vos options
+Étape 4 : Choix de la suite
+Après l'entretien, plusieurs options s'offrent à vous :
+
+    1. Soutien psychologique uniquement (sans procédure)
+    2. Médiation (si la situation s'y prête)
+    3. Signalement formel et enquête
+    4. Dépôt de plainte (accompagnement possible)
+Conseils :
+
+    • C'est VOUS qui choisissez la suite
+    • Aucune pression ne sera exercée
+    • Vous pouvez changer d'avis à tout moment
+Étape 5 : Signalement formel (si vous le souhaitez)
+Si vous décidez d'un signalement formel, un dossier est constitué avec : votre
+témoignage écrit, tous les éléments probants, identification de l'auteur présumé.
+
+Conseils :
+
+    • Rassemblez tous les éléments (emails, SMS, témoins, etc.)
+    • Le référent vous aide dans cette démarche
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 6 : Mesures conservatoires (si nécessaire)
+Pendant l'enquête, des mesures peuvent être prises : changement de groupe/emploi
+du temps, interdiction de contact, suspension provisoire de l'auteur présumé (cas
+graves).
+
+Conseils :
+
+    • Ces mesures visent à vous protéger pendant l'enquête
+Étape 7 : Enquête
+Une enquête interne est diligentée : auditions de toutes les parties, collecte de
+preuves, respect du contradictoire.
+
+Conseils :
+
+    • L'enquête est menée de façon neutre et professionnelle
+    • Délai variable selon complexité (2-6 semaines)
+Étape 8 : Décision et sanctions
+Si les faits sont avérés : sanctions disciplinaires selon gravité (avertissement à
+exclusion définitive), accompagnement renforcé de la victime, suivi pour prévenir toute
+récidive.
+
+Si les faits ne sont pas établis : classement sans suite, mais accompagnement si
+besoin.
+
+Conseils :
+
+    • Vous êtes informé de la décision
+    • En cas d'exclusion, possibilité de dépôt de plainte pénale (assistance possible)
+Étape 9 : Accompagnement de la victime
+Tout au long du processus et après : soutien psychologique (psychologue campus ou
+externe), aménagements académiques si nécessaire, suivi régulier.
+
+Conseils :
+
+    • N'hésitez pas à solliciter l'accompagnement
+    • Il est là pour vous aider à vous reconstruire
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+DÉLAIS
+Réponse cellule d'écoute : 24-48h. Enquête : 2-6 semaines selon complexité.
+
+CONTACTS
+Cellule d'écoute (confidentiel)
+
+    • Email : ecoute@esic.fr
+    • Disponibilité : 7j/7, email consulté quotidiennement
+Direction (signalement formel)
+
+    • Email : direction@esic.fr
+    • Téléphone : 01.53.90.15.01
+Externe - Numéro contre les discriminations
+
+    • Téléphone : 3928
+    • Disponibilité : Lun-Ven 9h-18h
+Externe - Violences Femmes Info
+
+    • Téléphone : 3919
+    • Disponibilité : 7j/7, 9h-22h
+    • Gratuit
+
+QUESTIONS FRÉQUENTES
+Mon signalement restera-t-il confidentiel ? Oui, au maximum. Seules les personnes
+strictement nécessaires à l'enquête en sont informées. L'anonymat complet n'est
+possible que dans la phase d'écoute initiale.
+
+Puis-je me rétracter après un signalement ? Oui, à tout moment avant l'ouverture
+formelle de l'enquête. Une fois l'enquête lancée, elle se poursuit (obligation de
+l'établissement).
+
+Y a-t-il un risque de représailles ? Non, toute représaille est elle-même sanctionnée
+très sévèrement. Vous êtes protégé.
+
+PROCÉDURE 21 : DEMANDE D'AMÉNAGEMENT POUR SITUATION DE HANDICAP
+Public concerné : Étudiants en situation de handicap
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Période : Dès que possible (idéalement avant la rentrée)
+
+Durée estimée : 2-4 semaines (mise en place des aménagements)
+
+Coût : Gratuit
+
+PRÉREQUIS
+    • Avoir un handicap reconnu (MDPH, certificat médical, etc.)
+
+DOCUMENTS NÉCESSAIRES
+    • Notification MDPH (si vous en avez une)
+    • Ou certificat médical détaillé du médecin spécialiste
+    • Tout document attestant du handicap et de ses répercussions sur les études
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Prise de contact avec le référent handicap
+Contactez Isabelle DUBOIS, référent handicap ESIC : social@esic.fr ou 01.53.90.15.42.
+
+Conseils :
+
+    • Plus tôt vous contactez, mieux c'est
+    • Idéal : avant la rentrée ou dans les 2 premières semaines
+    • L'entretien est confidentiel
+Étape 2 : Premier entretien
+Rendez-vous avec le référent handicap (Bureau A105, Lun/Mer 14h-18h) pour :
+présenter votre situation, identifier vos besoins, envisager les aménagements
+possibles.
+
+Conseils :
+
+    • Vous pouvez être accompagné
+    • Apportez tous les documents médicaux
+    • Soyez transparent sur vos difficultés et besoins
+Étape 3 : Constitution du dossier
+Le référent vous aide à constituer un dossier avec : justificatifs médicaux (MDPH ou
+certificats), description de l'impact du handicap sur les études, liste des
+aménagements souhaités.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Le référent connaît tous les aménagements possibles
+    • N'hésitez pas à tout exprimer
+Étape 4 : Examen par la commission
+Votre dossier est présenté à la commission handicap (médecin scolaire, référent,
+responsable pédagogique). La commission valide les aménagements adaptés.
+
+Conseils :
+
+    • Délai : 2 semaines maximum
+    • Les aménagements sont adaptés au handicap et aux besoins réels
+Étape 5 : Notification des aménagements
+Vous recevez une notification écrite listant tous les aménagements accordés.
+Exemples : tiers-temps aux examens, secrétaire pour noter, utilisation d'ordinateur,
+salle isolée, supports de cours adaptés, aménagement d'emploi du temps, etc.
+
+Conseils :
+
+    • Conservez précieusement ce document
+Étape 6 : Information des enseignants
+Le référent informe vos enseignants des aménagements (avec votre accord) sans
+préciser la nature exacte du handicap.
+
+Conseils :
+
+    • Seule l'information nécessaire est transmise
+    • Vous pouvez aussi en parler directement aux enseignants si vous le souhaitez
+Étape 7 : Mise en œuvre
+Les aménagements sont mis en place :
+
+    • Pour les examens : organisation automatique (salles adaptées, tiers-temps,
+         etc.)
+
+    • Pour les cours : adaptations selon besoins
+    • Suivi régulier par le référent
+Conseils :
+
+    • Vérifiez avant chaque examen que les aménagements sont bien prévus
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 8 : Suivi et ajustements
+Rendez-vous réguliers avec le référent (1-2 fois par semestre) pour : évaluer l'efficacité
+des aménagements, ajuster si nécessaire, anticiper les besoins futurs.
+Conseils :
+
+    • N'attendez pas pour signaler un problème
+    • Les aménagements peuvent évoluer selon vos besoins
+DÉLAIS
+Mise en place : 2-4 semaines après dépôt du dossier.
+CONTACTS
+Référent Handicap
+
+    • Nom : Isabelle DUBOIS
+    • Email : social@esic.fr
+    • Téléphone : 01.53.90.15.42
+    • Bureau : A105
+    • Horaires : Lun, Mer 14h-18h
+QUESTIONS FRÉQUENTES
+Mes camarades sauront-ils que j'ai des aménagements ? Seuls les enseignants et
+personnels concernés sont informés (strictement nécessaire). Vos camarades ne le
+sauront que si vous le souhaitez.
+Les aménagements sont-ils mentionnés sur mon diplôme ? Non, absolument pas.
+Votre diplôme est identique aux autres.
+Puis-je refuser certains aménagements ? Oui, c'est vous qui décidez. Les
+aménagements sont là pour vous aider, pas pour vous imposer quoi que ce soit.
+
+PROCÉDURE 22 : INSCRIPTION À UNE CERTIFICATION PROFESSIONNELLE
+Public concerné : Étudiants de Bachelor 3 et Master
+Période : Variable selon la certification
+Durée estimée : Automatique (inscription gérée par l'école)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Coût : 1ère tentative incluse dans les frais de scolarité. 2ème tentative : à vos frais
+(150-400€ selon certification)
+
+PRÉREQUIS
+    • Être inscrit dans une formation incluant une certification
+    • Avoir suivi les cours de préparation
+
+DOCUMENTS NÉCESSAIRES
+Aucun
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Préparation intégrée aux cours
+La préparation aux certifications est intégrée dans vos cours. Exemples :
+
+    • B3 Dev : AWS Solutions Architect (préparation sur 2 mois)
+    • B3 Cyber : CEH (préparation sur le semestre)
+    • B3 Data : TensorFlow Developer (préparation sur 6 semaines)
+Conseils :
+
+    • Assistez assidûment aux cours de préparation
+    • Les certifications sont exigeantes
+Étape 2 : Ressources de révision
+L'école met à disposition : supports de cours dédiés, examens blancs, accès à des
+plateformes de préparation en ligne (selon certification).
+
+Conseils :
+
+    • Utilisez tous les supports disponibles
+    • Faites les examens blancs en conditions réelles
+Étape 3 : Inscription automatique
+L'école vous inscrit automatiquement à la session de certification. Vous n'avez
+AUCUNE démarche à faire.
+
+Conseils :
+
+    • Vous recevez un email de confirmation avec la date d'examen 2-3 semaines
+         avant
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Étape 4 : Convocation
+Vous recevez votre convocation par email : date, heure, lieu, format de l'examen (en
+ligne ou centre d'examen), instructions spécifiques.
+
+Conseils :
+
+    • Lisez attentivement la convocation
+    • Certaines certifications sont passées en ligne depuis chez vous, d'autres dans
+
+         un centre d'examen
+Étape 5 : Préparation finale
+Dernière semaine avant l'examen : révisions intensives, examen blanc final en
+conditions réelles.
+
+Conseils :
+
+    • Ne négligez pas cette dernière ligne droite
+    • Reposez-vous bien la veille
+Étape 6 : Passage de la certification
+Jour J : Présentez-vous à l'heure (ou connectez-vous en ligne), Munissez-vous de votre
+pièce d'identité, Respectez toutes les consignes (très strictes pour les certifications).
+
+Conseils :
+
+    • Pour les examens en ligne : préparez votre environnement (webcam, calme,
+         connexion stable)
+
+    • Durée variable : 1h à 4h selon certification
+Étape 7 : Résultats
+Les résultats sont communiqués selon la certification :
+
+    • Immédiatement (certifications en ligne type AWS)
+    • Sous 2-4 semaines (certifications type CEH)
+Conseils :
+
+    • Vous recevez le résultat par email de l'organisme certificateur
+Étape 8 : Obtention du certificat
+Si réussi : vous recevez votre certificat officiel (format PDF généralement). Si échoué :
+possibilité de repasser (2ème tentative à vos frais sauf si ratage de justesse).
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Ajoutez votre certification sur votre CV et LinkedIn immédiatement
+    • Certaines certifications ont une durée de validité (2-3 ans) et nécessitent
+
+         renouvellement
+DÉLAIS
+Passage : selon calendrier académique (généralement en fin de semestre).
+CONTACTS
+Votre responsable pédagogique Pour toute question sur votre certification.
+QUESTIONS FRÉQUENTES
+La certification est-elle obligatoire ? Oui, elle fait partie intégrante de votre formation.
+Cependant, l'obtention n'est pas obligatoire pour valider l'année (mais fortement
+recommandée).
+Que se passe-t-il si j'échoue ? Vous pouvez repasser à vos frais. L'école peut
+exceptionnellement financer une 2ème tentative si vous avez échoué de peu (score >
+60%).
+La certification apparaît-elle sur mon diplôme ? Non, c'est un certificat séparé
+délivré par l'organisme certificateur (AWS, EC-Council, Google, etc.). Mais elle est
+mentionnée dans votre supplément au diplôme.
+DOCUMENTS GÉNÉRÉS
+
+    • Certificat officiel de l'organisme certificateur (si réussi)
+    • Badge numérique (selon certification)
+
+PROCÉDURE 23 : DEMANDE DE CONTRAT D'ALTERNANCE
+Public concerné : Étudiants de Bachelor 3 et Master souhaitant effectuer leur
+formation en alternance
+Période : Recherche : Janvier-Juin. Signature : Avant le 31 août
+Durée estimée : 2-4 semaines (montage du dossier)
+Coût : Gratuit pour vous. Frais de scolarité pris en charge par l'OPCO (entreprise)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+PRÉREQUIS
+    • Être en Bachelor 3 ou Master
+    • Avoir trouvé une entreprise d'accueil
+    • Entreprise d'accord pour l'alternance
+    • Âge : Moins de 30 ans pour l'apprentissage (pas de limite pour
+         professionnalisation)
+
+DOCUMENTS NÉCESSAIRES
+    • Promesse d'embauche de l'entreprise
+    • Coordonnées complètes entreprise et maître d'apprentissage
+    • Descriptif des missions
+    • Rémunération proposée
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Recherche de l'entreprise
+Trouvez une entreprise prête à vous accueillir en alternance. Utilisez : offres sur l'ENT,
+forums entreprises, candidatures spontanées, réseau alumni, service carrières.
+
+Conseils :
+
+    • Commencez tôt (janvier-février)
+    • Le service carrières peut vous aider
+    • Présentez clairement le rythme alternance (3 sem entreprise / 1 sem école)
+Étape 2 : Validation du projet par l'école
+Une fois l'entreprise trouvée, envoyez un email à carrieres@esic.fr avec : coordonnées
+entreprise, missions prévues, rémunération. L'école valide la cohérence avec votre
+formation.
+
+Conseils :
+
+    • Cette étape est obligatoire avant signature
+    • Délai de validation : 1 semaine
+Étape 3 : Choix du type de contrat
+Avec l'aide de l'école et de l'entreprise, déterminez : Contrat d'apprentissage (privilégié,
+plus avantageux fiscalement), Ou contrat de professionnalisation.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • L'apprentissage est possible jusqu'à 29 ans révolus
+    • Le contrat pro n'a pas de limite d'âge
+Étape 4 : Demande du dossier alternance
+Téléchargez le dossier d'inscription en alternance sur l'ENT > 'Formations' >
+'Alternance'.
+
+Conseils :
+
+    • Lisez bien toutes les instructions
+Étape 5 : Constitution du dossier OPCO
+L'école vous aide à monter le dossier de prise en charge auprès de l'OPCO (Opérateur
+de Compétences) de l'entreprise. Ce dossier permet : le financement de vos frais de
+scolarité par l'OPCO, la validation du contrat.
+
+Conseils :
+
+    • L'école gère cette partie administrative complexe
+    • Vous devez juste fournir les infos demandées
+Étape 6 : Rédaction du contrat
+L'entreprise rédige le contrat d'alternance (CERFA) avec : durée du contrat (1 ou 2 ans),
+rémunération (% SMIC selon âge et niveau), missions, rythme (3 sem entreprise / 1 sem
+école).
+
+Conseils :
+
+    • Vérifiez tous les éléments du contrat avant signature
+    • Rémunération minimum légale : 43-100% du SMIC selon âge et année d'études
+Étape 7 : Signatures tripartites
+Le contrat est signé par :
+
+    • Vous (l'apprenti)
+    • L'entreprise (employeur + maître d'apprentissage)
+    • L'ESIC (CFA)
+Conseils :
+
+    • Les 3 signatures sont obligatoires avant le début
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Ordre : vous, puis entreprise, puis école
+Étape 8 : Dépôt du contrat à l'OPCO
+L'entreprise (ou l'école) dépose le contrat auprès de l'OPCO pour validation et prise en
+charge financière.
+
+Conseils :
+
+    • Délai de traitement OPCO : 2-4 semaines
+    • Vous pouvez commencer avant la validation OPCO
+Étape 9 : Début de l'alternance
+Vous commencez votre alternance (généralement début septembre). Rythme : 3
+semaines en entreprise, 1 semaine à l'école.
+
+Conseils :
+
+    • Vous avez le statut de salarié (congés payés, protection sociale, retraite)
+    • Vous êtes payé tous les mois
+    • Vos frais de scolarité sont pris en charge par l'OPCO
+
+DÉLAIS
+Constitution dossier : 2-4 semaines. IMPORTANT : Contrat à signer AVANT le 31 août
+pour rentrée septembre.
+
+CONTACTS
+Service Alternance
+
+    • Nom : Pierre LEGRAND
+    • Email : p.legrand@esic.fr
+    • Téléphone : 01.53.90.15.33
+    • Horaires : Lun-Ven 9h-17h
+Service Carrières
+
+    • Email : carrieres@esic.fr
+    • Téléphone : 01.53.90.15.31
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+QUESTIONS FRÉQUENTES
+Quelle est la différence entre apprentissage et professionnalisation ?
+Apprentissage : pour les moins de 30 ans, plus d'avantages fiscaux pour l'entreprise.
+Professionnalisation : pas de limite d'âge, conditions légèrement différentes.
+Combien vais-je gagner ? Selon votre âge et niveau : B3 (18-20 ans : 43-51% SMIC, 21-
+25 ans : 53-61% SMIC, 26+ ans : 100% SMIC). Master : +15 points. Soit environ 750-
+1650€/mois.
+Puis-je rompre mon contrat ? Période d'essai de 45 jours pendant laquelle rupture
+libre. Après : rupture possible mais complexe (commun accord, faute grave,
+inaptitude). Accompagnement école en cas de problème.
+DOCUMENTS GÉNÉRÉS
+
+    • Contrat d'alternance (CERFA)
+    • Convention tripartite ESIC-Entreprise-Alternant
+
+PROCÉDURE 24 : PROCÉDURE DISCIPLINAIRE
+Public concerné : Étudiants convoqués par le Conseil de Discipline
+Période : Si nécessaire
+Durée estimée : 2-4 semaines
+Coût : Gratuit (sauf si vous faites appel à un avocat)
+PRÉREQUIS
+Aucun
+DOCUMENTS NÉCESSAIRES
+
+    • Tout élément de défense que vous souhaitez présenter
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Constatation de l'infraction
+Un manquement grave au règlement est constaté : fraude/plagiat, violence,
+dégradations, absences répétées injustifiées, comportement inapproprié, etc.
+Conseils :
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Tout comportement problématique doit d'abord faire l'objet d'avertissements
+         moins formels
+
+Étape 2 : Rapport de l'incident
+Un rapport est rédigé par : l'enseignant témoin, le personnel, ou tout membre de la
+communauté ESIC. Ce rapport est transmis à la Direction des Études.
+
+Étape 3 : Convocation au Conseil de Discipline
+Si l'infraction est jugée suffisamment grave, vous êtes convoqué par email et courrier
+recommandé au moins 15 jours avant la séance du Conseil.
+
+Conseils :
+
+    • La convocation précise : date, heure, lieu, faits reprochés, votre droit d'être
+         assisté
+
+Étape 4 : Préparation de votre défense
+Vous avez le droit de : préparer votre défense par écrit, rassembler des éléments
+probants (témoignages, documents), être assisté par : un avocat (à vos frais), un
+délégué étudiant, un membre de votre famille, un représentant étudiant.
+
+Conseils :
+
+    • Prenez cette procédure au sérieux
+    • Préparez votre défense soigneusement
+    • Être accompagné est fortement recommandé
+Étape 5 : Séance du Conseil de Discipline
+Composition du Conseil : Président (Directeur ou Directeur des Études), 2
+enseignants, 2 représentants étudiants, 1 membre administratif.
+
+Déroulement : Présentation des faits par le rapporteur, Votre audition et celle de votre
+défenseur, Audition de témoins éventuels, Questions du Conseil, Délibération à huis
+clos (vous n'êtes pas présent).
+
+Conseils :
+
+    • Restez calme et respectueux
+    • Présentez les faits de votre point de vue
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+    • Reconnaître ses torts (si c'est le cas) et montrer sa volonté de s'amender joue en
+         votre faveur
+
+Étape 6 : Délibération
+Le Conseil délibère à la majorité et décide :
+
+    • Relaxe (pas de sanction)
+    • Avertissement
+    • Blâme
+    • Exclusion temporaire (3 jours à 1 mois)
+    • Exclusion définitive
+Conseils :
+
+    • La décision est motivée (explication des raisons)
+Étape 7 : Notification de la décision
+La décision vous est notifiée :
+
+    • Oralement à la fin de la séance (information)
+    • Par courrier recommandé sous 15 jours (notification officielle)
+Conseils :
+
+    • Vous avez 30 jours pour faire appel (voir étape suivante)
+Étape 8 : Recours possible
+Si vous contestez la décision, vous pouvez :
+
+    • Former un recours gracieux auprès de la Direction (30 jours)
+    • Saisir le médiateur de l'établissement
+    • Recours contentieux devant le tribunal administratif (2 mois)
+Conseils :
+
+    • Le recours gracieux suspend l'exécution de la sanction (sauf exclusion
+         définitive)
+
+    • Faites-vous conseiller pour le recours
+Étape 9 : Exécution de la sanction
+Si pas de recours ou recours rejeté : la sanction est exécutée. Elle est inscrite dans
+votre dossier.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Une exclusion définitive entraîne la radiation
+    • Les sanctions mineures (avertissement, blâme) peuvent être effacées après 1-2
+
+         ans de bonne conduite
+DÉLAIS
+
+    • Convocation : 15 jours avant la séance
+    • Décision : 15 jours après la séance
+    • Recours : 30 jours après notification
+CONTACTS
+Direction des Études
+
+    • Email : etudes@esic.fr
+    • Téléphone : 01.53.90.15.03
+QUESTIONS FRÉQUENTES
+Puis-je refuser de me présenter au Conseil ? Oui, mais le Conseil statue quand
+même en votre absence. C'est fortement déconseillé car vous ne pouvez pas vous
+défendre.
+La sanction apparaîtra-t-elle sur mon diplôme ? Non, jamais. Les sanctions sont
+internes à l'établissement.
+Puis-je contacter un avocat ? Oui, vous avez le droit d'être assisté par un avocat. C'est
+à vos frais.
+DOCUMENTS GÉNÉRÉS
+    • Convocation au Conseil
+    • Décision motivée du Conseil
+
+PROCÉDURE 25 : OBTENTION DU DIPLÔME FINAL
+Public concerné : Étudiants ayant validé leur dernière année (B3 ou M2)
+Période : 3-6 mois après validation
+Durée estimée : Variable (attente signature officielle)
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Coût : Gratuit. Envoi postal : 15€ (optionnel)
+
+PRÉREQUIS
+    • Avoir validé tous les ECTS requis (180 pour Bachelor, 300 pour Master)
+    • Avoir soutenu son mémoire/projet de fin d'études (si applicable)
+    • Être à jour de tous les paiements
+
+DOCUMENTS NÉCESSAIRES
+Aucun
+
+ÉTAPES DE LA PROCÉDURE
+Étape 1 : Validation finale
+Le jury de délibération valide votre diplôme après : validation de tous les ECTS, note de
+stage/alternance, soutenance de mémoire (Master), relevé intégral des notes.
+
+Conseils :
+
+    • Les résultats définitifs sont publiés sur l'ENT
+Étape 2 : Attestation de réussite provisoire
+Dès validation du diplôme par le jury, vous pouvez télécharger une attestation de
+réussite sur l'ENT > 'Scolarité' > 'Mes documents'.
+
+Conseils :
+
+    • Cette attestation a valeur de diplôme provisoire
+    • Utilisez-la pour vos démarches (emploi, poursuite d'études)
+Étape 3 : Transmission au Rectorat
+L'ESIC transmet votre dossier au Rectorat de Paris pour signature officielle et
+enregistrement (RNCP).
+
+Conseils :
+
+    • C'est une étape administrative obligatoire pour les diplômes visés
+    • Cela prend 3-6 mois
+Étape 4 : Cérémonie de remise des diplômes
+En attendant le diplôme officiel, vous êtes invité à la cérémonie de remise des diplômes
+(juin). Vous recevez un diplôme de cérémonie (symbolique).
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Invitation par email 1 mois avant
+    • 2 places par diplômé (famille/amis)
+    • Tenue : toge académique fournie
+    • Moment convivial et photos
+Étape 5 : Notification de disponibilité
+Quand votre diplôme officiel est prêt (3-6 mois après validation), vous recevez un email
+et un SMS.
+
+Conseils :
+
+    • Vérifiez régulièrement vos emails
+Étape 6 : Retrait du diplôme
+3 options pour récupérer votre diplôme :
+
+    • Option 1 : En personne au service scolarité (Bureau A102) avec pièce d'identité
+         (Lun-Ven 9h-17h)
+
+    • Option 2 : Par procuration (personne de confiance + votre pièce d'identité)
+    • Option 3 : Envoi postal (frais 15€, recommandé avec AR)
+Conseils :
+
+    • Vérifiez que toutes les informations sur le diplôme sont correctes (nom, prénom,
+         dates)
+
+    • Conservez précieusement l'original
+Étape 7 : Supplément au diplôme
+Avec le diplôme, vous recevez le supplément au diplôme (document détaillant votre
+parcours, compétences, équivalences ECTS).
+
+Conseils :
+
+    • Le supplément au diplôme est très utile pour les employeurs et la mobilité
+         internationale
+
+Étape 8 : Adhésion au réseau Alumni
+Vous êtes automatiquement inscrit au réseau ESIC Alumni. Accès à : plateforme
+alumni.esic.fr, annuaire des 15 000 diplômés, offres d'emploi exclusives, événements
+networking.
+
+
+Document créé exclusivement pour le projet étudiant
+
+Joel BANKA
+
+Conseils :
+
+    • Créez votre profil alumni dès réception du diplôme
+    • Restez connecté à l'ESIC !
+DÉLAIS
+3-6 mois après validation (délais administratifs Rectorat).
+CONTACTS
+Service Scolarité
+
+    • Email : scolarite@esic.fr
+    • Téléphone : 01.53.90.15.20
+    • Horaires : Lun-Ven 9h-12h / 14h-17h
+QUESTIONS FRÉQUENTES
+Puis-je avoir plusieurs originaux du diplôme ? Non, un seul original est délivré. En cas
+de perte, vous pouvez obtenir un duplicata (50€) qui porte la mention 'DUPLICATA'.
+Le diplôme mentionne-t-il ma spécialisation ? Oui, votre spécialisation et votre
+mineure (si applicable) sont mentionnées sur le diplôme.
+Mon email @esic.fr sera-t-il supprimé après le diplôme ? Vous conservez votre email
+pendant 1 an après l'obtention du diplôme. Pensez à migrer vos contacts importants
+avant.
+DOCUMENTS GÉNÉRÉS
+    • Diplôme officiel
+    • Supplément au diplôme
+    • Attestation de réussite (provisoire)
+
+FIN DU DOCUMENT
+ESIC - École Supérieure d'Informatique et du Commerce
+Tél : 01.53.90.15.00 | Email : info@esic.fr | Web : www.esic.fr

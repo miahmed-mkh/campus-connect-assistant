@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 
+from backend.app.api.chat import router as chat_router
 from backend.app.core.config import settings
+
+from backend.app.api.analytics import router as analytics_router
+from backend.app.api.feedback import router as feedback_router
 
 
 app = FastAPI(
@@ -8,6 +12,11 @@ app = FastAPI(
     description=settings.app_description,
     version=settings.app_version,
 )
+
+app.include_router(chat_router)
+
+app.include_router(feedback_router)
+app.include_router(analytics_router)
 
 
 @app.get("/")

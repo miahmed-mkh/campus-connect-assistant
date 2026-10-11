@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     app_description: str = (
         "API de l'assistant virtuel éducatif du Campus ESIC"
     )
-    app_version: str = "0.1.0"
+    app_version: str = "1.0.0"
     app_environment: str = "development"
 
     # Cle d'acces aux statistiques d'usage (vide = endpoint desactive)

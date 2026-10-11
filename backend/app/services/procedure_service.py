@@ -211,6 +211,8 @@ def format_procedure_answer(
 
 
 class ProcedureService:
+    minimum_confidence = PROCEDURE_CONFIDENCE_THRESHOLD
+
     def __init__(self) -> None:
         self.procedures = load_procedures()
 

@@ -345,6 +345,8 @@ def format_contact_answer(
 
 
 class ContactService:
+    minimum_confidence = CONTACT_CONFIDENCE_THRESHOLD
+
     def __init__(self) -> None:
         self.contacts = load_contacts()
 

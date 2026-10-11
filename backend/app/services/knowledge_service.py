@@ -1,3 +1,4 @@
+import logging
 from backend.app.services.text_matching import normalize_text
 from difflib import SequenceMatcher
 from typing import Any
@@ -9,6 +10,14 @@ from backend.app.services.procedure_service import (
     procedure_service,
 )
 from backend.app.services.schedule_service import schedule_service
+from backend.app.services.knowledge_ranking import (
+    build_candidate,
+    explain_ranking,
+    rank_candidates,
+    select_answer,
+)
+
+logger = logging.getLogger(__name__)
 
 
 def calculate_similarity(
@@ -48,6 +57,8 @@ def calculate_similarity(
     )
 
 class KnowledgeService:
+    minimum_confidence = 0.65
+
     def __init__(self) -> None:
         self.faq_items: list[dict[str, Any]] = (
             load_all_faq_items()
@@ -74,7 +85,7 @@ class KnowledgeService:
                     best_score = score
                     best_item = item
 
-        if best_item is None or best_score < 0.65:
+        if best_item is None or best_score < self.minimum_confidence:
             return {
                 "answer": (
                     "Je n’ai pas encore de réponse fiable à cette "
@@ -93,127 +104,41 @@ class KnowledgeService:
             "confidence": round(best_score, 3),
         }
 
-def test_expanded_faq_library_question() -> None:
-    result = knowledge_service.search(
-        "Quels sont les horaires de la bibliothèque ?"
-    )
-
-    assert result["category"] == "services_campus"
-    assert result["confidence"] == 1.0
-    assert result["source"] == (
-        "FAQ complète ESIC — données pédagogiques 2024-2025"
-    )
-    assert "bibliothèque" in result["answer"].lower()
-
-
-def test_expanded_faq_administrative_question() -> None:
-    result = knowledge_service.search(
-        "Comment obtenir un certificat de scolarité ?"
-    )
-
-    assert result["category"] == "procedures_administratives"
-    assert result["confidence"] >= 0.65
-    assert result["source"] == (
-        "FAQ complète ESIC — données pédagogiques 2024-2025"
-    )
-
-
-def test_expanded_faq_orientation_question() -> None:
-    result = knowledge_service.search(
-        "Quelles sont les spécialisations proposées en Bachelor 3 ?"
-    )
-
-    assert result["category"] == "orientation_formation"
-    assert result["confidence"] >= 0.65
-    assert result["source"] == (
-        "FAQ complète ESIC — données pédagogiques 2024-2025"
-    )
-
-def test_knowledge_service_loads_all_faq_items() -> None:
-    assert len(knowledge_service.faq_items) == 159
-
-    identifiers = [
-        item["id"]
-        for item in knowledge_service.faq_items
-    ]
-
-    assert len(identifiers) == len(set(identifiers))
-
-def test_expanded_faq_library_question() -> None:
-    result = knowledge_service.search(
-        "Quels sont les horaires de la bibliothèque ?"
-    )
-
-    assert result["category"] == "services_campus"
-    assert result["confidence"] == 1.0
-    assert result["source"] == (
-        "FAQ complète ESIC — données pédagogiques 2024-2025"
-    )
-    assert "bibliothèque" in result["answer"].lower()
-
-
-def test_administrative_question_preserves_legacy_answer() -> None:
-    result = knowledge_service.search(
-        "Comment obtenir un certificat de scolarité ?"
-    )
-
-    assert result["category"] == "procedure_admin"
-    assert result["confidence"] == 1.0
-    assert result["source"] == "Procédures administratives"
-    assert "ENT" in result["answer"]
-
-
-def test_expanded_faq_orientation_question() -> None:
-    result = knowledge_service.search(
-        "Quelles sont les spécialisations proposées en Bachelor 3 ?"
-    )
-
-    assert result["category"] == "orientation_formation"
-    assert result["confidence"] >= 0.65
-    assert result["source"] == (
-        "FAQ complète ESIC — données pédagogiques 2024-2025"
-    )
-    assert "Cybersécurité" in result["answer"]
-
-
-def test_knowledge_service_loads_all_faq_items() -> None:
-    assert len(knowledge_service.faq_items) == 159
-
-    identifiers = [
-        item["id"]
-        for item in knowledge_service.faq_items
-    ]
-
-    assert len(identifiers) == len(set(identifiers))
 
 knowledge_service = KnowledgeService()
 
 def search_knowledge(question: str) -> dict[str, Any]:
-    results = (
-        knowledge_service.search(question),
-        procedure_service.search(question),
-        contact_service.search(question),
-        schedule_service.search(question),
-        document_service.search(question),
+    faq_result = knowledge_service.search(question)
+
+    candidates = (
+        build_candidate(
+            "faq",
+            faq_result,
+            knowledge_service.minimum_confidence,
+        ),
+        build_candidate(
+            "procedure",
+            procedure_service.search(question),
+            procedure_service.minimum_confidence,
+        ),
+        build_candidate(
+            "contact",
+            contact_service.search(question),
+            contact_service.minimum_confidence,
+        ),
+        build_candidate(
+            "schedule",
+            schedule_service.search(question),
+            schedule_service.minimum_confidence,
+        ),
+        build_candidate(
+            "document",
+            document_service.search(question),
+            document_service.minimum_confidence,
+        ),
     )
 
-    known_results = tuple(
-        result
-        for result in results
-        if result["category"] != "unknown"
-    )
+    ranked = rank_candidates(candidates)
+    logger.debug("knowledge ranking: %s", explain_ranking(ranked))
 
-    if known_results:
-        best_result = max(
-            known_results,
-            key=lambda result: result["confidence"],
-        )
-
-        return {
-            "answer": best_result["answer"],
-            "source": best_result["source"],
-            "category": best_result["category"],
-            "confidence": best_result["confidence"],
-        }
-
-    return results[0]
+    return select_answer(ranked, faq_result)

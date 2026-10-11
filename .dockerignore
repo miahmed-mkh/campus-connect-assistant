@@ -1,0 +1,24 @@
+# VCS / CI
+.git
+.gitignore
+.github
+
+# Environnements locaux et secrets
+.venv
+.env
+.env.*
+!.env.example
+
+# Caches Python
+**/__pycache__
+**/*.pyc
+.pytest_cache
+backend/tests
+
+# Frontend (construit via son propre Dockerfile / contexte)
+frontend
+
+# Fichiers sources originaux non versionnes (racine)
+*.pdf
+*.json
+*.csv

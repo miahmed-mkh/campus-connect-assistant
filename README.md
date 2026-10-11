@@ -1,28 +1,23 @@
-# campus-connect-assistant
-Assistant virtuel éducatif pour campus connecté, NLP, analytics et simulation IoT
 
-Assistant virtuel educatif ESIC : chatbot campus (FAQ, procedures,
-contacts, emploi du temps, reglement) avec journalisation anonymisee,
-securite des entrees et collecte de feedback.
+## Démo Docker complète (une commande)
 
-## Demarrage rapide
-
-1. Copier `.env.example` vers `.env` et adapter si besoin.
-2. `docker compose up -d postgres`
-3. `python -m alembic upgrade head`
-4. `uvicorn backend.app.main:app --reload` (API sur http://127.0.0.1:8000, documentation sur /docs)
-5. `cd frontend && npm install && npm run dev` (interface sur http://localhost:5173)
-
-## Tests
+Toute la pile (PostgreSQL, migrations Alembic, API FastAPI, front React servi par Nginx) peut être lancée sans Python ni Node installés :
 
 ```bash
-docker compose up -d postgres
-python -m pytest backend/tests -q
+cp .env.example .env          # si ce n'est pas déjà fait, puis adapter les mots de passe
+docker compose --profile full up -d --build
 ```
 
-Les tests s'executent sur une base PostgreSQL dediee, isolee de la base
-de developpement : par defaut `campus_connect_test`, derivee de
-`DATABASE_URL` (suffixe `_test`). Elle est creee et migree (Alembic)
-automatiquement par `backend/tests/conftest.py`, et les tables sont
-videes apres chaque test. La variable optionnelle `TEST_DATABASE_URL`
-permet de forcer une autre base ; son nom doit se terminer par `_test`.
+Puis ouvrir http://localhost:8088/ (Swagger : http://localhost:8088/docs).
+
+Fonctionnement :
+
+- `migrate` applique les migrations Alembic puis se termine ; `api` ne démarre qu'après son succès.
+- `api` n'est **pas publiée sur l'hôte** : seul Nginx (`web`) est exposé et sert de reverse proxy vers `/api/`, `/docs`, `/openapi.json` et `/health`. Une seule porte d'entrée, pas de CORS à gérer.
+- `web` est construit en multi-étapes (build Vite avec `VITE_USE_MOCK=false`, puis image `nginx:alpine`).
+- Les conteneurs tournent avec un utilisateur non-root et disposent de healthchecks.
+- Le port hôte se règle via `WEB_HOST_PORT` dans `.env` (8080 est souvent réservé par Windows, d'où 8088 par défaut).
+
+Arrêt : `docker compose --profile full down` (ajouter `-v` pour supprimer aussi la base).
+
+Le workflow de développement reste inchangé : `docker compose up -d postgres` ne lance que la base, l'API et le front tournant en local.

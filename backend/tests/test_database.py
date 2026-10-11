@@ -10,4 +10,5 @@ def test_database_connection() -> None:
         ).one()
 
     assert result[0] == "campus_user"
-    assert result[1] == "campus_connect"
+    assert result[1] == engine.url.database
+    assert result[1].endswith("_test")

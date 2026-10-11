@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     app_environment: str = "development"
 
+    # Cle d'acces aux statistiques d'usage (vide = endpoint desactive)
+    analytics_api_key: str = ""
+
     database_url: str = (
         "postgresql+psycopg://campus_user:change_me"
         "@127.0.0.1:5433/campus_connect"

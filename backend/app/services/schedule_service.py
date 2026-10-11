@@ -169,6 +169,8 @@ def format_important_dates(
 
 
 class ScheduleService:
+    minimum_confidence = SCHEDULE_THRESHOLD
+
     def __init__(self) -> None:
         self.course_slots = load_course_slots()
         self.exams = load_exams()

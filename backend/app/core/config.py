@@ -13,6 +13,8 @@ class Settings(BaseSettings):
 
     # Cle d'acces aux statistiques d'usage (vide = endpoint desactive)
     analytics_api_key: str = ""
+    iot_device_key: str = ""
+    iot_online_threshold_seconds: int = 120
 
     database_url: str = (
         "postgresql+psycopg://campus_user:change_me"

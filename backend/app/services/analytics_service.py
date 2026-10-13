@@ -41,7 +41,26 @@ def session_stats(db: Session, start: datetime, end: datetime) -> dict[str, Any]
             ConversationSession.started_at <= end,
         )
     )
-    return {"total": int(total or 0)}
+
+    rows = db.execute(
+        select(
+            ConversationSession.channel,
+            func.count(ConversationSession.id).label("count"),
+        )
+        .where(
+            ConversationSession.started_at >= start,
+            ConversationSession.started_at <= end,
+        )
+        .group_by(ConversationSession.channel)
+        .order_by(func.count(ConversationSession.id).desc(), ConversationSession.channel)
+    ).all()
+
+    return {
+        "total": int(total or 0),
+        "by_channel": [
+            {"channel": channel, "count": int(count)} for channel, count in rows
+        ],
+    }
 
 
 def message_stats(db: Session, start: datetime, end: datetime) -> dict[str, Any]:

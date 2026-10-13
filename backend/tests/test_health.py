@@ -13,6 +13,6 @@ def test_health_check() -> None:
     assert response.json() == {
         "status": "ok",
         "application": "Campus Connect Assistant API",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "environment": "development",
     }

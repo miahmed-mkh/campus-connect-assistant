@@ -1,3 +1,4 @@
+from typing import Literal
 from uuid import UUID
 
 from pydantic import BaseModel, Field
@@ -12,8 +13,14 @@ class ChatRequest(BaseModel):
     session_id: str = Field(
         min_length=1,
         max_length=100,
-        description="Identifiant de la session de conversation",
+        description="Identifiant de la session de conversation", 
     )
+
+    channel: Literal["web", "kiosk"] = Field(
+        default="web",
+        description="Canal d'origine de la conversation (web ou borne)",
+    )
+    
 
 
 class ChatResponse(BaseModel):

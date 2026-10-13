@@ -79,7 +79,7 @@ def test_empty_summary_returns_zeros() -> None:
         db.close()
 
     assert summary["period"]["days"] == 30
-    assert summary["sessions"] == {"total": 0}
+    assert summary["sessions"] == {"total": 0, "by_channel": []}
     assert summary["messages"] == {"total": 0, "user": 0, "assistant": 0}
     assert summary["resolution"] == {"resolved": 0, "unresolved": 0, "rate": 0.0}
     assert summary["response_time_ms"] == {"average": None, "max": None}
@@ -119,7 +119,10 @@ def test_summary_aggregates_only_period_data() -> None:
     finally:
         db.close()
 
-    assert summary["sessions"] == {"total": 1}
+    assert summary["sessions"] == {
+        "total": 1,
+        "by_channel": [{"channel": "web", "count": 1}],
+    }
     assert summary["messages"] == {"total": 6, "user": 3, "assistant": 3}
     assert summary["resolution"] == {"resolved": 2, "unresolved": 1, "rate": 0.667}
     assert summary["response_time_ms"] == {"average": 200.0, "max": 300}

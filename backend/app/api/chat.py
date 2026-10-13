@@ -38,6 +38,7 @@ router = APIRouter(
 def get_or_create_conversation(
     database: Session,
     session_id: str,
+    channel: str = "web",
 ) -> ConversationSession:
     conversation = None
 
@@ -70,7 +71,7 @@ def get_or_create_conversation(
 
     conversation = ConversationSession(
         anonymous_user_id=session_id,
-        channel="web",
+        channel=channel,
         language="fr",
     )
 
@@ -144,6 +145,7 @@ def chat(
         conversation = get_or_create_conversation(
             database=database,
             session_id=request.session_id,
+            channel=request.channel,
         )
 
         save_message(

@@ -8,11 +8,13 @@ class Settings(BaseSettings):
     app_description: str = (
         "API de l'assistant virtuel éducatif du Campus ESIC"
     )
-    app_version: str = "1.0.1"
+    app_version: str = "1.1.0"
     app_environment: str = "development"
 
     # Cle d'acces aux statistiques d'usage (vide = endpoint desactive)
     analytics_api_key: str = ""
+    iot_device_key: str = ""
+    iot_online_threshold_seconds: int = 120
 
     database_url: str = (
         "postgresql+psycopg://campus_user:change_me"

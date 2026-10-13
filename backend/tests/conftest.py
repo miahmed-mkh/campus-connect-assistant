@@ -20,7 +20,12 @@ from sqlalchemy.engine import make_url
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 TEST_DATABASE_SUFFIX = "_test"
-TABLES_TO_TRUNCATE = ("feedbacks", "messages", "conversation_sessions")
+TABLES_TO_TRUNCATE = (
+    "feedbacks",
+    "messages",
+    "conversation_sessions",
+    "iot_readings",
+)
 
 
 def resolve_test_database_url() -> str:

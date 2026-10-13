@@ -9,8 +9,14 @@ class AnalyticsPeriod(BaseModel):
     end: datetime
 
 
+class ChannelCount(BaseModel):
+    channel: str
+    count: int
+
+
 class SessionStats(BaseModel):
     total: int
+    by_channel: list[ChannelCount]
 
 
 class MessageStats(BaseModel):

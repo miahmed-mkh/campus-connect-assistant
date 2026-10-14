@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Console IoT - Campus Connect</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, sans-serif; background: #f3f4f6; color: #111827; }
+    main { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+    h1 { margin: 0 0 4px; font-size: 1.6rem; }
+    h2 { margin: 0 0 12px; font-size: 1.1rem; }
+    .muted { color: #6b7280; margin: 0 0 20px; }
+    section { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+    label { display: block; font-size: .85rem; font-weight: 600; margin: 10px 0 4px; }
+    input { width: 100%; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: .95rem; }
+    button { margin-top: 12px; padding: 8px 14px; border: 0; border-radius: 6px; background: #1d4ed8; color: #fff; font-size: .95rem; cursor: pointer; }
+    button:hover { background: #1e40af; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .8rem; font-weight: 600; background: #e5e7eb; color: #374151; }
+    .badge.ok { background: #dcfce7; color: #166534; }
+    .badge.ko { background: #fee2e2; color: #991b1b; }
+    #log { max-height: 220px; overflow-y: auto; background: #111827; color: #e5e7eb; border-radius: 6px; padding: 10px; font-family: ui-monospace, monospace; font-size: .8rem; }
+    #log div { margin-bottom: 2px; }
+    #log .error { color: #fca5a5; }
+    #log .success { color: #86efac; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Console IoT</h1>
+    <p class="muted">Pilotage manuel de la borne d'accueil et du capteur de salle simulés. Les clés restent dans cet onglet (sessionStorage) et ne sont jamais écrites dans le code.</p>
+
+    <section>
+      <h2>1. Connexion <span id="api-badge" class="badge">non testée</span></h2>
+      <div class="row">
+        <div>
+          <label for="device-key">Clé d'appareil (IOT_DEVICE_KEY)</label>
+          <input id="device-key" type="password" autocomplete="off">
+        </div>
+        <div>
+          <label for="analytics-key">Clé analytics (ANALYTICS_API_KEY)</label>
+          <input id="analytics-key" type="password" autocomplete="off">
+        </div>
+      </div>
+      <button id="connect">Enregistrer et tester la connexion</button>
+    </section>
+
+    <section>
+      <h2>Journal</h2>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function log(message, level) {
+      const line = document.createElement("div");
+      if (level) line.className = level;
+      line.textContent = new Date().toLocaleTimeString("fr-FR") + "  " + message;
+      const box = $("log");
+      box.appendChild(line);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function setBadge(text, level) {
+      const badge = $("api-badge");
+      badge.textContent = text;
+      badge.className = "badge " + (level || "");
+    }
+
+    async function api(path, options) {
+      const response = await fetch(path, options || {});
+      let body = null;
+      try {
+        body = await response.json();
+      } catch (error) {
+        body = null;
+      }
+      return { status: response.status, body: body };
+    }
+
+    function getKeys() {
+      return {
+        device: $("device-key").value.trim(),
+        analytics: $("analytics-key").value.trim(),
+      };
+    }
+
+    function saveKeys() {
+      const keys = getKeys();
+      sessionStorage.setItem("iot_device_key", keys.device);
+      sessionStorage.setItem("iot_analytics_key", keys.analytics);
+    }
+
+    function loadKeys() {
+      $("device-key").value = sessionStorage.getItem("iot_device_key") || "";
+      $("analytics-key").value = sessionStorage.getItem("iot_analytics_key") || "";
+    }
+
+    async function testConnection() {
+      saveKeys();
+      const keys = getKeys();
+
+      try {
+        const health = await api("/health");
+        if (health.status !== 200) {
+          setBadge("API indisponible", "ko");
+          log("GET /health -> HTTP " + health.status, "error");
+          return;
+        }
+        setBadge("API en ligne v" + health.body.version, "ok");
+        log("API en ligne, version " + health.body.version, "success");
+      } catch (error) {
+        setBadge("API injoignable", "ko");
+        log("API injoignable : " + error.message, "error");
+        return;
+      }
+
+      if (!keys.analytics) {
+        log("Clé analytics vide : le tableau de statut sera indisponible.", "error");
+      } else {
+        const status = await api("/api/iot/status", {
+          headers: { "X-Analytics-Key": keys.analytics },
+        });
+        if (status.status === 200) {
+          log("Clé analytics valide : " + status.body.devices.length + " appareil(s), " + status.body.readings_total + " mesure(s).", "success");
+        } else if (status.status === 401) {
+          log("Clé analytics refusée (401).", "error");
+        } else if (status.status === 503) {
+          log("Clé analytics non configurée côté serveur (503).", "error");
+        } else {
+          log("GET /api/iot/status -> HTTP " + status.status, "error");
+        }
+      }
+
+      if (!keys.device) {
+        log("Clé d'appareil vide : l'envoi de mesures sera impossible.", "error");
+      } else {
+        log("Clé d'appareil enregistrée (elle sera vérifiée au premier envoi).");
+      }
+    }
+
+    $("connect").addEventListener("click", testConnection);
+    loadKeys();
+    log("Console prête. Saisis les clés puis teste la connexion.");
+  </script>
+</body>
+</html>

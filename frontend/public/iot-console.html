@@ -47,6 +47,30 @@
     </section>
 
     <section>
+      <h2>Capteur de salle (sensor-manual-01)</h2>
+      <p class="muted">Règle les valeurs puis envoie une mesure, ou active le mode automatique (un envoi toutes les 5 secondes).</p>
+
+      <div>
+        <label for="sensor-temp">Température : <strong id="sensor-temp-value">21</strong> °C</label><br>
+        <input type="range" id="sensor-temp" min="10" max="35" step="0.5" value="21" style="width:100%">
+      </div>
+      <div>
+        <label for="sensor-hum">Humidité : <strong id="sensor-hum-value">45</strong> %</label><br>
+        <input type="range" id="sensor-hum" min="20" max="90" step="1" value="45" style="width:100%">
+      </div>
+      <div>
+        <label for="sensor-occ">Affluence : <strong id="sensor-occ-value">0</strong> personne(s)</label><br>
+        <input type="range" id="sensor-occ" min="0" max="100" step="1" value="0" style="width:100%">
+      </div>
+
+      <p>
+        <button type="button" id="sensor-send">Envoyer une mesure</button>
+        <button type="button" id="sensor-auto">Mode automatique : arrêté</button>
+      </p>
+    </section>
+
+
+    <section>
       <h2>Journal</h2>
       <div id="log"></div>
     </section>
@@ -141,6 +165,108 @@
         log("Clé d'appareil enregistrée (elle sera vérifiée au premier envoi).");
       }
     }
+
+    // ===== Capteur de salle =====
+    const SENSOR_ID = "sensor-manual-01";
+    let sensorTimer = null;
+
+    function bindSlider(id) {
+      const input = $(id);
+      const output = $(id + "-value");
+      const update = () => { output.textContent = input.value; };
+      input.addEventListener("input", update);
+      update();
+    }
+
+    function clampSlider(input, value) {
+      const min = Number(input.min);
+      const max = Number(input.max);
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function driftSlider(id, amplitude) {
+      const input = $(id);
+      const change = (Math.random() * 2 - 1) * amplitude;
+      input.value = clampSlider(input, Number(input.value) + change);
+      $(id + "-value").textContent = input.value;
+    }
+
+    async function sendSensorReading() {
+      const keys = getKeys();
+      if (!keys.device) {
+        log("Capteur : clé d'appareil vide, envoi impossible.", "error");
+        return false;
+      }
+      const now = new Date().toISOString();
+      const payload = {
+        device_id: SENSOR_ID,
+        readings: [
+          { kind: "temperature", value: Number($("sensor-temp").value), unit: "C", recorded_at: now },
+          { kind: "humidity", value: Number($("sensor-hum").value), unit: "%", recorded_at: now },
+          { kind: "occupancy", value: Number($("sensor-occ").value), unit: "people", recorded_at: now },
+        ],
+      };
+      let result;
+      try {
+        result = await api("/api/iot/telemetry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "X-Device-Key": keys.device },
+          body: JSON.stringify(payload),
+        });
+      } catch (error) {
+        log("Capteur : API injoignable.", "error");
+        return false;
+      }
+      if (result.status === 202) {
+        log("Capteur : " + result.body.accepted + " mesure(s) acceptée(s) ("
+          + $("sensor-temp").value + " °C, " + $("sensor-hum").value + " %, "
+          + $("sensor-occ").value + " pers.).");
+        return true;
+      }
+      if (result.status === 401) {
+        log("Capteur : clé d'appareil refusée (401).", "error");
+      } else if (result.status === 503) {
+        log("Capteur : clé d'appareil non configurée côté serveur (503).", "error");
+      } else {
+        log("Capteur : POST /api/iot/telemetry -> HTTP " + result.status, "error");
+      }
+      return false;
+    }
+
+    function stopSensorAuto() {
+      if (sensorTimer !== null) {
+        clearInterval(sensorTimer);
+        sensorTimer = null;
+      }
+      $("sensor-auto").textContent = "Mode automatique : arrêté";
+    }
+
+    async function sensorAutoTick() {
+      driftSlider("sensor-temp", 0.6);
+      driftSlider("sensor-hum", 2);
+      driftSlider("sensor-occ", 3);
+      const ok = await sendSensorReading();
+      if (!ok) {
+        stopSensorAuto();
+        log("Capteur : mode automatique arrêté (envoi en échec).", "error");
+      }
+    }
+
+    function toggleSensorAuto() {
+      if (sensorTimer !== null) {
+        stopSensorAuto();
+        log("Capteur : mode automatique arrêté.");
+        return;
+      }
+      sensorTimer = setInterval(sensorAutoTick, 5000);
+      $("sensor-auto").textContent = "Mode automatique : actif (5 s)";
+      log("Capteur : mode automatique activé.");
+      sensorAutoTick();
+    }
+
+    ["sensor-temp", "sensor-hum", "sensor-occ"].forEach(bindSlider);
+    $("sensor-send").addEventListener("click", sendSensorReading);
+    $("sensor-auto").addEventListener("click", toggleSensorAuto);
 
     $("connect").addEventListener("click", testConnection);
     loadKeys();

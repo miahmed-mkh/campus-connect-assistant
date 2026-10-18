@@ -16,6 +16,13 @@ class Settings(BaseSettings):
     iot_device_key: str = ""
     iot_online_threshold_seconds: int = 120
 
+    # Console IoT : secret de signature des jetons et hachage des comptes
+    console_token_secret: str = ""
+    console_token_ttl_seconds: int = 3600
+    console_responsable_hash: str = ""
+    console_intervenant_hash: str = ""
+    console_etudiant_hash: str = ""
+
     database_url: str = (
         "postgresql+psycopg://campus_user:change_me"
         "@127.0.0.1:5433/campus_connect"

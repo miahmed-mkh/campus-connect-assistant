@@ -214,11 +214,11 @@
     }
 
     async function sendSensorReading() {
-      const keys = getKeys();
-      if (!keys.device) {
-        log("Capteur : clé d'appareil vide, envoi impossible.", "error");
+      if (!isOperator()) {
+        log("Capteur : accès non autorisé, connecte-toi en responsable ou intervenant.", "error");
         return false;
       }
+
       const now = new Date().toISOString();
       const payload = {
         device_id: SENSOR_ID,
@@ -232,7 +232,7 @@
       try {
         result = await api("/api/iot/telemetry", {
           method: "POST",
-          headers: { "Content-Type": "application/json", "X-Device-Key": keys.device },
+          headers: { "Content-Type": "application/json", "Authorization": "Bearer " + session.token },
           body: JSON.stringify(payload),
         });
       } catch (error) {
@@ -246,9 +246,10 @@
         return true;
       }
       if (result.status === 401) {
-        log("Capteur : clé d'appareil refusée (401).", "error");
-      } else if (result.status === 503) {
-        log("Capteur : clé d'appareil non configurée côté serveur (503).", "error");
+        log("Capteur : session expirée ou invalide, reconnecte-toi.", "error");
+        logout();
+      } else if (result.status === 403) {
+        log("Capteur : accès refusé par le serveur (403).", "error");
       } else {
         log("Capteur : POST /api/iot/telemetry -> HTTP " + result.status, "error");
       }

@@ -107,6 +107,11 @@
       </p>
     </section>
 
+    <section id="status-section" style="display:none">
+      <h2>Statut des appareils <span id="status-badge" class="badge">arrêté</span></h2>
+      <p class="muted" id="status-updated">Aucune donnée pour le moment.</p>
+      <div id="status-list"></div>
+    </section>
 
     <section>
       <h2>Journal</h2>
@@ -314,8 +319,14 @@
       show($("student-notice"), loggedIn && !isOperator());
       show($("connect").closest("section"), isOperator());
       show($("sensor-send").closest("section"), isOperator());
-            show($("kiosk-section"), isOperator());
+      show($("kiosk-section"), isOperator());
+      show($("status-section"), isOperator());
       if (!isOperator()) stopKioskHeartbeat();
+      if (isOperator()) {
+        startStatusPolling();
+      } else {
+        stopStatusPolling();
+      }
       if (loggedIn) {
         $("session-name").textContent = session.display_name;
         $("session-role").textContent = ROLE_LABELS[session.role] || session.role;
@@ -508,6 +519,105 @@
       button.addEventListener("click", () => askKiosk(button.dataset.question));
     });
 
+
+        // ==== Statut en direct ====
+    const STATUS_REFRESH_MS = 3000;
+    const KIND_LABELS = {
+      temperature: "Température",
+      humidity: "Humidité",
+      occupancy: "Affluence",
+    };
+    let statusTimer = null;
+    let statusBusy = false;
+
+    function statusNode(tag, text, className) {
+      const node = document.createElement(tag);
+      node.textContent = text;
+      if (className) node.className = className;
+      return node;
+    }
+
+    function setStatusBadge(text, cssClass) {
+      const badge = $("status-badge");
+      badge.textContent = text;
+      badge.className = "badge " + cssClass;
+    }
+
+    function describeReading(reading) {
+      if (reading.kind === "heartbeat") return "signal de présence reçu";
+      const label = KIND_LABELS[reading.kind] || reading.kind;
+      const unit = reading.unit ? " " + reading.unit : "";
+      return label + " : " + reading.value + unit;
+    }
+
+    function renderStatus(body) {
+      const list = $("status-list");
+      list.textContent = "";
+      if (body.devices.length === 0) {
+        list.appendChild(statusNode("p", "Aucun appareil connu pour le moment.", "muted"));
+      }
+      const reference = Date.parse(body.generated_at);
+      body.devices.forEach(function (device) {
+        const card = document.createElement("div");
+        card.style.margin = "0 0 14px";
+
+        const title = statusNode("p", "");
+        title.appendChild(statusNode("strong", device.device_id + " "));
+        title.appendChild(statusNode(
+          "span",
+          device.online ? "🟢 en ligne" : "🔴 hors ligne",
+          "badge " + (device.online ? "ok" : "ko")
+        ));
+        card.appendChild(title);
+
+        const seconds = Math.max(0, Math.round((reference - Date.parse(device.last_seen_at)) / 1000));
+        card.appendChild(statusNode("p", "Dernier signal il y a " + seconds + " s", "muted"));
+
+        device.latest.forEach(function (reading) {
+          card.appendChild(statusNode("p", describeReading(reading)));
+        });
+        list.appendChild(card);
+      });
+      const now = new Date().toLocaleTimeString("fr-FR");
+      $("status-updated").textContent = "Mis à jour à " + now + " (toutes les 3 s). Seuil hors ligne : " + body.online_threshold_seconds + " s.";
+    }
+
+    async function refreshStatus() {
+      if (!isOperator() || statusBusy) return;
+      statusBusy = true;
+      try {
+        const result = await api("/api/iot/status", {
+          headers: { "Authorization": "Bearer " + session.token },
+        });
+        if (result.status === 200) {
+          renderStatus(result.body);
+          setStatusBadge("en direct", "ok");
+        } else if (result.status === 401) {
+          log("Session expirée, reconnecte-toi.", "error");
+          logout();
+        } else {
+          setStatusBadge("erreur HTTP " + result.status, "ko");
+        }
+      } catch (error) {
+        setStatusBadge("API injoignable", "ko");
+      } finally {
+        statusBusy = false;
+      }
+    }
+
+    function startStatusPolling() {
+      if (statusTimer !== null) return;
+      refreshStatus();
+      statusTimer = setInterval(refreshStatus, STATUS_REFRESH_MS);
+    }
+
+    function stopStatusPolling() {
+      if (statusTimer !== null) {
+        clearInterval(statusTimer);
+        statusTimer = null;
+      }
+      setStatusBadge("arrêté", "");
+    }
 
     $("login-form").addEventListener("submit", submitLogin);
     $("logout").addEventListener("click", logout);

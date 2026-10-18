@@ -8,13 +8,20 @@ class Settings(BaseSettings):
     app_description: str = (
         "API de l'assistant virtuel éducatif du Campus ESIC"
     )
-    app_version: str = "1.1.0"
+    app_version: str = "1.2.0"
     app_environment: str = "development"
 
     # Cle d'acces aux statistiques d'usage (vide = endpoint desactive)
     analytics_api_key: str = ""
     iot_device_key: str = ""
     iot_online_threshold_seconds: int = 120
+
+    # Console IoT : secret de signature des jetons et hachage des comptes
+    console_token_secret: str = ""
+    console_token_ttl_seconds: int = 3600
+    console_responsable_hash: str = ""
+    console_intervenant_hash: str = ""
+    console_etudiant_hash: str = ""
 
     database_url: str = (
         "postgresql+psycopg://campus_user:change_me"

@@ -48,3 +48,17 @@ class IotStatus(BaseModel):
     online_threshold_seconds: int
     readings_total: int
     devices: list[DeviceStatus]
+
+
+
+class ConsoleLoginRequest(BaseModel):
+    username: str = Field(min_length=1, max_length=64)
+    password: str = Field(min_length=1, max_length=128)
+
+
+class ConsoleLoginResponse(BaseModel):
+    token: str
+    username: str
+    role: str
+    display_name: str
+    expires_in: int

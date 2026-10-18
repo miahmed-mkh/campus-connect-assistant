@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Console IoT - Campus Connect</title>
+  <style>
+  :root { color-scheme: light dark; --bleu: #2563eb; --bleu-fonce: #1e3a8a; --texte: #0f172a; --gris: #64748b; --bord: #e2e8f0; --fond: #f8fafc; --carte: #fff; --ok: #15803d; --ko: #b91c1c; --rayon: 16px; --ombre: 0 1px 2px rgba(15,23,42,.04), 0 10px 28px -10px rgba(15,23,42,.18); }
+  @media (prefers-color-scheme: dark) { :root { --bleu: #60a5fa; --bleu-fonce: #bfdbfe; --texte: #e2e8f0; --gris: #94a3b8; --bord: #1e293b; --fond: #0b1120; --carte: #111a2e; --ok: #4ade80; --ko: #f87171; --ombre: 0 10px 28px -10px rgba(0,0,0,.7); } }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100dvh; font-family: system-ui, "Segoe UI", sans-serif; background: radial-gradient(70% 340px at 50% 0, color-mix(in oklab, var(--bleu) 18%, transparent), transparent), var(--fond); background-attachment: fixed; color: var(--texte); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  main { max-width: 960px; margin-inline: auto; padding: clamp(20px, 4vw, 40px) 16px 56px; }
+  h1 { margin: 0 0 4px; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem); letter-spacing: -.03em; text-wrap: balance; background: linear-gradient(120deg, var(--bleu-fonce), var(--bleu)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h2 { margin: 0 0 12px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; text-wrap: balance; }
+  .muted { color: var(--gris); margin: 0 0 24px; text-wrap: pretty; }
+  section { background: var(--carte); border: 1px solid var(--bord); border-radius: var(--rayon); padding: 20px; margin-bottom: 18px; box-shadow: var(--ombre); transition: border-color .2s; }
+  section:focus-within { border-color: color-mix(in oklab, var(--bleu) 45%, var(--bord)); }
+  label { display: block; font-size: .85rem; font-weight: 600; margin: 10px 0 4px; }
+  input { width: 100%; padding: 10px 12px; border: 1px solid color-mix(in oklab, var(--texte) 18%, var(--bord)); border-radius: 10px; background: transparent; color: inherit; font: inherit; font-size: .95rem; transition: border-color .15s, box-shadow .15s; }
+  input:focus { outline: none; border-color: var(--bleu); box-shadow: 0 0 0 4px color-mix(in oklab, var(--bleu) 22%, transparent); }
+  button { margin-top: 12px; padding: 10px 18px; border: 0; border-radius: 10px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(29,78,216,.4); transition: transform .12s, box-shadow .12s, filter .12s; }
+  button:hover { filter: brightness(1.08); transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 8px 18px -6px rgba(29,78,216,.55); }
+  button:active { transform: translateY(0); box-shadow: none; }
+  button:focus-visible { outline: 3px solid color-mix(in oklab, var(--bleu) 45%, transparent); outline-offset: 2px; }
+  button:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; filter: none; }
+  .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 16px; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 11px; border-radius: 999px; font-size: .8rem; font-weight: 600; background: color-mix(in oklab, currentColor 12%, transparent); color: var(--gris); }
+  .badge.ok { color: var(--ok); }
+  .badge.ko { color: var(--ko); }
+  .badge.ok::before, .badge.ko::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  #log { max-height: 220px; overflow-y: auto; background: #0b1120; color: #e2e8f0; border: 1px solid #1e293b; border-radius: 12px; padding: 12px 14px; font-family: ui-monospace, "Cascadia Code", monospace; font-size: .8rem; scrollbar-width: thin; color-scheme: dark; overflow-wrap: anywhere; }
+  #log div { margin-bottom: 2px; }
+  #log .error { color: #fca5a5; }
+  #log .success { color: #86efac; }
+  @keyframes apparition { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes pulsation { 0% { box-shadow: 0 0 0 0 rgba(22,163,74,.55); } 100% { box-shadow: 0 0 0 9px rgba(22,163,74,0); } }
+  @keyframes glissement { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+  section { animation: apparition .45s ease both; }
+  #status-list .badge.ok, #status-badge.ok { animation: pulsation 1.6s ease-out infinite; }
+  #log div { animation: glissement .25s ease-out; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } button:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Console IoT</h1>
+    <p class="muted">Pilotage manuel de la borne d'accueil et du capteur de salle simulés. Les clés restent dans cet onglet (sessionStorage) et ne sont jamais écrites dans le code.</p>
+
+        <section id="kiosk-section" style="display:none">
+      <h2>📟 Borne d'accueil (kiosk-manual-01)</h2>
+      <p class="muted">La borne envoie un signal de présence et pose des questions au chatbot sur le canal « kiosk ».</p>
+
+      <p>
+        <button type="button" id="kiosk-heartbeat">💓 Signal de présence : arrêté</button>
+      </p>
+
+      <label for="kiosk-question">Question posée à la borne</label>
+      <input type="text" id="kiosk-question" maxlength="300" placeholder="Ex. : Comment obtenir une convention de stage ?">
+      <button type="button" id="kiosk-ask">💬 Poser la question</button>
+
+      <p class="muted" style="margin-top:14px">Questions types :</p>
+      <div id="kiosk-quick">
+        <button type="button" data-question="Comment obtenir une convention de stage ?">📄 Convention de stage</button>
+        <button type="button" data-question="Comment contacter la scolarité ?">☎️ Contact scolarité</button>
+        <button type="button" data-question="Quel est le cours du groupe B1-A lundi ?">📅 Cours B1-A lundi</button>
+        <button type="button" data-question="Quand a lieu le cours de Machine Learning Avancé ?">🤖 Machine Learning Avancé</button>
+      </div>
+
+      <label>Réponse du chatbot</label>
+      <div id="kiosk-answer" class="muted">Aucune question posée pour l'instant.</div>
+    </section>
+
+    <section id="auth-section">
+      <h2>🔐 Accès à la console</h2>
+      <form id="login-form">
+        <p>
+          <label for="login-user">Identifiant</label><br>
+          <input type="text" id="login-user" autocomplete="username" style="width:100%">
+        </p>
+        <p>
+          <label for="login-pass">Mot de passe</label><br>
+          <input type="password" id="login-pass" autocomplete="current-password" style="width:100%">
+        </p>
+        <p><button type="submit" id="login-submit">Se connecter</button></p>
+      </form>
+      <div id="session-box" style="display:none">
+        <p>Connecté : <strong id="session-name"></strong> (<span id="session-role"></span>)</p>
+        <p><button type="button" id="logout">Se déconnecter</button></p>
+      </div>
+      <div id="student-notice" style="display:none">
+        <p><strong>🎓 Accès non autorisé.</strong> Le compte étudiant n'a aucun droit sur la console IoT. Contacte un responsable ou un intervenant.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2> Santé de l'API <span id="api-badge" class="badge">non testée</span></h2>
+      <p class="muted">Vérifie que l'API répond et que ton compte peut lire le statut des appareils.</p>
+      <button id="connect">Tester la connexion</button>
+    </section>
+
+
+    <section>
+      <h2>Capteur de salle (sensor-manual-01)</h2>
+      <p class="muted">Règle les valeurs puis envoie une mesure, ou active le mode automatique (un envoi toutes les 5 secondes).</p>
+
+      <div>
+        <label for="sensor-temp">Température : <strong id="sensor-temp-value">21</strong> °C</label><br>
+        <input type="range" id="sensor-temp" min="10" max="35" step="0.5" value="21" style="width:100%">
+      </div>
+      <div>
+        <label for="sensor-hum">Humidité : <strong id="sensor-hum-value">45</strong> %</label><br>
+        <input type="range" id="sensor-hum" min="20" max="90" step="1" value="45" style="width:100%">
+      </div>
+      <div>
+        <label for="sensor-occ">Affluence : <strong id="sensor-occ-value">0</strong> personne(s)</label><br>
+        <input type="range" id="sensor-occ" min="0" max="100" step="1" value="0" style="width:100%">
+      </div>
+
+      <p>
+        <button type="button" id="sensor-send">Envoyer une mesure</button>
+        <button type="button" id="sensor-auto">Mode automatique : arrêté</button>
+      </p>
+    </section>
+
+    <section id="status-section" style="display:none">
+      <h2>Statut des appareils <span id="status-badge" class="badge">arrêté</span></h2>
+      <p class="muted" id="status-updated">Aucune donnée pour le moment.</p>
+      <div id="status-list"></div>
+    </section>
+
+    <section>
+      <h2>Journal</h2>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function log(message, level) {
+      const line = document.createElement("div");
+      if (level) line.className = level;
+      line.textContent = new Date().toLocaleTimeString("fr-FR") + "  " + message;
+      const box = $("log");
+      box.appendChild(line);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function setBadge(text, level) {
+      const badge = $("api-badge");
+      badge.textContent = text;
+      badge.className = "badge " + (level || "");
+    }
+
+    async function api(path, options) {
+      const response = await fetch(path, options || {});
+      let body = null;
+      try {
+        body = await response.json();
+      } catch (error) {
+        body = null;
+      }
+      return { status: response.status, body: body };
+    }
+
+    async function testConnection() {
+      try {
+        const health = await api("/health");
+        if (health.status !== 200) {
+          setBadge("API indisponible", "ko");
+          log("GET /health -> HTTP " + health.status, "error");
+          return;
+        }
+        setBadge("API en ligne v" + health.body.version, "ok");
+        log("API en ligne, version " + health.body.version, "success");
+      } catch (error) {
+        setBadge("API injoignable", "ko");
+        log("API injoignable : " + error.message, "error");
+        return;
+      }
+
+      if (!isOperator()) {
+        log("Statut : connecte-toi en responsable ou intervenant.", "error");
+        return;
+      }
+
+      let status;
+      try {
+        status = await api("/api/iot/status", {
+          headers: { "Authorization": "Bearer " + session.token },
+        });
+      } catch (error) {
+        log("Statut : API injoignable.", "error");
+        return;
+      }
+
+      if (status.status === 200) {
+        log("Statut accessible : " + status.body.devices.length + " appareil(s), " + status.body.readings_total + " mesure(s).", "success");
+      } else if (status.status === 401) {
+        log("Session expirée ou invalide, reconnecte-toi.", "error");
+        logout();
+      } else if (status.status === 403) {
+        log("Statut : accès refusé par le serveur (403).", "error");
+      } else {
+        log("GET /api/iot/status -> HTTP " + status.status, "error");
+      }
+    }
+
+    // ===== Capteur de salle =====
+    const SENSOR_ID = "sensor-manual-01";
+    let sensorTimer = null;
+
+    function bindSlider(id) {
+      const input = $(id);
+      const output = $(id + "-value");
+      const update = () => { output.textContent = input.value; };
+      input.addEventListener("input", update);
+      update();
+    }
+
+    function clampSlider(input, value) {
+      const min = Number(input.min);
+      const max = Number(input.max);
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function driftSlider(id, amplitude) {
+      const input = $(id);
+      const change = (Math.random() * 2 - 1) * amplitude;
+      input.value = clampSlider(input, Number(input.value) + change);
+      $(id + "-value").textContent = input.value;
+    }
+
+    async function sendSensorReading() {
+      if (!isOperator()) {
+        log("Capteur : accès non autorisé, connecte-toi en responsable ou intervenant.", "error");
+        return false;
+      }
+
+      const now = new Date().toISOString();
+      const payload = {
+        device_id: SENSOR_ID,
+        readings: [
+          { kind: "temperature", value: Number($("sensor-temp").value), unit: "C", recorded_at: now },
+          { kind: "humidity", value: Number($("sensor-hum").value), unit: "%", recorded_at: now },
+          { kind: "occupancy", value: Number($("sensor-occ").value), unit: "people", recorded_at: now },
+        ],
+      };
+      let result;
+      try {
+        result = await api("/api/iot/telemetry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": "Bearer " + session.token },
+          body: JSON.stringify(payload),
+        });
+      } catch (error) {
+        log("Capteur : API injoignable.", "error");
+        return false;
+      }
+      if (result.status === 202) {
+        log("Capteur : " + result.body.accepted + " mesure(s) acceptée(s) ("
+          + $("sensor-temp").value + " °C, " + $("sensor-hum").value + " %, "
+          + $("sensor-occ").value + " pers.).");
+        return true;
+      }
+      if (result.status === 401) {
+        log("Capteur : session expirée ou invalide, reconnecte-toi.", "error");
+        logout();
+      } else if (result.status === 403) {
+        log("Capteur : accès refusé par le serveur (403).", "error");
+      } else {
+        log("Capteur : POST /api/iot/telemetry -> HTTP " + result.status, "error");
+      }
+      return false;
+    }
+
+    function stopSensorAuto() {
+      if (sensorTimer !== null) {
+        clearInterval(sensorTimer);
+        sensorTimer = null;
+      }
+      $("sensor-auto").textContent = "Mode automatique : arrêté";
+    }
+
+    async function sensorAutoTick() {
+      driftSlider("sensor-temp", 0.6);
+      driftSlider("sensor-hum", 2);
+      driftSlider("sensor-occ", 3);
+      const ok = await sendSensorReading();
+      if (!ok) {
+        stopSensorAuto();
+        log("Capteur : mode automatique arrêté (envoi en échec).", "error");
+      }
+    }
+
+    function toggleSensorAuto() {
+      if (sensorTimer !== null) {
+        stopSensorAuto();
+        log("Capteur : mode automatique arrêté.");
+        return;
+      }
+      sensorTimer = setInterval(sensorAutoTick, 5000);
+      $("sensor-auto").textContent = "Mode automatique : actif (5 s)";
+      log("Capteur : mode automatique activé.");
+      sensorAutoTick();
+    }
+
+    ["sensor-temp", "sensor-hum", "sensor-occ"].forEach(bindSlider);
+    $("sensor-send").addEventListener("click", sendSensorReading);
+    $("sensor-auto").addEventListener("click", toggleSensorAuto);
+
+        // ===== Authentification =====
+    const SESSION_KEY = "iot_console_session";
+    const OPERATOR_ROLES = ["responsable", "intervenant"];
+    const ROLE_LABELS = {
+      responsable: "👔 Responsable",
+      intervenant: "🛠️ Intervenant",
+      etudiant: "🎓 Étudiant",
+    };
+    let session = null;
+
+    function show(element, visible) {
+      element.style.display = visible ? "" : "none";
+    }
+
+    function isOperator() {
+      return session !== null && OPERATOR_ROLES.includes(session.role);
+    }
+
+    function applySession() {
+      const loggedIn = session !== null;
+      show($("login-form"), !loggedIn);
+      show($("session-box"), loggedIn);
+      show($("student-notice"), loggedIn && !isOperator());
+      show($("connect").closest("section"), isOperator());
+      show($("sensor-send").closest("section"), isOperator());
+      show($("kiosk-section"), isOperator());
+      show($("status-section"), isOperator());
+      if (!isOperator()) stopKioskHeartbeat();
+      if (isOperator()) {
+        startStatusPolling();
+      } else {
+        stopStatusPolling();
+      }
+      if (loggedIn) {
+        $("session-name").textContent = session.display_name;
+        $("session-role").textContent = ROLE_LABELS[session.role] || session.role;
+      }
+      if (!isOperator()) {
+        stopSensorAuto();
+      }
+    }
+
+    function restoreSession() {
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(SESSION_KEY) || "null");
+        if (saved && saved.token && saved.expires_at > Date.now()) {
+          session = saved;
+        } else {
+          sessionStorage.removeItem(SESSION_KEY);
+        }
+      } catch (error) {
+        sessionStorage.removeItem(SESSION_KEY);
+      }
+      applySession();
+    }
+
+    async function submitLogin(event) {
+      event.preventDefault();
+      const username = $("login-user").value.trim();
+      const password = $("login-pass").value;
+      if (!username || !password) {
+        log("Connexion : identifiant et mot de passe requis.", "error");
+        return;
+      }
+      let result;
+      try {
+        result = await api("/api/iot/console/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username: username, password: password }),
+        });
+      } catch (error) {
+        log("Connexion : API injoignable.", "error");
+        return;
+      }
+      $("login-pass").value = "";
+      if (result.status === 200) {
+        session = {
+          token: result.body.token,
+          username: result.body.username,
+          role: result.body.role,
+          display_name: result.body.display_name,
+          expires_at: Date.now() + result.body.expires_in * 1000,
+        };
+        sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+        log("Connecté : " + session.display_name + " (" + session.role + ").");
+        if (!isOperator()) {
+          log("Accès non autorisé pour ce rôle.", "error");
+        }
+        applySession();
+      } else if (result.status === 401) {
+        log("Connexion refusée : identifiant ou mot de passe incorrect.", "error");
+      } else if (result.status === 503) {
+        log("Connexion indisponible : secret non configuré côté serveur (503).", "error");
+      } else {
+        log("POST /api/iot/console/login -> HTTP " + result.status, "error");
+      }
+    }
+
+    function logout() {
+      session = null;
+      sessionStorage.removeItem(SESSION_KEY);
+      log("Déconnecté.");
+      applySession();
+    }
+
+        // ===== Borne d'accueil =====
+    const KIOSK_ID = "kiosk-manual-01";
+    const KIOSK_SESSION_ID = "kiosk-manual-" + Math.random().toString(36).slice(2, 10);
+    let kioskTimer = null;
+
+    async function sendKioskHeartbeat() {
+      if (!isOperator()) {
+        return false;
+      }
+      let result;
+      try {
+        result = await api("/api/iot/telemetry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": "Bearer " + session.token },
+          body: JSON.stringify({
+            device_id: KIOSK_ID,
+            readings: [
+              { kind: "heartbeat", value: 1, recorded_at: new Date().toISOString() },
+            ],
+          }),
+        });
+      } catch (error) {
+        log("Borne : API injoignable.", "error");
+        return false;
+      }
+      if (result.status === 202) {
+        log("Borne : signal de présence envoyé.");
+        return true;
+      }
+      if (result.status === 401) {
+        log("Borne : session expirée ou invalide, reconnecte-toi.", "error");
+        logout();
+      } else if (result.status === 403) {
+        log("Borne : accès refusé par le serveur (403).", "error");
+      } else {
+        log("Borne : POST /api/iot/telemetry -> HTTP " + result.status, "error");
+      }
+      return false;
+    }
+
+    function stopKioskHeartbeat() {
+      if (kioskTimer !== null) {
+        clearInterval(kioskTimer);
+        kioskTimer = null;
+      }
+      $("kiosk-heartbeat").textContent = "💓 Signal de présence : arrêté";
+    }
+
+    async function kioskHeartbeatTick() {
+      const ok = await sendKioskHeartbeat();
+      if (!ok) {
+        stopKioskHeartbeat();
+      }
+    }
+
+    function toggleKioskHeartbeat() {
+      if (kioskTimer !== null) {
+        stopKioskHeartbeat();
+        log("Borne : signal de présence arrêté.");
+        return;
+      }
+      kioskTimer = setInterval(kioskHeartbeatTick, 10000);
+      $("kiosk-heartbeat").textContent = "💓 Signal de présence : actif (10 s)";
+      log("Borne : signal de présence activé.");
+      kioskHeartbeatTick();
+    }
+
+    async function askKiosk(question) {
+      const text = question.trim();
+      if (!text) {
+        log("Borne : écris une question d'abord.", "error");
+        return;
+      }
+      if (!isOperator()) {
+        log("Borne : accès non autorisé.", "error");
+        return;
+      }
+      $("kiosk-question").value = text;
+      $("kiosk-answer").textContent = "…";
+      let result;
+      try {
+        result = await api("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: text,
+            session_id: KIOSK_SESSION_ID,
+            channel: "kiosk",
+          }),
+        });
+      } catch (error) {
+        $("kiosk-answer").textContent = "API injoignable.";
+        log("Borne : API injoignable.", "error");
+        return;
+      }
+      if (result.status === 200 && result.body) {
+        const source = result.body.source ? " [source : " + result.body.source + "]" : "";
+        $("kiosk-answer").textContent = result.body.answer + source;
+        log("Borne : réponse reçue (" + result.body.category + ", confiance " + result.body.confidence + ").", "success");
+      } else if (result.status === 429) {
+        $("kiosk-answer").textContent = "Trop de questions, patiente un instant.";
+        log("Borne : limite de débit atteinte (429).", "error");
+      } else {
+        $("kiosk-answer").textContent = "Erreur " + result.status + ".";
+        log("Borne : POST /api/chat -> HTTP " + result.status, "error");
+      }
+    }
+
+    $("kiosk-heartbeat").addEventListener("click", toggleKioskHeartbeat);
+    $("kiosk-ask").addEventListener("click", () => askKiosk($("kiosk-question").value));
+    $("kiosk-question").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        askKiosk($("kiosk-question").value);
+      }
+    });
+    document.querySelectorAll("#kiosk-quick button").forEach((button) => {
+      button.addEventListener("click", () => askKiosk(button.dataset.question));
+    });
+
+
+        // ==== Statut en direct ====
+    const STATUS_REFRESH_MS = 3000;
+    const KIND_LABELS = {
+      temperature: "Température",
+      humidity: "Humidité",
+      occupancy: "Affluence",
+    };
+    let statusTimer = null;
+    let statusBusy = false;
+    const DEVICE_INFO = {
+      "kiosk-hall-01": { name: "Borne du hall", service: "Accueil (simulateur)" },
+      "kiosk-manual-01": { name: "Borne d'accueil", service: "Accueil (console)" },
+      "sensor-b204": { name: "Capteur de la salle B204", service: "Bâtiment B (simulateur)" },
+      "sensor-manual-01": { name: "Capteur de salle", service: "Salle de démonstration (console)" },
+    };
+
+    function deviceInfo(deviceId) {
+      if (Object.prototype.hasOwnProperty.call(DEVICE_INFO, deviceId)) {
+        return DEVICE_INFO[deviceId];
+      }
+      return { name: deviceId, service: "Appareil non référencé" };
+    }
+
+    function statusNode(tag, text, className) {
+      const node = document.createElement(tag);
+      node.textContent = text;
+      if (className) node.className = className;
+      return node;
+    }
+
+    function setStatusBadge(text, cssClass) {
+      const badge = $("status-badge");
+      badge.textContent = text;
+      badge.className = "badge " + cssClass;
+    }
+
+    const KIND_ICONS = { temperature: "🌡️", humidity: "💧", occupancy: "👥", heartbeat: "💓" };
+    const UNIT_LABELS = { C: "°C", people: "personnes", persons: "personnes" };
+
+    function pick(map, key, fallback) {
+      return Object.prototype.hasOwnProperty.call(map, key) ? map[key] : fallback;
+    }
+
+    function describeReading(reading) {
+      const icon = pick(KIND_ICONS, reading.kind, "•");
+      if (reading.kind === "heartbeat") return icon + " signal de présence reçu";
+      const label = pick(KIND_LABELS, reading.kind, reading.kind);
+      const unit = reading.unit ? " " + pick(UNIT_LABELS, reading.unit, reading.unit) : "";
+      return icon + " " + label + " : " + reading.value + unit;
+    }
+
+
+    function renderStatus(body) {
+      const list = $("status-list");
+      list.textContent = "";
+      if (body.devices.length === 0) {
+        list.appendChild(statusNode("p", "Aucun appareil connu pour le moment.", "muted"));
+      }
+      const reference = Date.parse(body.generated_at);
+      body.devices.forEach(function (device) {
+        const card = document.createElement("div");
+        card.style.margin = "0 0 14px";
+
+        const title = statusNode("p", "");
+        const info = deviceInfo(device.device_id);
+        title.appendChild(statusNode("strong", info.name + " "));
+        title.appendChild(statusNode(
+          "span",
+          device.online ? "🟢 en ligne" : "🔴 hors ligne",
+          "badge " + (device.online ? "ok" : "ko")
+        ));
+        card.appendChild(title);
+        card.appendChild(statusNode("p", info.service + " · identifiant : " + device.device_id, "muted"));
+
+
+        const seconds = Math.max(0, Math.round((reference - Date.parse(device.last_seen_at)) / 1000));
+        card.appendChild(statusNode("p", "Dernier signal il y a " + seconds + " s", "muted"));
+
+        device.latest.forEach(function (reading) {
+          card.appendChild(statusNode("p", describeReading(reading)));
+        });
+        list.appendChild(card);
+      });
+      const now = new Date().toLocaleTimeString("fr-FR");
+      $("status-updated").textContent = "Mis à jour à " + now + " (toutes les 3 s). Seuil hors ligne : " + body.online_threshold_seconds + " s.";
+    }
+
+    async function refreshStatus() {
+      if (!isOperator() || statusBusy) return;
+      statusBusy = true;
+      try {
+        const result = await api("/api/iot/status", {
+          headers: { "Authorization": "Bearer " + session.token },
+        });
+        if (result.status === 200) {
+          renderStatus(result.body);
+          setStatusBadge("en direct", "ok");
+        } else if (result.status === 401) {
+          log("Session expirée, reconnecte-toi.", "error");
+          logout();
+        } else {
+          setStatusBadge("erreur HTTP " + result.status, "ko");
+        }
+      } catch (error) {
+        setStatusBadge("API injoignable", "ko");
+      } finally {
+        statusBusy = false;
+      }
+    }
+
+    function startStatusPolling() {
+      if (statusTimer !== null) return;
+      refreshStatus();
+      statusTimer = setInterval(refreshStatus, STATUS_REFRESH_MS);
+    }
+
+    function stopStatusPolling() {
+      if (statusTimer !== null) {
+        clearInterval(statusTimer);
+        statusTimer = null;
+      }
+      setStatusBadge("arrêté", "");
+    }
+
+    $("login-form").addEventListener("submit", submitLogin);
+    $("logout").addEventListener("click", logout);
+    restoreSession();
+
+    $("connect").addEventListener("click", testConnection);
+    log("Console prête. Connecte-toi avec ton compte pour piloter les appareils.");
+  </script>
+</body>
+</html>

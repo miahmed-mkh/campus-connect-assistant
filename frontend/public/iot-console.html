@@ -565,12 +565,21 @@
       badge.className = "badge " + cssClass;
     }
 
-    function describeReading(reading) {
-      if (reading.kind === "heartbeat") return "signal de présence reçu";
-      const label = KIND_LABELS[reading.kind] || reading.kind;
-      const unit = reading.unit ? " " + reading.unit : "";
-      return label + " : " + reading.value + unit;
+    const KIND_ICONS = { temperature: "🌡️", humidity: "💧", occupancy: "👥", heartbeat: "💓" };
+    const UNIT_LABELS = { C: "°C", people: "personnes", persons: "personnes" };
+
+    function pick(map, key, fallback) {
+      return Object.prototype.hasOwnProperty.call(map, key) ? map[key] : fallback;
     }
+
+    function describeReading(reading) {
+      const icon = pick(KIND_ICONS, reading.kind, "•");
+      if (reading.kind === "heartbeat") return icon + " signal de présence reçu";
+      const label = pick(KIND_LABELS, reading.kind, reading.kind);
+      const unit = reading.unit ? " " + pick(UNIT_LABELS, reading.unit, reading.unit) : "";
+      return icon + " " + label + " : " + reading.value + unit;
+    }
+
 
     function renderStatus(body) {
       const list = $("status-list");

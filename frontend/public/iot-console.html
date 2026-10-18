@@ -146,9 +146,6 @@
     }
 
     async function testConnection() {
-      saveKeys();
-      const keys = getKeys();
-
       try {
         const health = await api("/health");
         if (health.status !== 200) {
@@ -164,27 +161,30 @@
         return;
       }
 
-      if (!keys.analytics) {
-        log("Clé analytics vide : le tableau de statut sera indisponible.", "error");
-      } else {
-        const status = await api("/api/iot/status", {
-          headers: { "X-Analytics-Key": keys.analytics },
-        });
-        if (status.status === 200) {
-          log("Clé analytics valide : " + status.body.devices.length + " appareil(s), " + status.body.readings_total + " mesure(s).", "success");
-        } else if (status.status === 401) {
-          log("Clé analytics refusée (401).", "error");
-        } else if (status.status === 503) {
-          log("Clé analytics non configurée côté serveur (503).", "error");
-        } else {
-          log("GET /api/iot/status -> HTTP " + status.status, "error");
-        }
+      if (!isOperator()) {
+        log("Statut : connecte-toi en responsable ou intervenant.", "error");
+        return;
       }
 
-      if (!keys.device) {
-        log("Clé d'appareil vide : l'envoi de mesures sera impossible.", "error");
+      let status;
+      try {
+        status = await api("/api/iot/status", {
+          headers: { "Authorization": "Bearer " + session.token },
+        });
+      } catch (error) {
+        log("Statut : API injoignable.", "error");
+        return;
+      }
+
+      if (status.status === 200) {
+        log("Statut accessible : " + status.body.devices.length + " appareil(s), " + status.body.readings_total + " mesure(s).", "success");
+      } else if (status.status === 401) {
+        log("Session expirée ou invalide, reconnecte-toi.", "error");
+        logout();
+      } else if (status.status === 403) {
+        log("Statut : accès refusé par le serveur (403).", "error");
       } else {
-        log("Clé d'appareil enregistrée (elle sera vérifiée au premier envoi).");
+        log("GET /api/iot/status -> HTTP " + status.status, "error");
       }
     }
 

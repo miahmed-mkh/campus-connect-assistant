@@ -54,19 +54,11 @@
     </section>
 
     <section>
-      <h2>1. Connexion <span id="api-badge" class="badge">non testée</span></h2>
-      <div class="row">
-        <div>
-          <label for="device-key">Clé d'appareil (IOT_DEVICE_KEY)</label>
-          <input id="device-key" type="password" autocomplete="off">
-        </div>
-        <div>
-          <label for="analytics-key">Clé analytics (ANALYTICS_API_KEY)</label>
-          <input id="analytics-key" type="password" autocomplete="off">
-        </div>
-      </div>
-      <button id="connect">Enregistrer et tester la connexion</button>
+      <h2> Santé de l'API <span id="api-badge" class="badge">non testée</span></h2>
+      <p class="muted">Vérifie que l'API répond et que ton compte peut lire le statut des appareils.</p>
+      <button id="connect">Tester la connexion</button>
     </section>
+
 
     <section>
       <h2>Capteur de salle (sensor-manual-01)</h2>
@@ -125,24 +117,6 @@
         body = null;
       }
       return { status: response.status, body: body };
-    }
-
-    function getKeys() {
-      return {
-        device: $("device-key").value.trim(),
-        analytics: $("analytics-key").value.trim(),
-      };
-    }
-
-    function saveKeys() {
-      const keys = getKeys();
-      sessionStorage.setItem("iot_device_key", keys.device);
-      sessionStorage.setItem("iot_analytics_key", keys.analytics);
-    }
-
-    function loadKeys() {
-      $("device-key").value = sessionStorage.getItem("iot_device_key") || "";
-      $("analytics-key").value = sessionStorage.getItem("iot_analytics_key") || "";
     }
 
     async function testConnection() {
@@ -394,8 +368,7 @@
     restoreSession();
 
     $("connect").addEventListener("click", testConnection);
-    loadKeys();
-    log("Console prête. Saisis les clés puis teste la connexion.");
+    log("Console prête. Connecte-toi avec ton compte pour piloter les appareils.");
   </script>
 </body>
 </html>

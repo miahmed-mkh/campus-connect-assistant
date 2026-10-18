@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from backend.app.api.analytics import require_analytics_key
 from backend.app.core.config import settings
 from backend.app.db.database import get_db
-from backend.app.core.console_auth import create_token, verify_password
+from backend.app.core.console_auth import create_token, verify_password, verify_token
 from backend.app.schemas.iot import (
     ConsoleLoginRequest,
     ConsoleLoginResponse,
@@ -50,12 +50,59 @@ def require_device_key(
             },
         )
 
+OPERATOR_ROLES = ("responsable", "intervenant")
+
+
+def check_console_token(authorization: str) -> None:
+    scheme, _, token = authorization.partition(" ")
+    payload = None
+    if scheme.lower() == "bearer" and token.strip():
+        payload = verify_token(token.strip(), settings.console_token_secret)
+
+    if payload is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail={
+                "error": "invalid_token",
+                "message": "Jeton de console absent, invalide ou expiré.",
+            },
+        )
+
+    if payload["role"] not in OPERATOR_ROLES:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail={
+                "error": "forbidden_role",
+                "message": "Accès non autorisé pour ce rôle.",
+            },
+        )
+
+
+def require_device_or_console(
+    x_device_key: str | None = Header(default=None, alias="X-Device-Key"),
+    authorization: str | None = Header(default=None),
+) -> None:
+    if authorization:
+        check_console_token(authorization)
+        return
+    require_device_key(x_device_key)
+
+
+def require_analytics_or_console(
+    x_analytics_key: str | None = Header(default=None, alias="X-Analytics-Key"),
+    authorization: str | None = Header(default=None),
+) -> None:
+    if authorization:
+        check_console_token(authorization)
+        return
+    require_analytics_key(x_analytics_key)
+
 
 @router.post(
     "/telemetry",
     response_model=TelemetryAccepted,
     status_code=status.HTTP_202_ACCEPTED,
-    dependencies=[Depends(require_device_key)],
+    dependencies=[Depends(require_device_or_console)],
 )
 def post_telemetry(
     payload: TelemetryPayload,
@@ -67,7 +114,7 @@ def post_telemetry(
 @router.get(
     "/status",
     response_model=IotStatus,
-    dependencies=[Depends(require_analytics_key)],
+    dependencies=[Depends(require_analytics_or_console)],
 )
 def get_iot_status(
     db: Session = Depends(get_db),

@@ -30,13 +30,14 @@ Navigateur ──> Nginx (web, :8088) ──> FastAPI (api, :8000, non publiée)
 | Frontend | React 18, Vite, Tailwind CSS |
 | Backend | Python 3.12, FastAPI, Pydantic, SQLAlchemy, Alembic |
 | Base de données | PostgreSQL 16 |
-| Tests / CI | Pytest (250 tests), GitHub Actions |
+| Tests / CI | Pytest (291 tests), GitHub Actions |
 | Conteneurs | Docker Compose (profil `full`), images `python:3.12-slim` et `nginx:alpine` |
 
 ## Sécurité
 
 - Masquage des données personnelles **avant** écriture en base (aucune donnée brute conservée).
-- Identifiant de session anonyme, pas de compte utilisateur ni de donnée nominative.
+- Chatbot : identifiant de session anonyme, pas de compte pour les étudiants qui posent leurs questions, aucune donnée nominative conservée.
+- Console IoT : comptes avec rôles, contrôlés côté serveur (mots de passe hachés PBKDF2-SHA256, jeton signé HMAC avec expiration, rôle étudiant refusé en `403`). Voir la section « Console IoT et comptes ».
 - Validation stricte des entrées (longueur, contenu) et limitation de débit.
 - Endpoint analytics protégé par clé d'API (comparaison à temps constant), désactivé si aucune clé n'est configurée.
 - Télémétrie IoT protégée par une clé d'appareil distincte de la clé analytics (écriture seule), validation stricte des mesures (types, bornes, taille du lot).
@@ -129,6 +130,89 @@ Les conteneurs `sensor` et `kiosk` ne reçoivent que la clé d'appareil : ni acc
 - Une clé d'appareil partagée par tous les appareils (pas de clé par appareil), sans HTTPS.
 - Pas de limitation de débit ni de purge automatique sur la télémétrie.
 
+## Console IoT et comptes
+
+La page `iot-console.html` permet de piloter les appareils simulés à la main. En démo Docker, elle est servie par Nginx : `http://localhost:8088/iot-console.html`.
+
+Elle propose trois fonctions :
+
+- **Capteur de salle** : curseurs de température, d'humidité et d'affluence, envoi manuel ou automatique toutes les 5 secondes.
+- **Borne d'accueil** : questions au chatbot sur le canal `kiosk` et signal de présence toutes les 10 secondes.
+- **Statut des appareils** : tableau rafraîchi toutes les 3 secondes, avec l'état en ligne ou hors ligne et les dernières mesures.
+
+### Comptes et rôles
+
+L'accès se fait par un compte. Les droits sont contrôlés **côté serveur** : masquer un bouton dans la page ne suffit pas, l'API refuse les requêtes non autorisées.
+
+| Rôle | Droits |
+|---|---|
+| `responsable` | capteur, borne, statut |
+| `intervenant` | capteur, borne, statut |
+| `etudiant` | aucun pilotage : l'API répond `403` |
+
+- Route de connexion : `POST /api/iot/console/login`.
+- Mots de passe stockés **uniquement hachés** (PBKDF2-SHA256, 600 000 itérations, sel aléatoire).
+- Jeton signé HMAC-SHA256, avec expiration (3600 secondes par défaut).
+- Compte inconnu et mauvais mot de passe renvoient la même erreur `401`, avec un temps de réponse comparable.
+- `CONSOLE_TOKEN_SECRET` vide : connexion désactivée (`503`).
+- Jeton invalide ou expiré : `401`. Rôle sans droit : `403`.
+- Les clés `X-Device-Key` et `X-Analytics-Key` restent valides pour les simulateurs et les scripts. Le jeton d'un compte ne donne pas accès à `GET /api/analytics/summary`.
+
+### Configurer les comptes
+
+Les comptes se définissent dans `.env` (ignoré par Git), jamais dans le dépôt. Les variables sont `CONSOLE_TOKEN_SECRET`, `CONSOLE_TOKEN_TTL_SECONDS`, `CONSOLE_RESPONSABLE_HASH`, `CONSOLE_INTERVENANT_HASH` et `CONSOLE_ETUDIANT_HASH`. Elles figurent, vides, dans `.env.example`.
+
+Générer le secret de signature :
+
+~~~bash
+python -c "import secrets; print(secrets.token_hex(32))"
+~~~
+
+Générer le hachage d'un mot de passe, à coller dans la variable du rôle voulu :
+
+~~~bash
+python -m backend.scripts.hash_password
+~~~
+
+Après modification de `.env`, recréer l'API pour qu'elle relise les variables :
+
+~~~bash
+docker compose --profile full --profile iot up -d --build
+~~~
+
+Les mots de passe de démonstration ne figurent pas dans ce dépôt : ils sont communiqués séparément.
+
+### Limites assumées de la console
+
+- Pas de limitation du nombre d'essais sur la connexion : le coût du hachage PBKDF2 ralentit les attaques par force brute, mais un blocage après plusieurs échecs reste à ajouter.
+- Le jeton de session est conservé dans le `sessionStorage` du navigateur : il disparaît à la fermeture de l'onglet, mais une faille XSS pourrait le lire.
+- Les comptes sont définis par variables d'environnement : pas de gestion en ligne (création, changement de mot de passe, révocation d'un jeton avant son expiration).
+- Pas de HTTPS en démonstration : les mots de passe circulent en clair sur le réseau local.
+- Les mots de passe de démonstration sont des valeurs d'exemple, à remplacer pour tout autre usage.
+
+## Consulter la base avec Adminer
+
+Adminer est une interface web pour parcourir les tables PostgreSQL (sessions, messages, mesures IoT). Il est **optionnel** : il ne démarre qu'avec le profil Docker `tools`.
+
+~~~bash
+docker compose --profile tools up -d adminer
+~~~
+
+Ouvrir ensuite `http://localhost:8090` et remplir le formulaire :
+
+| Champ | Valeur |
+|---|---|
+| Système | PostgreSQL |
+| Serveur | `postgres` |
+| Utilisateur | `POSTGRES_USER` du fichier `.env` |
+| Mot de passe | `POSTGRES_PASSWORD` du fichier `.env` |
+| Base de données | `campus_connect` |
+
+- Le port est lié à `127.0.0.1` : Adminer n'est pas accessible depuis le réseau. Il se change avec `ADMINER_HOST_PORT`.
+- Outil de développement et de démonstration : à ne pas lancer en production.
+
+## Tests
+
 ```bash
 docker compose up -d postgres
 python -m pytest backend/tests -q
@@ -156,7 +240,7 @@ La CI GitHub Actions (`.github/workflows/ci.yml`) s'exécute sur chaque push et 
 │   │   └── services/         # connaissances, classement, redaction PII, sécurité, rate limit, analytics
 │   ├── data/                 # faq.json + knowledge_base/{raw,processed}
 │   ├── scripts/knowledge_base/  # extraction PDF, normalisation, vérification des données
-│   ├── tests/                # 250 tests Pytest
+│   ├── tests/                # 291 tests Pytest
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/                 # React + Vite + Tailwind, Dockerfile multi-étapes, nginx.conf

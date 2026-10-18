@@ -31,6 +31,28 @@
     <h1>Console IoT</h1>
     <p class="muted">Pilotage manuel de la borne d'accueil et du capteur de salle simulés. Les clés restent dans cet onglet (sessionStorage) et ne sont jamais écrites dans le code.</p>
 
+    <section id="auth-section">
+      <h2>🔐 Accès à la console</h2>
+      <form id="login-form">
+        <p>
+          <label for="login-user">Identifiant</label><br>
+          <input type="text" id="login-user" autocomplete="username" style="width:100%">
+        </p>
+        <p>
+          <label for="login-pass">Mot de passe</label><br>
+          <input type="password" id="login-pass" autocomplete="current-password" style="width:100%">
+        </p>
+        <p><button type="submit" id="login-submit">Se connecter</button></p>
+      </form>
+      <div id="session-box" style="display:none">
+        <p>Connecté : <strong id="session-name"></strong> (<span id="session-role"></span>)</p>
+        <p><button type="button" id="logout">Se déconnecter</button></p>
+      </div>
+      <div id="student-notice" style="display:none">
+        <p><strong>🎓 Accès non autorisé.</strong> Le compte étudiant n'a aucun droit sur la console IoT. Contacte un responsable ou un intervenant.</p>
+      </div>
+    </section>
+
     <section>
       <h2>1. Connexion <span id="api-badge" class="badge">non testée</span></h2>
       <div class="row">
@@ -267,6 +289,108 @@
     ["sensor-temp", "sensor-hum", "sensor-occ"].forEach(bindSlider);
     $("sensor-send").addEventListener("click", sendSensorReading);
     $("sensor-auto").addEventListener("click", toggleSensorAuto);
+
+        // ===== Authentification =====
+    const SESSION_KEY = "iot_console_session";
+    const OPERATOR_ROLES = ["responsable", "intervenant"];
+    const ROLE_LABELS = {
+      responsable: "👔 Responsable",
+      intervenant: "🛠️ Intervenant",
+      etudiant: "🎓 Étudiant",
+    };
+    let session = null;
+
+    function show(element, visible) {
+      element.style.display = visible ? "" : "none";
+    }
+
+    function isOperator() {
+      return session !== null && OPERATOR_ROLES.includes(session.role);
+    }
+
+    function applySession() {
+      const loggedIn = session !== null;
+      show($("login-form"), !loggedIn);
+      show($("session-box"), loggedIn);
+      show($("student-notice"), loggedIn && !isOperator());
+      show($("connect").closest("section"), isOperator());
+      show($("sensor-send").closest("section"), isOperator());
+      if (loggedIn) {
+        $("session-name").textContent = session.display_name;
+        $("session-role").textContent = ROLE_LABELS[session.role] || session.role;
+      }
+      if (!isOperator()) {
+        stopSensorAuto();
+      }
+    }
+
+    function restoreSession() {
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(SESSION_KEY) || "null");
+        if (saved && saved.token && saved.expires_at > Date.now()) {
+          session = saved;
+        } else {
+          sessionStorage.removeItem(SESSION_KEY);
+        }
+      } catch (error) {
+        sessionStorage.removeItem(SESSION_KEY);
+      }
+      applySession();
+    }
+
+    async function submitLogin(event) {
+      event.preventDefault();
+      const username = $("login-user").value.trim();
+      const password = $("login-pass").value;
+      if (!username || !password) {
+        log("Connexion : identifiant et mot de passe requis.", "error");
+        return;
+      }
+      let result;
+      try {
+        result = await api("/api/iot/console/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username: username, password: password }),
+        });
+      } catch (error) {
+        log("Connexion : API injoignable.", "error");
+        return;
+      }
+      $("login-pass").value = "";
+      if (result.status === 200) {
+        session = {
+          token: result.body.token,
+          username: result.body.username,
+          role: result.body.role,
+          display_name: result.body.display_name,
+          expires_at: Date.now() + result.body.expires_in * 1000,
+        };
+        sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+        log("Connecté : " + session.display_name + " (" + session.role + ").");
+        if (!isOperator()) {
+          log("Accès non autorisé pour ce rôle.", "error");
+        }
+        applySession();
+      } else if (result.status === 401) {
+        log("Connexion refusée : identifiant ou mot de passe incorrect.", "error");
+      } else if (result.status === 503) {
+        log("Connexion indisponible : secret non configuré côté serveur (503).", "error");
+      } else {
+        log("POST /api/iot/console/login -> HTTP " + result.status, "error");
+      }
+    }
+
+    function logout() {
+      session = null;
+      sessionStorage.removeItem(SESSION_KEY);
+      log("Déconnecté.");
+      applySession();
+    }
+
+    $("login-form").addEventListener("submit", submitLogin);
+    $("logout").addEventListener("click", logout);
+    restoreSession();
 
     $("connect").addEventListener("click", testConnection);
     loadKeys();

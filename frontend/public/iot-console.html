@@ -31,6 +31,30 @@
     <h1>Console IoT</h1>
     <p class="muted">Pilotage manuel de la borne d'accueil et du capteur de salle simulés. Les clés restent dans cet onglet (sessionStorage) et ne sont jamais écrites dans le code.</p>
 
+        <section id="kiosk-section" style="display:none">
+      <h2>📟 Borne d'accueil (kiosk-manual-01)</h2>
+      <p class="muted">La borne envoie un signal de présence et pose des questions au chatbot sur le canal « kiosk ».</p>
+
+      <p>
+        <button type="button" id="kiosk-heartbeat">💓 Signal de présence : arrêté</button>
+      </p>
+
+      <label for="kiosk-question">Question posée à la borne</label>
+      <input type="text" id="kiosk-question" maxlength="300" placeholder="Ex. : Comment obtenir une convention de stage ?">
+      <button type="button" id="kiosk-ask">💬 Poser la question</button>
+
+      <p class="muted" style="margin-top:14px">Questions types :</p>
+      <div id="kiosk-quick">
+        <button type="button" data-question="Comment obtenir une convention de stage ?">📄 Convention de stage</button>
+        <button type="button" data-question="Comment contacter la scolarité ?">☎️ Contact scolarité</button>
+        <button type="button" data-question="Quel est le cours du groupe B1-A lundi ?">📅 Cours B1-A lundi</button>
+        <button type="button" data-question="Quand a lieu le cours de Machine Learning Avancé ?">🤖 Machine Learning Avancé</button>
+      </div>
+
+      <label>Réponse du chatbot</label>
+      <div id="kiosk-answer" class="muted">Aucune question posée pour l'instant.</div>
+    </section>
+
     <section id="auth-section">
       <h2>🔐 Accès à la console</h2>
       <form id="login-form">
@@ -290,6 +314,8 @@
       show($("student-notice"), loggedIn && !isOperator());
       show($("connect").closest("section"), isOperator());
       show($("sensor-send").closest("section"), isOperator());
+            show($("kiosk-section"), isOperator());
+      if (!isOperator()) stopKioskHeartbeat();
       if (loggedIn) {
         $("session-name").textContent = session.display_name;
         $("session-role").textContent = ROLE_LABELS[session.role] || session.role;
@@ -362,6 +388,126 @@
       log("Déconnecté.");
       applySession();
     }
+
+        // ===== Borne d'accueil =====
+    const KIOSK_ID = "kiosk-manual-01";
+    const KIOSK_SESSION_ID = "kiosk-manual-" + Math.random().toString(36).slice(2, 10);
+    let kioskTimer = null;
+
+    async function sendKioskHeartbeat() {
+      if (!isOperator()) {
+        return false;
+      }
+      let result;
+      try {
+        result = await api("/api/iot/telemetry", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": "Bearer " + session.token },
+          body: JSON.stringify({
+            device_id: KIOSK_ID,
+            readings: [
+              { kind: "heartbeat", value: 1, recorded_at: new Date().toISOString() },
+            ],
+          }),
+        });
+      } catch (error) {
+        log("Borne : API injoignable.", "error");
+        return false;
+      }
+      if (result.status === 202) {
+        log("Borne : signal de présence envoyé.");
+        return true;
+      }
+      if (result.status === 401) {
+        log("Borne : session expirée ou invalide, reconnecte-toi.", "error");
+        logout();
+      } else if (result.status === 403) {
+        log("Borne : accès refusé par le serveur (403).", "error");
+      } else {
+        log("Borne : POST /api/iot/telemetry -> HTTP " + result.status, "error");
+      }
+      return false;
+    }
+
+    function stopKioskHeartbeat() {
+      if (kioskTimer !== null) {
+        clearInterval(kioskTimer);
+        kioskTimer = null;
+      }
+      $("kiosk-heartbeat").textContent = "💓 Signal de présence : arrêté";
+    }
+
+    async function kioskHeartbeatTick() {
+      const ok = await sendKioskHeartbeat();
+      if (!ok) {
+        stopKioskHeartbeat();
+      }
+    }
+
+    function toggleKioskHeartbeat() {
+      if (kioskTimer !== null) {
+        stopKioskHeartbeat();
+        log("Borne : signal de présence arrêté.");
+        return;
+      }
+      kioskTimer = setInterval(kioskHeartbeatTick, 10000);
+      $("kiosk-heartbeat").textContent = "💓 Signal de présence : actif (10 s)";
+      log("Borne : signal de présence activé.");
+      kioskHeartbeatTick();
+    }
+
+    async function askKiosk(question) {
+      const text = question.trim();
+      if (!text) {
+        log("Borne : écris une question d'abord.", "error");
+        return;
+      }
+      if (!isOperator()) {
+        log("Borne : accès non autorisé.", "error");
+        return;
+      }
+      $("kiosk-question").value = text;
+      $("kiosk-answer").textContent = "…";
+      let result;
+      try {
+        result = await api("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: text,
+            session_id: KIOSK_SESSION_ID,
+            channel: "kiosk",
+          }),
+        });
+      } catch (error) {
+        $("kiosk-answer").textContent = "API injoignable.";
+        log("Borne : API injoignable.", "error");
+        return;
+      }
+      if (result.status === 200 && result.body) {
+        const source = result.body.source ? " [source : " + result.body.source + "]" : "";
+        $("kiosk-answer").textContent = result.body.answer + source;
+        log("Borne : réponse reçue (" + result.body.category + ", confiance " + result.body.confidence + ").", "success");
+      } else if (result.status === 429) {
+        $("kiosk-answer").textContent = "Trop de questions, patiente un instant.";
+        log("Borne : limite de débit atteinte (429).", "error");
+      } else {
+        $("kiosk-answer").textContent = "Erreur " + result.status + ".";
+        log("Borne : POST /api/chat -> HTTP " + result.status, "error");
+      }
+    }
+
+    $("kiosk-heartbeat").addEventListener("click", toggleKioskHeartbeat);
+    $("kiosk-ask").addEventListener("click", () => askKiosk($("kiosk-question").value));
+    $("kiosk-question").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        askKiosk($("kiosk-question").value);
+      }
+    });
+    document.querySelectorAll("#kiosk-quick button").forEach((button) => {
+      button.addEventListener("click", () => askKiosk(button.dataset.question));
+    });
+
 
     $("login-form").addEventListener("submit", submitLogin);
     $("logout").addEventListener("click", logout);

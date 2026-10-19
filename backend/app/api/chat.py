@@ -1,3 +1,4 @@
+import html
 from uuid import UUID
 from backend.app.models import ConversationSession, Message
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -155,7 +156,7 @@ def chat(
             content=safe_message,
         )
 
-        result = search_knowledge(safe_message)
+        result = search_knowledge(html.unescape(safe_message))
         resolved = result["category"] != "unknown"
 
         response_time_ms = max(

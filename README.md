@@ -30,7 +30,8 @@ Navigateur ──> Nginx (web, :8088) ──> FastAPI (api, :8000, non publiée)
 | Frontend | React 18, Vite, Tailwind CSS |
 | Backend | Python 3.12, FastAPI, Pydantic, SQLAlchemy, Alembic |
 | Base de données | PostgreSQL 16 |
-| Tests / CI | Pytest (319 tests), GitHub Actions |
+| Tableau de bord | Grafana 11.3 (profil `full`, port 3000 sur 127.0.0.1) |
+| Tests / CI | Pytest (320 tests), GitHub Actions |
 | Conteneurs | Docker Compose (profil `full`), images `python:3.12-slim` et `nginx:alpine` |
 
 ## Sécurité
@@ -67,7 +68,7 @@ Pour utiliser la vraie API plutôt que les réponses simulées, créer `frontend
 
 ## Démo Docker complète (une commande)
 
-Toute la pile (PostgreSQL, migrations, API, front servi par Nginx) sans Python ni Node installés :
+Toute la pile (PostgreSQL, migrations, API, front servi par Nginx, Grafana) sans Python ni Node installés :
 
 ```bash
 cp .env.example .env
@@ -79,6 +80,7 @@ Puis ouvrir http://localhost:8088/ (Swagger : http://localhost:8088/docs).
 - `migrate` applique les migrations Alembic puis se termine ; `api` ne démarre qu'après son succès ; `web` attend que `api` soit saine.
 - `api` n'est **pas publiée sur l'hôte** : seul Nginx est exposé et fait office de reverse proxy. Pas de CORS à gérer.
 - Le port hôte se règle via `WEB_HOST_PORT` dans `.env` (8080 est souvent réservé par Windows, d'où 8088 par défaut).
+- Grafana démarre aussi avec le profil `full` (http://localhost:3000). Après `cp .env.example .env`, remplacer `GRAFANA_ADMIN_PASSWORD` (valeur `change_me`) par un vrai mot de passe : voir la section « Tableau de bord Grafana ».
 - Arrêt : `docker compose --profile full down` (ajouter `-v` pour supprimer aussi la base).
 - Pour ajouter les simulateurs IoT : renseigner `IOT_DEVICE_KEY` et `ANALYTICS_API_KEY` dans `.env` (vides par défaut, l'IoT est alors désactivé), puis `docker compose --profile full --profile iot up -d --build`. Voir la section « IoT simulé ».
 
@@ -211,6 +213,49 @@ Ouvrir ensuite `http://localhost:8090` et remplir le formulaire :
 - Le port est lié à `127.0.0.1` : Adminer n'est pas accessible depuis le réseau. Il se change avec `ADMINER_HOST_PORT`.
 - Outil de développement et de démonstration : à ne pas lancer en production.
 
+## Tableau de bord Grafana
+
+Grafana affiche des statistiques d'usage lues directement dans la base PostgreSQL : questions posées, conversations, satisfaction, temps de réponse, catégories, questions les plus fréquentes, comptes créés, retours négatifs et état des bornes IoT.
+
+### Lancement
+
+Le service `grafana` appartient au profil `full` : il démarre avec la démo complète.
+
+~~~bash
+docker compose --profile full --profile iot up -d --build
+~~~
+
+- Adresse : `http://localhost:3000`, publiée uniquement sur `127.0.0.1`.
+- Image : `grafana/grafana:11.3.0` (environ 650 Mo à télécharger la première fois).
+- Dans l'espace admin (`http://localhost:8088`), l'onglet **Statistiques** affiche le tableau de bord dans un cadre, actualisé toutes les 30 secondes. Le bouton « Ouvrir en grand » l'ouvre dans un nouvel onglet.
+- L'adresse de Grafana utilisée par le frontend peut être changée avec `VITE_GRAFANA_URL` (défaut : `http://localhost:3000`).
+
+### Configuration
+
+Définir dans le fichier `.env` (ignoré par Git) :
+
+| Variable | Défaut dans `compose.yaml` | Rôle |
+|---|---|---|
+| `GRAFANA_ADMIN_USER` | `admin` | identifiant administrateur |
+| `GRAFANA_ADMIN_PASSWORD` | `change_me` | mot de passe administrateur : **à remplacer** |
+| `GRAFANA_HOST_PORT` | `3000` | port local |
+
+Grafana applique l'identifiant et le mot de passe au premier démarrage de son volume `grafana_data`.
+
+### Provisionnement automatique
+
+- Source de données : `infrastructure/grafana/provisioning/datasources/postgres.yaml` (`Campus Connect DB`). Les identifiants PostgreSQL sont lus dans les variables d'environnement, pas écrits dans le fichier.
+- Tableau de bord : `infrastructure/grafana/dashboards/campus-connect.json` (« Campus Connect – Analytics », 11 panneaux).
+- Le panneau « Top 10 des questions » lit `content_redacted`, c'est-à-dire le texte déjà masqué. La table `users` n'est lue que par un comptage.
+
+### Limites
+
+- Grafana se connecte avec l'utilisateur principal de PostgreSQL. Un administrateur Grafana peut donc exécuter n'importe quelle requête sur la base, y compris sur la table `users`. Une mise en production demanderait un compte PostgreSQL en lecture seule limité aux tables nécessaires.
+- L'affichage dans un cadre est autorisé (`GF_SECURITY_ALLOW_EMBEDDING`). Le tableau de bord a été vérifié avec une session Grafana ouverte ; sans connexion préalable, la page de connexion de Grafana peut apparaître dans le cadre (non testé).
+- Le mot de passe par défaut `change_me` ne convient qu'à un essai local.
+- Les journaux de Grafana contiennent quatre erreurs au démarrage : un plugin `xychart` enregistré deux fois, et deux dossiers de provisionnement absents (`plugins`, `alerting`) qui ne servent pas ici. Elles n'empêchent pas le fonctionnement.
+- La CI ne démarre pas Grafana : le tableau de bord n'est pas couvert par les tests automatiques.
+
 ## LLM optionnel (Ollama)
 
 Le moteur de recherche reste la source des réponses. Un petit modèle de langage local peut, **en option**, reformuler un passage déjà trouvé pour le rendre plus lisible. Cette fonction est **expérimentale et désactivée par défaut** : la démo principale n'en a pas besoin.
@@ -288,7 +333,7 @@ La CI GitHub Actions (`.github/workflows/ci.yml`) s'exécute sur chaque push et 
 │   │   └── services/         # connaissances, classement, redaction PII, sécurité, rate limit, analytics
 │   ├── data/                 # faq.json + knowledge_base/{raw,processed}
 │   ├── scripts/knowledge_base/  # extraction PDF, normalisation, vérification des données
-│   ├── tests/                # 319 tests Pytest
+│   ├── tests/                # 320 tests Pytest
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/                 # React + Vite + Tailwind, Dockerfile multi-étapes, nginx.conf

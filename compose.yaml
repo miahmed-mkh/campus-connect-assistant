@@ -3,6 +3,7 @@
 # Arret           : docker compose --profile full down            (ajouter -v pour effacer la base)
 # Demo + IoT      : docker compose --profile full --profile iot up -d --build
 # Outils base     : docker compose --profile tools up -d adminer   -> http://localhost:8090
+# Dashboards      : inclus dans le profil full                      -> http://localhost:${GRAFANA_HOST_PORT:-3000}
 
 
 x-api-base: &api-base
@@ -133,8 +134,40 @@ services:
     profiles:
       - tools
 
+  # Dashboards analytics (Grafana) branches sur PostgreSQL : http://localhost:3000
+  grafana:
+    image: grafana/grafana:11.3.0
+    container_name: campus-grafana
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-change_me}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      # Autorise l'affichage du dashboard dans l'onglet Statistiques de l'espace admin
+      GF_SECURITY_ALLOW_EMBEDDING: "true"
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/campus-connect.json
+      # Lus par provisioning/datasources/postgres.yaml
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infrastructure/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infrastructure/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "127.0.0.1:${GRAFANA_HOST_PORT:-3000}:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - campus_backend
+    profiles:
+      - full
+
 volumes:
   postgres_data:
+  grafana_data:
 
 networks:
   campus_backend:

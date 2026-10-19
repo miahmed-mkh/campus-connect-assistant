@@ -30,7 +30,7 @@ Navigateur ──> Nginx (web, :8088) ──> FastAPI (api, :8000, non publiée)
 | Frontend | React 18, Vite, Tailwind CSS |
 | Backend | Python 3.12, FastAPI, Pydantic, SQLAlchemy, Alembic |
 | Base de données | PostgreSQL 16 |
-| Tests / CI | Pytest (291 tests), GitHub Actions |
+| Tests / CI | Pytest (319 tests), GitHub Actions |
 | Conteneurs | Docker Compose (profil `full`), images `python:3.12-slim` et `nginx:alpine` |
 
 ## Sécurité
@@ -211,6 +211,54 @@ Ouvrir ensuite `http://localhost:8090` et remplir le formulaire :
 - Le port est lié à `127.0.0.1` : Adminer n'est pas accessible depuis le réseau. Il se change avec `ADMINER_HOST_PORT`.
 - Outil de développement et de démonstration : à ne pas lancer en production.
 
+## LLM optionnel (Ollama)
+
+Le moteur de recherche reste la source des réponses. Un petit modèle de langage local peut, **en option**, reformuler un passage déjà trouvé pour le rendre plus lisible. Cette fonction est **expérimentale et désactivée par défaut** : la démo principale n'en a pas besoin.
+
+### Activation
+
+Le service `ollama` appartient au profil Docker Compose `llm`. Il faut aussi `LLM_ENABLED=true` (syntaxe Bash), puis télécharger le modèle une seule fois (environ 1 Go, conservé dans le volume `ollama_data`) :
+
+~~~bash
+LLM_ENABLED=true docker compose --profile full --profile llm up -d --build
+docker exec campus-ollama ollama pull qwen2.5:1.5b
+~~~
+
+Sans `LLM_ENABLED=true`, l'API ne contacte jamais Ollama, même si le conteneur tourne.
+
+### Réglages
+
+Variables définies dans `.env.example` et dans `compose.yaml` :
+
+| Variable | Défaut | Rôle |
+|---|---|---|
+| `LLM_ENABLED` | `false` | active la reformulation |
+| `LLM_BASE_URL` | `http://ollama:11434` | adresse d'Ollama sur le réseau interne Docker |
+| `LLM_MODEL` | `qwen2.5:1.5b` | modèle utilisé |
+| `LLM_TIMEOUT_SECONDS` | `8` | délai maximal avant retour à la réponse du moteur |
+| `LLM_MAX_PASSAGE_CHARS` | `600` | taille maximale du passage envoyé au modèle |
+| `LLM_KEEP_ALIVE` | `10m` | durée de maintien du modèle en mémoire |
+
+### Fonctionnement
+
+- Le moteur trouve d'abord le passage et sa catégorie, comme sans LLM.
+- La reformulation n'est tentée que si le passage fait 600 caractères au plus et si la catégorie n'est ni `unknown`, ni `schedule`, ni `contact`, ni `procedure` (liste `LLM_EXCLUDED_CATEGORIES` dans `backend/app/api/chat.py`). Les emplois du temps, les contacts et les procédures en étapes doivent rester exacts.
+- La question est masquée par `redact_personal_data` avant d'être envoyée au modèle.
+- Le modèle reçoit une consigne stricte (n'utiliser que le passage, température 0).
+- Retour automatique à la réponse du moteur si la fonction est désactivée, si Ollama est injoignable ou trop lent, si la réponse est vide, si le modèle indique ne pas avoir l'information, ou si elle contient des caractères CJK.
+- Ollama n'est pas publié sur l'hôte : il n'est joignable que depuis le réseau interne `campus_backend`, et aucune question n'est envoyée à un service externe.
+
+### Limites mesurées
+
+Mesures sur la machine de développement (8 cœurs, sans configuration GPU) avec `qwen2.5:1.5b` :
+
+- Le chargement du modèle prend environ 10,7 s lors du premier appel. Le premier appel via l'API dépasse donc souvent le délai de 8 s (mesuré : 8,4 s, puis retour à la réponse du moteur).
+- Une fois le modèle chargé, la reformulation prend de 1,7 s à 6,2 s selon la longueur du passage.
+- Sur « j'ai perdu ma carte », la reformulation a omis un cas (le vol) et introduit une formulation fautive.
+- Sur la procédure « convention de stage », des étapes ont été perdues, d'où l'exclusion de la catégorie `procedure`.
+- Les tests automatiques (`backend/tests/test_llm_service.py`, `backend/tests/test_chat_llm.py`) simulent Ollama. Ils vérifient les replis et le masquage, pas la qualité des réponses.
+- L'appel au modèle a lieu pendant que la transaction de base de données est ouverte. Il faudrait le sortir de la transaction avant une mise en production.
+
 ## Tests
 
 ```bash
@@ -240,7 +288,7 @@ La CI GitHub Actions (`.github/workflows/ci.yml`) s'exécute sur chaque push et 
 │   │   └── services/         # connaissances, classement, redaction PII, sécurité, rate limit, analytics
 │   ├── data/                 # faq.json + knowledge_base/{raw,processed}
 │   ├── scripts/knowledge_base/  # extraction PDF, normalisation, vérification des données
-│   ├── tests/                # 291 tests Pytest
+│   ├── tests/                # 319 tests Pytest
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/                 # React + Vite + Tailwind, Dockerfile multi-étapes, nginx.conf

@@ -9,6 +9,6 @@ def test_database_connection() -> None:
             text("SELECT current_user, current_database()")
         ).one()
 
-    assert result[0] == "campus_user"
+    assert result[0] == engine.url.username
     assert result[1] == engine.url.database
     assert result[1].endswith("_test")

@@ -17,12 +17,14 @@ EXPECTED_TABLES = {
     "feedbacks",
     "iot_readings",
     "messages",
+    "users",
 }
 
 # Chaîne de migrations attendue : revision -> down_revision
 EXPECTED_REVISIONS = {
     "66a7581910ef": None,
     "090ffb7eecf9": "66a7581910ef",
+    "b7d4e2f1a9c3": "090ffb7eecf9",
 }
 
 
@@ -67,4 +69,4 @@ def test_migration_chain_is_linear_and_consistent() -> None:
     }
 
     assert actual_chain == EXPECTED_REVISIONS
-    assert script.get_heads() == ["090ffb7eecf9"]
+    assert script.get_heads() == ["b7d4e2f1a9c3"]

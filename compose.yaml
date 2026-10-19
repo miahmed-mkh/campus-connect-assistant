@@ -21,6 +21,12 @@ x-api-base: &api-base
     CONSOLE_INTERVENANT_HASH: ${CONSOLE_INTERVENANT_HASH:-}
     CONSOLE_ETUDIANT_HASH: ${CONSOLE_ETUDIANT_HASH:-}
     APP_ENVIRONMENT: ${APP_ENVIRONMENT:-development}
+    LLM_ENABLED: ${LLM_ENABLED:-false}
+    LLM_BASE_URL: ${LLM_BASE_URL:-http://ollama:11434}
+    LLM_MODEL: ${LLM_MODEL:-qwen2.5:1.5b}
+    LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-8}
+    LLM_MAX_PASSAGE_CHARS: ${LLM_MAX_PASSAGE_CHARS:-600}
+    LLM_KEEP_ALIVE: ${LLM_KEEP_ALIVE:-10m}
   networks:
     - campus_backend
   profiles:
@@ -133,8 +139,31 @@ services:
     profiles:
       - tools
 
+  # LLM local : reformule les reponses de la base.
+  # Non publie sur l'hote. Modele a telecharger une fois.
+  ollama:
+    image: ollama/ollama
+    container_name: campus-ollama
+    restart: unless-stopped
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 15s
+    networks:
+      - campus_backend
+    profiles:
+      - llm
+
 volumes:
   postgres_data:
+  ollama_data:
+
 
 networks:
   campus_backend:

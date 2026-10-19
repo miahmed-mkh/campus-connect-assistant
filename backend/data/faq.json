@@ -15,7 +15,8 @@
     "questions": [
       "Comment contacter le service scolarité ?",
       "Quel est le mail de la scolarité ?",
-      "Quel est le numéro de téléphone de la scolarité ?"
+      "Quel est le numéro de téléphone de la scolarité ?",
+      "contact scolarité"
     ],
     "answer": "Vous pouvez joindre la scolarité par e-mail à scolarite@esic.fr ou vous rendre au bureau du rez-de-chaussée.",
     "source": "Annuaire des contacts",

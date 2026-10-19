@@ -28,6 +28,14 @@ class Settings(BaseSettings):
         "@127.0.0.1:5433/campus_connect"
     )
 
+    # LLM : reformulation locale via Ollama
+    llm_enabled: bool = False
+    llm_base_url: str = "http://ollama:11434"
+    llm_model: str = "qwen2.5:1.5b"
+    llm_timeout_seconds: float = 8.0
+    llm_max_passage_chars: int = 600
+    llm_keep_alive: str = "10m"
+
     docker_database_url: str = (
         "postgresql+psycopg://campus_user:change_me"
         "@postgres:5432/campus_connect"

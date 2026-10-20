@@ -12,6 +12,7 @@ from backend.app.services.procedure_service import (
 from backend.app.services.schedule_service import schedule_service
 from backend.app.services.semantic_service import semantic_service
 from backend.app.services.knowledge_ranking import (
+    UNKNOWN_CATEGORY,
     RankedCandidate,
     build_candidate,
     explain_ranking,
@@ -109,9 +110,17 @@ class KnowledgeService:
 
 knowledge_service = KnowledgeService()
 
+CLARIFICATION_CATEGORY = "clarification"
+
+CLARIFICATION_ANSWER = (
+    "Je ne suis pas sûr d’avoir bien compris. "
+    "Vouliez-vous dire :"
+)
+
+
 def build_faq_candidates(
-    question: str,
     faq_result: dict[str, Any],
+    semantic_result: dict[str, Any],
 ) -> tuple[RankedCandidate, ...]:
     faq_candidate = build_candidate(
         "faq",
@@ -121,7 +130,7 @@ def build_faq_candidates(
 
     semantic_candidate = build_candidate(
         "semantic",
-        semantic_service.search(question),
+        semantic_result,
         semantic_service.minimum_confidence,
     )
 
@@ -140,11 +149,29 @@ def build_faq_candidates(
     return (faq_candidate, semantic_candidate)
 
 
+def build_clarification(
+    semantic_result: dict[str, Any],
+) -> dict[str, Any] | None:
+    suggestions = semantic_result.get("suggestions") or []
+
+    if not suggestions:
+        return None
+
+    return {
+        "answer": CLARIFICATION_ANSWER,
+        "source": None,
+        "category": CLARIFICATION_CATEGORY,
+        "confidence": semantic_result["confidence"],
+        "suggestions": suggestions,
+    }
+
+
 def search_knowledge(question: str) -> dict[str, Any]:
     faq_result = knowledge_service.search(question)
+    semantic_result = semantic_service.search(question)
 
     candidates = (
-        *build_faq_candidates(question, faq_result),
+        *build_faq_candidates(faq_result, semantic_result),
         build_candidate(
             "procedure",
             procedure_service.search(question),
@@ -170,4 +197,11 @@ def search_knowledge(question: str) -> dict[str, Any]:
     ranked = rank_candidates(candidates)
     logger.debug("knowledge ranking: %s", explain_ranking(ranked))
 
-    return select_answer(ranked, faq_result)
+    result = select_answer(ranked, faq_result)
+
+    # Aucune source fiable : plutôt qu'un « je ne sais pas », on propose
+    # les questions proches trouvées par le sémantique (US-018).
+    if result["category"] == UNKNOWN_CATEGORY:
+        return build_clarification(semantic_result) or result
+
+    return result

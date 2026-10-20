@@ -33,7 +33,16 @@ from backend.app.services.llm_service import (
     rephrase_answer,
 )
 
-LLM_EXCLUDED_CATEGORIES = {"unknown", "schedule", "contact", "procedure"}
+LLM_EXCLUDED_CATEGORIES = {
+    "unknown",
+    "clarification",
+    "schedule",
+    "contact",
+    "procedure",
+}
+
+# Une clarification n'a pas encore répondu à la question
+UNRESOLVED_CATEGORIES = {"unknown", "clarification"}
 
 router = APIRouter(
     prefix="/api",
@@ -163,7 +172,7 @@ def chat(
 
         search_text = html.unescape(safe_message)
         result = search_knowledge(search_text)
-        resolved = result["category"] != "unknown"
+        resolved = result["category"] not in UNRESOLVED_CATEGORIES
 
         answer = result["answer"]
         if result["category"] not in LLM_EXCLUDED_CATEGORIES:
@@ -243,4 +252,5 @@ def chat(
         category=result["category"],
         confidence=result["confidence"],
         resolved=resolved,
+        suggestions=result.get("suggestions", []),
     )

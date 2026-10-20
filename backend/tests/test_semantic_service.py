@@ -251,3 +251,110 @@ def test_unconfident_semantic_keeps_lexical_answer(
     )
 
     assert knowledge_module.search_knowledge(question) == expected
+
+
+def build_ready_service(
+    items: list[dict[str, Any]],
+) -> SemanticSearchService:
+    service = SemanticSearchService(
+        enabled=True,
+        encoder_factory=BagOfWordsEncoder,
+        items_loader=lambda: items,
+    )
+    assert service.warm_up() is True
+    return service
+
+
+def faq_item(item_id: str, question: str, category: str) -> dict[str, Any]:
+    return {
+        "id": item_id,
+        "questions": [question, f"Autre formulation de {item_id} ici"],
+        "answer": f"Réponse {item_id}",
+        "source": "FAQ test",
+        "category": category,
+    }
+
+
+def test_suggestions_skip_greetings_and_duplicates() -> None:
+    service = build_ready_service(
+        [
+            faq_item("BIB", "Horaires de la bibliothèque ?", "services_campus"),
+            faq_item("SCO", "Horaires de la scolarité ?", "service_campus"),
+            faq_item("SAL", "Bonjour", "salutation"),
+        ]
+    )
+    # Références : BIB, BIB bis, SCO, SCO bis, SAL, SAL bis
+    scores = np.array([0.65, 0.40, 0.58, 0.62, 0.69, 0.10])
+
+    # SAL est exclu ; SCO n'apparaît qu'une fois, sous sa question principale
+    assert service.build_suggestions(scores) == [
+        "Horaires de la bibliothèque ?",
+        "Horaires de la scolarité ?",
+    ]
+
+
+def test_suggestions_respect_floor_and_limit() -> None:
+    service = build_ready_service(
+        [
+            faq_item(f"Q{index}", f"Question numéro {index} ?", "test")
+            for index in range(5)
+        ]
+    )
+
+    low_scores = np.full(10, 0.54)
+    assert service.build_suggestions(low_scores) == []
+
+    high_scores = np.full(10, 0.6)
+    assert len(service.build_suggestions(high_scores)) == 3
+
+
+def test_unknown_question_with_suggestions_asks_for_clarification(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    question = "Comment réserver un hélicoptère sur le campus ?"
+    assert knowledge_module.search_knowledge(question)["category"] == "unknown"
+
+    monkeypatch.setattr(
+        knowledge_module,
+        "semantic_service",
+        FixedSemanticService(
+            {
+                "answer": None,
+                "source": None,
+                "category": "unknown",
+                "confidence": 0.62,
+                "suggestions": ["Y a-t-il une navette ?"],
+            }
+        ),
+    )
+
+    result = knowledge_module.search_knowledge(question)
+
+    assert result["category"] == "clarification"
+    assert result["answer"] == knowledge_module.CLARIFICATION_ANSWER
+    assert result["suggestions"] == ["Y a-t-il une navette ?"]
+    assert result["confidence"] == 0.62
+    assert result["source"] is None
+
+
+def test_reliable_answer_is_not_replaced_by_clarification(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    question = "Quels sont les horaires de la scolarité ?"
+    expected = knowledge_module.search_knowledge(question)
+
+    monkeypatch.setattr(
+        knowledge_module,
+        "semantic_service",
+        FixedSemanticService(
+            {
+                "answer": None,
+                "source": None,
+                "category": "unknown",
+                "confidence": 0.6,
+                "suggestions": ["Autre question ?"],
+            }
+        ),
+    )
+
+    assert knowledge_module.search_knowledge(question) == expected

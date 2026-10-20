@@ -33,6 +33,16 @@ SEMANTIC_CONFIDENCE_THRESHOLD = 0.7
 # principale, ou « Bonjour » pour la salutation).
 MINIMUM_REFERENCE_WORDS = 3
 
+# Clarification (US-018) : sous le seuil, les questions proches sont
+# proposées à l'utilisateur. Plancher mesuré : à 0.5, « réserver un
+# hélicoptère » proposait déjà la navette.
+SUGGESTION_MINIMUM_CONFIDENCE = 0.55
+MAX_SUGGESTIONS = 3
+
+# « il fait beau » est proche de « Bonjour » : proposer une salutation
+# n'aide pas l'utilisateur.
+SUGGESTION_EXCLUDED_CATEGORIES = {"salutation"}
+
 
 class Encoder(Protocol):
     def encode(self, texts: Sequence[str]) -> np.ndarray: ...
@@ -152,7 +162,10 @@ class SemanticSearchService:
         best_score = round(float(scores[best_reference]), 3)
 
         if best_score < self.minimum_confidence:
-            return unknown_result(best_score)
+            return {
+                **unknown_result(best_score),
+                "suggestions": self.build_suggestions(scores),
+            }
 
         item = self.items[self.reference_owners[best_reference]]
 
@@ -163,6 +176,34 @@ class SemanticSearchService:
             "confidence": min(best_score, 1.0),
             "matched_question": self.reference_texts[best_reference],
         }
+
+    def build_suggestions(self, scores: np.ndarray) -> list[str]:
+        suggestions: list[str] = []
+        seen_items: set[int] = set()
+
+        # Une seule suggestion par entrée de la FAQ : sa question
+        # principale, qui figure telle quelle dans la FAQ. Un clic la
+        # renvoie au chatbot et obtient donc la réponse exacte.
+        for reference in np.argsort(-scores):
+            if scores[reference] < SUGGESTION_MINIMUM_CONFIDENCE:
+                break
+
+            item_index = self.reference_owners[reference]
+            item = self.items[item_index]
+
+            if (
+                item_index in seen_items
+                or item["category"] in SUGGESTION_EXCLUDED_CATEGORIES
+            ):
+                continue
+
+            seen_items.add(item_index)
+            suggestions.append(item["questions"][0])
+
+            if len(suggestions) == MAX_SUGGESTIONS:
+                break
+
+        return suggestions
 
 
 def unknown_result(confidence: float) -> dict[str, Any]:

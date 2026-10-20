@@ -8,3 +8,4 @@ pytest
 httpx
 alembic
 ftfy
+numpy

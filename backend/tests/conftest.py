@@ -58,6 +58,9 @@ if not TEST_DATABASE_NAME.endswith(TEST_DATABASE_SUFFIX):
     )
 
 os.environ["DATABASE_URL"] = TEST_DATABASE_URL
+# Les tests ne chargent jamais le vrai modele : ils utilisent un encodeur
+# simule (voir test_semantic_service.py).
+os.environ["SEMANTIC_ENABLED"] = "false"
 
 
 def ensure_test_database_exists() -> None:

@@ -33,3 +33,11 @@ class ChatResponse(BaseModel):
         le=1.0,
     )
     resolved: bool
+    suggestions: list[str] = Field(
+        default_factory=list,
+        description="Questions proposées quand la demande est ambiguë",
+    )
+    language: Literal["fr", "en"] = Field(
+        default="fr",
+        description="Langue détectée de la question, et donc de la réponse",
+    )

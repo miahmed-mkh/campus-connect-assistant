@@ -71,6 +71,8 @@ export default function ChatPage({ user, onLogout, embedded = false }) {
         role: 'bot',
         text: data.answer,
         source: data.source,
+        // Questions proposées quand la demande est ambiguë (US-018)
+        suggestions: data.suggestions,
         time: now(),
       })
     } catch {
@@ -140,7 +142,12 @@ export default function ChatPage({ user, onLogout, embedded = false }) {
 
       <main className="flex-1 space-y-4 overflow-y-auto p-4">
         {messages.map((m) => (
-          <Message key={m.id} message={m} onFeedback={handleFeedback} />
+          <Message
+            key={m.id}
+            message={m}
+            onFeedback={handleFeedback}
+            onSelectSuggestion={loading ? undefined : handleSend}
+          />
         ))}
 
         {loading && (

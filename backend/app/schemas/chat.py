@@ -33,3 +33,7 @@ class ChatResponse(BaseModel):
         le=1.0,
     )
     resolved: bool
+    suggestions: list[str] = Field(
+        default_factory=list,
+        description="Questions proposées quand la demande est ambiguë",
+    )

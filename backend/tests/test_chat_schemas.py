@@ -52,6 +52,7 @@ def test_chat_response_with_source() -> None:
         "category": "service_campus",
         "confidence": 0.92,
         "resolved": True,
+        "suggestions": [],
     }
 
 
@@ -75,6 +76,7 @@ def test_chat_response_without_source() -> None:
         "category": "salutation",
         "confidence": 1.0,
         "resolved": True,
+        "suggestions": [],
     }
 
 

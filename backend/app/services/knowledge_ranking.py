@@ -18,6 +18,7 @@ SERVICE_PRIORITY: dict[str, int] = {
     "schedule": 5,
     "contact": 4,
     "procedure": 3,
+    "semantic": 2,
     "faq": 2,
     "document": 1,
 }

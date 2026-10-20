@@ -29,6 +29,11 @@ from backend.app.services.pii_redaction_service import (
     redact_personal_data,
 )
 
+from backend.app.services.llm_service import (
+    rephrase_answer,
+)
+
+LLM_EXCLUDED_CATEGORIES = {"unknown", "schedule", "contact", "procedure"}
 
 router = APIRouter(
     prefix="/api",
@@ -156,8 +161,17 @@ def chat(
             content=safe_message,
         )
 
-        result = search_knowledge(html.unescape(safe_message))
+        search_text = html.unescape(safe_message)
+        result = search_knowledge(search_text)
         resolved = result["category"] != "unknown"
+
+        answer = result["answer"]
+        if result["category"] not in LLM_EXCLUDED_CATEGORIES:
+            rephrased = rephrase_answer(
+                redact_personal_data(search_text), answer
+            )
+            if rephrased:
+                answer = rephrased
 
         response_time_ms = max(
             1,
@@ -170,7 +184,7 @@ def chat(
             database=database,
             conversation=conversation,
             role="assistant",
-            content=result["answer"],
+            content=answer,
             response_time_ms=response_time_ms,
             category=result["category"],
             confidence=result["confidence"],
@@ -224,7 +238,7 @@ def chat(
 
     return ChatResponse(
         message_id=assistant_message.id,
-        answer=result["answer"],
+        answer=answer,
         source=result["source"],
         category=result["category"],
         confidence=result["confidence"],

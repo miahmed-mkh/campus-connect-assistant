@@ -7,6 +7,12 @@ from backend.app.services.knowledge_service import (
     search_knowledge,
 )
 
+def test_short_contact_query_returns_contact_answer() -> None:
+    result = search_knowledge("contact scolarité")
+
+    assert result["category"] == "contact"
+    assert "scolarite@esic.fr" in result["answer"]
+
 def test_normalize_text() -> None:
     normalized = normalize_text(
         "  À quelle heure ouvre la Scolarité ?  "

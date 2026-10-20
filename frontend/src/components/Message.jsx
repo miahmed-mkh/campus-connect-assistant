@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import remarkBreaks from 'remark-breaks'
+import Suggestions from './Suggestions'
 
 // Rendu des réponses Markdown de l'API (titres, gras, listes).
 // react-markdown échappe le HTML brut : aucun risque d'injection.
@@ -20,7 +21,7 @@ const markdownComponents = {
   code: ({ children }) => <code className="rounded bg-slate-100 px-1 text-xs">{children}</code>,
 }
 
-export default function Message({ message, onFeedback }) {
+export default function Message({ message, onFeedback, onSelectSuggestion }) {
   const isUser = message.role === 'user'
 
   return (
@@ -43,6 +44,12 @@ export default function Message({ message, onFeedback }) {
             </ReactMarkdown>
           )}
         </div>
+
+        {!isUser && message.suggestions?.length > 0 && (
+          <div className="mt-2">
+            <Suggestions items={message.suggestions} onSelect={(text) => onSelectSuggestion?.(text)} />
+          </div>
+        )}
 
         {!isUser && message.source && (
           <p className="mt-1 pl-1 text-xs text-slate-500">Source : {message.source}</p>

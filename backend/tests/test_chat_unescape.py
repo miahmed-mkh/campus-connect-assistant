@@ -13,7 +13,7 @@ SESSION_ID = "test-chat-unescape"
 def test_engine_receives_unescaped_question(monkeypatch) -> None:
     received = []
 
-    def fake_search(question: str) -> dict:
+    def fake_search(question: str, language: str = "fr") -> dict:
         received.append(question)
         return {
             "answer": "reponse de test",

@@ -93,6 +93,8 @@ def test_chat_with_known_question() -> None:
         "category": "service_campus",
 
         "resolved": True,
+        "suggestions": [],
+        "language": "fr",
 
     }
 
@@ -121,6 +123,8 @@ def test_chat_with_greeting() -> None:
         "category": "salutation",
         "confidence": 1.0,
         "resolved": True,
+        "suggestions": [],
+        "language": "fr",
     }
 
 

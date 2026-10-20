@@ -1,0 +1,5 @@
+# Recherche semantique (installee dans l'image Docker, optionnelle en local).
+# PyTorch en version CPU : environ 200 Mo au lieu de plusieurs Go avec CUDA.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+sentence-transformers

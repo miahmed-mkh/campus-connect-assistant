@@ -10,7 +10,9 @@ from backend.app.services.procedure_service import (
     procedure_service,
 )
 from backend.app.services.schedule_service import schedule_service
+from backend.app.services.semantic_service import semantic_service
 from backend.app.services.knowledge_ranking import (
+    RankedCandidate,
     build_candidate,
     explain_ranking,
     rank_candidates,
@@ -107,15 +109,42 @@ class KnowledgeService:
 
 knowledge_service = KnowledgeService()
 
+def build_faq_candidates(
+    question: str,
+    faq_result: dict[str, Any],
+) -> tuple[RankedCandidate, ...]:
+    faq_candidate = build_candidate(
+        "faq",
+        faq_result,
+        knowledge_service.minimum_confidence,
+    )
+
+    semantic_candidate = build_candidate(
+        "semantic",
+        semantic_service.search(question),
+        semantic_service.minimum_confidence,
+    )
+
+    # Les deux candidats interrogent la même FAQ. S'ils sont en désaccord,
+    # le sémantique comprend mieux le sens que le recouvrement de mots
+    # (« bibliothèque » contre « scolarité ») : il remplace le lexical,
+    # sauf correspondance exacte. S'ils sont d'accord, les deux restent
+    # en lice et le plus confiant garde sa marge face aux autres sources.
+    if (
+        semantic_candidate.accepted
+        and faq_candidate.confidence < 1.0
+        and faq_candidate.answer != semantic_candidate.answer
+    ):
+        return (semantic_candidate,)
+
+    return (faq_candidate, semantic_candidate)
+
+
 def search_knowledge(question: str) -> dict[str, Any]:
     faq_result = knowledge_service.search(question)
 
     candidates = (
-        build_candidate(
-            "faq",
-            faq_result,
-            knowledge_service.minimum_confidence,
-        ),
+        *build_faq_candidates(question, faq_result),
         build_candidate(
             "procedure",
             procedure_service.search(question),

@@ -28,6 +28,7 @@ x-api-base: &api-base
     LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-8}
     LLM_MAX_PASSAGE_CHARS: ${LLM_MAX_PASSAGE_CHARS:-600}
     LLM_KEEP_ALIVE: ${LLM_KEEP_ALIVE:-10m}
+    SEMANTIC_ENABLED: ${SEMANTIC_ENABLED:-true}
   networks:
     - campus_backend
   profiles:

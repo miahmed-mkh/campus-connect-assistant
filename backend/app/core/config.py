@@ -36,6 +36,12 @@ class Settings(BaseSettings):
     llm_max_passage_chars: int = 600
     llm_keep_alive: str = "10m"
 
+    # Recherche semantique (Sentence-BERT multilingue) dans la FAQ
+    semantic_enabled: bool = False
+    semantic_model: str = (
+        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    )
+
     docker_database_url: str = (
         "postgresql+psycopg://campus_user:change_me"
         "@postgres:5432/campus_connect"

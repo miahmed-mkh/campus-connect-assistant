@@ -8,6 +8,7 @@ Projet transverse réalisé en méthode Scrum (2ᵉ année). Les données (FAQ, 
 
 - **Chat** (`POST /api/chat`) : réponse issue de la base de connaissances, avec catégorie, source, score de confiance et indicateur `resolved`.
 - **Base de connaissances** : FAQ, procédures, contacts, emploi du temps, documents (règlement, guides) chargés depuis `backend/data/`.
+- **Recherche sémantique** : la FAQ est aussi interrogée par similarité de sens (Sentence-BERT multilingue), y compris pour les questions reformulées ou posées en anglais.
 - **Classement explicable** : chaque source produit un candidat (confiance, seuil, marge, priorité) ; le meilleur est retenu et le raisonnement est journalisé.
 - **Journalisation anonymisée** : sessions et messages persistés en PostgreSQL ; les données personnelles (e-mails, téléphones, identifiants…) sont **masquées avant stockage**.
 - **Sécurité des entrées** : validation et nettoyage des messages, limitation de débit (rate limiting) par session.
@@ -29,9 +30,10 @@ Navigateur ──> Nginx (web, :8088) ──> FastAPI (api, :8000, non publiée)
 |---|---|
 | Frontend | React 18, Vite, Tailwind CSS |
 | Backend | Python 3.12, FastAPI, Pydantic, SQLAlchemy, Alembic |
+| NLP | Sentence-BERT multilingue (`sentence-transformers`, PyTorch CPU) |
 | Base de données | PostgreSQL 16 |
 | Tableau de bord | Grafana 11.3 (profil `full`, port 3000 sur 127.0.0.1) |
-| Tests / CI | Pytest (320 tests), GitHub Actions |
+| Tests / CI | Pytest (330 tests), GitHub Actions |
 | Conteneurs | Docker Compose (profil `full`), images `python:3.12-slim` et `nginx:alpine` |
 
 ## Sécurité
@@ -304,6 +306,52 @@ Mesures sur la machine de développement (8 cœurs, sans configuration GPU) avec
 - Les tests automatiques (`backend/tests/test_llm_service.py`, `backend/tests/test_chat_llm.py`) simulent Ollama. Ils vérifient les replis et le masquage, pas la qualité des réponses.
 - L'appel au modèle a lieu pendant que la transaction de base de données est ouverte. Il faudrait le sortir de la transaction avant une mise en production.
 
+## Recherche sémantique (Sentence-BERT)
+
+Le moteur lexical compare les mots ; il confond des questions qui partagent la même tournure (« À quelle heure ouvre la bibliothèque ? » renvoyait les horaires de la scolarité) et ne comprend pas l'anglais. La recherche sémantique compare le **sens** : les questions de la FAQ sont transformées en vecteurs par un modèle multilingue, puis comparées à la question posée par similarité cosinus.
+
+### Activation
+
+- Docker : **activée par défaut** (`SEMANTIC_ENABLED=true`). Le modèle est téléchargé à la construction de l'image ; l'API démarre ensuite sans accès réseau (`HF_HUB_OFFLINE=1`).
+- En local : `pip install -r backend/requirements-semantic.txt` puis `SEMANTIC_ENABLED=true` dans `.env`. Sans ces dépendances, ou avec `SEMANTIC_ENABLED=false`, le moteur lexical répond seul.
+
+| Variable | Défaut | Rôle |
+|---|---|---|
+| `SEMANTIC_ENABLED` | `false` (code), `true` (Docker) | active la recherche sémantique |
+| `SEMANTIC_MODEL` | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` | modèle d'embeddings |
+
+### Fonctionnement
+
+- Au démarrage, le modèle est chargé et les questions de la FAQ sont encodées **en arrière-plan** (`backend/app/services/semantic_service.py`). L'API répond tout de suite ; tant que l'index n'est pas prêt, le moteur lexical répond seul.
+- Seules les vraies questions sont indexées : les tags d'un ou deux mots (« déjeuner », « conseil ») attiraient des questions sans rapport.
+- Seuil d'acceptation : similarité **≥ 0.7** (valeur du brief). En dessous, la réponse sémantique est ignorée.
+- Le sémantique devient un candidat `semantic` du classement. Quand il est en désaccord avec la FAQ lexicale, il la remplace, sauf correspondance lexicale exacte (score 1.0). Quand ils sont d'accord, les deux restent en lice. Les autres sources (emploi du temps, contacts, procédures, documents) ne changent pas.
+- Si le modèle ne peut pas être chargé, l'erreur est journalisée une fois et le moteur lexical prend le relais, sans nouvelle tentative.
+
+### Résultats mesurés
+
+Sur la machine de développement (CPU, sans GPU) :
+
+| Question | Avant | Après |
+|---|---|---|
+| À quelle heure ouvre la bibliothèque ? | horaires de la scolarité (faux, 0.81) | horaires de la bibliothèque (0.85) |
+| When does the library open? | aucune réponse | horaires de la bibliothèque (0.76) |
+| How can I get a school certificate? | aucune réponse | certificat de scolarité (0.97) |
+| contact scolarité, Bonjour, carte perdue | réponse correcte | inchangée |
+| Questions hors sujet (hélicoptère, capitale de l'Australie) | aucune réponse | aucune réponse |
+
+- Temps de réponse de `POST /api/chat` via Nginx : **90 ms en médiane** (10 requêtes, `127.0.0.1`).
+- Chargement du modèle et encodage des 180 questions de référence : quelques secondes au démarrage, en arrière-plan.
+- Les 320 tests existants passent aussi avec le vrai modèle activé.
+
+### Limites
+
+- Les réponses restent en français : la question anglaise est comprise, la réponse n'est pas traduite.
+- Entre 0.5 et 0.7, le modèle hésite (« je veux faire un stage » : 0.67 sur la bonne réponse, « la BU » : 0.66 sur une mauvaise). Ces questions restent sans réponse ; une clarification (« Vouliez-vous dire… ? ») serait la suite logique.
+- Seule la FAQ est indexée, pas les documents ni les procédures.
+- Image de l'API plus lourde (PyTorch CPU et modèle d'environ 470 Mo) et environ 1 Go de mémoire vive pour l'API.
+- Les tests automatiques (`backend/tests/test_semantic_service.py`) utilisent un encodeur simulé : ils vérifient la logique, pas la qualité du modèle.
+
 ## Tests
 
 ```bash
@@ -333,7 +381,7 @@ La CI GitHub Actions (`.github/workflows/ci.yml`) s'exécute sur chaque push et 
 │   │   └── services/         # connaissances, classement, redaction PII, sécurité, rate limit, analytics
 │   ├── data/                 # faq.json + knowledge_base/{raw,processed}
 │   ├── scripts/knowledge_base/  # extraction PDF, normalisation, vérification des données
-│   ├── tests/                # 320 tests Pytest
+│   ├── tests/                # 330 tests Pytest
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/                 # React + Vite + Tailwind, Dockerfile multi-étapes, nginx.conf
@@ -351,4 +399,4 @@ La CI GitHub Actions (`.github/workflows/ci.yml`) s'exécute sur chaque push et 
 
 ## Perspectives
 
-Hors périmètre de cette version, identifiées pour la suite : compréhension du langage plus avancée (embeddings), interface d'administration de la base de connaissances, multilingue et vocal, supervision Prometheus/Grafana, tests de bout en bout et de charge, matériel réel (ESP32/Raspberry Pi) à la place du simulateur.
+Hors périmètre de cette version, identifiées pour la suite : clarification des questions ambiguës (score entre 0.5 et 0.7), réponses en anglais, interface d'administration de la base de connaissances, vocal, supervision Prometheus/Grafana, tests de bout en bout et de charge, matériel réel (ESP32/Raspberry Pi) à la place du simulateur.

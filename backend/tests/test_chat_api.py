@@ -164,6 +164,25 @@ def test_chat_rejects_empty_message() -> None:
     assert response.status_code == 422
 
 
+def test_chat_handles_short_message() -> None:
+    response = client.post(
+        "/api/chat",
+        json={
+            "message": "a",
+            "session_id": "session-short-test",
+        },
+    )
+
+    assert response.status_code == 200
+    data = response.json()
+    assert (
+        "Votre message est trop court pour que je puisse vous aider"
+        in data["answer"]
+    )
+    assert data["resolved"] is False
+    assert data["category"] == "unknown"
+
+
 def test_chat_rejects_missing_session_id() -> None:
     response = client.post(
         "/api/chat",

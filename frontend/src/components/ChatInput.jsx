@@ -1,9 +1,16 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const MAX_LENGTH = 500
 
 export default function ChatInput({ onSend, disabled }) {
   const [value, setValue] = useState('')
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    if (!disabled) {
+      inputRef.current?.focus()
+    }
+  }, [disabled])
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -11,11 +18,13 @@ export default function ChatInput({ onSend, disabled }) {
     if (!text || disabled) return
     onSend(text)
     setValue('')
+    inputRef.current?.focus()
   }
 
   return (
     <form onSubmit={handleSubmit} className="flex gap-2 border-t border-slate-200 bg-white p-3">
       <input
+        ref={inputRef}
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}

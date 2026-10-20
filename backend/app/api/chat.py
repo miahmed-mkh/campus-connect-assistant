@@ -162,7 +162,18 @@ def chat(
         )
 
         search_text = html.unescape(safe_message)
-        result = search_knowledge(search_text)
+        if len(search_text.strip()) < 2:
+            result = {
+                "answer": (
+                    "Votre message est trop court pour que je puisse vous aider. "
+                    "Pourriez-vous formuler votre question avec plus de précisions ?"
+                ),
+                "source": None,
+                "category": "unknown",
+                "confidence": 0.0,
+            }
+        else:
+            result = search_knowledge(search_text)
         resolved = result["category"] != "unknown"
 
         answer = result["answer"]

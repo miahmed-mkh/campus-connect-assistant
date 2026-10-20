@@ -70,6 +70,7 @@ def build_service(
         enabled=enabled,
         encoder_factory=lambda: encoder,
         items_loader=lambda: FAKE_ITEMS,
+        english_questions_loader=dict,
     )
 
 
@@ -81,6 +82,7 @@ def test_disabled_service_never_loads_the_model() -> None:
         enabled=False,
         encoder_factory=fail,
         items_loader=lambda: FAKE_ITEMS,
+        english_questions_loader=dict,
     )
 
     assert service.warm_up() is False
@@ -148,6 +150,7 @@ def test_model_failure_falls_back_without_retrying() -> None:
         enabled=True,
         encoder_factory=broken,
         items_loader=lambda: FAKE_ITEMS,
+        english_questions_loader=dict,
     )
 
     assert service.warm_up() is False
@@ -174,7 +177,7 @@ class FixedSemanticService:
     def __init__(self, result: dict[str, Any]) -> None:
         self.result = result
 
-    def search(self, question: str) -> dict[str, Any]:
+    def search(self, question: str, language: str = "fr") -> dict[str, Any]:
         return self.result
 
 
@@ -260,6 +263,7 @@ def build_ready_service(
         enabled=True,
         encoder_factory=BagOfWordsEncoder,
         items_loader=lambda: items,
+        english_questions_loader=dict,
     )
     assert service.warm_up() is True
     return service
@@ -358,3 +362,22 @@ def test_reliable_answer_is_not_replaced_by_clarification(
     )
 
     assert knowledge_module.search_knowledge(question) == expected
+
+
+def test_english_references_are_only_used_for_english_questions() -> None:
+    service = SemanticSearchService(
+        enabled=True,
+        encoder_factory=BagOfWordsEncoder,
+        items_loader=lambda: FAKE_ITEMS[:1],
+        english_questions_loader=lambda: {
+            FAKE_ITEMS[0]["questions"][0]: "What are the library opening hours?"
+        },
+    )
+    service.warm_up()
+
+    english = service.search("library opening hours", "en")
+    assert english["answer"] == FAKE_ITEMS[0]["answer"]
+
+    # Une question française ne voit que les références françaises
+    french = service.search("library opening hours", "fr")
+    assert french["category"] == "unknown"

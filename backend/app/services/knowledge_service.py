@@ -166,9 +166,12 @@ def build_clarification(
     }
 
 
-def search_knowledge(question: str) -> dict[str, Any]:
+def search_knowledge(
+    question: str,
+    language: str = "fr",
+) -> dict[str, Any]:
     faq_result = knowledge_service.search(question)
-    semantic_result = semantic_service.search(question)
+    semantic_result = semantic_service.search(question, language)
 
     candidates = (
         *build_faq_candidates(faq_result, semantic_result),

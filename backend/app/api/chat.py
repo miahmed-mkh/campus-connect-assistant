@@ -33,6 +33,14 @@ from backend.app.services.llm_service import (
     rephrase_answer,
 )
 
+from backend.app.services.language_service import (
+    detect_language,
+)
+
+from backend.app.services.translation_service import (
+    translation_service,
+)
+
 LLM_EXCLUDED_CATEGORIES = {
     "unknown",
     "clarification",
@@ -54,6 +62,7 @@ def get_or_create_conversation(
     database: Session,
     session_id: str,
     channel: str = "web",
+    language: str = "fr",
 ) -> ConversationSession:
     conversation = None
 
@@ -87,7 +96,8 @@ def get_or_create_conversation(
     conversation = ConversationSession(
         anonymous_user_id=session_id,
         channel=channel,
-        language="fr",
+        # Langue du premier message de la session
+        language=language,
     )
 
     database.add(conversation)
@@ -157,10 +167,13 @@ def chat(
                 ),
             )
 
+        language = detect_language(safe_message)
+
         conversation = get_or_create_conversation(
             database=database,
             session_id=request.session_id,
             channel=request.channel,
+            language=language,
         )
 
         save_message(
@@ -171,11 +184,23 @@ def chat(
         )
 
         search_text = html.unescape(safe_message)
-        result = search_knowledge(search_text)
+        result = search_knowledge(search_text, language)
         resolved = result["category"] not in UNRESOLVED_CATEGORIES
 
         answer = result["answer"]
-        if result["category"] not in LLM_EXCLUDED_CATEGORIES:
+        suggestions = result.get("suggestions", [])
+
+        if language == "en":
+            # Le LLM reformule en français : on sert la traduction de la FAQ
+            answer = translation_service.translate_answer(
+                answer,
+                result["category"],
+            )
+            suggestions = [
+                translation_service.translate_question(suggestion)
+                for suggestion in suggestions
+            ]
+        elif result["category"] not in LLM_EXCLUDED_CATEGORIES:
             rephrased = rephrase_answer(
                 redact_personal_data(search_text), answer
             )
@@ -252,5 +277,6 @@ def chat(
         category=result["category"],
         confidence=result["confidence"],
         resolved=resolved,
-        suggestions=result.get("suggestions", []),
+        suggestions=suggestions,
+        language=language,
     )

@@ -53,6 +53,7 @@ def test_chat_response_with_source() -> None:
         "confidence": 0.92,
         "resolved": True,
         "suggestions": [],
+        "language": "fr",
     }
 
 
@@ -77,6 +78,7 @@ def test_chat_response_without_source() -> None:
         "confidence": 1.0,
         "resolved": True,
         "suggestions": [],
+        "language": "fr",
     }
 
 

@@ -94,6 +94,7 @@ def test_chat_with_known_question() -> None:
 
         "resolved": True,
         "suggestions": [],
+        "language": "fr",
 
     }
 
@@ -123,6 +124,7 @@ def test_chat_with_greeting() -> None:
         "confidence": 1.0,
         "resolved": True,
         "suggestions": [],
+        "language": "fr",
     }
 
 

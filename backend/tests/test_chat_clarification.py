@@ -20,7 +20,7 @@ SUGGESTIONS = [
 ]
 
 
-def fake_clarification(question: str) -> dict:
+def fake_clarification(question: str, language: str = "fr") -> dict:
     return {
         "answer": "Je ne suis pas sûr d’avoir bien compris. Vouliez-vous dire :",
         "source": None,

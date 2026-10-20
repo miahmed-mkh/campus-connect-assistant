@@ -6,7 +6,7 @@ Projet transverse réalisé en méthode Scrum (2ᵉ année). Les données (FAQ, 
 
 ## Fonctionnalités
 
-- **Chat** (`POST /api/chat`) : réponse issue de la base de connaissances, avec catégorie, source, score de confiance, indicateur `resolved` et, si la question est ambiguë, des questions proposées (`suggestions`).
+- **Chat** (`POST /api/chat`) : réponse issue de la base de connaissances, avec catégorie, source, score de confiance, indicateur `resolved` et, si la question est ambiguë, des questions proposées (`suggestions`) ; une question posée en anglais reçoit une réponse en anglais (`language`).
 - **Base de connaissances** : FAQ, procédures, contacts, emploi du temps, documents (règlement, guides) chargés depuis `backend/data/`.
 - **Recherche sémantique** : la FAQ est aussi interrogée par similarité de sens (Sentence-BERT multilingue), y compris pour les questions reformulées ou posées en anglais.
 - **Classement explicable** : chaque source produit un candidat (confiance, seuil, marge, priorité) ; le meilleur est retenu et le raisonnement est journalisé.
@@ -33,7 +33,7 @@ Navigateur ──> Nginx (web, :8088) ──> FastAPI (api, :8000, non publiée)
 | NLP | Sentence-BERT multilingue (`sentence-transformers`, PyTorch CPU) |
 | Base de données | PostgreSQL 16 |
 | Tableau de bord | Grafana 11.3 (profil `full`, port 3000 sur 127.0.0.1) |
-| Tests / CI | Pytest (336 tests), GitHub Actions |
+| Tests / CI | Pytest (381 tests), GitHub Actions |
 | Conteneurs | Docker Compose (profil `full`), images `python:3.12-slim` et `nginx:alpine` |
 
 ## Sécurité
@@ -346,7 +346,7 @@ Sur la machine de développement (CPU, sans GPU) :
 
 ### Limites
 
-- Les réponses restent en français : la question anglaise est comprise, la réponse n'est pas traduite.
+- Les réponses en anglais passent par la FAQ pré-traduite : voir « Réponses en anglais ».
 - Entre 0.55 et 0.7, le modèle hésite (« je veux faire un stage » : 0.67 sur la bonne réponse, « la BU » : 0.66 sur une mauvaise) : ces questions passent par la clarification ci-dessous plutôt que par une réponse directe.
 - Seule la FAQ est indexée, pas les documents ni les procédures.
 - Image de l'API plus lourde (PyTorch CPU et modèle d'environ 470 Mo) et environ 1 Go de mémoire vive pour l'API.
@@ -381,6 +381,74 @@ Quand **aucune** source n'a de réponse fiable, mais que le sémantique trouve d
 | c'est quand les exams | résultats des examens ; dates des examens ; durée des examens |
 | il fait beau aujourd'hui | aucune (réponse « je ne sais pas » habituelle) |
 
+## Réponses en anglais (US-032)
+
+Une question posée en anglais reçoit une réponse en anglais. La réponse de `POST /api/chat` indique la langue détectée (`"language": "fr"` ou `"en"`), et la session garde la langue de son premier message (`conversation_sessions.language`).
+
+### Fonctionnement
+
+1. **Détection de la langue** (`backend/app/services/language_service.py`) : on compte les mots outils de chaque langue (« the, is, how » contre « le, est, comment »), les accents comptent pour le français. En cas d'égalité (« exams », « stage »), le français reste la langue par défaut. Une règle explicable plutôt qu'un détecteur statistique, peu fiable sur des questions de trois mots.
+2. **Recherche** : le modèle sémantique est multilingue, et les questions traduites de la FAQ sont ajoutées à son index. Elles ne servent **qu'aux questions anglaises** : pour une question française, elles faisaient monter les questions hors sujet (« réserver un hélicoptère » : 0.506 → 0.574 sur la navette).
+3. **Réponse** (`backend/app/services/translation_service.py`) :
+   - réponse de la FAQ : sa traduction, suivie de la mention _Automatic translation from French._ ;
+   - message « je ne sais pas » et clarification : versions anglaises écrites à la main ; les suggestions sont traduites ;
+   - autre source (contacts, emploi du temps, documents) : réponse en français, précédée de _This information is only available in French:_. Ces sources cherchent des mots français et sont rarement atteintes par une question anglaise.
+4. Le LLM optionnel n'est pas appelé en anglais : il reformule en français.
+
+### Traductions pré-calculées
+
+Les traductions sont produites **une fois, hors ligne**, par MarianMT (`Helsinki-NLP/opus-mt-fr-en`) et versionnées dans `backend/data/knowledge_base/processed/faq_translations_en.json`. L'API ne charge aucun modèle de traduction : la réponse est instantanée, l'image Docker ne grossit pas, et aucune question n'est envoyée à un service externe.
+
+Le fichier peut être **relu et corrigé à la main**. Après une modification de la FAQ, le régénérer :
+
+~~~bash
+pip install -r backend/requirements-semantic.txt sentencepiece sacremoses
+python -m backend.scripts.knowledge_base.translate_faq
+~~~
+
+Le script protège ce que le modèle abîmait, mesuré sur les 159 réponses :
+
+| Problème constaté | Protection |
+|---|---|
+| `bibliotheque@esic.fr` traduit en `library@esic.fr` (adresse inexistante) | e-mails, liens et téléphones masqués puis restitués |
+| `'Scolarité' > 'Ma carte'` traduit, alors que l'ENT reste en français | libellés entre guillemets conservés |
+| Sous-listes désindentées | traduction ligne par ligne, préfixes de liste conservés |
+| Gras cassé (`** Titre:**`) dans 14 réponses | réparation automatique |
+| Horaires mélangés : « 8 a.m. », « 9am », « 9h-17h », « 12:00 - 14:00 » | tout est ramené au format « 9am-5pm » |
+| Lignes d'horaires seules mal traduites (« 8h-10h » et « 10h15-12h15 » fusionnées en « 8-10am-10.15-12.15 ») | plages converties **avant** traduction puis protégées ; une ligne sans texte n'est pas envoyée au modèle |
+
+Les **durées** ne sont jamais converties en heures (« 24h/24 », « 10-15h of personal work », « 1h30 à 4h ») : seules les plages dont les deux bornes portent « h » sont lues comme des horaires.
+
+Pour retraduire seulement quelques entrées sans perdre les corrections manuelles des autres :
+
+~~~bash
+python -m backend.scripts.knowledge_base.translate_faq --only EDT018 SVC023
+~~~
+
+Traduire en direct aurait pris 3,2 s en moyenne par réponse (7,3 s au pire) sur CPU : d'où la pré-traduction (159 entrées en 10 minutes, une seule fois).
+
+Les 7 entrées de `backend/data/faq.json` (horaires, contact, formations, certificat, salutation…) ont été **relues et corrigées à la main** : le modèle traduisait « horaires de la scolarité » par « school hours » et supprimait le « Bonjour ! » de la salutation. Le test `test_versioned_translations_cover_faq_and_keep_contacts` vérifie que chaque entrée de la FAQ a une traduction et qu'aucun e-mail ni téléphone n'a été modifié.
+
+### Résultats mesurés
+
+| Question | Réponse |
+|---|---|
+| When does the library open? | horaires de la bibliothèque, en anglais (0.76) |
+| How can I get a certificate of enrolment? | certificat de scolarité, en anglais (1.00) |
+| exam dates please / when are the exams | dates des examens, en anglais (0.84 / 0.94) |
+| Hello | salutation en anglais |
+| How do I book a helicopter on campus? | « I don't have a reliable answer… » |
+| how do i get a scholarship | clarification en anglais ; un clic sur une suggestion donne sa réponse (1.00) |
+| Questions en français | inchangées (349 tests existants passent avec le vrai modèle) |
+
+### Limites
+
+- Traduction automatique : quelques contresens de vocabulaire (« alternance » traduit par « alternative » ; « scolarité » par « tuition » ou « school service » dans 15 réponses). Le fichier se corrige à la main.
+- Le vocabulaire traduit ne correspond pas toujours à celui des étudiants : « bourse » est traduit par « grant », donc « how do i get a scholarship » ne propose pas la bourse CROUS. « I want to do an internship » atteint tout juste le seuil (0.701) et renvoie l'attestation de stage plutôt que la convention. Des variantes anglaises ajoutées à la main amélioreraient ces cas.
+- Seules la FAQ et les messages fixes sont traduits.
+- Deux langues seulement (français, anglais) ; l'interface (accueil, boutons) reste en français.
+- Une phrase mêlant les deux langues est classée selon la majorité de ses mots outils.
+
 ## Tests
 
 ```bash
@@ -410,7 +478,7 @@ La CI GitHub Actions (`.github/workflows/ci.yml`) s'exécute sur chaque push et 
 │   │   └── services/         # connaissances, classement, redaction PII, sécurité, rate limit, analytics
 │   ├── data/                 # faq.json + knowledge_base/{raw,processed}
 │   ├── scripts/knowledge_base/  # extraction PDF, normalisation, vérification des données
-│   ├── tests/                # 336 tests Pytest
+│   ├── tests/                # 381 tests Pytest
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/                 # React + Vite + Tailwind, Dockerfile multi-étapes, nginx.conf
@@ -428,4 +496,4 @@ La CI GitHub Actions (`.github/workflows/ci.yml`) s'exécute sur chaque push et 
 
 ## Perspectives
 
-Hors périmètre de cette version, identifiées pour la suite : réponses en anglais, interface d'administration de la base de connaissances, vocal, supervision Prometheus/Grafana, tests de bout en bout et de charge, matériel réel (ESP32/Raspberry Pi) à la place du simulateur.
+Hors périmètre de cette version, identifiées pour la suite : interface d'administration de la base de connaissances, vocal, supervision Prometheus/Grafana, tests de bout en bout et de charge, matériel réel (ESP32/Raspberry Pi) à la place du simulateur.

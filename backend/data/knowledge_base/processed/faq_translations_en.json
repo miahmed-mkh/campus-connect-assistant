@@ -1,0 +1,638 @@
+{
+  "faq-001": {
+    "question": "What are the student office opening hours?",
+    "answer": "The student office (scolarité) is open Monday to Friday, from 9am to 5pm"
+  },
+  "faq-002": {
+    "question": "How do I contact the student office?",
+    "answer": "You can reach the student office (scolarité) by e-mail at scolarite@esic.fr or go to its ground floor office."
+  },
+  "faq-003": {
+    "question": "What programmes does ESIC offer?",
+    "answer": "ESIC offers programmes in Data Science, Cybersecurity and Development, available as full-time studies or as work-study (alternance)."
+  },
+  "faq-004": {
+    "question": "When are the next holidays?",
+    "answer": "The academic calendar of holidays, exams and thesis defences is available on the ENT."
+  },
+  "faq-005": {
+    "question": "How do I get a certificate of enrolment?",
+    "answer": "The certificate of enrolment (certificat de scolarité) can be downloaded from your ENT space, in the « Mes documents » section."
+  },
+  "faq-006": {
+    "question": "What are the campus rules?",
+    "answer": "The internal regulations set out students' rights and duties, including attendance, respect for the premises and sanctions. They are available on the ENT."
+  },
+  "faq-007": {
+    "question": "Hello",
+    "answer": "Hello! Ask me your question about the campus, I'm here to help."
+  },
+  "EDT001": {
+    "question": "Where can I consult my schedule?",
+    "answer": "Your schedule is available on the ENT (ent.esic.fr) in section 'Planning'. You can also download the mobile app 'ESIC Campus' available on iOS and Android to view your real-time schedule and receive notifications in case of changes."
+  },
+  "EDT002": {
+    "question": "When does semester 1 start?",
+    "answer": "Semester 1 (S1) begins on Monday, September 2, 2024 and ends on January 17, 2025. The S1 exams take place from January 6 to 17, 2025."
+  },
+  "EDT003": {
+    "question": "When does semester 2 start?",
+    "answer": "Semester 2 (S2) begins on February 10, 2025 and ends on June 27, 2025. The S2 exams take place from May 19 to 30, 2025. The internship period begins on June 2, 2025."
+  },
+  "EDT004": {
+    "question": "What are the dates of school holidays?",
+    "answer": "The vacation periods for 2024-2025 are as follows:\n- Toussaint Holidays : October 28 - November 3, 2024\n- Christmas Holidays: December 23, 2024 - January 5, 2025\n- Winter Holidays: February 24 - March 2, 2025\n- Spring holidays : 21-27 April 2025"
+  },
+  "EDT005": {
+    "question": "When are the exams taking place?",
+    "answer": "The examinations take place in two periods:\n- S1 exams: 6-17 January 2025\n- S2 exams: 19-30 May 2025\n\nCatch-ups take place:\n- S1: 3-7 February 2025\n- S2 Rattlings: 1-12 September 2025\n\nYour personalized exam schedule is available on the ENT 3 weeks before the start of the exams."
+  },
+  "EDT006": {
+    "question": "How many hours of lessons a week?",
+    "answer": "The weekly volume varies according to your level:\n- Bachelor 1-2 : 28-30 hours of course + 15-20 hours of personal work\n- Bachelor 3: 24-26 hours of lessons + 20-25 hours of personal work\n- Master 1-2 : 20-24 hours of lessons + 25-30 hours of personal work\n\nThis volume includes master's courses (CMs), directed work (TDs), practical work (TPs) and projects."
+  },
+  "EDT007": {
+    "question": "My schedule has changed, how am I informed?",
+    "answer": "All changes in time use are automatically notified:\n1. By email to your address @esic.fr\n2. By push notification via the ESIC Campus mobile app\n3. On your ENT with an alert banner\n\nChanges are communicated at least 48 hours in advance unless there is an emergency (unforeseen absence of a teacher)."
+  },
+  "EDT008": {
+    "question": "How can I book a room?",
+    "answer": "To reserve a room for a group project:\n1. Connect to the ENT (ent.esic.fr)\n2. Go to 'Services' > 'Réservation de salles'\n3. Select the desired date, schedule and room type\n4. Validate your reservation\n\nThe group rooms (6 rooms for 4-8 people) at the library can be booked up to 7 days in advance. The computer rooms require a validation of the teaching manager."
+  },
+  "EDT009": {
+    "question": "What time does class start in the morning?",
+    "answer": "The course starts at 8am. The campus opens at 7:30am to allow you to arrive in advance. It is recommended to arrive 10-15 minutes before the start of the course."
+  },
+  "EDT010": {
+    "question": "Until what time are there classes?",
+    "answer": "Courses can take place up to 6pm maximum. The last slot is 4pm-6pm. The campus remains open until 9pm on weekdays for personal work and associative activities."
+  },
+  "EDT011": {
+    "question": "Is there class on Saturdays?",
+    "answer": "No, there are usually no courses on Saturdays. The campus is open on Saturdays from 8am to 6pm for:\n- Library (9am-5pm)\n- The fitness room (10am-1pm)\n- Workspaces in autonomy\n\nExceptional events (conferences, hackathons, forums) can be organised on some Saturdays."
+  },
+  "EDT012": {
+    "question": "Where's my classroom?",
+    "answer": "The rooms are identified by a code:\n- A###: Administration Building (course rooms)\n- B### : Class building (amphitheatres and rooms)\n- C### : Computer building (computer labs)\n- D### : Building Services (library, restaurant U)\n- E### : Sports complex\n\nAn interactive campus map is available on the ENT and mobile app. Signboards are available in each building."
+  },
+  "EDT013": {
+    "question": "How do I export my schedule to my phone?",
+    "answer": "You have two options:\n\n**Option 1 - Mobile application (recommended):**\nDownload the application 'ESIC Campus' (iOS/Android) to automatically synchronize your schedule.\n\n**Option 2 - iCal/Google Calendar Export:**\n1. Log in to the ENT\n2. Go to 'Planning'\n3. Click 'Exporter' and then 'Format iCal'\n4. Import the file into your calendar application\n\nThe schedule automatically updates every hour."
+  },
+  "EDT014": {
+    "question": "Who should I contact if I have a problem with my schedule?",
+    "answer": "Depending on the type of problem:\n\n**Course Enrolment Error:** Contact Tuition Service (scolarite@esic.fr or 01.53.90.15.20)\n\n**Planning conflict:** Contact your training manager\n\n**Technical problem (ENT, mobile app):** Contact the IT helpdesk (support-it@esic.fr or 01.53.90.15.99)\n\nOpening hours are: Monday-Friday 9am-12pm and 2pm-5pm"
+  },
+  "EDT015": {
+    "question": "When's the day of integration?",
+    "answer": "The day of integration for the Bachelor 1 takes place on Tuesday, September 3, 2024, the day after the beginning of the school year.\n- 9am-12pm : Presentation of the school and services\n- 12pm-2pm : Breakfast (offered)\n- 2pm-6pm : Team building activities and campus discovery\n\nThe presence is mandatory. You will receive all details by email at the end of August."
+  },
+  "EDT016": {
+    "question": "When is the Business Forum held?",
+    "answer": "Two business forums are held each year:\n\n**Forum Internships/Alternance:** Tuesday, 15 October 2024\n- 9am-6pm in the gymnasium\n- 80+ companies present\n- CV workshops and interviews\n\n**Employment Forum:** Saturday 15 March 2025\n- 10am-5pm\n- Dedicated to students of M2 and Alumni\n\nCompulsory registration via the ENT. Professional clothing required."
+  },
+  "EDT017": {
+    "question": "Is there a permanence from my training manager?",
+    "answer": "Yes, each training officer ensures weekly permanences. Schedules vary according to the person in charge (consultable on the ENT in 'Mon parcours' > 'Responsable de formation').\n\nExamples:\n- Sophie MARTIN (B1) : Tuesday and Thursday 2pm-5pm\n- Marc ROUSSEAU (B3 Cyber): Tuesday and Thursday 10am-12pm\n- David GARCIA (M1-M2 IA): Tuesday and Thursday 3pm-6pm\n\nMake a mandatory appointment via the ENT."
+  },
+  "EDT018": {
+    "question": "How long do the classes last?",
+    "answer": "The courses are organized in two-hour slots:\n- 8am-10am\n- 10:15am-12:15pm\n- 1:45pm-3:45pm\n- 4pm-6pm\n\nThere is a 15-minute break between each slot. For laboratory TPs, some slots can be extended to 3 or 4 consecutive hours."
+  },
+  "EDT019": {
+    "question": "What is the difference between CM, TD and TP?",
+    "answer": "The courses are organized in three formats:\n\n**CM (Magistral Course):** Theoretical course in amphitheater with all students of the promotion (100-150 people). Magistral format with taking of notes.\n\n**TD (Directed Works):** Groups of 25-30 students. Application exercises, case studies, discussions. More interactive.\n\n**TP (Works in Practice):** Groups of 15-20 students in computer labs. Implementation on computer, projects, manipulation.\n\nYour schedule specifies the format of each course."
+  },
+  "EDT020": {
+    "question": "Can I have an arranged schedule?",
+    "answer": "Improvements are possible in some cases:\n\n**Disability status:** Contact the social service (social@esic.fr) with a CDMH certificate\n\n**High level sports:** Contact your training manager with a certificate from the federation\n\n**Medical status:** Contact the school doctor with a medical certificate\n\n**Professional activity:** Facilities are limited. Prefer to alternation if you work.\n\nApplications must be made at the beginning of the semester."
+  },
+  "EDT021": {
+    "question": "How does project planning work?",
+    "answer": "Projects have dedicated slots in your schedule, usually on Wednesdays. These slots allow:\n- Teamwork supervised by a guardian\n- Regular points of advancement\n- Access to computer laboratories\n\nThe rest of the work is done in autonomy. Plan 10-15h of personal work per week in Bachelor 3 and 15-20h in Master for your projects."
+  },
+  "EDT022": {
+    "question": "When should I choose my specialization?",
+    "answer": "The choice of specialization is:\n\n**Bachelor 3:** End of semester 4 (Bachelor 2), in April-May. You will receive a wish form on the ENT. Specializations available: Development, Cybersecurity, Data Science, Digital Marketing, Product Management.\n\n**Master 2:** End of semester 7 (Master 1), December-January.\n\nInformation sessions are held 1 month before the choice period. The assignment depends on your wishes and academic results."
+  },
+  "EDT023": {
+    "question": "Are there any white exams?",
+    "answer": "Yes, white exams are organized:\n- 3 weeks before official examinations\n- In real-life conditions (duration, format, room)\n- Individualised correction in the following week\n- Optional but strongly recommended\n\nThe dates of the white exams are communicated on the ENT early December (S1) and early April (S2). Registration via the compulsory ENT."
+  },
+  "EDT024": {
+    "question": "How long do the exams last?",
+    "answer": "The duration of examinations varies by subject and format:\n- Written exams : 1.5 to 4 hours\n- MCQ: 1h to 2h\n- Practical exams (programming): 2h to 4h\n- Oral support: 15-30 minutes of presentation + 15-30 minutes of questions\n\nThe exact duration is specified on your invitation available on the TENT 1 week prior to the exam."
+  },
+  "EDT025": {
+    "question": "May I arrive late for an examination?",
+    "answer": "The rules for delaying examinations are strict:\n\n**Delay < 15 minutes:** You can enter but you do not get any extra time. You must return your copy at the scheduled time.\n\n**Delay > 15 minutes:** Access to the examination room is denied. You will be considered absent and will have to pass the catch-up.\n\n**Tip:** Arrive 20-30 minutes before the start of the exam. Bring your convocation, student card and ID."
+  },
+  "EDT026": {
+    "question": "What happens if I'm sick on the day of an exam?",
+    "answer": "In case of illness on the day of an examination:\n\n1. Consult a doctor within 48 hours\n2. Get an original medical certificate\n3. Send it by e-mail to the school service (scolarite@esic.fr) + self-handling within 3 working days\n4. You will take the exam during the catch-up session\n\nPlease note: A simple email is not enough. The original medical certificate is required. Without valid proof, you get a rating of 0/20."
+  },
+  "EDT027": {
+    "question": "When will we get the results of the exams?",
+    "answer": "Timelines for publication of results:\n\n**Written exams/MCQs:** 2-3 weeks after the end of the session\n**Projects and defences:** 1-2 weeks after defence\n**Ratchings:** 10 days after the session\n\nThe notes are published on the ENT in 'Scolarité' > 'Mes notes'. You will receive an email notification for each publication. Official transcripts can be downloaded 1 week after the full publication."
+  },
+  "EDT028": {
+    "question": "How are project defences organised?",
+    "answer": "Project defences follow this format:\n\n**Total duration:** 30-45 minutes\n- Presentation : 15-20 minutes\n- Jury questions: 10-15 minutes\n- Deliberation and feedback: 5-10 minutes\n\n**Jury:** 2-3 persons (guardian teacher + potential external expert)\n\n**Planning:** Support slots are published 2 weeks before on the ENT. Mandatory registration to the desired slot (first come, first served).\n\n**Limitable:** Report + code + submission to be filed 48 hours before."
+  },
+  "EDT029": {
+    "question": "Are there any classes during the holidays?",
+    "answer": "No, there are never courses during official holiday periods. However:\n\n**Free revision periods:** The library and some workspaces remain accessible during the holidays (reduced hours 9am-5pm).\n\n**Personal Work:** Projects and works may require work during holidays.\n\n**Stages:** In Bachelor 3 and Master, some holiday periods may coincide with your internship period."
+  },
+  "EDT030": {
+    "question": "How can I see the notes of my comrades?",
+    "answer": "You cannot consult the notes of your classmates. Each student has access only to his or her own notes via his or her personal ENT account. This confidentiality is guaranteed by the GDPR and the rules of procedure.\n\nHowever, you can consult:\n- Your individual notes\n- Promotion statistics (average, median, standard deviation) without identification of students\n- Your relative classification (quintile) in certain subjects"
+  },
+  "EDT031": {
+    "question": "What are the holidays during the year?",
+    "answer": "Public holidays 2024-2025 (no courses):\n- Toussaint : 1 November 2024 (Friday)\n- Armistice: 11 November 2024 (Monday)\n- Christmas: 25 December 2024 (Wednesday)\n- New Year's Day : January 1, 2025 (Wednesday)\n- Easter Monday: 21 April 2025\n- Labour Day: 1 May 2025 (Thursday)\n- Victory 1945: 8 May 2025 (Thursday)\n- Ascension : 29 May 2025 (Thursday) + bridge Friday 30 May\n- Pentecost Monday: 9 June 2025\n\nThe campus is closed in those days."
+  },
+  "EDT032": {
+    "question": "How do I know the exam room?",
+    "answer": "The examination room is indicated on your invitation available on the ENT in 'Examens' > 'Mes convocations', accessible 7 days before the examination.\n\nThe summons shall specify:\n- Date and time of examination\n- Room and placement (seat number)\n- Duration of the test\n- Authorized documents and equipment\n- Supervisor's name\n\nYou must print or have the summons on your phone on D-Day. Signboards are also installed in front of each exam room."
+  },
+  "EDT033": {
+    "question": "Is there a trial period at the beginning of the year?",
+    "answer": "There is no formal trial period, but the first 4 weeks are crucial:\n\n**Weeks 1-2:** Adaptation, branding, diagnostic assessments (not accounted for in the average)\n\n**Week 3-4:** Start of the final grade scores\n\n**Mid-semester point:** An individual assessment is made in November to identify students in difficulty and offer support (tutoring, methodological support).\n\nThe administrative withdrawal period is 7 days after re-entry."
+  },
+  "EDT034": {
+    "question": "Can I attend a course from another promotion?",
+    "answer": "This depends on the type of course:\n\n**Magistral course (CM) in amphitheater:** Yes, you can attend if there are places available. Simply inform the teacher at the beginning of the course.\n\n**TD/TP in small groups:** No, places are limited and reserved for students. Exception possible with the prior consent of the teacher.\n\n**Different specialization course:** Possible as a free listener after validation of the teacher manager, but this does not matter to your ECTS."
+  },
+  "EDT035": {
+    "question": "How does the catch-up system work?",
+    "answer": "Catch-up refers to materials where you obtained less than 10/20 after compensation:\n\n**Eligibility:** Final score between 6/20 and 9.9/20 (< 6/20 = direct repetition)\n\n**Recovery session:**\n- S1: 3-7 February 2025\n- S2: 1-12 September 2025\n\n**Format:** Same type of test as session 1\n\n**Final note:** The best score between session 1 and catch-up is retained, capped at 10/20\n\n**Convocation:** Available on the TENT 2 weeks before"
+  },
+  "EDT036": {
+    "question": "How many absences are tolerated?",
+    "answer": "Attendance is compulsory. The regulations set thresholds:\n\n**Unjustified absences:**\n- 3 absences = Written warning\n- 5 absences = Convocation responsible pedagogic\n- 10 absences = 0 to the subject\n- 20 absences on semester = Possible exclusion\n\n**Absences justified:** Unlimited if valid (medical certificate, official summons). To be transmitted within 48 hours to the school service.\n\n**Delays:** 3 delays = 1 absence"
+  },
+  "EDT037": {
+    "question": "Can I go on vacation before the end of the semester?",
+    "answer": "No, courses and exams are mandatory until the last date of the semester.\n- Training of unwarranted absences recorded\n- May prevent you from validating your semester\n- Is not a valid excuse to miss an exam\n\n**Exception:** Exceptional serious medical or family reasons (deaths) with supporting documents. Contact your teacher immediately.\n\n**Tip:** Organize your departures after the last official date of the semester indicated on the calendar."
+  },
+  "EDT038": {
+    "question": "When is the week of revisions going on?",
+    "answer": "There is no week of formal revisions. The schedule is as follows:\n\n**Last week of courses:** Ends on Friday before exams\n\n**Week-end + Monday:** 3 days free for personal revisions\n\n**Exams:** Start next Tuesday\n\nTips:\n- The library remains open in extended hours (8am-10pm)\n- Group work rooms are available upon reservation\n- During exams (January/May), the library is open 24 hours a day"
+  },
+  "EDT039": {
+    "question": "How can I get my custom calendar?",
+    "answer": "Your custom calendar is automatically generated on the ENT depending on:\n- Your training and group\n- Your Selected Options\n- Your educational registrations\n\nTo access it:\n1. Connect to the ENT (ent.esic.fr)\n2. Section 'Planning' or 'Mon calendrier'\n3. Download PDF or export (iCal/Google Calendar)\n\nThe ESIC Campus mobile app automatically synchronizes your personal schedule with change notifications."
+  },
+  "EDT040": {
+    "question": "Are there any online or distancical courses?",
+    "answer": "The courses are in front of you by default. Distanciel is only allowed in exceptional cases:\n\n**Situations accepted:**\n- Communicable disease with medical certificate (Access Teams)\n- Health confederation decided by the authorities\n- International mobility students (under agreements)\n\n**Recording of courses:** Some CMs are registered and posted on the SENT (pedagogical resources). This does not replace the current presence.\n\n**Alternants:** Business alternants have access to online courses when technically possible."
+  },
+  "EDT041": {
+    "question": "When are the traineeship defenses?",
+    "answer": "Internship defences are programmed:\n\n**Bachelor 1 (Stage 4 sem):** Last week of July 2025\n**Bachelor 2 (stage 8 sem):** First half of September 2025\n**Bachelor 3 (stage 12 sem):** Mid-September 2025\n**Master 1 (stage 16 sem):** Early September 2025\n**Master 2 (stage 24 sem):** End of August / beginning of September 2025\n\nThe precise slots are communicated 1 month before. Compulsory registration via the ENT. The jury is made up of your academic tutor, your trainee master and an external member."
+  },
+  "EDT042": {
+    "question": "Can I change my TD/TP group?",
+    "answer": "Group changes are exceptional and must be justified:\n\n**Reasons accepted:**\n- Conflict of hours with a declared job\n- Medical reasons (mandatory certificate)\n- Major transport constraints\n\n**Procedure:**\n1. Reasoned written request to the school department\n2. Prior agreement of your teaching manager\n3. Actual change if seats available in the other group\n\n**Timeframe:** Applications accepted only in the first 2 weeks of the semester. Email to scolarite@esic.fr"
+  },
+  "EDT043": {
+    "question": "How does ECTS work?",
+    "answer": "The European Credit Transfer System (ECTS) measures your workload:\n\n**1 ECTS = 25-30 hours of work** (courses + personal work)\n\n**By semester:** 30 ECTS to be validated\n**By year:** 60 ECTS\n**Complete Bachelor:** 180 ECTS\n**Complete Master:** 120 ECTS (300 ECTS total Bac+5)\n\n**Validation:** An average of ≥ 10/20 per material must be obtained, with compensation possible within the same semester. Minimum 48 ECTS/60 required to move to the next year."
+  },
+  "EDT044": {
+    "question": "Is there a hackathon organized by the school?",
+    "answer": "Yes! The **Hackathon ESIC** is a major annual event:\n\n**Date:** 20-22 November 2024 (48h non-stop)\n**Location:** ESIC Campus (computer rooms + relaxation area)\n**Format:** Teams of 3-5 people, all levels\n**Theme 2024:** IA and Sustainable Development\n**Price:** €3,000 to be distributed among the 3 winning teams + internships in partner companies\n\n**Registration:** Via the ENT from 1 October (seats limited to 120 participants)\n**Free** with meals, snacks and drinks provided"
+  },
+  "EDT045": {
+    "question": "How's graduation going?",
+    "answer": "The **Certification Ceremony** takes place annually:\n\n**Date:** Friday, June 20, 2025 at 6pm\n**Location:** Grand amphitheatre + outdoor cocktail\n**Concerned:** Bachelor 3 and Master 2 graduates of the year 2024-2025\n\n**Draft:**\n- 6pm-7:30pm: Official ceremony (speech, graduation)\n- 7:30pm-10pm : Cocktail and photos\n\n**Invitations:** 2 places per graduate (family/friends)\n**Tenue:** Academic toge provided by the school\n**Confirmation:** Compulsory registration via the SENT before 1 June"
+  },
+  "ADM001": {
+    "question": "How do I get a certificate of education?",
+    "answer": "You can obtain a Tuition Certificate in 3 ways:\n\n**Option 1 - On-line (snapshot):**\n1. Log in to the ENT\n2. Go to 'Scolarité' > 'Mes documents'\n3. Click 'Certificat de scolarité'\n4. Download the PDF (available immediately)\n\n**Option 2 - Tuition Service:**\nEmail to scolarite@esic.fr (48h time)\n\n**Option 3 - Window:**\nRoom A102, Mon-Ven 9am-12am/2pm-5pm (immediate issuance)\n\nThe certificate is free and unlimited."
+  },
+  "ADM002": {
+    "question": "How do I get my transcript?",
+    "answer": "Your transcripts are available on the ENT:\n\n1. Log in to the ENT\n2. 'Scolarité' > 'Mes notes'\n3. Select Semester\n4. Click 'Télécharger le relevé' (PDF format)\n\nThe statements are available 1 week after the full publication of the semester notes. The document is official with school stamp and electronic signature.\n\n**Released paper with original stamp:** Application to school service (3 working days)"
+  },
+  "ADM003": {
+    "question": "How do I apply for a CROUS grant?",
+    "answer": "The application is made online on the CROUS website:\n\n**Period:** January 15 to May 15 for the following year\n\n**Procedure:**\n1. Create your Student Social Record (SSD) on my services.student.gouv.fr\n2. Provide information (parental income, siblings, etc.)\n3. Choose the ESIC from the list of establishments\n4. Validate and wait for the answer (June-July)\n\n**Help on campus:**The social service can accompany you (social@esic.fr or office A105, Mon/Mer 2pm-6pm)\n\n**Important:** Apply even if you think you are not eligible."
+  },
+  "ADM004": {
+    "question": "How do I get an internship agreement?",
+    "answer": "To obtain your internship agreement:\n\n1. Find your internship and validate the offer with the company\n2. Connect to the ENT > 'Stages' > 'Nouvelle convention'\n3. Complete the online form (dates, missions, company, gratuity)\n4. Download the pre-filled convention\n5. Make it sign by the company\n6. Place it signed in the school office (Office A102) or send it to stages@esic.fr\n7. Retrieve the final agreement signed by the school (5 working days)\n\n**Important:** The agreement must be signed BEFORE the start of the internship."
+  },
+  "ADM005": {
+    "question": "How do I pay my tuition fees?",
+    "answer": "Several payment options are available:\n\n**Cash payment (disbursement -3%):**\n- Bank transfer\n- Cheque\n- CB online on the ENT\n\n**Payment in 3 times (toll-free):**\n- September, November, January\n- Automatic sampling\n\n**Payment in 10 times (cost +2%) :**\n- September to June\n- Automatic sampling\n\n**Procedure:**\n1. ENT > 'Comptabilité' > 'Mes factures'\n2. Choose your method of payment\n3. Validate your schedule\n\nContact: comptabilite@esic.fr or 01.53.90.15.21"
+  },
+  "ADM006": {
+    "question": "How do I get a tax certificate?",
+    "answer": "The tax certificate (for tax reduction) is available:\n\n**When:** From end of February for the previous calendar year\n\n**Where:**\n1. ENT > 'Comptabilité' > 'Mes documents fiscaux'\n2. Download the attestation (PDF format)\n\nThe certificate indicates the amount of tuition fees paid the previous year, allowing a tax reduction of 25% (ceiling 61€ for the college, 153€ for the high school, 183€ for the superior according to the tax legislation).\n\n**Important:** Keep this document for your tax return."
+  },
+  "ADM007": {
+    "question": "I lost my student card, what to do?",
+    "answer": "In case of loss or theft of your student card:\n\n1. **Report immediately** loss on the ENT ('Scolarité' > 'Ma carte' > 'Déclarer une perte') to disable the card\n\n2. **Do a duplicate request:**\n   - Via the ENT or at the school service\n   - Cost: 25€ (payment online or at the counter)\n   - Identity photo required\n\n3. **Recovery:** New card available within 5 working days in room A102\n\n**In case of theft:** Attach a complaint to ensure that the duplicate is free of charge."
+  },
+  "ADM008": {
+    "question": "How do I apply for emergency aid?",
+    "answer": "The ESIC offers **emergency financial assistance** up to €1,000 for students in difficulty:\n\n**Conditions:**\n- Sudden difficult financial situation (accident, loss of parental employment, etc.)\n- Regularly enrolled student\n- Exhausted other aid (CROUS, CAF)\n\n**Procedure:**\n1. Make an appointment with the social worker (social@esic.fr)\n2. Prepare supporting documents (income, expenses, event)\n3. Fill in the application folder\n4. Emergency aid commission within 15 days\n5. Payment within 5 days if accepted\n\nContact: Isabelle DUBOIS, Bureau A105, Mon/Mer 2pm-6pm"
+  },
+  "ADM009": {
+    "question": "How do I register for a catch-up exam?",
+    "answer": "Registration for catch-ups is **automatic**. You have no steps to take.\n\n**Functioning:**\n1. The results of session 1 are published\n2. If you have a score < 10/20 after compensation, you are automatically included in the catch-up for this subject\n3. You receive your summons by email 2 weeks before\n4. The summons is also available on the ENT ('Examens' > 'Mes convocations')\n\n**Dispense:** If you do not wish to make a catch-up (Session 1 acceptable to you), request in writing to scolarite@esic.fr before the deadline indicated on the ENT."
+  },
+  "ADM010": {
+    "question": "How do I apply for a caesure?",
+    "answer": "A **year of caesure** may be granted after Bachelor 2 or Master 1:\n\n**Duration:** 1 semester or 1 full year\n\n**Projects accepted:**\n- Long-term work placement in company\n- Entrepreneurial project\n- Civic service\n- International Volunteering\n- Structured personal project\n\n**Procedure:**\n1. Reasoned written request to your teaching manager (3 months before)\n2. Detailed project description attached\n3. Pedagogical Commission (response within 1 month)\n4. If accepted: caesure agreement to be signed\n\n**Status:** You retain student status. Reduced rate of 20% to maintain enrolment.\n\nContact: etudes@esic.fr"
+  },
+  "ADM011": {
+    "question": "How do I get proof of travel for the CAF?",
+    "answer": "To obtain proof of presence/movement for the CAF (notably for the LPA if you move):\n\n1. Log in to the ENT\n2. 'Scolarité' > 'Mes documents' > 'Attestation de présence'\n3. Download the document\n\nOr ask the school department (scolarite@esic.fr) who can issue a custom certificate stating:\n- Your first and last names\n- Your training and year\n- The campus address\n- The training period\n- Number of days of attendance required per week"
+  },
+  "ADM012": {
+    "question": "How to apply for a change of training?",
+    "answer": "A change in training (reorientation) is possible under conditions:\n\n**Periods possible:**\n- End of S1: Reorientation within Bachelor 1 only\n- End of year: reorientation to another specialization (subject to places)\n\n**Procedure:**\n1. Make a mandatory appointment with your current teaching manager\n2. Interview with the person in charge of the desired training\n3. Application file to be completed (motivations, results)\n4. Pedagogical Commission (decision within 3 weeks)\n5. If accepted: upgrade possible to catch up with program differences\n\nContact: etudes@esic.fr or your teaching manager"
+  },
+  "ADM013": {
+    "question": "How can I challenge a note?",
+    "answer": "You have the right to challenge a note if you believe there is an error:\n\n**Timeframe:** 15 days after the publication of the note on the ENT\n\n**Procedure:**\n1. **Consultation of copy:** First request to consult your copy (guaranteed right) with the teacher\n2. **Request for review:** If the error persists, written request for reasons scolarite@esic.fr\n3. **Commission:** Your copy is reviewed by another teacher + your teacher + pedagogical manager\n4. **Final decision:** Response within 2 weeks, final decision\n\n**Important:** The revision may result in a decrease in grade if undetected errors are found."
+  },
+  "ADM014": {
+    "question": "How do I obtain a school insurance certificate?",
+    "answer": "School insurance is not compulsory in higher education but strongly recommended, especially for traineeships.\n\n**If you have subscribed via the school:**\n- The attestation was sent to you by email when registering\n- Copy available on ENT > 'Scolarité' > 'Mes documents'\n\n**If you have your own insurance:**\n- Contact your insurer directly\n- Drop a copy to the school office to record it in your file\n\n**For internships:** Civil Liability insurance is mandatory. Attach the certificate to your internship agreement."
+  },
+  "ADM015": {
+    "question": "How to get a diploma duplicate?",
+    "answer": "In case of loss, theft or deterioration of your degree, you can obtain a duplicate:\n\n**Conditions:**\n- Be a graduate of the ESIC\n- Provide evidence of loss (theft/loss report)\n\n**Procedure:**\n1. Written request to scolarite@esic.fr with:\n   - Copy ID\n   - Statement of loss/theft on honour\n   - Year of graduation\n2. Fee: 50€ (cheque or transfer)\n3. Time frame: 4-6 weeks\n\n**Important:** The duplicate bears the mention 'DUPLICATA' and does not have the same legal value as an original. A certificate of success (free) may be sufficient in most cases."
+  },
+  "ADM016": {
+    "question": "How do I register for language courses?",
+    "answer": "Language courses are **mandatory** and already registered in your schedule:\n\n**Functioning:**\n- Level test at the beginning of the year (September)\n- Automatic assignment to a level group (A2, B1, B2, C1)\n- 2 hours of lessons per week\n\n**Languages available :**\n- English: mandatory for all\n- LV2 (optional in Bachelor 3 and Master) : Spanish, German, Chinese, Italian\n\n**For optional LV2s:**\n1. ENT > 'Scolarité' > 'Choix pédagogiques'\n2. Register before September 15\n3. Limited places (30 per group)\n\nContact: Christine ROBIN (c.robin@esic.fr)"
+  },
+  "ADM017": {
+    "question": "How do I obtain my diploma after validation?",
+    "answer": "After final validation of your diploma:\n\n**Deadline for issuance:** 3-6 months after validation (rectorate's administrative deadline for signature)\n\n**Notification:**\n- Email to your address @esic.fr as soon as the diploma is ready\n- Reminder SMS\n\n**Remains:**\n- In person at school (Office A102, Lun-Ven 9am-5pm) with identification\n- Or by proxy (+ person ID copy)\n- Or mail (cost 15€, recommended with AR)\n\n**In the meantime:** You can obtain a free and immediate certificate of success on the ENT."
+  },
+  "ADM018": {
+    "question": "How can I validate my professional achievements?",
+    "answer": "The **VAE (Validation of the Acquis of Experience)** or **VAP (Validation of the Acquis Professionnels)** make it possible to have your experience recognized:\n\n**PAV:** To access training without a required degree\n**VAE:** To obtain all or part of a diploma through experience\n\n**Conditions:**\n- Minimum 3 years of professional experience in connection with the diploma\n- Employee, independent, voluntary or voluntary experience\n\n**Procedure:**\n1. Request for file: vae@esic.fr\n2. Writing of the EAW booklet (possible accompanying)\n3. Support before a jury\n4. Disposition: total, partial or refusal validation\n\nContact: VAE Service, vae@esic.fr or 01.53.90.15.30"
+  },
+  "ADM019": {
+    "question": "How to get a duplicate newsletter?",
+    "answer": "If you have lost your bulletin/recorded notes:\n\n**Reduced from recent ratings (since 2020):**\n- Available for free and instantly on the ENT\n- 'Scolarité' > 'Mes notes' > 'Télécharger le relevé'\n\n**Former surveys (before 2020):**\n- Request by email to scolarite@esic.fr with :\n  * Surname, first name, date of birth\n  * Training and year concerned\n- Free\n- Time limit: 5 working days\n- Send by email (PDF) or pick-up\n\n**Certified paper version:** Available on request (free of charge, 48h)"
+  },
+  "ADM020": {
+    "question": "How do I register as an alternate?",
+    "answer": "**alternance** (apprenticeship or professionalization contract) is possible from Bachelor 3 and Master:\n\n**Calendar:**\n- Company search: January to June\n- Signing of contract: before August 31\n- Beginning of alternation : September\n\n**Procedure:**\n1. Find a Host Company\n2. Ask for the alternance file on the ENT or carrieres@esic.fr\n3. Fill out the alternate teacher registration form\n4. The school helps you set up the OPCO file\n5. Tripartite contract signed (student/school/business)\n\n**Rythm:** 3 weeks company / 1 week school (variable according to training)\n\nContact: Pierre LEGRAND, p.legrand@esic.fr or 01.53.90.15.33"
+  },
+  "ADM021": {
+    "question": "How do I change my personal information?",
+    "answer": "To change your personal information (address, phone, personal email, etc.):\n\n1. Log in to the ENT\n2. 'Mon profil' > 'Mes informations'\n3. Edit the affected fields\n4. Validate\n\n**Modifications with justification (name, marital status, nationality):**\n- Written application to the school department\n- Official proof of birth (declaration of birth, identity card, etc.)\n- Processing time: 5 working days\n\n**Important:** Keep your contact information up to date to receive all important communications from the school.\n\nContact: scolarite@esic.fr"
+  },
+  "ADM022": {
+    "question": "How do I apply for an executive?",
+    "answer": "A **exeat** is a document certifying that you are in good standing with the institution and can register elsewhere. It is necessary to:\n- Change of place of business\n- Final departure of the ESIC\n- File transfer\n\n**Conditions:**\n- Being up to date with your tuition fees\n- Returning all borrowed material (library, IT)\n- No ongoing disciplinary proceedings\n\n**Procedure:**\n1. Written request to scolarite@esic.fr\n2. Specify the reason and destination\n3. Settlement of pending charges\n4. Delivery time: 5 working days\n\nExecuting is free."
+  },
+  "ADM023": {
+    "question": "Can I get a tax receipt for my tuition?",
+    "answer": "Yes, a tax receipt is automatically issued to you each year:\n\n**Period:** Available at the end of February/early March for the previous calendar year\n\n**Access:**\n1. ENT > 'Comptabilité' > 'Mes documents fiscaux'\n2. Download the receipt (PDF)\n\nThe receipt indicates the total amount of tuition fees paid in the previous year.\n- To obtain a tax reduction (according to legislation)\n- To justify tuition fees with the CAF or other organizations\n\n**Duplicata:** Ask comptabilite@esic.fr if you lost it"
+  },
+  "ADM024": {
+    "question": "How do I obtain an internship certificate?",
+    "answer": "An internship certificate certifies that you have completed an internship as part of your training:\n\n**Delivered automatically:**\n- At the end of your internship, after submission of the report and support\n- Available on the ENT > 'Stages' > 'Mes attestations'\n\n**Content:**\n- Internship dates\n- Host company\n- Main missions\n- Appreciation of the trainee master\n- Pedagogical validation\n\n**Specific request:** If you need an intermediate or special statement, please contact stages@esic.fr (within 3 days)\n\nFree and unlimited."
+  },
+  "ADM025": {
+    "question": "How do I get my INE/BEA code?",
+    "answer": "The **INE code (National Student Identifier)** or **BEA (Basic Academic Students)** is a unique number that follows you throughout your schooling:\n\n**Format:** 11 characters (10 digits + 1 letter)\n\n**Where to find it:**\n- On your ESIC student card (on the back)\n- On your transcript\n- On your tuition certificate\n- On the ENT > 'Mon profil' > 'Mes informations'\n\n**If you don't have it:** Contact the school service (scolarite@esic.fr) that can find it in your file.\n\nThis code is necessary in particular for registration in competitions and for certain administrative procedures."
+  },
+  "ADM026": {
+    "question": "How do I apply for a refund?",
+    "answer": "Claims for reimbursement (overpayment, cancellation, etc.) are made to the accounting department:\n\n**Rebates accepted:**\n- Double payment\n- Abandonment of studies (specific conditions)\n- Invoicing error\n- Post-payment scholarship\n\n**Procedure:**\n1. Email to comptabilite@esic.fr with:\n   - Detailed rationale\n   - Supporting documents\n   - RIB\n2. Consideration of application (1 week)\n3. If accepted: transfer within 30 days\n\n**Important:** Drop-outs after October 31 do not qualify for reimbursement (unless force majeure is justified).\n\nContact : François BLANC, 01.53.90.15.21"
+  },
+  "ADM027": {
+    "question": "How do I activate my ENT account?",
+    "answer": "Your ENT account is normally activated upon your administrative registration:\n\n**First connection:**\n1. Go on ent.esic.fr\n2. Use your IDs received by email when registering\n3. Format: prenom.nom@esic.fr\n4. Temporary password provided\n5. Change the password at the first login\n\n**Connecting problems:**\n- Check your emails (including spam) for logins\n- Use the function 'Mot de passe oublié'\n- Contact the IT helpdesk: support-it@esic.fr or 01.53.90.15.99\n\n**Important:** The ENT is your main tool. Activate it as soon as possible!"
+  },
+  "ADM028": {
+    "question": "How do I apply for foreign diploma equivalence?",
+    "answer": "If you have obtained a degree abroad and wish to have an equivalent or a parallel admission:\n\n**For admission:**\n1. Contact the admissions service (admissions@esic.fr)\n2. Provide your diplomas translated and legalized\n3. Letter of motivation\n4. Full academic record\n5. The Pedagogical Commission is studying your case\n6. Interview if pre-selected\n\n**For a simple equivalence (excluding admission):**\nESIC does not issue equivalencies. Contact ENIC-NARIC France (official centre): www.france-education-international.fr\n\n**For Erasmus/exchange students:** Equivalencies are managed automatically via the Learning Agreement.\n\nInternational contact: international@esic.fr or 01.53.90.15.25"
+  },
+  "ADM029": {
+    "question": "How do I register for a professional certification?",
+    "answer": "Some professional certifications are **included** in your curriculum (AWS, Azure, Google Analytics, etc.):\n\n**Certifications included:**\n- Automatic registration\n- Sessions organized by the school\n- Cost covered\n- Passing in the course of examinations or in dedicated session\n\n**Training list:**\n- B3 Dev : AWS Solutions Architect Associate\n- B3 Cyber: CEH (Certified Ethical Hacker)\n- B3 Data: TensorFlow Developer\n- Master : Advanced certifications according to specialization\n\n**Additional certifications (not included):**\nYou can pass them independently. Some rooms at the school are Pearson VIUE approved examination centres.\n\nContact : Your teacher leader"
+  },
+  "ADM030": {
+    "question": "How to obtain an extension of time for rendering?",
+    "answer": "Extensions to renders (projects, reports) are exceptional and must be justified:\n\n**Reasons accepted:**\n- Sickness (compulsory medical certificate)\n- Serious family event (death certificate, etc.)\n- Major technical problem (to be reported immediately)\n\n**Procedure:**\n1. Contact the appropriate teacher BEFORE the deadline\n2. Explain the situation with supporting documents\n3. The teacher decides whether or not to grant the extension (1-7 days maximum generally)\n\n**Important:**\n- Don't wait for the last minute\n- Unjustified or late applications are systematically refused\n- A late rendering without agreement = automatic penalty (usually -2 points per day)"
+  },
+  "ADM031": {
+    "question": "How do I make a complaint or report a problem?",
+    "answer": "Several channels depending on the type of problem:\n\n**Teaching problem:**\n- First: your class delegate\n- Then: your teacher leader\n- As a last resort: Director of Studies (etudes@esic.fr)\n\n**Administrative problem:**\n- Service concerned (schooling, accounting, etc.)\n- If no solution: mediation possible via bve@esic.fr\n\n**Problem of harassment/discrimination:**\n- Listening cell: ecoute@esic.fr (confidential)\n- Reference Harassment\n- Mediation and possible accompaniment\n\n**Formal claim:**\nIn writing to direction@esic.fr. Answer guaranteed within 15 days.\n\n**Satisfaction surveys:** Complete the questionnaires sent each semester (anonymous)."
+  },
+  "ADM032": {
+    "question": "How do I get an IZLY card for the university restaurant?",
+    "answer": "The IZLY card is integrated into your **ESIC student card** which also acts as an electronic wallet:\n\n**Activation:**\n1. Download the application 'IZLY' (iOS/Android)\n2. Create your account with your email @esic.fr\n3. Link your student card (scan QR code on the back)\n4. Reload your account (CB, transfer, cash at the counter)\n\n**Use:**\n- At the university restaurant: simply badge your student card\n- To the cafeteria: Idem\n- To distributors: if equipped\n\n**Recharge :** Minimum €10, online or at campus terminals (building D)\n\n**Help:** Desk A102 or IZLY support: https://www.izly.fr"
+  },
+  "ADM033": {
+    "question": "Can I get an international mobility grant?",
+    "answer": "Yes, several scholarships are available to finance your international mobility:\n\n**Erasmus+ grants:**\n- 150-250€/month depending on the country of destination\n- For academic exchanges in Europe\n- Demand via international service\n\n**AMI Fellowship (Aid for International Mobility):**\n- 400€/month, up to 9 months\n- For CROUS fellow students\n- Study stay or internship abroad\n\n**Regional scholarships (Île-de-France Mobility):**\n- Up to 2000€\n- Depending on resources and destination\n\n**Procedure:**\nContact Elena MARTINEZ (international@esic.fr, 01.53.90.15.25) at least 3 months before your departure.\n\nThe scholarships are cumulative!"
+  },
+  "ADM034": {
+    "question": "How do I temporarily suspend my studies?",
+    "answer": "You may suspend your studies (temporary interruption) for serious medical or personal reasons:\n\n**Duration:** 1 semester or 1 year maximum\n\n**Reasons accepted:**\n- Medical reasons (mandatory certificate)\n- Serious family problems\n- Civic service\n- Professional project requiring a break\n\n**Procedure:**\n1. Reasoned written request to your teacher's manager\n2. Supporting attachments\n3. Consideration by the pedagogical committee\n4. If accepted: retention of registration (reduced rate 20%)\n5. Automatic recovery the following year\n\n**Difference with the caesure:** The suspension is for cause, the caesure for the chosen project.\n\nContact: etudes@esic.fr"
+  },
+  "ADM035": {
+    "question": "How do I obtain a student visa (for international students)?",
+    "answer": "If you are an international student outside the EU, you need a student visa:\n\n**Campus France procedure:**\n1. Create an account at campusfrance.org (country of origin)\n2. Fill in the application file\n3. Pay the fees Campus France\n4. Get your acceptance at the ESIC\n5. Receive the ESIC admission certificate\n6. Get your long-stay student visa (VLS-TS)\n\n**Required documents:**\n- Admission letter ESIC\n- Resource rationale (minimum €615/month)\n- Health insurance\n- Housing justification\n\n**After arrival in France:**\n- Visa validation (within 3 months)\n- Enrolment in student social security\n\nThe international service accompanies you: international@esic.fr"
+  },
+  "ADM036": {
+    "question": "How do I get a certificate of success?",
+    "answer": "A **certificate of achievement** certifies that you have validated your year/diploma pending the issuance of the official diploma:\n\n**Availability:** Upon publication of the final results and the jury's deliberations\n\n**Purpose:**\n1. ENT > 'Scolarité' > 'Mes documents' > 'Attestation de réussite'\n2. Immediate download (PDF)\n\nOr at school (free of charge, immediate delay)\n\n**Utility:**\n- Continuation of studies\n- Job search\n- Administrative procedures\n- While waiting for the official diploma (which takes 3-6 months)\n\nThe certificate has the same value as the diploma for most of the procedures."
+  },
+  "ADM037": {
+    "question": "How do I apply for a transfer of records to another school?",
+    "answer": "If you wish to transfer your file to another institution:\n\n**Prerequisites:**\n- Being up to date with all your payments\n- No ongoing disciplinary proceedings\n- Get an exeat (see ADM022)\n\n**Documents to be requested:**\n1. Exeat\n2. Notes from all years\n3. Education certificate\n4. Detailed educational programme (if requested by the new institution)\n\n**Procedure:**\n1. Inform your teacher's manager of your departure\n2. Request documents from scolarite@esic.fr\n3. Specify the destination establishment\n4. Time limit: 5-10 working days\n\n**Free** (excluding postage: 15€)"
+  },
+  "ADM038": {
+    "question": "How to obtain a proof of presence for social security?",
+    "answer": "To justify your student status with social security (especially if you stay on the parental plan or for health insurance):\n\n**Document required:** Certificate of Education\n\n**Purpose:**\n1. ENT > 'Scolarité' > 'Mes documents' > 'Certificat de scolarité'\n2. Download the PDF (free, unlimited)\n\nThe certificate shall state:\n- Your Student Status\n- Your training and year\n- The dates of the academic year\n- The school's official stamp\n\nThis document is generally sufficient for all approaches related to social security, student mutuals, etc.\n\n**Need a specific certificate:** scolarite@esic.fr"
+  },
+  "SVC001": {
+    "question": "What are the library schedules?",
+    "answer": "The library (Building D, 1st floor) is open:\n\n**Normal period:**\n- Monday-Friday: 8am-8pm\n- Saturday: 9am-5pm\n- Sunday: Closed\n\n**Period of Examinations (January and May-June):**\n- 24 hours a day, 7 days a week\n- Access by student badge\n- Reduced night surveillance (cameras)\n\n**School holidays:** 9am-5pm Monday to Friday\n\nContact: bibliotheque@esic.fr or 01.53.90.15.50"
+  },
+  "SVC002": {
+    "question": "How to borrow a book from the library?",
+    "answer": "Book borrowing is free and unlimited:\n\n**Procedure:**\n1. Search the book in the online (bibliotheque.esic.fr) or on-site catalogue\n2. Take the book from the shelving\n3. Present yourself at the reception counter with your student card\n4. Librarian registers loan\n\n**Conditions:**\n- Books: 5 books maximum for 3 weeks (renewable 2 times)\n- Old magazines: 2 copies for 1 week\n- Dictionaries and encyclopedias: on-site consultation only\n\n**Retarded:** €0.50 per day and per document\n\n**Renewal:** By email, on the online catalogue or at the counter"
+  },
+  "SVC003": {
+    "question": "Can I print documents on campus?",
+    "answer": "Yes, several printing solutions are available:\n\n**Library:**\n- 200 free pages per week (quota)\n- Beyond: 0,05€ per page N&B, 0,20€ per page color\n- Reloading of credit via the ENT or terminals\n\n**Computer stalls (C001-C004):**\n- Priced printing only\n- Same price as at the library\n\n**Procedure:**\n1. Send your document to the printer from any post\n2. Go to the printer\n3. Badgez with your student card\n4. Select your documents to print\n5. Validate\n\n**Scan:** Free and unlimited at the library"
+  },
+  "SVC004": {
+    "question": "What are the hours of the university restaurant?",
+    "answer": "The university restaurant (Building D, DRC) is open:\n\n**Lunch service only:**\n- Monday-Friday: 11:45am-2pm\n- Saturday-Sunday: Closed\n\n**Rates:**\n- Student fellow : 1€\n- Non-student: 3,90€\n- ESIC staff : 5,50€\n- Visitor : 8€\n\n**Full menu :** Starter + Main course + Cheese/Laiting + Dessert + Bread\n\n**Options:** Daily vegetarian, no pork available, gluten free on request 48h before\n\n**Tip:** Book via the ESIC Campus app before 10am to get 10% discount and avoid waiting!"
+  },
+  "SVC005": {
+    "question": "Is there a cafeteria on campus?",
+    "answer": "Yes, the cafeteria is located on the ground floor of Building D, next to the university restaurant:\n\n**Timetables:**\n- Monday-Friday: 8am-6pm\n- Saturday: 9am-5pm (if activities on campus)\n\n**Offer:**\n- Breakfast: pastries, coffee, juice (2-4€)\n- Snacks : sandwiches 4,50-5,50€, salads 5-7€\n- Beverages: coffee 1,20€, fresh drinks 1,50-2,50€\n- Midday formulas : 3,50-7,50€\n\n**Payment:** CB, cash or student card IZLY\n\n**Release area:** Tables, microwaves to warm your dishes, vending machines 24/7"
+  },
+  "SVC006": {
+    "question": "How to access WiFi on campus?",
+    "answer": "WiFi is free and accessible throughout the campus:\n\n**Main network: ESIC-Student**\n\n**Login:**\n1. Search the network 'ESIC-Student'\n2. Log in with your ENT IDs\n   - Login: prenom.nom@esic.fr\n   - Password: your ENT password\n3. Accept Terms of Use\n4. You're connected!\n\n**Performances:**\n- Flow rate: 100 Mbps per user\n- Cover: 100% of campus (buildings + exterior)\n\n**Connecting problems:**\n- Reconnect\n- Check your IDs\n- Contact the IT helpdesk: support-it@esic.fr or 01.53.90.15.99\n\n**Usage:** Reserved for educational and professional use"
+  },
+  "SVC007": {
+    "question": "Can I borrow computer equipment?",
+    "answer": "Yes, the IT service offers a loan of equipment to students:\n\n**Material available:**\n- 20 Dell laptops (48h loan)\n- Cameras and microphones for video projects (loan 1 week)\n- Scientific calculators (ready-term review)\n- Miscellaneous loaders (ready-day)\n\n**Procedure:**\n1. Booking via the ENT ('Services' > 'Prêt matériel')\n2. Withdrawal at Helpdesk IT (Office C104) with your student card\n3. Deposit : 50€ (uncashed cheque or CB print)\n4. Timely return (retards = suspension of service)\n\n**Availability:** Monday-Friday 9am-12pm / 2pm-5pm\n\n**Responsibility:** You are responsible for the borrowed material"
+  },
+  "SVC008": {
+    "question": "Is there a gym on campus?",
+    "answer": "Yes, the sports complex (Building E) offers several facilities:\n\n**Strengthening room (150m2):**\n- Cardio : carpet, bicycles, rowers\n- Musculation : dumbbells, guided machines\n- Functional: kettlebells, TRX, Swiss balls\n- Schedules: Lun-Ven 12pm-2pm and 6pm-8pm, Sam 10am-1pm\n- **Free access with student card**\n\n**Gymnase (500m2):**\n- Basket, volleyball, badminton, futsal\n- Booking via the ENT\n\n**External terrains:**\n- Football (synthetic grass)\n- Basket\n- 2 tennis courts\n- Track of athletics 200m\n- Free access 8am-9pm\n\n**Free group lessons:** See schedule on sports@esic.fr\n\nContact: Thomas LEROY, 01.53.90.15.45"
+  },
+  "SVC009": {
+    "question": "How do I consult a doctor or nurse on campus?",
+    "answer": "The health service is at your disposal:\n\n**Infirmary (Building D, DRC):**\n- Nurse: Marie LAURENT\n- Schedules : Monday, Wednesday, Friday 9am-5pm\n- Free access without appointment\n- Services: emergency care, medical follow-up, health prevention, emergency contraception\n\n**School doctor:**\n- Dr. Marie LAURENT\n- Schedules : Tuesday 2pm-6pm, Thursday 10am-2pm\n- **On appointment only**: sante@esic.fr or 01.53.90.15.40\n- Free and confidential consultations\n\n**Medical emergency:** Call 15 (SAMU) or 01.53.90.15.00 (campus emergency)\n\nFree condoms available at the infirmary."
+  },
+  "SVC010": {
+    "question": "Is there a psychologist on campus?",
+    "answer": "Yes, a psychologist is available to accompany students:\n\n**Psychologist:**\n- Sophie MARTIN\n- Room D102\n- Schedules : Tuesday and Thursday 10am-6pm\n- **On appointment:** sante@esic.fr or 01.53.90.15.40\n\n**Consultations:**\n- Free and confidential\n- Duration: 45 minutes\n- Reasons: academic difficulties, stress, anxiety, personal problems, adaptation\n\n**Other resources:**\n- Fil Santé Jeunes : 0 800 235 236 (free, anonymous, 7 days/7, 9am-11pm)\n- Nightline (student listening): nightline.fr, 9pm-2:30am\n- In case of emergency: SAMU (15) or SOS Friendship (09 72 39 40 50)\n\nDo not hesitate to consult, it is confidential and benevolent."
+  },
+  "SVC011": {
+    "question": "How to access digital library resources?",
+    "answer": "The library provides access to many digital resources:\n\n**Academic databases:**\n- IEEE Xplore (informatics, electronics)\n- ACM Digital Library (computer science)\n- SpringerLink (science and technology)\n- ScienceDirect (multidisciplinary)\n\n**E-learning Platforms:**\n- O'Reilly Learning (40 000+ ebooks tech)\n- Scholarvox (academic ebooks)\n- Cairn (human and social sciences)\n\n**Press:**\n- Europresse (French and international newspapers)\n- Factiva (economic press)\n\n**Access:**\n1. From campus: direct access via WiFi\n2. From home: ESIC VPN connection mandatory\n3. Identifiers: your login/password ENT\n\n**VPN ESIC:** Installation Guide on ent.esic.fr > 'Services IT' > 'VPN'"
+  },
+  "SVC012": {
+    "question": "Are there any lockers available for the students?",
+    "answer": "Yes, lockers are available to store your belongings:\n\n**Location:**\n- Building B (Couloirs, ground floor and 1st floor)\n- Building C (near computer rooms)\n- Total: 300 lockers available\n\n**Attribution:**\n- Request via the ENT ('Services' > 'Casier')\n- Attribution by order of arrival (waiting list if complete)\n- Duration: 1 school year\n- Free\n\n**Functioning:**\n- Lock with padlock (provided by the school)\n- Personal code to be defined\n- Compulsory release at the end of the year\n\n**Important:** Do not leave valuables. The school disclaims any responsibility in the event of theft."
+  },
+  "SVC013": {
+    "question": "Where can I warm up my meal?",
+    "answer": "Several areas are equipped with microwaves:\n\n**Cafeteria (Building D, DRC):**\n- 4 microwaves in open access\n- Tables and chairs\n- Access 8am-6pm\n\n**Release areas:**\n- Building B (1st floor): 2 microwaves\n- Building C (near open space): 1 microwave\n\n**Automated distributors:**\n- Available 24/7 in buildings B, C and D\n- Snacks, hot and cold drinks\n- Payment: contactless CB or IZLY card\n\n**Refrigerators:** Not available (hygiene). Plan an insulated bag if necessary.\n\n**Rules:** Clean after use, maximum time 3 minutes per person if waiting"
+  },
+  "SVC014": {
+    "question": "Is there a parking lot on campus?",
+    "answer": "Yes, parking is available:\n\n**Student parking:**\n- 200 places\n- Free\n- Compulsory registration via the ENT with vehicle registration\n- Access badge (student card)\n- Availability: first come, first served\n- Guarded from Monday to Friday 7:30am-9pm\n\n**Parking visitors:**\n- 50 places\n- Fee: 3€/hour\n- Free access (automatic terminal)\n\n**Alternatives:**\n- Vélib' : 2 stations at 50m and 150m from the campus\n- Bicycle parking: 100 covered and secured spaces (free access with badge)\n- Trottinettes : Dedicated parking areas\n\n**Recommended public transport:** République metro (L3) or Voltaire (L9)"
+  },
+  "SVC015": {
+    "question": "How do I contact the IT department in case of technical problems?",
+    "answer": "The IT helpdesk is here to help you:\n\n**Contact:**\n- Email: support-it@esic.fr\n- Tel.: 01.53.90.15.99\n- Office: C104 (Informatics Building)\n- Hours : Mon-Ven 9am-12pm / 2pm-5pm\n\n**Online chapter:**\n- Via the ENT: 'Support' > 'Chat IT'\n- Available 9am-6pm\n- Real-time response\n\n**Types of problems addressed:**\n- ENT/WiFi connection\n- Configuration email @esic.fr\n- VPN Issues\n- Access to digital resources\n- Software installation\n- Printer problems\n\n**Response time:**\n- Blocking incident: 48h\n- Standard request: 1 week\n\n**Ticket:** Automatically created for each request, followed by the ENT"
+  },
+  "SVC016": {
+    "question": "Is there any help finding a place to stay?",
+    "answer": "Yes, the social service helps you in your housing search:\n\n**Accompaniment:**\n- Isabelle DUBOIS, social worker\n- Room A105\n- Schedules : Monday and Wednesday 2pm-6pm\n- Contact: social@esic.fr or 01.53.90.15.42\n\n**Proposed services:**\n- Information on CROUS residences\n- List of partner private student residences\n- Support for the CAF file (APL, ALS)\n- Guarantee advice (Visal, guarantor)\n- Tenant mediation if conflict\n\n**Resources:**\n- CROUS de Paris : www.crous-paris.fr\n- Visale (guarantee free): www.visale.fr\n- Lokaviz : find-un-housing.lescrous.fr\n\n**Partners:** Several student residences near campus offer preferential rates"
+  },
+  "SVC017": {
+    "question": "Can I organize an event on campus?",
+    "answer": "Yes, students can organize events on campus:\n\n**Types of events accepted:**\n- Technical conferences\n- Workshops (coding, design, etc.)\n- Associative events\n- Sports tournaments\n- Projections, concerts (subject to conditions)\n\n**Authorization procedure:**\n1. Written request to the Student Life Bureau (bve@esic.fr) minimum 3 weeks before\n2. Specify: date, desired location, description, number of participants, budget\n3. Commission BVE examines the request\n4. If accepted: booking rooms + logistic accompaniment\n\n**Support available:**\n- Financial support possible (up to €500 depending on project)\n- Loan of equipment (sonic, video projector)\n- Communication (school social networks)\n\nContact: Laura GARCIA, bve@esic.fr or 01.53.90.15.50"
+  },
+  "SVC018": {
+    "question": "Is there a photocopy service?",
+    "answer": "Yes, the photocopies service is integrated into the printing department:\n\n**Location:** Library (Bât D, 1st floor)\n\n**Material available:**\n- 3 multifunction photocopiers (copy, scan, print)\n- Automatic back-to-back\n- N&B and colour\n\n**Rates:**\n- 200 free N&B pages per week (quota)\n- Beyond : 0,05€/page N&B, 0,20€/page color\n- Scan: free and unlimited\n\n**Use:**\n1. Badgez with your student card\n2. Place your documents\n3. Select options (N&B/color, front/recto-verso)\n4. Launch\n\n**Recharge credit:** Via the ENT ('Services' > 'Impressions') or on-site terminals\n\n**Timetables:** Opening hours of the library"
+  },
+  "SVC019": {
+    "question": "How to join or create a student association?",
+    "answer": "Student associations boost campus life:\n\n**Existing associations:**\n- BDE (Student Office) - Unifying Events\n- BDS (Office of Sports) - Sports activities\n- DevCampus - Developers Club\n- ESICyber - Cybersecurity\n- ESIC Entrepreneurship - Startups\n- ESIC Green - Sustainable Development\n- + 9 other associations\n\n**Join an ass:**\n- Forum of Associations : 10 September 2024\n- Contact the presidents directly (contacts on the ENT)\n- Annual contribution : 5-20€ according to the association\n\n**Create an association:**\n1. Minimum 5 founding members\n2. Creation folder at the BVE (bve@esic.fr)\n3. Presentation of the draft before the committee\n4. If validated: official recognition + possible start-up grant\n\nContact BVE : Laura GARCIA, 01.53.90.15.50"
+  },
+  "SVC020": {
+    "question": "Is there a shuttle service between campuses?",
+    "answer": "The ESIC has a unique campus located at 42 Avenue de la République, 75011 Paris. There is therefore no shuttle service.\n\n**Access to campus:**\n- Metro: Line 3 (Republic), Line 9 (Voltaire)\n- Bus: Lines 20, 56, 65, 69\n- Vélib' : Stations 11023 (50m) and 11045 (150m)\n- Car : Parking 200 places (free of charge upon registration)\n\n**Proximity:** Everything is on one site, you can walk between all buildings in less than 5 minutes.\n\n**Accessibility PMR:** All buildings are accessible to persons with reduced mobility."
+  },
+  "SVC021": {
+    "question": "Where can I charge my laptop on campus?",
+    "answer": "Electrical outlets are available in many areas:\n\n**Library:**\n- All individual tables are equipped with sockets\n- Group rooms also equipped\n\n**Computer stalls (C001-C004):**\n- Takings available on all posts\n- Free access when no courses\n\n**Release areas and corridors:**\n- Building B and C: wall sockets every 5 meters\n- Sofa spaces with integrated sockets\n\n**Cafeteria:**\n- Tables equipped with sockets\n\n**Courses:**\n- Most rooms have accessible outlets\n\n**Tip:** Always check that your device is plugged in and never leave your business unattended"
+  },
+  "SVC022": {
+    "question": "Is there a ticket distributor (DAB) on campus?",
+    "answer": "No, there is no ATM directly on campus.\n\n**Nearest BAD:**\n- Crédit Agricole : 38 Avenue de la République (100m)\n- BNP Paribas : Place de la République (250m)\n- Société Générale : 45 Boulevard Voltaire (300m)\n\n**Payment on campus:**\n- Restaurant U and cafeteria : CB, cash, IZLY card\n- Library (prints) : Student card (reloadable online)\n- ATMs: contactless CB\n\n**Tip:** Most payments can be made by credit card. Prefer the IZLY card for restaurant U."
+  },
+  "SVC023": {
+    "question": "Can I access campus on the weekend?",
+    "answer": "Yes, the campus is partially open on Saturdays:\n\n**Saturday:**\n- Open campus: 8am-6pm\n- Library: 9am-5pm\n- Fitness room: 10am-1pm\n- Outdoor sports grounds: 8am-6pm\n- Working spaces (group rooms): Upon reservation ENT\n- Cafeteria : Closed (distributors available)\n- Restaurant U : Closed\n\n**Sunday and public holidays:**\n- Closed campus (except exceptional events)\n\n**Access:** Your student card allows you to enter even when the reception is closed\n\n**Events:** Some weekends, events can be organized (hackathons, conferences, forums)"
+  },
+  "SVC024": {
+    "question": "Is there any help for students with disabilities?",
+    "answer": "Yes, the ESIC supports students with disabilities:\n\n**Refer to disability:**\n- Isabelle DUBOIS (social worker)\n- Room A105\n- Contact: social@esic.fr or 01.53.90.15.42\n- Schedules : Monday and Wednesday 2pm-6pm\n\n**Possible modifications:**\n- Third time at exams\n- Technical assistance (adapted software)\n- Scheduling of time use\n- Adaptation of course materials\n- Physical accessibility (lifts, ramps)\n\n**Procedure:**\n1. Contact the disability referent as soon as you register\n2. Provide MDHC or medical certificate\n3. Maintenance to define needs\n4. Implementation of the adjustments\n\n**Important:** Report your situation as soon as possible to benefit from the accommodation as soon as you return"
+  },
+  "SVC025": {
+    "question": "How to get a Transport Discount Card (Imagine R)?",
+    "answer": "The **Imagine R** card offers unlimited transportation in Île-de-France for students:\n\n**Rate 2024-2025:**\n- Annual package : 350€\n- Or monthly: €37.50/month\n- Bursaries: reduced price 165,60€/year\n\n**Order:**\n1. On the website imagining.fr\n2. Create your account\n3. Select 'Étudiant'\n4. Provide your ESIC Tuition Certificate (downloadable on the TENT)\n5. Identity photo\n6. Online payment\n7. Reception at home within 10 days\n\n**Advantages:**\n- Unlimited 1-5 zones (metro, RER, bus, tram, Transilian)\n- Valid from 1 September to 31 August\n- Accepted on the Vélib'\n\n**Help:** Social service can help you: social@esic.fr"
+  },
+  "SVC026": {
+    "question": "Is there a shop or a bookshop on campus?",
+    "answer": "There are no physical libraries on campus.\n\n**For your academic needs:**\n\n**Books:**\n- ESIC Library: 25,000 books available\n- O'Reilly Learning: 40,000+ ebooks tech (free access via ENT)\n- Scholarvox : Academic books (free access)\n\n**Supply:**\n- Small stationery available at the reception (stylos, notebooks)\n- Vending machine: basic supplies\n- Nearby libraries : Gibert Joseph République (5 min walk)\n\n**ESIC Merchandising:**\n- Online store : boutique.esic.fr\n- Sweat, t-shirt, gourd, school-colored bag\n- Physical sale at events (asso forum, integration day)\n\nMost course materials are provided by teachers via the ENT."
+  },
+  "SVC027": {
+    "question": "How do I report an object found or lost?",
+    "answer": "A Found Objects service is managed by the reception:\n\n**Object found:**\n1. Drop it off at the reception (Building A, DRC)\n2. The object is recorded and stored 3 months\n3. Display on the ad board + publication on the ENT\n\n**Object lost:**\n1. Check on the ENT: 'Services' > 'Objets trouvés'\n2. View the display at home\n3. If not present: Report loss to accueil@esic.fr with precise description\n4. You will be contacted if the object is found\n\n**Objects frequently found:**\n- Keys, badges, cards\n- Clothing\n- Books, notebooks\n- Chargers, headphones\n- Gourdes, tupperware\n\n**Important:** For valuables (telephone, computer, wallet), contact the welcome immediately"
+  },
+  "SVC028": {
+    "question": "Is there a VPN connection to access resources from home?",
+    "answer": "Yes, the **VPN ESIC** allows you to access internal resources from anywhere:\n\n**Use of VPN:**\n- Access to academic databases (IEEE, ACM, SpringerLink)\n- Access to software licenses (MATLAB, some IDEs)\n- Secure connection to school servers\n- Access to reserved streaming courses\n\n**Installation:**\n1. Log in to the ENT\n2. 'Services IT' > 'VPN ESIC'\n3. Download the client according to your OS (Windows/Mac/Linux)\n4. Install the client\n5. Log in with your ENT IDs\n\n**Compatible:** Windows 10/11, macOS, Linux, iOS, Android\n\n**Support:** Detailed installation guide on the ENT. In case of problem: support-it@esic.fr\n\n**Important:** VPN is mandatory to access digital resources from outside"
+  },
+  "SVC029": {
+    "question": "Can I use the facilities in the evening or during the holidays?",
+    "answer": "Access times vary according to facilities and periods:\n\n**During the course period (evening):**\n- Campus : Open until 9pm\n- Library: Up to 8pm (24h/24 during exams)\n- Computer rooms : Up to 8pm\n- Sports room: Up to 8pm (scenes 6pm-8pm)\n- Workspaces : Until 9pm\n\n**During holidays:**\n- Campus: 9am-5pm Monday to Friday\n- Library: 9am-5pm\n- Sports room : Closed\n- Cafeteria : Closed (distributors available)\n- Computer rooms : Limited access\n\n**Reviews (January/May-June):**\n- Library: 24/7\n- Workspaces : Extended hours\n\n**Access:** Your student card allows automatic access to authorized schedules"
+  },
+  "SVC030": {
+    "question": "Is there a catering service for people with special diets?",
+    "answer": "Yes, the university restaurant offers options for different diets:\n\n**Daily options:**\n- Vegetarian menu: Every day\n- Pig-free: Systematically available\n- Classic Day Menu\n\n**Special schemes (on request 48 hours before):**\n- Gluten-free\n- Lactose-free\n- Vegetal/vegan\n- Specific food Allergies\n\n**Procedure:**\n1. Report your diet to restauration@esic.fr\n2. For a one-time meal: request 48h before\n3. For a permanent diet: medical certificate for allergies\n4. Booking via the ESIC Campus app specifying 'régime spécial'\n\n**Allergens:** Always displayed on dishes (gluten, lactose, nuts, etc.)\n\n**Alternative:** The cafeteria also offers vegetarian options without common allergens."
+  },
+  "REG001": {
+    "question": "Am I allowed to smoke on campus?",
+    "answer": "No, **campus is entirely non-smoking** (cigarettes, e-cigarettes, tobacco):\n\n**Prohibition:**\n- All buildings (including covered outdoor spaces)\n- Campus outdoor spaces\n- Immediate edges of entrances\n\n**Smokers' area:**\n- 1 area dedicated outside the campus compound (street, main exit)\n- Ashtrays made available\n\n**Sanctions:**\n- 1st offence: Warning\n- 2nd offence: Fine €68 (Public Health Code)\n- Repeated offences: Disciplinary sanctions\n\nThis rule aims to protect the health of all and complies with French legislation."
+  },
+  "REG002": {
+    "question": "Can I bring my pet to campus?",
+    "answer": "No, pets are **not permitted** on campus, except:\n\n**General prohibition:**\n- Dogs, cats and other animals prohibited in all buildings\n- Forbidden also in the outside areas of the campus\n\n**Exceptions:**\n- **Assistance dogs/blind guides**: Allowed everywhere with official justification\n- Derogation possible for specific educational projects (with prior authorisation)\n\n**Reasons:**\n- Health and safety\n- Allergies of some students/staff\n- Compliance with LES Regulations (Publicly Receivable Establishments)\n\n**Question:** For any particular situation, contact direction@esic.fr"
+  },
+  "REG003": {
+    "question": "What are the rules regarding alcohol on campus?",
+    "answer": "Alcohol use is **strictly prohibited** on campus:\n\n**Prohibitions:**\n- Alcohol consumption in all buildings\n- Consumption in campus outdoor spaces\n- Introduction of alcoholic beverages\n- Intoxication on campus\n\n**Exceptions:**\n- Official events authorized by the Directorate (gala, ceremonies)\n- Controlled and supervised consumption\n\n**Sanctions:**\n- Warning for 1st offence\n- Temporary exclusion (3-7 days) in case of recidivism\n- Definitive exclusion in case of serious or repeated infringements\n\n**Student Events:** The BDE evenings are held outside the campus in appropriate locations.\n\nThe aim of this rule is to ensure a safe and serene study environment."
+  },
+  "REG004": {
+    "question": "What is the school's policy on plagiarism?",
+    "answer": "The **plagiarism is a serious misconduct** punishable by severe penalties:\n\n**Definition of plagiarism:**\n- Copy the work of others (text, code, images) without quotation\n- Paraphrase without mentioning source\n- Reusing your own previous work (self-plagiarism)\n- Use AI (ChatGPT, etc.) without mentioning it\n\n**Detection:**\n- All the work has gone to the anti-plagiarism software (Compilatio)\n- Source code verification for computer projects\n- Oral interviews if suspected\n\n**Sanctions:**\n- Note of 0/20 for the work concerned (minimum)\n- Excluded from the course or semester\n- Definitive exclusion in case of recidivism\n- Mention in the academic record\n\n**Prevention:** Workshops are offered at the beginning of the year on citation rules and intellectual property."
+  },
+  "REG005": {
+    "question": "Can I wear whatever I want on campus?",
+    "answer": "Yes, there is **no strict dress code** at the CISC, but some common sense rules:\n\n**General principles:**\n- Proper and decent dress required\n- Respect for other students and staff\n- No offensive, discriminatory or political messages on clothing\n\n**Specific situations:**\n- **Ordinary classes**: Free clothing (jean, basketball, etc.)\n- **Supports, presentations, oral examinations**: Recommended professional dress (not mandatory)\n- **Forums companies, professional events**: Professional dress **mandatory**\n- **Laboratories** : Port of the blouse provided by the school\n- **Sport**: Compulsory sport outfit\n\n**Prohibitions:**\n- Ostentatious religious signs (French law)\n- Security Detachments (Laboratory)\n\nThe principle: \"Remain yourself while remaining respectful\""
+  },
+  "REG006": {
+    "question": "Are there any disciplinary sanctions and what?",
+    "answer": "The rules of procedure provide for a range of disciplinary sanctions depending on the seriousness of the misconduct:\n\n**Minor errors** (absences, repeated delays, disruptive attitude):\n1. Oral warning\n2. Written warning\n3. Blame\n\n**Severe errors** (fraud, verbal violence, degradation):\n1. Temporary exclusion (3-8 days)\n2. Exclusion of courses/matter\n3. Excluded from semester\n\n**Very serious defects** (physical violence, harassment, trafficking):\n1. Definitive exclusion from establishment\n2. Possible prosecution\n\n**Disciplinary procedure:**\n- Calling before the Discipline Council\n- Right to be assisted and to defend oneself\n- Reasoned decision within 15 days\n- Possibility of appeal (30 days)\n\nThe full regulations are available on the ENT."
+  },
+  "REG007": {
+    "question": "What are my rights as a student?",
+    "answer": "As a student of the ESIC, you enjoy many rights:\n\n**Academic rights:**\n- Access to quality education\n- Consultation of your examination copies\n- Objection to notes (framed procedure)\n- Access to educational resources\n\n**Basic freedoms:**\n- Freedom of expression (with respect for others)\n- Freedom of association\n- Right of assembly\n- Representation via delegates\n\n**Protection:**\n- Confidentiality of School Record (GDPR)\n- Non-discrimination\n- Protection against harassment\n- Right to health and well-being\n\n**Recourse:**\n- Mediation in the event of conflict\n- Hierarchical remedy\n- Referral to the institution's Ombudsman\n\nThese rights are accompanied by duties (assiduousness, respect, integrity)."
+  },
+  "REG008": {
+    "question": "How does student representation work?",
+    "answer": "Students are represented at several levels:\n\n**Class delegates:**\n- 2 per promotion (holder + alternate)\n- Elected at the beginning of the year\n- Role: Relay concerns, participate in class councils\n\n**Student Life Office (SVO):**\n- Consisting of elected students\n- Role: Animating campus life, representing students\n- Interlocutor with management\n\n**Performance Board:**\n- Students, teachers, professionals, management\n- 2 meetings/year\n- Role: Evaluate and improve training\n\n**Quality of Life Commission:**\n- Students + Administration\n- Role: Improving services and infrastructure\n\n**Elections:** September/October each year. All students can run or vote."
+  },
+  "REG009": {
+    "question": "What to do in case of harassment or discrimination?",
+    "answer": "The CISA applies a **zero tolerance** against harassment and discrimination:\n\n**Types of prohibited behaviour:**\n- Moral or sexual harassment\n- Discrimination (origin, gender, sexual orientation, religion, disability)\n- Verbal or physical violence\n- Cyberharassment\n\n**What to do if you are a victim or witness:**\n1. **Emergency:** Contact the listening cell: ecoute@esic.fr (confidential 24/7)\n2. **Refer to harassment:** Confidential appointment\n3. **Formal report:** direction@esic.fr\n\n**Procedure:**\n- Investigation carried out immediately\n- Protective measures if necessary\n- Severe disciplinary sanctions for the author\n- Psychological support of the victim\n- Possible prosecution\n\n**External:** Police (17), Anti-Discrimination Number (3928)"
+  },
+  "REG010": {
+    "question": "Can I work in parallel with my studies?",
+    "answer": "Yes, you can work in parallel, but with moderation:\n\n**Recommendations:**\n- Maximum 15-20h/week to pass your studies\n- Focus on compatible student jobs (nights, weekends)\n- The alternation is an option if you want to work more\n\n**Current student jobs:**\n- Private lessons, babysitting\n- Catering, shopping (orchards, weekends)\n- Freelance informatique (depending on skills)\n- Campus jobs (library, tutoring)\n\n**Research assistance:**\n- Career Service: carrieres@esic.fr\n- Offers on the ENT ('Carrières' > 'Jobs étudiants')\n- Partnerships with local businesses\n\n**Important:**\n- No automatic time-use arrangements\n- Attendance remains compulsory\n- Work does not justify absences\n\n**Alternative:** The alternation (B3/Master) allows you to be paid while studying"
+  },
+  "REG011": {
+    "question": "How do I protect my personal data (GDPR)?",
+    "answer": "The ESIC strictly complies with the **GDPR** (General Data Protection Regulation):\n\n**Data collected:**\n- Identity, contact information, education\n- Notes, absences, possible sanctions\n- Photos (events, student map)\n\n**Use:**\n- Only for the management of your schooling\n- Institutional communication\n- Anonymised statistics\n\n**Your rights:**\n- Access to your data\n- Correction of errors\n- Deletion (after leaving school)\n- Portability\n- Objection to treatment\n\n**Protection:**\n- Data hosted in France (secure servers)\n- Limited access to authorized personnel\n- No sale or assignment to third parties\n- Limited storage (archiving after 5 years)\n\n**Contact DPO** (Delegated to Data Protection): dpo@esic.fr"
+  },
+  "REG012": {
+    "question": "Can I film or photograph on campus?",
+    "answer": "Yes, but with strict privacy rules:\n\n**Campus Public Spaces:**\n- Photos/videos authorized for personal use\n- If other people appear: mandatory blurring or prior agreement\n\n**In progress:**\n- Prohibition without teacher's agreement\n- If allowed: personal use only (no broadcast)\n\n**Events:**\n- Official photographers at ESIC events\n- If you are photographing: ask for the agreement of identifiable persons\n\n**Dissemination on social media:**\n- Compulsory agreement of recognizable persons\n- Tag @ESIC_Official for official events\n- Respect for the right to image\n\n**Teaching projects:**\n- Right-to-image forms to be signed (available at OVE)\n\n**Sanctions:** Failure to respect the right to image may result in legal proceedings"
+  },
+  "REG013": {
+    "question": "How do I get to the Student Office (BDE)?",
+    "answer": "**BDE** (Students' Office) is the association that drives campus life:\n\n**Role of the BDE:**\n- Organization of the evenings, the gala of the end of the year\n- Integration Day\n- Weekends of integration and cohesion\n- Student Partnerships (Reductions)\n\n**Becoming a member:**\n- Accession: €10/year\n- Advantages: Discounts on events, goodies, voting at the AG\n- Registration at the Assos Forum (September) or on bde@esic.fr\n\n**Candidater at the office (BDE list):**\n- Make up a list of 8-12 people\n- Electoral campaign (March)\n- Elections (April)\n- Term of office: 1 year (April N to April N+1)\n\n**Involved without being elected:**\n- Volunteering on events\n- Member of a committee (events, partnerships, communication)\n\nContact: Thomas LAURENT, President BDE 2024-2025, bde@esic.fr"
+  },
+  "REG014": {
+    "question": "Are there any scholarships or specific aids from the school?",
+    "answer": "Yes, the ESIC offers several financial aids in addition to the CROUS grants:\n\n**Emergency aid:**\n- Up to €1,000 for sudden difficulties\n- Procedure via the social worker\n- Decision within 15 days\n\n**Honours awards:**\n- For students with excellent results (average >16/20)\n- 500-2 000 € depending on the level\n- Automatic assignment after deliberation\n\n**Aid for international mobility:**\n- Supplement to Erasmus grants\n- 500-1,500€ depending on destination and duration\n\n**Enhanced student loan:**\n- Partnership with banks\n- Preferential rate\n- Reimbursement difference\n\n**Partial fee exemption:**\n- For exceptional situations (on file)\n- Up to 30% discount\n\n**Contact:** Isabelle DUBOIS, social@esic.fr or 01.53.90.15.42"
+  },
+  "REG015": {
+    "question": "What events are organised during the year?",
+    "answer": "Many events are taking place throughout the academic year:\n\n**September:**\n- Return (2 Sept)\n- Bachelor 1 Integration Day (3 Sept)\n- Forum of Associations (10 Sept)\n- BDE Integration Weekend (end of seven)\n\n**October-November:**\n- Forum entreprises Internships/Alternance (15 Oct)\n- ESIC Hackathon 48h (20-22 Nov)\n- Inter-promos football tournament (Nov)\n\n**December:**\n- BDE Christmas Evening (15 Dec)\n\n**January-February:**\n- S1 reviews\n- Weekend ski BDS (Feb)\n\n**Mars-April:**\n- Forum entreprises Emploi (15 March)\n- Basketball tournament (March)\n- BDE Elections (April)\n- Gala Junior Enterprise (April)\n\n**May-June:**\n- ESIC Sports Olympiads (May)\n- ESIC race 5/10km (last sam May)\n- Year-end Gala (mid-June)\n- Graduation (20 June)\n\nFull programme on the ENT and bve@esic.fr"
+  },
+  "REG016": {
+    "question": "How does the school's sports teams work?",
+    "answer": "The ESIC offers several competitive **sports teams**:\n\n**Suggested sports:**\n- Men's and Women's Football\n- Mixed Basketball\n- Mixed volleyball\n- Running Club\n\n**Functioning:**\n- Training: twice a week (evening 7pm-9pm)\n- Competitions: Paris University Championship (FFSU)\n- Inter-school tournaments\n- Coaching by professional coach or experienced student\n\n**Registration:**\n1. BDS Forum (September) or sports@esic.fr\n2. Compulsory medical certificate (less than 3 months)\n3. Contribution: €20/year (licence + jersey)\n4. Free Trials in the first 2 weeks\n\n**Commitment:**\n- Training attendance\n- Match availability (usually Saturday)\n- Team spirit\n\nContact: Julie MERCIER, President BDS, bds@esic.fr"
+  },
+  "REG017": {
+    "question": "Can I create my own startup during my studies?",
+    "answer": "Yes, ESIC strongly encourages student entrepreneurship:\n\n**Accompaniment available:**\n- **ESIC Entrepreneurship** : Association d'aide aux porteurs de projet\n- Mentoring by contractors\n- Business Model workshops, pitch, fundraising\n- Access to a coworking space on campus\n\n**Student-Entrepreneur Status:**\n- Keeps student status while setting up your business\n- Possible schedule arrangements\n- Substitution of the internship by the entrepreneurial project (on validation)\n- Application via Pepite (Student Centre for Innovation)\n\n**Partner incubator:**\n- Access to Station F (Paris)\n- 6-month incubation program\n\n**Contest:**\n- ESIC Startup Challenge competition (price: €5,000)\n- Participation in national competitions\n\nContact : Alexandre DURAND, entrepreneurship@esic.fr"
+  },
+  "REG018": {
+    "question": "How does school insurance work?",
+    "answer": "School insurance is **not mandatory** in the superior but strongly recommended:\n\n**Recommended coverage:**\n- **Civil Responsibility (RC)**: Mandatory for internships\n- **Individual Accident**: Covers your own injuries\n- **Legal protection**: In the event of a dispute\n\n**Options:**\n\n**1. School-proposed insurance:**\n- Partnership with insurer\n- RC + Individual Accident + Legal protection\n- Price: 25€/year\n- Subscription at the time of registration\n\n**2. Personal insurance:**\n- Check your home insurance (RC often included)\n- Complete if necessary\n- Provide a certificate to the school department\n\n**For internships:**\n- CR mandatory (mention on the convention)\n- Certification to be attached to the internship file\n\n**Sinister:** Report to your insurer within 5 days. For school insurance: scolarite@esic.fr"
+  },
+  "REG019": {
+    "question": "How to access the Alumni network?",
+    "answer": "The **ESIC Alumni** network has more than 15,000 graduates worldwide:\n\n**Access to the network:**\n- Automatic upon graduation from ESIC\n- Online platform: alumni.esic.fr\n- Mobile application ESIC Alumni\n\n**Services:**\n- Graduate directory (research by promo, sector, company)\n- Exclusive job offers\n- Mentoring (an alumni sponsors your early career)\n- Networking events (4-6 per year)\n- Trade conferences\n\n**As a student:**\n- Early access to certain services\n- Participation in alumni-student events\n- Can be mentored as soon as Master 1\n\n**Alumni contribution:**\n- Free the first year after graduation\n- Then 50€/year (optional but recommended for premium services)\n\nContact: alumni@esic.fr or 01.53.90.15.35"
+  },
+  "REG020": {
+    "question": "What are the rules in case of emergency or evacuation?",
+    "answer": "Emergency procedures are in place for your safety:\n\n**In case of fire alarm:**\n1. Evacuate immediately and calmly\n2. Follow the signs « Sortie de secours » (green lighting)\n3. Don't take your stuff\n4. Do not use elevators\n5. Join the assembly point (main parking lot)\n6. Don't go home until you're cleared.\n\n**Emergency Numbers:**\n- Emergency campus: 01.53.90.15.00 (24h/7d)\n- Campus security: 01.53.90.15.01\n- UAS: 15\n- Firefighters: 18\n- Police: 17\n- European emergency: 112\n\n**Evacuation Exercises:**\n- twice a year (September and February)\n- Compulsory participation\n\n**Saving gestures:**\n- PSC1 courses offered free of charge (registration via BVE)\n- Accessible defibrillators in each building\n\n**Emergency plan:** Posted in each room and on the ENT"
+  },
+  "REG021": {
+    "question": "How to get a student discount?",
+    "answer": "Your ESIC student card gives you access to many discounts:\n\n**Culture:**\n- Cinemas : Reduced price 5-7€ (UGC, Gaumont, MK2, etc.)\n- Museums: Free or reduced (-18-25 years in national museums)\n- Theatres : Places from 8€ (Théâtre de la Ville, Châtelet, etc.)\n- Concerts : Discounts via BDE partners\n\n**Shopping:**\n- Apple: -5% on Mac, iPad (Apple Education)\n- Microsoft: Office 365 free (via ENT)\n- Adobe: -65% Creative Cloud Student\n- Spotify Premium student : €5.99/month\n\n**Food:**\n- BDE partnerships : -10-15% in selected restaurants\n\n**Sport:**\n- Sports facilities: Discounts (see BDS partnerships)\n- Arkose, MurMur (climbing): -15-20%\n\n**Transport:**\n- SNCF : Young Advantage Card (30€/year, -30% journeys)\n- Flixbus, BlaBlaCar: Regular discounts\n\n**Full list:** On the ENT > 'Vie étudiante' > 'Bons plans étudiants'"
+  },
+  "REG022": {
+    "question": "How to participate in solidarity or voluntary projects?",
+    "answer": "The ESIC encourages citizen engagement and solidarity:\n\n**On campus:**\n\n**ESIC Green (Sustainable Development Association):**\n- Environmental actions on campus\n- Student awareness\n- Contact: green@esic.fr\n\n**Student Tutoring:**\n- Help B1-B2 in difficulty\n- 2-4h/week, volunteer\n- Valued in your CV\n- Registration: bve@esic.fr\n\n**Outside campus:**\n\n**Civic Service:**\n- 6-12-month missions\n- Allowance €600/month\n- Possible during caesure or after graduation\n- Info : service-civilique.gouv.fr\n\n**Partner associations:**\n- Restos du Coeur (maraudes)\n- Apprenticeship from Auteuil (workwork aid)\n- Red Cross (first aid)\n\n**Valorization:**\n- Voluntary commitment recorded (certificate)\n- Mentionable on CV and LinkedIn\n- Possible validation in ECTS according to projects\n\nContact BVE : Laura GARCIA, bve@esic.fr"
+  },
+  "REG023": {
+    "question": "Are there support courses or tutoring?",
+    "answer": "Yes, several help devices are available:\n\n**Student Tutoring (free):**\n- M1-M2 Students Help B1-B2\n- Subjects : Programming, Maths, English, Methodology\n- Sessions of 1.5 hours, 1-2 times/week\n- Registration: tutorat@esic.fr or via ENT\n\n**Institutional support:**\n- Automatically identified if mean <8/20 in continuous control\n- Mandatory convening of refresher sessions\n- Free\n\n**Teachers' Permanences:**\n- Each teacher's office hours (see directory)\n- Don't hesitate to ask them\n\n**Online resources:**\n- Racera, LinkedIn Learning: free access via ENT\n- Videos of recorded courses\n- Adjusted exercises on the ENT\n\n**Paying private lessons:**\n- List of recommended tutors available at the BVE\n- Student rates : 15-25€/h depending on level\n\n**Methodological workshops:**\n- Time management, note-taking, preparation exams\n- Free, organized by the BVE (calendar on ENT)"
+  },
+  "ORI001": {
+    "question": "What specializations are available in Bachelor 3?",
+    "answer": "The Bachelor 3 offers 5 specializations:\n\n**1. Development & Software Engineering**\n- Languages : Java, Python, JavaScript, Go\n- Frameworks : Spring, React, Angular\n- DevOps, microservices, cloud (AWS/Azure)\n- Opportunities : Full-Stack Developer, DevOps Engineer, Software Architect\n\n**2. Cybersecurity**\n- Ethical hacking, slopesting\n- Forensics, SIEM, response to incidents\n- Certifications : CEH included\n- Opportunities : Cybersecurity Analyst, Pentester, Security Consultant\n\n**3. Data Science & IA**\n- Machine Learning, Deep Learning\n- Big Data (Spark), visualization\n- NLP, Computer Vision\n- Opportunities : Data Scientist, ML Engineer, Data Analyst\n\n**4. Digital Marketing**\n- SEO/SEA, social media, analytics\n- Growth hacking, e-commerce\n- Opportunities : Digital Marketer, Growth Hacker, Traffic Manager\n\n**5. Product Management**\n- Product vision, roadmapping\n- Agile scale, OKRs\n- Opportunities : Product Owner, Product Manager\n\n**Choice:** April-May of B2, according to wishes and results"
+  },
+  "ORI002": {
+    "question": "Can I do a double degree abroad?",
+    "answer": "Yes, the ESIC offers **double international degrees**:\n\n**Partner universities:**\n- **United Kingdom:** University of Manchester (MSc Computer Science)\n- **Germany:** TU Munich (MSc Data Engineering)\n- **Spain:** Universidad Carlos III of Madrid (MSc Cybersecurity)\n- **Canada:** Université de Montréal (MSc IA)\n\n**Draft:**\n- Master 1 at the ESIC (France)\n- Master 2 at the partner university\n- Obtaining 2 diplomas (ESIC + foreign university)\n\n**Conditions for admission:**\n- Average ≥ 13/20 in Bachelor 3\n- English level: B2 minimum (TOEFL/IELTS required)\n- Letter of motivation\n- Interview with the jury\n\n**Financing:**\n- Erasmus+ grants available (EU)\n- ESIC mobility grants\n- Subsidised bank loans\n\n**Candidature:** December-January of M1\n\nContact: Elena MARTINEZ, international@esic.fr or 01.53.90.15.25"
+  },
+  "ORI003": {
+    "question": "What are the job opportunities after graduation?",
+    "answer": "The ESIC has a **integration rate of 92% to 6 months** after graduation:\n\n**Opportunities by specialization:**\n\n**Development:**\n- Full-Stack Developer, DevOps Engineer\n- Software Architect, Tech Lead\n- Average starting wage : 38-45K€\n\n**Cybersecurity:**\n- Analyst SOC, Pentester, Security Consultant\n- Junior RSSI, Cloud Security Engineer\n- Average wage : 40-48K€\n\n**Data Science & IA:**\n- Data Scientist, ML Engineer, Data Analyst\n- Data Engineer, AI Researcher\n- Average wage: 42-50K€\n\n**Digital Marketing:**\n- Digital Marketer, Traffic Manager\n- SEO Manager, Growth Hacker\n- Average wage : 35-42K€\n\n**Product Management:**\n- Product Owner, Product Manager\n- Digital Project Manager\n- Average salary : 38-45K€\n\n**Activity sectors:** Tech (40%), Banking/Insurance (25%), Consulting (20%), Industry (10%), Startup (5%)\n\n**Integration survey:**Annual report available on alumni.esic.fr"
+  },
+  "ORI004": {
+    "question": "How is a semester of foreign exchange going?",
+    "answer": "ESIC encourages **international mobility** with 45 partner universities:\n\n**Periods possible:**\n- Semester 5 (S1 of B3) : Recommended\n- Semester 6 (S2 of B3): Possible but less common (stage)\n- Semester 7 (S1 of M1) : Possible\n\n**Popular destinations:**\n- Europe: Spain, Germany, UK, Italy, Netherlands\n- Outside Europe: Canada, USA, Australia, Japan, South Korea\n\n**Procedure:**\n1. Briefing (October N-1)\n2. Application (November-December)\n3. Selection (January): file + interview\n4. Acceptance of partner university (February-March)\n5. Administrative and pedagogical preparation\n6. Departure (August-September)\n\n**Validation:**\n- Learning Agreement signed before departure\n- 30 ECTS to be validated on site\n- Automatic equivalency if validated\n\n**Financing:**\n- Erasmus+ grant: €150-250/month (Europe)\n- AMI: €400/month (students)\n- Possible regional grants\n\nContact: international@esic.fr"
+  },
+  "ORI005": {
+    "question": "Can I pursue a PhD after the Master's degree?",
+    "answer": "Yes, the **doctorate** (Bac+8) is accessible after Master 2:\n\n**Profile concerned:**\n- Students with academic research project\n- Willingness to work in R&D or higher education\n- Excellent results (average ≥ 14/20 in Master)\n\n**Compatible ESIC specifications:**\n- Artificial Intelligence\n- Cybersecurity\n- Data Science\n- Theoretical computing\n\n**Procedures:**\n1. Identify a thesis supervisor (teacher-researcher)\n2. Define Search Subject\n3. Upgrading funding file (doctoral fellowship)\n4. Doctoral school application (April-June)\n5. Project support before jury\n\n**Financing:**\n- Doctoral contract (CIFRE, university): €1,700/month\n- Ministerial Fellowship\n- Financing (CIFRE)\n\n**Duration:** Minimum 3 years\n\n**Accompaniment:** Philippe LEFEVRE, Director of Research\nrecherche@esic.fr or 01.53.90.15.35"
+  },
+  "ORI006": {
+    "question": "How to choose between internship and alternation?",
+    "answer": "The choice between **stage** and **alternative** depends on your situation:\n\n**Stage (Bachelor 3 and Master):**\n- **Advantages:**\n  * Flexibility to try multiple companies\n  * Less commitment\n  * Shorter period\n- **Inconvenients:**\n  * Less compensation (minimum fee 4.35€/h)\n  * Student status (no pension contributions)\n- **Duration:** 12-24 weeks depending on level\n\n**Alternance (Bachelor 3 and Master):**\n- **Advantages:**\n  * Attractive remuneration (SMIC 60-100% by age/level)\n  * Employee status (paid leave, social protection)\n  * Tuition fees paid by the company\n  * Long experience (1-2 years)\n- **Inconvenients:**\n  * Rhythm supported (3 sem entreprise / 1 sem école)\n  * Strong commitment\n  * Less mobility\n- **Rythm:** September N to August N+1 (or N+2)\n\n**Recommendation:**\n- B3 : Internship OR alternation (at your choice)\n- M1-M2 : Highly recommended alternative\n\nContact: carrieres@esic.fr"
+  },
+  "ORI007": {
+    "question": "What professional certifications can I obtain?",
+    "answer": "The ESIC integrates several **recognized professional certifications** into the curricula:\n\n**Bachelor 3 - Development:**\n- AWS Solutions Architect Associate\n- Azure Fundamentals\n\n**Bachelor 3 - Cybersecurity:**\n- CEH (Certified Ethical Hacker)\n- CompTIA Security+\n\n**Bachelor 3 - Data Science:**\n- TensorFlow Developer Certificate\n- DataCamp Data Scientist\n\n**Master 1-2:**\n- Kubernetes CKA (Certified Kubernetes Administrator)\n- PSM I (Professional Scrum Master)\n- Google Analytics Individual Qualification\n- CISSP (Certified Information Systems Security Professional) - preparation\n- OSCP (Offensive Security Certified Professional) - preparation\n\n**Modalities:**\n- Integrated course preparation\n- Examination session organised by the school\n- 1st attempt included in tuition fees\n- 2nd attempt at your expense\n\n**Added value:** These certifications are highly valued by recruiters (including tech)"
+  },
+  "ORI008": {
+    "question": "Can I reorient after the first year?",
+    "answer": "Yes, a **reorientation is possible** after Bachelor 1:\n\n**Internal Reorientation (within the CIS):**\n- Period: End of S1 or end of year\n- Approach:\n  1. Interview with current teacher leader\n  2. Interview with the person in charge of the training\n  3. Internal application file\n  4. Decision within 3 weeks\n- Limited possibilities (no reorientation towards more selective training)\n\n**External Reorientation (to other institutions):**\n- Period: All year\n- Required documents: Exeat (see ADM022)\n- Support by the Guidance Service\n\n**Internal pods:**\n- Bachelor 1 → Bachelor 1 other specialty : Possible\n- Bachelor 2 → Other course: Depending on available places\n- Upgrade modules if necessary\n\n**Accompaniment:**\n- Orientation appointment available\n- Professional interest tests\n- Contact: etudes@esic.fr\n\n**Important:** Think carefully, talk to your family and teachers before deciding"
+  },
+  "ORI009": {
+    "question": "How do I prepare my professional project?",
+    "answer": "The ESIC supports you in the construction of your **professional project**:\n\n**Tools available:**\n\n**Tests and balance sheets:**\n- RIASEC Guidance Test (Professional Interests)\n- Simplified skills assessment\n- Through the Career Service\n\n**Workshops:**\n- CV and cover letter (B1-B2)\n- LinkedIn and personal branding (B2-B3)\n- Preparation of hiring interviews (B3-M1)\n- Wage negotiations (M2)\n- ENT Calendar\n\n**Individual support:**\n- Appointment with career advisors\n- On appointment: carrieres@esic.fr\n- Rereading CV, simulation maintenance\n\n**Events:**\n- Business Forums (Oct and March)\n- Trade conferences (1/month)\n- Speed-recruiting\n- Alumni meetings\n\n**Resources:**\n- Business records on the ENT\n- Testimony of alumni\n- Job offers/training/alternation\n\n**Tips:**\n- Start from B1\n- Multiply internships and experiences\n- Network = success key"
+  },
+  "ORI010": {
+    "question": "What are the gateways to other schools?",
+    "answer": "**gateways** exist to integrate other institutions:\n\n**After the Bachelor (Bac+3) :**\n- Engineering schools (parallel admissions)\n- Business Schools (Master)\n- Universities (Selected Master)\n- Special schools (design, data, etc.)\n\n**General conditions:**\n- Validated Bachelor's degree (180 ECTS)\n- Strong academic record\n- Competition or selection on file according to school\n\n**Prior partner schools:**\n- Polytech School Network (Engineers)\n- IAE (University Master's)\n- CGE Schools\n\n**Accompaniment:**\n- Competition information (Career Service)\n- Preparation for interviews\n- Teachers' letters of recommendation\n\n**Tip:** If you are considering a bridge, anticipate:\n1. Find out from the B2\n2. Aim for excellent results (14+/20)\n3. Multiply extra-academic experiments\n4. Prepare the competitions intensively\n\nContact: etudes@esic.fr"
+  },
+  "ORI011": {
+    "question": "How does the major/minor system work?",
+    "answer": "The ESIC offers a system of **major and minor** to customize your journey:\n\n**System:**\n- **Major**: Your main specialization (80% of courses)\n- **Minor** : Supplementary specialization (20% of courses)\n\n**Availability:**\n- From Bachelor 3\n- Mandatory in Master's\n\n**Examples of combinations:**\n- Major Development + Minor Cybersecurity → DevSecOps\n- Major Data Science + Minor Business → Data Product Manager\n- Major AI + Minor Ethics → AI Responsible\n\n**Mining available:**\n- Business & Entrepreneurship\n- Cybersecurity\n- Data Science\n- UX/UI Design\n- Project management\n- Digital ethics\n\n**Choice:**\n- At the same time as specialization (April-May)\n- Validation: minimum 12 ECTS\n- Mentioned on the diploma\n\n**Advantage:** More comprehensive and differentiated profile on the market"
+  },
+  "ORI012": {
+    "question": "Does the school offer continuing training or VAE?",
+    "answer": "Yes, the CISS proposes devices for **professionals in operation**:\n\n**Continuing training:**\n- Publics : Employees, job seekers, entrepreneurs\n- Formats:\n  * Executive MBA (part-time, 18 months)\n  * Professional certificates (3-6 months)\n  * Short training (2-5 days)\n- Themes : IA, Cybersecurity, Data, Digital management, DevOps\n- Financing: CPF, Enterprise Training Plan, Employment Centre\n\n**VAE (Validation of Experience Acquis):**\n- To obtain all or part of an ESIC diploma through the professional experience\n- Conditions: 3 years minimum experience in connection with the diploma\n- Procedure:\n  1. Admissibility file\n  2. Preparation of the VAE booklet (possible accompanying)\n  3. Jury support\n  4. Total, partial or refusal validation\n- Duration: 8-12 months\n\n**VAP (Validation of Professional Acquis):**\n- To gain access to training without having the required diploma\n\nContact: fc@esic.fr or vae@esic.fr"
+  },
+  "ORI013": {
+    "question": "Can I do my internships/alternation abroad?",
+    "answer": "Yes, **internships and alternations** are possible and encouraged:\n\n**Stage abroad:**\n- All levels (B1 to M2)\n- Destinations : Worldwide\n- Duration: Similar to internships in France\n- Compulsory Internship Agreement (provided by the ESIC)\n\n**Procedures:**\n1. Find your host company\n2. Inform the internship service: stages@esic.fr\n3. Tripartite agreement (student/ECS/enterprise)\n4. For EU: Erasmus+ Convention Possible traineeship\n5. Compulsory international insurance\n\n**Alternance abroad:**\n- More complex (different social legislation)\n- Possible in some countries (Germany, UK, Belgium)\n- Contact carrieres@esic.fr for feasibility\n\n**Financing:**\n- Erasmus+ grants Traineeship: €150-300/month (EU)\n- AMI (students): €400/month\n- ESIC assistance possible on a case-by-case basis\n\n**Tip:** Anticipate at least 6 months in advance. English level B2 recommended.\n\nContact: international@esic.fr + stages@esic.fr"
+  },
+  "ORI014": {
+    "question": "How does the school help us find an internship or an alternation?",
+    "answer": "The **Service Careers** supports you in your research:\n\n**Tendering schedule:**\n- ENT > 'Carrières' > 'Offres'\n- 500+ traineeship/alternation/employment offers\n- Filter by level, specialty, location\n- Application in 1 click\n\n**Individual support:**\n- Rereading CV and cover letter\n- Maintenance simulation\n- Research advice\n- On appointment: carrieres@esic.fr\n\n**Group workshops:**\n- Drafting CV (B1)\n- LinkedIn optimisation (B2)\n- Research techniques (B2-B3)\n- Deferred video interviews (B3-M1)\n- Wage negotiations (M2)\n\n**Events:**\n- Forum Internships/Alternance (Oct) : 80+ companies\n- Employment Forum (March) : 60+ companies\n- Regular speed-recruiting\n- Job dating sector\n\n**Network undertaken:**\n- 300+ partner companies\n- Business visits\n- Trade conferences\n\n**Success rate:** 95% of students find an internship/alternative\n\nContact: carrieres@esic.fr or 01.53.90.15.31"
+  },
+  "ORI015": {
+    "question": "Are there any English courses?",
+    "answer": "Yes, the ESIC offers **English courses**:\n\n**Bachelor:**\n- Required English courses (2h/week)\n- Some technical modules in English (B3): 10-20% of courses\n- International projects in English\n\n**Master:**\n- 30-40% of courses in English\n- Seminars and conferences in English\n- Possible projects and defences in English\n\n**Master International Track (optional):**\n- 100% in English\n- International promotion\n- Level B2-C1 required\n- Diploma supplement in English\n\n**Certifications:**\n- TOEIC : Compulsory crossing in B3 and M2\n- Objective B2 (785+) in B3, C1 (945+) in M2\n- Integrated preparation\n\n**Mobility:**\n- Exchange Semester in English\n- Summer schools partners\n\n**Resources:**\n- English e-learning platform (GlobalExam)\n- Talk Workshops (English Club, Thursday 12:30pm)\n- VO movies/series in the library\n\nContact: Christine ROBIN, c.robin@esic.fr"
+  },
+  "ORI016": {
+    "question": "What projects are proposed during the training?",
+    "answer": "The **projects** are at the heart of the ESIC pedagogy:\n\n**Bachelor 1:**\n- Web project (S2) : Complete website (HTML/CSS/JS + BDD)\n- Group work of 4-5\n\n**Bachelor 2:**\n- Red wire project (year-round): Mobile app + backend\n- Agile/Scrum methodology\n- Real customer (association or startup)\n\n**Bachelor 3:**\n- Specialization Project (S1): Depending on your major\n  * Dev: Complex full-stack application\n  * Cyber: Full Security Audit\n  * Data: ML/IA project from end to end\n- Professional project (S2): Related to the internship\n\n**Master 1:**\n- Expertise project (S1): Advanced level, innovation\n- Research/innovation project (S2)\n- Opportunity to work on partner company projects\n\n**Master 2:**\n- Research or professional memory\n- Major entrepreneurial project (optional)\n\n**Common Terms:**\n- Teams of 3-6 persons\n- Follow-up by a tutor\n- Final support\n- Group note + individual note\n- Counting 20-30% of the semester's grade"
+  }
+}

@@ -21,6 +21,7 @@ import numpy as np
 
 from backend.app.core.config import settings
 from backend.app.services.faq_loader import load_all_faq_items
+from backend.app.services.translation_service import translation_service
 
 logger = logging.getLogger(__name__)
 
@@ -85,15 +86,20 @@ class SemanticSearchService:
         items_loader: Callable[[], list[dict[str, Any]]] = (
             load_all_faq_items
         ),
+        english_questions_loader: Callable[[], dict[str, str]] = (
+            translation_service.english_questions
+        ),
     ) -> None:
         self.enabled = enabled
         self.encoder_factory = encoder_factory
         self.items_loader = items_loader
+        self.english_questions_loader = english_questions_loader
 
         self.encoder: Encoder | None = None
         self.items: list[dict[str, Any]] = []
         self.reference_texts: list[str] = []
         self.reference_owners: list[int] = []
+        self.reference_is_english = np.zeros(0, dtype=bool)
         self.reference_vectors: np.ndarray | None = None
 
         self.failed = False
@@ -133,12 +139,24 @@ class SemanticSearchService:
         items = self.items_loader()
         texts: list[str] = []
         owners: list[int] = []
+        english_flags: list[bool] = []
 
         for item_index, item in enumerate(items):
             for position, text in enumerate(item["questions"]):
                 if is_semantic_reference(position, text):
                     texts.append(text)
                     owners.append(item_index)
+                    english_flags.append(False)
+
+        # Questions traduites (US-032) : une question anglaise retrouve sa
+        # version anglaise, et une suggestion anglaise cliquée sa réponse.
+        english_questions = self.english_questions_loader()
+        for item_index, item in enumerate(items):
+            english = english_questions.get(item["questions"][0])
+            if english:
+                texts.append(english)
+                owners.append(item_index)
+                english_flags.append(True)
 
         encoder = self.encoder_factory()
         vectors = normalize_rows(encoder.encode(texts))
@@ -147,9 +165,14 @@ class SemanticSearchService:
         self.items = items
         self.reference_texts = texts
         self.reference_owners = owners
+        self.reference_is_english = np.array(english_flags, dtype=bool)
         self.reference_vectors = vectors
 
-    def search(self, question: str) -> dict[str, Any]:
+    def search(
+        self,
+        question: str,
+        language: str = "fr",
+    ) -> dict[str, Any]:
         if not self.is_ready or self.encoder is None:
             return unknown_result(0.0)
 
@@ -157,6 +180,12 @@ class SemanticSearchService:
             self.encoder.encode([question])
         )[0]
         scores = self.reference_vectors @ question_vector
+
+        # Une question française ne voit que les références françaises :
+        # les traductions faisaient monter les questions hors sujet
+        # (« réserver un hélicoptère » : 0.506 -> 0.574 sur la navette).
+        if language != "en":
+            scores = np.where(self.reference_is_english, -1.0, scores)
 
         best_reference = int(np.argmax(scores))
         best_score = round(float(scores[best_reference]), 3)

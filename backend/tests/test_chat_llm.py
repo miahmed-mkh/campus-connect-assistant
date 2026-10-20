@@ -17,7 +17,7 @@ REPONSE_LLM = "reponse reformulee"
 def poser_question(monkeypatch, categorie: str, session_id: str, llm_renvoie):
     appels = []
 
-    def fake_search(question: str) -> dict:
+    def fake_search(question: str, language: str = "fr") -> dict:
         return {
             "answer": REPONSE_MOTEUR,
             "source": None,
@@ -79,7 +79,7 @@ def test_repli_sur_le_moteur_si_le_llm_ne_repond_pas(monkeypatch) -> None:
 def test_question_masquee_avant_envoi_au_llm(monkeypatch) -> None:
     questions = []
 
-    def fake_search(question: str) -> dict:
+    def fake_search(question: str, language: str = "fr") -> dict:
         return {
             "answer": REPONSE_MOTEUR,
             "source": None,
